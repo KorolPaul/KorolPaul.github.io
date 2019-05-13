@@ -5,6 +5,13 @@
     min-height: 20px;
     vertical-align: top;
 
+    &__input {
+        width: 100%;
+        @include desktop {
+            width: 190px;
+        }
+    }
+
     &_input[type]:disabled {
         text-align: center;
         font-size: 22px;
@@ -21,9 +28,14 @@
         background: transparent;
         border: none;
         padding: 0;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         display: inline-block;
+
+        .balance__input & {
+            width: 20px;
+            height: 20px;
+        }
     }
     .refresh-user-balance-icon {
         background: url(#{$img_path}/icons/sync.svg) 0 0 no-repeat;

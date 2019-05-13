@@ -3,7 +3,7 @@ $(document).ready(function () {
     const menuElement = $('.menu');
     const menuToggleElement = $('.menu-toggle');
 
-    menuToggleElement.on('click', function (e) {
+    $('.menu-toggle, .menu_leave').on('click', function (e) {
         e.preventDefault();
         menuToggleElement.toggleClass('opened');
         menuElement.toggleClass('opened');
@@ -82,13 +82,12 @@ $(document).ready(function () {
 
     function changeSwitcher() {
         const activeClassName = 'switch_item__active';
-        switchButtons.removeClass(activeClassName);
+        $(this).parent().find('.switch_item').removeClass(activeClassName);
         $(this).addClass(activeClassName);
 
         const tab = $(this).data('tab-link');
-        $('.tab').removeClass('active');
+        $(this).parent().parent().parent().find('.tab').removeClass('active');
         $('.tab[data-tab="' + tab + '"]').addClass('active');
-
     }
 
     /* Balance button */
@@ -108,5 +107,20 @@ $(document).ready(function () {
         dots: true,
         arrows: false
     });
+
+    /* Phone number pattern */
+    const phoneElements = document.querySelectorAll('input[type="tel"]');
+    for (let i = 0; i < phoneElements.length; i++) {
+        var dateMask = IMask(phoneElements[i],
+        {
+            mask: '-0000-0000',
+            lazy: false
+        });
+    }
+    $('.js-country').on('mousedown', '.choices__item--choice', function() {
+        let text = $(this).html();
+        text = text.substring(0, text.indexOf('">') + 2) + text.substring(text.indexOf('(') + 1, text.indexOf(')'));
+        $('.phone_code').html(text);
+    })
 
 });

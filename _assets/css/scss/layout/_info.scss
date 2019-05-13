@@ -2,7 +2,6 @@
     display: inline-block;
     position: relative;
 
-
     &_icon {
         cursor: pointer;
     }
@@ -17,6 +16,7 @@
         padding: 10px;
         border-radius: 12px;
         display: none;
+        z-index: 1;
 
         .info:hover & {
             display: block;

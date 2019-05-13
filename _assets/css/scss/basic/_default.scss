@@ -57,16 +57,47 @@ table {
 th {
     color: $light_color;
     font-weight: normal;
-    padding: 12px 30px;
+    padding: 7px 15px;
     border-bottom: 1px solid $bright_color;
     text-align: left;
+    @include tablet {
+        padding: 8px 30px;
+    }
+
+    &:first-child {
+        padding-left: 0;
+        @include tablet {
+            padding-left: 15px;
+        }
+    }
+    &:last-child {
+        padding-right: 0;
+        @include tablet {
+            padding-right: 15px;
+        }
+    }
 }
 td {
-    padding: 12px 30px;
+    padding: 7px 15px;
     border-bottom: 1px solid $gray_color;
+    @include tablet {
+        padding: 8px 30px;
+    }
 
-    table:not([class])tr:last-child & {
+    tr:last-child & {
         border: none;
+    }
+    &:first-child {
+        padding-left: 0;
+        @include tablet {
+            padding-left: 15px;
+        }
+    }
+    &:last-child {
+        padding-right: 0;
+        @include tablet {
+            padding-right: 15px;
+        }
     }
 }
 .table-number {
@@ -74,4 +105,11 @@ td {
 }
 .amount-and-currency {
     color: $light_color;
+}
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+    @include tablet {
+        overflow: visible;
+    }
 }

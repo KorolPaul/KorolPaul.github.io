@@ -1,5 +1,9 @@
 .breadcrumbs {
     text-align: right;
+    margin: 0 0 14px;
+    @include tablet {
+        margin-bottom: 28px;
+    }
 
     &_link {
         color: #4b535c;

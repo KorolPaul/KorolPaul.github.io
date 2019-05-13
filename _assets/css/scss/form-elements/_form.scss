@@ -1,19 +1,23 @@
 .form {
     &_row {
-        @include tablet {
+        @include desktop {
             display: flex;
             justify-content: space-between;
         }
     }
     &_row-item {
-        margin: 0 0 20px;
+        margin: 0 0 28px;
         flex-grow: 10;
+        @include desktop {
+            margin: 0 0 20px;
+        }
 
         &__center {
-            text-align: center;
+                text-align: center;
+                margin: 0 0 5px;
         }
         & + & {
-            @include tablet {
+            @include desktop {
                 margin-left: 30px;
             }
         }
@@ -29,6 +33,9 @@
     }
     &_submit {
         width: 100%;
-        margin: 0 0 10px;
+        margin: 5px 0 20px;
+    }
+    &_clarification {
+        margin: 25px 0 0;
     }
 }

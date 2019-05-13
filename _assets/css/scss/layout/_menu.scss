@@ -1,22 +1,32 @@
 .menu {
     display: none;
-    @include desktop {
+    background: rgba($bg_color, .96);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 127px 10px 0;
+    @include tablet {
         display: flex;
         justify-content: space-between;
+        background: transparent;
+        position: static;
+        padding: 0 20px;
     }
 
     &.opened {
         display: block;
-        @include desktop {
+        @include tablet {
             display: flex;
         }
     }
 
     &_link {
         display: block;
-        margin: 30px 0;
+        margin: 15px 0;
         position: relative;
-        @include desktop {
+        @include tablet {
             display: inline;
         }
 
@@ -31,7 +41,6 @@
             transition: .2s ease-in-out border-color;
         }
 
-        &:hover,
         &.active {
             color: $light_color;
 
@@ -41,11 +50,36 @@
                 }
             }
         }
+        &:hover {
+            @include tablet {
+                color: $light_color;
+
+                &::after {
+                    @include tablet {
+                        border-color: $bright_color;
+                    }
+                }
+            }
+        }
     }
     &_link-icon {
         color: $bright_color;
         margin: 0 10px 0 0;
         width: 20px;
         vertical-align: middle;
+    }
+    &_leave {
+        display: block;
+        position: absolute;
+        left: 10px;
+        bottom: 30px;
+        background: url(#{$img-path}/icons/logout.svg) no-repeat 0 center;
+        padding: 0 0 0 40px;
+        color: #4b535c;
+        border: none;
+        border-radius: 0;
+        @include tablet {
+            display: none;
+        }
     }
 }

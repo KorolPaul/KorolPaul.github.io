@@ -1,9 +1,21 @@
 .account-wrapper {
-    background: $dark_color;
-    border: 2px solid $gray_color;
-    border-radius: 12px;
-    padding: 20px 64px;
-    text-align: center;
+    margin: 0 0 75px;
+    @include tablet {        
+        text-align: center;
+        background: #141516;
+        border: 2px solid $gray_color;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 180px;
+    }
+    @include desktop {
+        padding: 20px 64px;
+        max-width: 966px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 500px;
+    }
 }
 
 .account {
@@ -12,34 +24,70 @@
     &_info {
         @include tablet {
             display: flex;
-            margin: 0 0 40px;
+            align-items: flex-start;
+        }
+        @include desktop {
+            margin: 0 0 30px;
         }
     }
     &_form-row {
-        margin: 0 0 20px;
-        @include tablet {
+        margin: 0 0 15px;
+        @include desktop {
             display: flex;
             justify-content: space-between;
         }
+
+        .account_edit & {
+            @include tablet {
+                margin-bottom: 30px;
+            }
+        }
     }
     &_form-row-item {
-        margin: 0 0 20px;
         flex-grow: 10;
+        margin: 0 0 30px;
+        @include tablet {
+            margin: 0;
+        }
 
         & + & {
             @include tablet {
-                margin-left: 30px;
+                margin: 15px 0 0;
+            }
+            @include desktop {
+                margin: 0 0 0 30px;
+            }
+        }
+
+        .account_edit & {
+            @include tablet {
+                margin-bottom: 30px;
+            }
+            @include tablet {
+                margin-bottom: 0;
+                width: 100%;
             }
         }
     }
     &_avatar {
+        flex-shrink: 0;
+        border: 2px solid #7f8a95;
+        border-radius: 6px;
+        margin: 0 auto 10px;
+        display: block;
         @include tablet {
-            margin: 0 30px 0 0;
+            margin-left: 0;
+            margin-right: 30px;
         }
     }
     &_name {
         font-size: 22px;
         color: $light_color;
+        text-align: center;
+        display: block;
+        @include tablet {
+            text-align: left;
+        }
     }
     &_name-edit {
         cursor: pointer;
@@ -52,8 +100,12 @@
         }
     }
     &_status {
-        text-align: right;
         color: #4b535c;
+        margin: 30px 0 0;
+        @include desktop {
+            margin: 0;
+            text-align: right;
+        }
     }
     &_verification {
         display: block;
@@ -66,26 +118,74 @@
     }
     &_bottom {
         text-align: right;
+        padding: 22px 0 0;
+        @include desktop {
+            padding: 0;
+        }
     }
     &_title {
-        margin: 10px 0 50px;
+        margin: 10px 0 30px;
     }
     &_payments {
         margin: auto;
         display: block;
     }
     &_filters {
+        display: flex;
+        flex-direction: column;
         @include tablet {
-            display: flex;
+            flex-direction: row;
             justify-content: space-between;
         }
     }
     &_filters-section {
+        margin: 0 0 20px;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0;
+        }
+
+        &:nth-child(1) {
+            order: 2;
+            @include tablet {
+                order: 1;
+            }
+        }
+        &:nth-child(2) {
+            order: 1;
+            @include tablet {
+                order: 2;
+            }
+        }
+
+        .choices:nth-child(2) {
+            @include tablet {
+                margin-left: 20px;
+            }
+        }
+    }
+    &_controls {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &_controls-section {
+        margin: 0 0 20px;
         @include tablet {
             display: flex;
             justify-content: space-between;
             align-items: flex-start
         }
+
+        &__right {
+            align-self: flex-end;
+        }
+
     }
     &_edit {
         display: none;
@@ -94,6 +194,105 @@
         @include tablet {
             display: flex;
             justify-content: space-between;
+        }
+    }
+    &_column {
+        @include tablet {
+            width: 47%;
+        }
+        @include desktop {
+            width: 60%;
+            
+            & + & {
+                width: 30%;
+            }
+        }
+    }
+    &_deposit-button {
+        margin: 28px auto 0;
+        width: 220px;
+        display: block;
+        @include tablet {
+            margin-left: 0;
+            margin-right: 0;
+            display: inline-block;
+        }
+        @include desktop {
+            margin: 0 0 0 30px;
+        }
+    }
+    &_edit-button {
+        margin: auto;
+        width: 220px;
+        display: block;
+        @include tablet {
+            margin: 0;
+            display: inline-block;
+        }
+    }
+    &_form {
+        @include tablet {
+            flex-grow: 1;
+        }
+    }
+    &_balance {
+        @include tablet {
+            margin-left: 236px;
+            text-align: right;
+        }
+        @include desktop {
+            margin-left: 0;
+            text-align: left;
+        }
+    }
+    &_edit-back {
+        margin: 0 auto 15px;
+        width: 220px;
+        display: block;
+        @include tablet {
+            margin-left: 0;
+            margin-right: 20px;
+            display: inline-block;
+        }
+        @include desktop {
+            margin: 0 0 0 30px;
+        }
+    }
+    &_edit-save {
+        margin: 0 auto 15px;
+        width: 220px;
+        display: block;
+        @include tablet {
+            margin-left: 0;
+            margin-right: 0;
+            display: inline-block;
+        }
+        @include desktop {
+            margin: 0 0 0 30px;
+        }
+    }
+    &_settings {
+        margin: 0 0 30px;
+
+        td + td {
+            text-align: center;
+        }
+        td:nth-child(2) {
+            width: 67px;
+        }
+        td:nth-child(3) {
+            width: 53px;
+        }
+    }
+    &_transactions {
+        margin: 0 0 20px;
+
+        td:last-child {
+            display: none;
+            @include tablet {
+                display: table-cell;
+                text-align: center;
+            }
         }
     }
 }

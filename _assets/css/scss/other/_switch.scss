@@ -3,11 +3,15 @@
 }
 
 .switch {
-    border: 1px solid $gray_color;
-    border-radius: 36px;
-    display: inline-flex;
     margin: 0 auto 38px; 
+    overflow: auto;
+    text-align: center;
 
+    &_items {
+        border: 1px solid #2b3036;
+        border-radius: 36px;
+        display: inline-flex;
+    }
     &_item {
         color: $color;
         background: transparent;
@@ -15,6 +19,8 @@
         display: inline-flex;
         align-items: center;
         padding: 6px 35px;
+        white-space: nowrap;
+        transition: .2s ease-in-out all;
 
         &:hover,
         &__hover {
@@ -23,6 +29,7 @@
         &__active {
             color: $bright_color;
             border-color: $bright_color;
+            box-shadow: 0 0 10px 2px rgba($bright_color, .25), 0 0 10px 2px rgba($bright_color, .25) inset;
         }
     }
     &_icon {

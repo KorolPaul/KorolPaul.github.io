@@ -1,9 +1,19 @@
 .header {
-    @include layout;
+    position: relative;
+    z-index: 3;
+    @include tablet {
+        @include layout;
+    }
+    @include desktop {
+        margin-bottom: 20px;
+    }
 
     &_top {
-        padding: 16px 0;
+        padding: 16px 0 0;
+        position: relative;
+        z-index: 2;
         @include tablet {
+            padding: 16px 0 0;
             display: flex;
             justify-content: space-between;
         }
@@ -11,9 +21,13 @@
     &_option {
         display: flex;
         justify-content: flex-end;
-        @include desktop {
+        border-bottom: 1px solid #1f2428;
+        padding: 0 0 16px;
+        @include tablet {
+            border-bottom-color: transparent;
             justify-content: space-between;
             align-items: center;
+            padding: 0;
         }
     }
 }

@@ -8,8 +8,11 @@
 
     &_link {
         display: block;
+        text-align: center;
+        margin: 0 0 14px;
         @include tablet {
             display: inline;
+            text-align: left;
         }
     }
 }

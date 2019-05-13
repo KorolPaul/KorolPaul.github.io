@@ -10,11 +10,10 @@
     display: flex;
     visibility: hidden;
     overflow: auto;
-    padding: 20px;
+    padding: 10px;
     transition: .2s ease-in-out opacity .1s,
                 .0001s ease-in-out visibility .2s;
     @include tablet {
-        padding: 10vh 0 0;
         height: 100vh;
     }
 

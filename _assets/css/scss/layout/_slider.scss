@@ -6,20 +6,33 @@
     background-size: 100% auto;
     padding: 0 0 20px;
     margin: 0 0 20px;
+    @include tablet {
+        padding: 0 0 10px;
+    }
     @include desktop {
         margin: 0 0 38px;
     }
 
     &_item {
         position: relative;
+        min-height: 250px;
+        @include desktop {
+            min-height: 1px;
+        }
     }
     &_image {
         width: 100%;
     }
     &_text {
         position: absolute;
-        bottom: 11%;
+        bottom: 15%;
         left: 50%;
         transform: translate(-50%, 0);
+        @include tablet {
+            bottom: 21%;
+        }
+        @include desktop {
+            bottom: 11%;
+        }
     }
 }

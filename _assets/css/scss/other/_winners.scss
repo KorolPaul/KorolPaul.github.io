@@ -9,11 +9,12 @@
 
     &_holder {
         border: 2px solid $bright_color;
-        border-radius: 28px;
-        padding: 8px 8px 18px 8px;
+        border-radius: 13px;
+        padding: 10px 10px 20px 10px;
+        text-align: center;
     }
     &_image {
-        border-radius: 28px;
+        border-radius: 13px;
         width: 100%;
     }
     &_info {
@@ -22,7 +23,7 @@
         max-width: 440px;
         padding: 0 8px;
         justify-content: space-between;
-        @include desktop {
+        @include tablet {
             margin-bottom: 20px;
         }
     }
@@ -34,8 +35,10 @@
         background: $bg_color;
         display: flex;
         align-items: center;
-        @include desktop {
+        text-transform: uppercase;
+        @include tablet {
             padding: 8px 25px;
+            font-size: 18px;
         }
     }
     &_info-icon {
@@ -50,18 +53,14 @@
     }
     &_tables {
         margin: 0 8px 10px;
-        @include desktop {
+        @include tablet {
             margin-bottom: 20px;
-        }
-    }
-    &_tables {
-        @include desktop {
             display: flex;
             justify-content: space-between;
         }
     }
     &_table {
-        @include desktop {
+        @include tablet {
             width: 48%;
             &:first-child {
                 margin-right: 12px;
@@ -73,10 +72,15 @@
 
         td {
             border: none;
-            border-top: 2px solid $bright_color;
-            padding: 10px 0;
+            border-top: 1px solid $bright_color;
+            padding: 5px 0;
             width: 40px;
             white-space: nowrap;
+            font-size: 14px;
+            @include tablet {
+                padding: 10px 0;
+                font-size: 16px;
+            }
 
             &:nth-child(2) {
                 color: $light_color;
@@ -86,10 +90,16 @@
                 text-align: right;
             }
         }
+        &:first-child tr:first-child td {
+            border-top: none;
+        }
         tr:first-child td {
-            @include desktop {
-                //border-top: none;
+            @include tablet {
+                border-top: none;
             }
         }
+    }
+    &_button {
+        margin: 4px auto 0;
     }
 }

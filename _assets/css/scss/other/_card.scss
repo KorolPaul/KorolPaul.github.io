@@ -10,8 +10,21 @@
     }
     @include desktop {
         width: 20%;
+        margin: 0%;
         .dashboard_grid & {
             width: 100%;
+        }
+    }
+
+    .dashboard_items & {
+        width: 48%;
+        margin: 0 0 22px;
+        @include tablet {
+            width: 30%;
+        }
+        @include desktop {
+            margin: 0 0 40px;
+            width: 18%;
         }
     }
 

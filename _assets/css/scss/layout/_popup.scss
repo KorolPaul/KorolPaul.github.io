@@ -1,12 +1,22 @@
 .popup {
-    padding: 20px $layout_indent $layout_indent;
+    padding: 20px 10px 0;
     background: $dark_color;
-    margin: auto;
     display: none;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1pxx solid #30363c;
     @include tablet {
+        width: auto;
+        padding: 20px 20px 0;
+        min-width: 400px;
+    }
+    @include desktop {
         box-sizing: border-box;
-        padding: 62px 75px;
-        max-width: 570px;
+        padding-left: 75px;
+        padding-right: 75px;
+        max-width: 590px;
     }
 
     &.opened {

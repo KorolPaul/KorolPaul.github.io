@@ -2,10 +2,11 @@
 
     &_image {
         display: block;
-        margin: 0 auto 13px;
+        margin: 0 auto 11px;
         width: 110px;
         @include tablet {
             width: auto;
+            margin-bottom: 13px;
         }
     }
 }

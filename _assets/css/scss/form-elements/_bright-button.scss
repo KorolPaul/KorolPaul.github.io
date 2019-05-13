@@ -3,14 +3,20 @@
     border-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 280px;
-    height: 80px;
+    width: 190;
+    height: 60px;
     animation: 0.5s linear lights infinite;
-    font-size: 23px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
     padding-left: 0;
     padding-right: 0;
+    background-size: 100% auto;
+    @include desktop {
+        font-size: 23px;
+        width: 280px;
+        height: 80px;
+    }
 }
 
 @keyframes lights {

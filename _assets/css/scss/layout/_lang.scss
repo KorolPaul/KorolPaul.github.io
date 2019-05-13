@@ -2,7 +2,7 @@
     position: absolute;
     top: 20px;
     right: 10px;
-    @include desktop {
+    @include tablet {
         min-width: 100px;
         position: static;
         margin: 0 0 0 30px;
@@ -13,5 +13,9 @@
     height: 16px;
     width: 24px;
     display: inline-block;
-    margin: 0 4px 0 0;
+    margin: 2px 4px 0 0;
+    vertical-align: top;
+    @include tablet {
+        margin-right: 8px;
+    }
 }

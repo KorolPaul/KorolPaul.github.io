@@ -36,11 +36,23 @@ input[type="tel"] {
 
 input[type="password"] {
     padding-left: 40px;
-    background: url(#{$img-path}/icons/lock.svg) no-repeat 12px center;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-image: url(#{$img-path}/icons/lock.svg);
     background-size: 16px auto;
 }
 input[type="email"] {
     padding-left: 40px;
-    background: url(#{$img-path}/icons/envelope.svg) no-repeat 12px center;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-image: url(#{$img-path}/icons/envelope.svg);
     background-size: 16px auto;
 }
+input[type="search"] {
+    padding-right: 40px;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-image: url(#{$img-path}/icons/search.svg);
+    background-size: 16px auto;
+}
+

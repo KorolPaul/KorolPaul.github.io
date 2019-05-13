@@ -73,15 +73,17 @@
     transform: scaleX(.5) scaleY(.8);
     position: absolute;
     right: 11.5px;
-    top: 50%;
+    top: 57%;
     margin-top: -6px;
     pointer-events: none;
     z-index: 3;
 
     .lang & {
         top: 35%;
+        right: 0;
         @include tablet {
             top: 50%;
+            right: 11.5px;
         }
     }
 }
@@ -121,11 +123,11 @@
     width: 100%;
     background: $bg_color;
     box-shadow: 0 0 0 1px #2b3036 inset;
-    padding: 7.5px 20px 3.75px;
+    padding: 9.5px 20px 3.75px;
     border: 1px solid #2b3036;
     border-radius: 8px;
     font-size: 14px;
-    min-height: 38px;
+    min-height: 40px;
     overflow: hidden;
     vertical-align: top;
     box-sizing: border-box;
@@ -141,14 +143,14 @@
     }
     .lang & {
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 0;
         padding-top: 0;
         padding-bottom: 0;
         background: transparent;
         box-shadow: none;
         border: 1px solid transparent;
         @include tablet {
-            padding: 7.5px 20px 3.75px;
+            padding: 7.5px 10px 3.75px;
             background: $bg_color;
             box-shadow: 0 0 0 1px #2b3036 inset;
             border: 1px solid #2b3036;
@@ -224,6 +226,14 @@
         box-shadow: 0 0 1px #16181a inset;
         border: 1px solid #1d2023;
     }
+    .lang & {
+        width: 44px;
+        margin-left: 5px;
+        @include tablet {
+            width: auto;
+            margin-left: inherit;
+        }
+    }
 }
 
 .choices__list--dropdown.is-active {
@@ -253,7 +263,10 @@
 
     .lang & {
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 0;
+        @include tablet {
+            padding-right: 10px;
+        }
     }
 }
 
@@ -261,6 +274,9 @@
     display: flex;
     align-items: center;
     font-size: 0;
+    @include tablet {
+        font-size: inherit;
+    }
 }
 
 @media (min-width: 640px) {
