@@ -1,0 +1,15 @@
+.popup {
+    padding: 20px $layout_indent $layout_indent;
+    background: $dark_color;
+    margin: auto;
+    display: none;
+    @include tablet {
+        box-sizing: border-box;
+        padding: 62px 75px;
+        max-width: 570px;
+    }
+
+    &.opened {
+        display: block;
+    }
+}

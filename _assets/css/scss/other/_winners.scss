@@ -1,0 +1,95 @@
+.winners {
+    width: 100%;
+    @include desktop {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    &_holder {
+        border: 2px solid $bright_color;
+        border-radius: 28px;
+        padding: 8px 8px 18px 8px;
+    }
+    &_image {
+        border-radius: 28px;
+        width: 100%;
+    }
+    &_info {
+        margin: -16px auto 10px;
+        display: flex;
+        max-width: 440px;
+        padding: 0 8px;
+        justify-content: space-between;
+        @include desktop {
+            margin-bottom: 20px;
+        }
+    }
+    &_info-field {
+        border: 2px solid $bright_color;
+        border-radius: 12px;
+        padding: 8px;
+        color: $light_color;
+        background: $bg_color;
+        display: flex;
+        align-items: center;
+        @include desktop {
+            padding: 8px 25px;
+        }
+    }
+    &_info-icon {
+        height: 23px;
+        margin: 0 4px 0 0;
+        @include tablet {
+            margin-right: 20px;
+        }
+        @include desktop {
+            margin-right: 15px;
+        }
+    }
+    &_tables {
+        margin: 0 8px 10px;
+        @include desktop {
+            margin-bottom: 20px;
+        }
+    }
+    &_tables {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_table {
+        @include desktop {
+            width: 48%;
+            &:first-child {
+                margin-right: 12px;
+            }
+            &:last-child {
+                margin-left: 12px;
+            }
+        }
+
+        td {
+            border: none;
+            border-top: 2px solid $bright_color;
+            padding: 10px 0;
+            width: 40px;
+            white-space: nowrap;
+
+            &:nth-child(2) {
+                color: $light_color;
+            }
+            &:nth-child(3) {
+                color: $bright_color;
+                text-align: right;
+            }
+        }
+        tr:first-child td {
+            @include desktop {
+                //border-top: none;
+            }
+        }
+    }
+}

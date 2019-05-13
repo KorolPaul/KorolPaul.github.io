@@ -1,0 +1,48 @@
+.balance {
+    display: inline-block;
+    position: relative;
+    min-width: 20px;
+    min-height: 20px;
+    vertical-align: top;
+
+    &_input[type]:disabled {
+        text-align: center;
+        font-size: 22px;
+        color: $light_color;
+        background-color: $dark_color;
+        border: 1px solid #2e343c;
+    }
+    &_button-wrapper {
+        position: absolute;
+        top: 13px;
+        right: 10px;
+    }
+    &_button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+    .refresh-user-balance-icon {
+        background: url(#{$img_path}/icons/sync.svg) 0 0 no-repeat;
+        background-size: 100% auto;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        &.loading {
+            animation: 1s linear rotation infinite;
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

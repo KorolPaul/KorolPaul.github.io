@@ -1,0 +1,23 @@
+.bright-button {
+    background-color: transparent;
+    border-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 280px;
+    height: 80px;
+    animation: 0.5s linear lights infinite;
+    font-size: 23px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@keyframes lights {
+    0% {
+        background-image: url(#{$img-path}/button-bg-1.png);
+    }
+    100% {
+        background-image: url(#{$img-path}/button-bg-2.png);
+    }
+}

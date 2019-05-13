@@ -1,0 +1,19 @@
+.header {
+    @include layout;
+
+    &_top {
+        padding: 16px 0;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_option {
+        display: flex;
+        justify-content: flex-end;
+        @include desktop {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

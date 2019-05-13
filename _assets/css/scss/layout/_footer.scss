@@ -1,0 +1,36 @@
+.footer {
+    &_top {
+        @include layout;
+    }
+    &_bottom {
+        border-top: 1px solid $gray_color;
+        text-align: center;
+        padding: 16px;
+    }
+
+    &_info {
+        display: flex;
+        align-items: center;
+        margin: 0 0 20px;
+    }
+    &_info-text {
+        text-align: center;
+        margin: 0 30px;
+        font-size: 13px;
+        @include tablet {
+            font-size: 14px;
+        }
+    }
+    &_info-icon {
+        width: 56px;
+        flex-shrink: 0;
+    }
+    &_logo {
+        display: inline-block;
+        margin: 0 0 20px;
+    }
+    &_copyright {
+        font-size: 14px;
+        color: #30353c;
+    }
+}

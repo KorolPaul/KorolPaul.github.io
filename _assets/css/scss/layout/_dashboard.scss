@@ -1,0 +1,44 @@
+.dashboard {
+    text-align: center;
+    margin: 0 0 25px;
+    @include desktop {
+        margin: 0 0 45px;
+    }
+
+    &_grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 30px;
+        text-align: inherit;
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 50px;
+            margin: 0 0 50px;
+        }
+    }
+    &_items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &_filters {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_filters-section {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_button {
+        @extend .button__secondary;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}

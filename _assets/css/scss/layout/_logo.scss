@@ -1,0 +1,11 @@
+.logo {
+
+    &_image {
+        display: block;
+        margin: 0 auto 13px;
+        width: 110px;
+        @include tablet {
+            width: auto;
+        }
+    }
+}

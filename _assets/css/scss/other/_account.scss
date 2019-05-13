@@ -1,0 +1,99 @@
+.account-wrapper {
+    background: $dark_color;
+    border: 2px solid $gray_color;
+    border-radius: 12px;
+    padding: 20px 64px;
+    text-align: center;
+}
+
+.account {
+    text-align: left;
+
+    &_info {
+        @include tablet {
+            display: flex;
+            margin: 0 0 40px;
+        }
+    }
+    &_form-row {
+        margin: 0 0 20px;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_form-row-item {
+        margin: 0 0 20px;
+        flex-grow: 10;
+
+        & + & {
+            @include tablet {
+                margin-left: 30px;
+            }
+        }
+    }
+    &_avatar {
+        @include tablet {
+            margin: 0 30px 0 0;
+        }
+    }
+    &_name {
+        font-size: 22px;
+        color: $light_color;
+    }
+    &_name-edit {
+        cursor: pointer;
+        width: 16px;
+        margin: 0 0 0 18px;
+        transition: .2s ease-in-out filter;
+
+        &:hover {
+            filter: brightness(2);
+        }
+    }
+    &_status {
+        text-align: right;
+        color: #4b535c;
+    }
+    &_verification {
+        display: block;
+        color: $light_color;
+    }
+    &_verification-icon {
+        width: 16px;
+        margin: 0 0 0 4px;
+        vertical-align: middle;
+    }
+    &_bottom {
+        text-align: right;
+    }
+    &_title {
+        margin: 10px 0 50px;
+    }
+    &_payments {
+        margin: auto;
+        display: block;
+    }
+    &_filters {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_filters-section {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start
+        }
+    }
+    &_edit {
+        display: none;
+    }
+    &_columns {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

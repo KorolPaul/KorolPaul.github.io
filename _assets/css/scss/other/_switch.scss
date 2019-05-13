@@ -1,0 +1,45 @@
+.switch-wrapper {
+    text-align: center;
+}
+
+.switch {
+    border: 1px solid $gray_color;
+    border-radius: 36px;
+    display: inline-flex;
+    margin: 0 auto 38px; 
+
+    &_item {
+        color: $color;
+        background: transparent;
+        border-color: transparent;
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 35px;
+
+        &:hover,
+        &__hover {
+            color: $bright_color;
+        }
+        &__active {
+            color: $bright_color;
+            border-color: $bright_color;
+        }
+    }
+    &_icon {
+        width: 22px;
+        color: $color;
+        fill: $color;
+        margin: 1px 12px 0 0;
+
+        .switch_item:hover &,
+        .switch_item__hover &,
+        .switch_item__active & {
+            color: $bright_color;
+            fill: $bright_color;
+        }
+
+        path {
+            transition: .2s ease-in-out fill;
+        }
+    }
+}

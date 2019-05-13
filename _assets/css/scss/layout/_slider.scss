@@ -1,0 +1,25 @@
+.slider {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background:  url(#{$img-path}/slider-line.png) no-repeat center bottom;
+    background-size: 100% auto;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+    @include desktop {
+        margin: 0 0 38px;
+    }
+
+    &_item {
+        position: relative;
+    }
+    &_image {
+        width: 100%;
+    }
+    &_text {
+        position: absolute;
+        bottom: 11%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}

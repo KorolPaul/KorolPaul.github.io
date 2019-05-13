@@ -1,0 +1,46 @@
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"] {
+    background-color: $dark_color;
+    color: #4e565c;
+    border: 1px solid #2e343c;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font: $font-size $font-family;
+    padding: 8px 25px 9px;
+    width: 100%;
+    transition: .2s ease-in border-color, .2s ease-in background;
+    @include tablet {
+        //width: inherit;
+    }
+
+    &:focus,
+    &.focus {
+        border-color: #3c4552;
+        background-color: $gray_color;
+        color: #7f8a95;
+    }
+    &:disabled {
+        background-color: rgba($dark_color, .3);
+        color: rgba(#4e565c, .3);
+        border-color: rgba(#2e343c, .3);
+    }
+    &:invalid,
+    &.invalid {
+        border-color: $bright_color;
+    }
+}
+
+input[type="password"] {
+    padding-left: 40px;
+    background: url(#{$img-path}/icons/lock.svg) no-repeat 12px center;
+    background-size: 16px auto;
+}
+input[type="email"] {
+    padding-left: 40px;
+    background: url(#{$img-path}/icons/envelope.svg) no-repeat 12px center;
+    background-size: 16px auto;
+}

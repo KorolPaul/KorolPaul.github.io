@@ -1,0 +1,15 @@
+.footer-menu {
+    margin: 0 0 30px;
+    @include tablet {
+        margin: 0 0 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_link {
+        display: block;
+        @include tablet {
+            display: inline;
+        }
+    }
+}

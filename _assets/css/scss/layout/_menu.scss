@@ -1,0 +1,51 @@
+.menu {
+    display: none;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &.opened {
+        display: block;
+        @include desktop {
+            display: flex;
+        }
+    }
+
+    &_link {
+        display: block;
+        margin: 30px 0;
+        position: relative;
+        @include desktop {
+            display: inline;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -3px;
+            right: -3px;
+            margin: 8px 0 0;
+            border-bottom: 3px solid transparent;
+            transition: .2s ease-in-out border-color;
+        }
+
+        &:hover,
+        &.active {
+            color: $light_color;
+
+            &::after {
+                @include tablet {
+                    border-color: $bright_color;
+                }
+            }
+        }
+    }
+    &_link-icon {
+        color: $bright_color;
+        margin: 0 10px 0 0;
+        width: 20px;
+        vertical-align: middle;
+    }
+}

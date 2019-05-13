@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+    display: inline-block;
+    border-radius: 11%;
+    overflow: hidden;
+    width: 48%;
+    margin: 0 0 22px;
+    @include tablet {
+        width: 33%;
+    }
+    @include desktop {
+        width: 20%;
+        .dashboard_grid & {
+            width: 100%;
+        }
+    }
+
+    &_image {
+        width: 100%;
+        border-radius: 10%;
+    }
+    &_info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(#000, .8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: .2s ease-in-out opacity;
+
+        .card:hover & {
+            opacity: 1;
+        }
+    }
+    &_title {
+        color: $light_color;
+        margin: 0 0 20px;
+    }
+    &_button {
+        
+    }
+}

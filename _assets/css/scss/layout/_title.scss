@@ -1,0 +1,45 @@
+.title {
+    @extend %heading-1;
+    max-width: 620px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    @include tablet {
+        margin-bottom: 60px;
+    }
+
+    &__small {
+        max-width: 85%;
+        margin-bottom: 25px;
+    }
+
+    &_text {
+        position: relative;
+
+        &::before {
+            content: '';
+            border: 2px solid $bright_color;
+            position: absolute;
+            right: 95%;
+            top: 45%;
+            width: 500px;
+            @include tablet {
+                margin-right: 36px;
+            }
+        }
+        &::after {
+            content: '';
+            border: 2px solid $bright_color;
+            position: absolute;
+            left: 95%;
+            top: 45%;
+            width: 500px;
+            @include tablet {
+                margin-left: 36px;
+            }
+        }
+    }
+    &_bright {
+        color: $bright_color;
+    }
+}

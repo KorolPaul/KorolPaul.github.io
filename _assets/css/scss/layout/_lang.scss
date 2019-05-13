@@ -1,0 +1,17 @@
+.lang {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    @include desktop {
+        min-width: 100px;
+        position: static;
+        margin: 0 0 0 30px;
+    }
+}
+
+.flag-icon {
+    height: 16px;
+    width: 24px;
+    display: inline-block;
+    margin: 0 4px 0 0;
+}

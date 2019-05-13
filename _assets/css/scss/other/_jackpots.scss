@@ -1,0 +1,19 @@
+.jackpots {
+    background: url(#{$img-path}/jackpots.png) no-repeat center center;
+    background-size: contain;
+    padding: 20% 0;
+    text-align: center;
+
+    &_title {
+        font-size: 32px;
+        font-weight: 900;
+    }
+    &_title-bright {
+        @include gradiented-text(#cf2a2c, #8c141b);
+        font-size: 60px;
+        line-height: 1;
+        color: $bright_color;
+        text-shadow: 0 0 36px rgba($bright_color, .35);
+        display: block;
+    }
+}
