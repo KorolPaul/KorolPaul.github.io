@@ -345,21 +345,21 @@ template {
 
 @font-face {
   font-family: 'Acumin';
-  src: url("../fonts/AcuminPro-Medium.woff2") format("woff2"), url("../fonts/AcuminPro-Medium.woff") format("woff");
+  src: url("fonts/AcuminPro-Medium.woff2") format("woff2"), url("fonts/AcuminPro-Medium.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Acumin';
-  src: url("../fonts/AcuminPro-Light.woff2") format("woff2"), url("../fonts/AcuminPro-Light.woff") format("woff");
+  src: url("fonts/AcuminPro-Light.woff2") format("woff2"), url("fonts/AcuminPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Brands';
-  src: url("../fonts/payment-webfont.woff") format("woff");
+  src: url("fonts/payment-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
