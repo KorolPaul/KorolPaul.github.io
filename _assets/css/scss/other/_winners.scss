@@ -100,6 +100,7 @@
         }
     }
     &_button {
+        @include button;
         margin: 4px auto 0;
     }
 }

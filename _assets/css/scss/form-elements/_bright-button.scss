@@ -1,9 +1,7 @@
 .bright-button {
-    background-color: transparent;
-    border-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 190;
+    display: inline-block;
+    width: 190px;
+    line-height: 60px;
     height: 60px;
     animation: 0.5s linear lights infinite;
     font-size: 15px;
@@ -12,10 +10,21 @@
     padding-left: 0;
     padding-right: 0;
     background-size: 100% auto;
+    text-align: center;
+    transition: .2s ease-in-out filter, .2s ease-in-out opacity;
     @include desktop {
         font-size: 23px;
         width: 280px;
-        height: 80px;
+        line-height: 87px;
+        height: 87px;
+    }
+
+    &:hover {
+        color: $light_color;
+        filter: saturate(1.4);
+    }
+    &:active {
+        opacity: .7;
     }
 }
 

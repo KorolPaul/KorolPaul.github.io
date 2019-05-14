@@ -54,12 +54,14 @@ input[type="submit"] {
     &__secondary:hover,
     &__secondary.button__hover {
         background: transparent;
+        border-color: $bright_color__hover;
         color: $bright_color__hover;
     }
     &__secondary:active,
     &__secondary.button__active {
-        background: transparent;    
+        background: transparent;
         color: $bright_color__active;
+        border-color: $bright_color__active;
     }
     &__signin,
     &__register {

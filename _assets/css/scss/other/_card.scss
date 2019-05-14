@@ -55,6 +55,6 @@
         margin: 0 0 20px;
     }
     &_button {
-        
+       @include button; 
     }
 }

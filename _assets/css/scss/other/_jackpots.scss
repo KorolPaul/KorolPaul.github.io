@@ -1,6 +1,4 @@
 .jackpots {
-    background: url(#{$img-path}/jackpots.png) no-repeat center bottom;
-    background-size: contain;
     padding: 11% 0;
     text-align: center;
     position: relative;
@@ -11,12 +9,35 @@
         background-size: 100% 100%;
         padding: 7% 0;
     }
-
+    
+    &_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(#{$img-path}/jackpots.png) no-repeat center bottom;
+        background-size: contain;
+        @include desktop {
+            background-size: 100% 100%;
+        }
+    }
+    &_caps {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        @include tablet {
+            animation: 4s ease-in-out caps infinite;
+        }
+    }
     &_title {
         font-size: 26px;
         font-weight: 900;
         color: $light_color;
         text-transform: uppercase;
+        position: relative;
         @include tablet {
             font-size: 32px;
         }
@@ -34,5 +55,17 @@
         @include tablet {
             font-size: 60px;
         }
+    }
+}
+
+@keyframes caps {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
