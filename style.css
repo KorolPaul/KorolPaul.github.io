@@ -366,14 +366,14 @@ template {
 
 @font-face {
   font-family: 'Acumin';
-  src: url("AcuminPro-Black.woff2") format("woff2"), url("AcuminPro-Black.woff") format("woff");
+  src: url("../fonts/AcuminPro-Black.woff2") format("woff2"), url("../fonts/AcuminPro-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Acumin';
-  src: url("AcuminPro-Semibold.woff2") format("woff2"), url("AcuminPro-Semibold.woff") format("woff");
+  src: url("../fonts/AcuminPro-Semibold.woff2") format("woff2"), url("../fonts/AcuminPro-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -10202,8 +10202,9 @@ h3,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-animation: 1.5s linear loading-fade-out forwards;
-  animation: 1.5s linear loading-fade-out forwards;
+  -webkit-animation: 1s linear loading-fade-out forwards;
+  animation: 1s linear loading-fade-out forwards;
+  z-index: 1000;
 }
 
 @-webkit-keyframes loading-fade-out {
@@ -12091,11 +12092,6 @@ body {
 
 .slick-arrow.slick-hidden {
   display: none;
-}
-
-/* Slider */
-.slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
