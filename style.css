@@ -9282,6 +9282,17 @@ input[disabled] + .phone_code {
   padding-left: 0;
   padding-right: 0;
   background-size: 100% auto;
+  background-position: center center;
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   -webkit-transition: .2s ease-in-out filter, .2s ease-in-out opacity;
   transition: .2s ease-in-out filter, .2s ease-in-out opacity;
@@ -9291,7 +9302,6 @@ input[disabled] + .phone_code {
   .bright-button {
     font-size: 23px;
     width: 280px;
-    line-height: 87px;
     height: 87px;
   }
 }
