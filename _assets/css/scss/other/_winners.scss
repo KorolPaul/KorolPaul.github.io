@@ -21,10 +21,12 @@
         margin: -16px auto 10px;
         display: flex;
         max-width: 440px;
-        padding: 0 8px;
         justify-content: space-between;
+        font-size: $font-size__small;
         @include tablet {
+            padding: 0 8px;
             margin-bottom: 20px;
+            font-size: $font-size;
         }
     }
     &_info-field {

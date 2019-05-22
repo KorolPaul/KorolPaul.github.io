@@ -138,6 +138,14 @@ $(document).ready(function () {
         let text = $(this).html();
         text = text.substring(0, text.indexOf('">') + 2) + text.substring(text.indexOf('(') + 1, text.indexOf(')'));
         $('.phone_code').html(text);
-    })
+    });
 
+    /* Load button */
+    $('.dashboard_button').on('click', function() {
+        $(this).addClass('loading');
+        setTimeout(() => {
+            $(this).removeClass('loading');
+        }, 2000);
+    });
+    
 });

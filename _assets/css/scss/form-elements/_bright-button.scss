@@ -10,12 +10,16 @@
     padding-left: 0;
     padding-right: 0;
     background-size: 100% auto;
+    background-position: center center;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     transition: .2s ease-in-out filter, .2s ease-in-out opacity;
     @include desktop {
         font-size: 23px;
         width: 280px;
-        line-height: 87px;
         height: 87px;
     }
 

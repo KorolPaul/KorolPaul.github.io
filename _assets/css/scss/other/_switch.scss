@@ -3,9 +3,12 @@
 }
 
 .switch {
-    margin: 0 auto 38px; 
+    margin: 0 auto 20px; 
     overflow: auto;
     text-align: center;
+    @include tablet {
+        margin-bottom: 38px;
+    }
 
     &_items {
         border: 1px solid #2b3036;
@@ -16,9 +19,13 @@
         color: $color;
         background: transparent;
         border-color: transparent;
+        box-sizing: border-box;
         display: inline-flex;
         align-items: center;
-        padding: 6px 35px;
+        padding: 0 35px 1px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
         white-space: nowrap;
         transition: .2s ease-in-out all;
 
@@ -37,6 +44,7 @@
         color: $color;
         fill: $color;
         margin: 1px 12px 0 0;
+        vertical-align: middle;
 
         .switch_item:hover &,
         .switch_item__hover &,

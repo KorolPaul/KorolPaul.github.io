@@ -64,6 +64,10 @@
             margin: 0;
         }
     }
+    &_info-link {
+        flex-shrink: 0;
+        display: inline-block;
+    }
     &_logo {
         display: inline-block;
         margin: 0 0 10px;

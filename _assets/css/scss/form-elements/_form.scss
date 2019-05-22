@@ -6,10 +6,9 @@
         }
     }
     &_row-item {
-        margin: 0 0 28px;
+        margin: 0 0 20px;
         flex-grow: 10;
         @include desktop {
-            margin: 0 0 20px;
         }
 
         &__center {

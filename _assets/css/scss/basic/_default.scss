@@ -11,6 +11,9 @@ body {
 
     }
 }
+.menu-opened {
+    overflow: hidden;
+}
 
 a {
     color: $light_color;
@@ -60,7 +63,9 @@ th {
     padding: 7px 15px;
     border-bottom: 1px solid $bright_color;
     text-align: left;
+    font-size: 15px;
     @include tablet {
+        font-size: $font-size;
         padding: 8px 30px;
     }
 
@@ -80,7 +85,9 @@ th {
 td {
     padding: 7px 15px;
     border-bottom: 1px solid $gray_color;
+    font-size: 15px;
     @include tablet {
+        font-size: $font-size;
         padding: 8px 30px;
     }
 
