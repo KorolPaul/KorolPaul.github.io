@@ -12,8 +12,8 @@
     <link rel="shortcut icon" href="48x48px.ico">
     <link rel="icon" type="image/x-icon" href="48x48px.ico">
     <link rel="icon" type="image/png" href="16x16px.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="32x32.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="32x32px.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="48x48px.png" sizes="48x48">
     <meta content="telephone=no" name="format-detection">
     <meta name="HandheldFriendly" content="true">
     <meta property="og:title" content="#{data.title}">
@@ -98,19 +98,22 @@
                 <div class="slider_text">
                     <a href="#" class="bright-button go-to-registration go-to-registration-link">fast registration</a>
                 </div>
-                <img class="slider_image" srcset="img/slider-mobile-1.png 320w, img/slider-1.png 1280w" sizes="(max-width: 767px) 280px, 800px" src="img/slider-1.png" alt="">
+                <img class="slider_image" src="img/slider-1.png" alt="">
+                <img class="slider_image slider_image__mobile" src="img/slider-mobile-1.png" alt="">
             </div>
             <div class="slider_item">
                 <div class="slider_text">
                     <a href="#" class="bright-button go-to-registration go-to-registration-link">fast registration</a>
                 </div>
-                <img class="slider_image" srcset="img/slider-mobile-1.png 320w, img/slider-1.png 1280w" sizes="(max-width: 767px) 280px, 800px" src="img/slider-1.png" alt="">
+                <img class="slider_image" src="img/slider-1.png" alt="">
+                <img class="slider_image slider_image__mobile" src="img/slider-mobile-1.png" alt="">
             </div>
             <div class="slider_item">
                 <div class="slider_text">
                     <a href="#" class="bright-button go-to-registration go-to-registration-link">fast registration</a>
                 </div>
-                <img class="slider_image" srcset="img/slider-mobile-1.png 320w, img/slider-1.png 1280w" sizes="(max-width: 767px) 280px, 800px" src="img/slider-1.png" alt="">
+                <img class="slider_image" src="img/slider-1.png" alt="">
+                <img class="slider_image slider_image__mobile" src="img/slider-mobile-1.png" alt="">
             </div>
         </div>
         <div class="content_holder">
@@ -315,7 +318,9 @@
                             <button class="card_button">Play now!</button>
                         </div>
                     </a>
-                    <button class="dashboard_button">Show more</button>
+                    <div class="dashboard_button-wrapper">
+                        <button class="dashboard_button">Show more</button>
+                    </div>
                     <div class="winners">
                         <p class="title title__small">
                             <span class="title_text">
@@ -443,7 +448,7 @@
                 <img class="footer_info-icon" src="img/icons/plus-18-movie.svg" alt="">
                 <p class="footer_info-text">Lucky7casino.com is fully owned and operated by OYINE N.V. and its registered address is E-Commerce Park Vredenberg z/n Curacao with the registration number 
                     of the Chamber of Commerce : 144430.A curaçao gaming company registered with the reference number of the license of Antillephone N.V. 8048/JAZ.</p>
-                <img class="footer_info-icon" src="img/icons/curasao.svg" alt="">            
+                <a href="#" class="footer_info-link"><img class="footer_info-icon" src="img/icons/curasao.svg" alt=""></a>            
             </div>
         </div>
         <div class="footer_bottom">
@@ -599,11 +604,11 @@
         </div>
     </div>
 
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="imask.min.js"></script>
-    <script src="slick.min.js"></script>
-    <script src="choices.min.js"></script>
-    <script src="main.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/imask.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

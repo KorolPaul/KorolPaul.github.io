@@ -58,9 +58,7 @@
     display: none;
     float: left;
 }
-.slick-slide img {
-    display: block;
-}
+
 .slick-slide.slick-loading img {
     display: none;
 }
@@ -80,11 +78,6 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
-}
-
-/* Slider */
-.slick-loading .slick-list {
-    background: #fff url("./ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */

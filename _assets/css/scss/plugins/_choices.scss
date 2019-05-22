@@ -166,12 +166,13 @@
 
 .choices__list--single {
     display: inline-block;
-    padding: 0 16px 0 4px;
+    padding: 2px 16px 0 4px;
     width: 100%;
 }
 
 .choices__list--single .choices__item {
     width: 100%;
+    line-height: 18px;
 }
 
 .choices__list--multiple {

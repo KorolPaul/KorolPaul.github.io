@@ -1,7 +1,7 @@
 .dashboard {
-    margin: 0 0 15px;
+    margin: 0 0 80px;
     @include desktop {
-        margin: 0;
+        margin: 0 0 40px;
     }
 
     &_grid {
@@ -51,23 +51,45 @@
         }
 
     }
+    &_button-wrapper {
+        width: 100%;
+        text-align: center;
+        @include desktop {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+    }
     &_button {
         @extend .button__secondary;
         padding-left: 75px;
         padding-right: 75px;
         margin: 0 auto 20px;
+        position: relative;
         @include tablet {
             margin-top: 6px;
-            margin-bottom: 40px;
         }
         @include desktop {
-            grid-column-start: 3;
-            grid-column-end: 4;
-
             .dashboard_grid & {
                 padding-left: 25px;
                 padding-right: 25px;
                 width: 100%;
+            }
+        }
+
+        &.loading {
+            color: transparent;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -12px 0 0 -12px;
+                background: url(../img/icons/sync-red.svg) 0 0 no-repeat;
+                background-size: 100% auto;
+                width: 24px;
+                height: 24px;
+                animation: 1s linear rotation infinite;
             }
         }
     }

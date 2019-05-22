@@ -7,6 +7,7 @@ $(document).ready(function () {
         e.preventDefault();
         menuToggleElement.toggleClass('opened');
         menuElement.toggleClass('opened');
+        $('html').toggleClass('menu-opened');
     });
 
     /* Popups */
@@ -26,6 +27,22 @@ $(document).ready(function () {
     $('.go-to-authorization-open-window').on('click', function () { popupToggle('.popup-authorization') });
     $('.go-to-registration-open-window').on('click', function () { popupToggle('.popup-registration') });
 
+    $('.go-to-authorization-open-window').on('click', function (event) {
+        event.preventDefault();
+
+        openModal('.popup-authorization')
+    });
+    $('.go-to-registration-open-window').on('click', function (event) {
+        event.preventDefault();
+
+        openModal('.popup-registration')
+    });
+
+    function openModal(targetElement) {
+        $('html').addClass('popup-opened');
+        $('.popup.opened').removeClass('opened');
+        $(targetElement).addClass('opened');
+    }
 
     /* Select customization */
     $('select[data-mode="icons"]').each(function () {
@@ -67,7 +84,7 @@ $(document).ready(function () {
         choises.setChoices(iconChoices, 'value', 'label', true);
     });
 
-    if ($('select:not([data-mode="icons"])')) {
+    if ($('select:not([data-mode="icons"])').length) {
         new Choices('select:not([data-mode="icons"])', {
             searchEnabled: false,
             itemSelectText: ''
@@ -121,6 +138,14 @@ $(document).ready(function () {
         let text = $(this).html();
         text = text.substring(0, text.indexOf('">') + 2) + text.substring(text.indexOf('(') + 1, text.indexOf(')'));
         $('.phone_code').html(text);
-    })
+    });
 
+    /* Load button */
+    $('.dashboard_button').on('click', function() {
+        $(this).addClass('loading');
+        setTimeout(() => {
+            $(this).removeClass('loading');
+        }, 2000);
+    });
+    
 });

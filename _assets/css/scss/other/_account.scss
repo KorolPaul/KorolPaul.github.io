@@ -286,13 +286,5 @@
     }
     &_transactions {
         margin: 0 0 20px;
-
-        td:last-child {
-            display: none;
-            @include tablet {
-                display: table-cell;
-                text-align: center;
-            }
-        }
     }
 }
