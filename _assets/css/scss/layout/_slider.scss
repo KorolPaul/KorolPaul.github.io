@@ -10,7 +10,7 @@
         padding: 0 0 10px;
     }
     @include desktop {
-        margin: 0 0 38px;
+        margin: -154px 0 38px;
     }
 
     &_item {
@@ -46,6 +46,21 @@
         }
         @include desktop {
             bottom: 11%;
+        }
+
+        .slider_item:nth-child(3) & {
+            @include tablet {
+                left: auto;
+                right: 14%;
+                bottom: 40%;
+            }
+        }
+        .slider_item:nth-child(4) & {
+            @include tablet {
+                left: auto;
+                right: 14%;
+                bottom: 20%;
+            }
         }
     }
 }

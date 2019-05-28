@@ -8,20 +8,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: 1.5s linear loading-fade-out forwards;
     z-index: 1000;
-}
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out opacity,
+                .001s linear visibility;
 
-@keyframes loading-fade-out {
-    90% {
+    &.active {
+        visibility: visible;
         opacity: 1;
-    }
-    99% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
+        transition: .3s ease-in-out opacity,
+                    .001s linear visibility .3s;
     }
 }
 
@@ -29,9 +26,6 @@ $coin-diameter: 75px;
 $coin-thickness: 5px;
 $coin-color: #FF0000;
 
-body {
-  background-color: #0f0f0f;
-}
 // dime
 // $coin-front: "https://cdn1.worldpng.ru/uploads/2019/4/27/ffeaf3f39952be3071e445df885af0e0-full.png";
 // $coin-back: "https://cdn1.worldpng.ru/uploads/2019/4/27/b92aeebbfb0094f423878910816eb677-full.png";

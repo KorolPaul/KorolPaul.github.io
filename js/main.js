@@ -147,5 +147,15 @@ $(document).ready(function () {
             $(this).removeClass('loading');
         }, 2000);
     });
-    
+
+    /* Loader */
+    setTimeout(() => {
+        $('.loader').removeClass('active');
+    }, 1000);
+
+    /* Alert messages */
+    $('.alert_close').on('click', function() {
+        $(this).parent().removeClass('active');
+    });
+
 });
