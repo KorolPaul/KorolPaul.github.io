@@ -52,14 +52,14 @@
             @include tablet {
                 left: auto;
                 right: 14%;
-                bottom: 40%;
+                bottom: 35%;
             }
         }
         .slider_item:nth-child(4) & {
             @include tablet {
                 left: auto;
-                right: 14%;
-                bottom: 20%;
+                right: 15%;
+                bottom: 19%;
             }
         }
     }

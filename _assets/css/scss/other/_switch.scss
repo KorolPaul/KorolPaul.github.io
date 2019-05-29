@@ -6,9 +6,10 @@
     margin: 0 auto 20px; 
     overflow: auto;
     text-align: center;
-    @include tablet {
+    @include media(1170px) {
         margin-bottom: 38px;
     }
+    
 
     &_items {
         border: 1px solid #2b3036;
@@ -22,12 +23,16 @@
         box-sizing: border-box;
         display: inline-flex;
         align-items: center;
-        padding: 0 35px 1px;
+        padding: 8px 20px 10px;
         height: 40px;
-        line-height: 40px;
+        line-height: 1;
         vertical-align: middle;
         white-space: nowrap;
         transition: .2s ease-in-out all;
+        @include desktop {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
 
         &:hover,
         &__hover {
@@ -40,6 +45,7 @@
         }
     }
     &_icon {
+        max-height: 100%;
         width: 22px;
         color: $color;
         fill: $color;

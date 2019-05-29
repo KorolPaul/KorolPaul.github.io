@@ -85,8 +85,46 @@
         color: $light_color;
         text-align: center;
         display: block;
+        position: relative;
         @include tablet {
             text-align: left;
+        }
+    }
+    &_name-input[type] {
+        position: absolute;
+        top: -6px;
+        left:50%;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        border-bottom: 2px solid $gray_color;
+        padding: 0 0 5px;
+        font-size: 22px;
+        background: #141516;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, 0);
+        transition: .2s ease-in-out opacity, .001s linear visibility  .2s;
+        text-align: center;
+        width: auto;
+        margin: auto;
+        @include tablet {
+            padding: 10px 0;
+            top: -17px;
+            text-align: left;
+            left: 0;
+            transform: none;
+        }
+
+        &:focus {
+            background: #141516;
+        }
+
+        .account__name-edit & {
+            opacity: 1;
+            visibility: visible;
+            transition: .2s ease-in-out opacity .001s, .001s linear visibility;
         }
     }
     &_name-edit {
@@ -119,6 +157,7 @@
     &_bottom {
         text-align: right;
         padding: 22px 0 0;
+        position: relative;
         @include desktop {
             padding: 0;
         }
@@ -269,6 +308,28 @@
         }
         @include desktop {
             margin: 0 0 0 30px;
+        }
+
+        &.js-toggle-name-edit {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: 0;
+            margin: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: .2s ease-in-out opacity, .001s linear visibility .2s;
+            @include tablet {
+                right: 0;
+                left: auto;;
+                transform: none;
+            }
+
+            .account__name-edit & {
+                opacity: 1;
+                visibility: visible;
+                transition: .2s ease-in-out opacity .001s, .001s linear visibility;
+            }
         }
     }
     &_settings {

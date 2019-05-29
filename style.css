@@ -9212,6 +9212,7 @@ input[disabled] + .phone_code {
   color: #fff;
   background-color: #1e2124;
   border: 1px solid #2e343c;
+  height: 45px;
 }
 
 .balance_button-wrapper {
@@ -9227,6 +9228,18 @@ input[disabled] + .phone_code {
   width: 18px;
   height: 18px;
   display: inline-block;
+  -webkit-transition: .2s ease-in-out filter;
+  transition: .2s ease-in-out filter;
+}
+
+.balance_button:hover {
+  -webkit-filter: brightness(3);
+  filter: brightness(3);
+}
+
+.balance_button:active {
+  -webkit-filter: brightness(1.5);
+  filter: brightness(1.5);
 }
 
 .balance__input .balance_button {
@@ -10277,15 +10290,15 @@ h3,
   .slider_item:nth-child(3) .slider_text {
     left: auto;
     right: 14%;
-    bottom: 40%;
+    bottom: 35%;
   }
 }
 
 @media all and (min-width: 767px) {
   .slider_item:nth-child(4) .slider_text {
     left: auto;
-    right: 14%;
-    bottom: 20%;
+    right: 15%;
+    bottom: 19%;
   }
 }
 
@@ -11152,7 +11165,7 @@ h3,
   text-align: center;
 }
 
-@media all and (min-width: 767px) {
+@media all and (min-width: 1170px) {
   .switch {
     margin-bottom: 38px;
   }
@@ -11178,13 +11191,20 @@ h3,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 35px 1px;
+  padding: 8px 20px 10px;
   height: 40px;
-  line-height: 40px;
+  line-height: 1;
   vertical-align: middle;
   white-space: nowrap;
   -webkit-transition: .2s ease-in-out all;
   transition: .2s ease-in-out all;
+}
+
+@media all and (min-width: 1000px) {
+  .switch_item {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 
 .switch_item:hover, .switch_item__hover {
@@ -11199,6 +11219,7 @@ h3,
 }
 
 .switch_icon {
+  max-height: 100%;
   width: 22px;
   color: #7f8a95;
   fill: #7f8a95;
@@ -11225,6 +11246,8 @@ h3,
   overflow: hidden;
   width: 48%;
   margin: 0 0 22px;
+  background: url(../img/no-game.png) no-repeat center center;
+  background-size: cover;
 }
 
 @media all and (min-width: 767px) {
@@ -11897,12 +11920,58 @@ h3,
   color: #fff;
   text-align: center;
   display: block;
+  position: relative;
 }
 
 @media all and (min-width: 767px) {
   .account_name {
     text-align: left;
   }
+}
+
+.account_name-input[type] {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #24282d;
+  padding: 0 0 5px;
+  font-size: 22px;
+  background: #141516;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transition: .2s ease-in-out opacity, .001s linear visibility  .2s;
+  transition: .2s ease-in-out opacity, .001s linear visibility  .2s;
+  text-align: center;
+  width: auto;
+  margin: auto;
+}
+
+@media all and (min-width: 767px) {
+  .account_name-input[type] {
+    padding: 10px 0;
+    top: -17px;
+    text-align: left;
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.account_name-input[type]:focus {
+  background: #141516;
+}
+
+.account__name-edit .account_name-input[type] {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: .2s ease-in-out opacity .001s, .001s linear visibility;
+  transition: .2s ease-in-out opacity .001s, .001s linear visibility;
 }
 
 .account_name-edit {
@@ -11944,6 +12013,7 @@ h3,
 .account_bottom {
   text-align: right;
   padding: 22px 0 0;
+  position: relative;
 }
 
 @media all and (min-width: 1000px) {
@@ -12206,6 +12276,35 @@ h3,
   }
 }
 
+.account_edit-save.js-toggle-name-edit {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  bottom: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out opacity, .001s linear visibility .2s;
+  transition: .2s ease-in-out opacity, .001s linear visibility .2s;
+}
+
+@media all and (min-width: 767px) {
+  .account_edit-save.js-toggle-name-edit {
+    right: 0;
+    left: auto;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.account__name-edit .account_edit-save.js-toggle-name-edit {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: .2s ease-in-out opacity .001s, .001s linear visibility;
+  transition: .2s ease-in-out opacity .001s, .001s linear visibility;
+}
+
 .account_settings {
   margin: 0 0 30px;
 }
@@ -12268,10 +12367,24 @@ h3,
 .user_avatar {
   border-radius: 50%;
   margin: 0 15px;
+  -webkit-transition: .2s ease-in-out filter;
+  transition: .2s ease-in-out filter;
+}
+
+.user_avatar:hover {
+  -webkit-filter: brightness(1.5);
+  filter: brightness(1.5);
+}
+
+.user_avatar:active {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
 }
 
 .user_logout {
   display: none;
+  -webkit-transition: .2s ease-in-out filter;
+  transition: .2s ease-in-out filter;
 }
 
 @media all and (min-width: 767px) {
@@ -12282,6 +12395,85 @@ h3,
     width: 20px;
     height: 20px;
   }
+}
+
+.user_logout:hover {
+  -webkit-filter: brightness(3);
+  filter: brightness(3);
+}
+
+.user_logout:active {
+  -webkit-filter: brightness(1.5);
+  filter: brightness(1.5);
+}
+
+.games-menu {
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+@media all and (min-width: 1170px) {
+  .games-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 38px;
+  }
+}
+
+@media all and (min-width: 1170px) {
+  .games-menu .switch {
+    margin: 0 30px 0 0;
+  }
+}
+
+.games-menu_button {
+  background: #d92d2f;
+  border: 2px solid #d92d2f;
+  border-radius: 36px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: center;
+  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+}
+
+.games-menu_button:hover, .games-menu_button__hover {
+  background-color: #af1e20;
+  border-color: #af1e20;
+}
+
+.games-menu_button:active, .games-menu_button__active {
+  background-color: #911f23;
+  border-color: #911f23;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.games-menu_button:disabled {
+  background: #141516;
+  border-color: #2b3036;
+  color: #2b3036;
+}
+
+.games-menu_button .button_icon {
+  position: relative;
+}
+
+.games-menu_button .button_icon::after {
+  content: '+';
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 0 0 3px #d92d2f;
 }
 
 /*Plugins*/

@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    /* Loader */
+    setTimeout(() => {
+        $('.loader').removeClass('active');
+    }, 1000);
+
     /* Menu toggle */
     const menuElement = $('.menu');
     const menuToggleElement = $('.menu-toggle');
@@ -147,11 +152,6 @@ $(document).ready(function () {
             $(this).removeClass('loading');
         }, 2000);
     });
-
-    /* Loader */
-    setTimeout(() => {
-        $('.loader').removeClass('active');
-    }, 1000);
 
     /* Alert messages */
     $('.alert_close').on('click', function() {

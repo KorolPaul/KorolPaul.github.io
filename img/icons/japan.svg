@@ -1,39 +1,12 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<path style="fill:#F5F5F5;" d="M473.655,88.275H38.345C17.167,88.275,0,105.442,0,126.62V385.38
-	c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.62
-	C512,105.442,494.833,88.275,473.655,88.275z"/>
-<circle style="fill:#FF4B55;" cx="256" cy="255.999" r="97.1"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
+<svg width="512" height="336" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="338" width="514" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" fill="#F5F5F5" d="m473.654999,1.275002l-435.309998,0c-21.178001,0 -38.345001,17.167 -38.345001,38.345001l0,258.760002c0,21.177002 17.167,38.345001 38.345001,38.345001l435.309998,0c21.177002,0 38.345001,-17.166992 38.345001,-38.345001l0,-258.760002c0,-21.178001 -17.166992,-38.345001 -38.345001,-38.345001z"/>
+  <circle id="svg_2" fill="#FF4B55" r="97.099976" cy="170.999" cx="255"/>
+ </g>
 </svg>

@@ -18,6 +18,7 @@
         color: $light_color;
         background-color: $dark_color;
         border: 1px solid #2e343c;
+        height: 45px;
     }
     &_button-wrapper {
         position: absolute;
@@ -31,6 +32,14 @@
         width: 18px;
         height: 18px;
         display: inline-block;
+        transition: .2s ease-in-out filter;
+
+        &:hover {
+            filter: brightness(3);
+        }
+        &:active {
+            filter: brightness(1.5);
+        }
 
         .balance__input & {
             width: 20px;

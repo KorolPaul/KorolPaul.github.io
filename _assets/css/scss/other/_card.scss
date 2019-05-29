@@ -5,6 +5,8 @@
     overflow: hidden;
     width: 48%;
     margin: 0 0 22px;
+    background: url(#{$img-path}/no-game.png) no-repeat center center;
+    background-size: cover;
     @include tablet {
         width: 33%;
     }
