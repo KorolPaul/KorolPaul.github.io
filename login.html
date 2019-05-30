@@ -1,0 +1,732 @@
+<html lang="en" class="popup-opened">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucky7</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="48x48px.ico">
+    <link rel="icon" type="image/x-icon" href="48x48px.ico">
+    <link rel="icon" type="image/png" href="16x16px.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="32x32px.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="48x48px.png" sizes="48x48">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+    <meta property="og:title" content="#{data.title}">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="300">
+    <meta property="twitter:description" content="">
+</head>
+<body>
+    <header class="header">
+        <div class="header_top">
+            <button class="menu-toggle"><div class="menu-toggle_line"></div></button>
+            <a href="/" class="logo">
+                <img class="logo_image" src="/img/logo.svg" alt="lucky7">
+            </a>
+            <div class="header_option">
+                <button class="button button__secondary button__signin go-to-authorization go-to-authorization-open-window">
+                    <img src="/img/icons/user.svg" alt="">
+                    Sign in
+                </button>
+                <button class="button button__register go-to-registration go-to-registration-open-window">
+                    <img src="/img/icons/user-plus.svg" alt="">
+                    Registration
+                </button>
+                <div class="lang light-select-wrapper">
+                    <select name="" data-mode="icons">
+                        <option value="tha" data-icon="/img/icons/thailand.svg">THA</option>
+                        <option value="ind" data-icon="/img/icons/indonesia.svg">IND</option>
+                        <option value="phi" data-icon="/img/icons/philippines.svg">PHI</option>
+                        <option value="vie" data-icon="/img/icons/vietnam.svg">VIE</option>
+                        <option value="uk" data-icon="/img/icons/uk.svg">UK</option>
+                        <option value="jpn" data-icon="/img/icons/japan.svg">JPN</option>
+                        <option value="usa" data-icon="/img/icons/usa.svg">USA</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <a href="/" class="menu_link active">
+                <span class="menu_link-icon fa fa-home"></span>
+                Home
+            </a>
+            <a href="/games.html" class="menu_link">
+                <img src="/img/icons/poker-chip.svg" alt="" class="menu_link-icon">
+                Casino games
+            </a>
+            <a href="/bonuses.html" class="menu_link">
+                <img src="/img/icons/new.svg" alt="" class="menu_link-icon">
+                Promotions
+            </a>
+            <a href="/" class="menu_link">
+                <span class="menu_link-icon fa fa-info-circle" style="font-size: 20px;"></span>
+                Game rules
+            </a>
+            <a href="/" class="menu_link">
+                <span class="menu_link-icon fa fa-envelope" style="font-size: 20px;"></span>
+                Contact us
+            </a> 
+            <button class="menu_leave">Exit</button>
+        </nav>
+    </header>
+    <main class="content">
+        <div class="content_holder">
+            <div class="breadcrumbs">
+                <a href="/" class="breadcrumbs_link">Home</a>
+                <a href="/" class="breadcrumbs_link">Personal account</a>
+                <span class="breadcrumbs_page">My account</span>
+            </div>
+            <h1 class="title">
+                <span class="title_text">
+                    PERSONAL <span class="title_bright">ACCOUNT</span>
+                </span>
+            </h1>
+            <div class="account-wrapper">
+                <div class="switch">
+                    <div class="switch_items">
+                        <button class="switch_item switch_item__active" data-tab-link="1">My account</button>
+                        <button class="switch_item" data-tab-link="2">
+                            <span class="fas fa-plus"></span>&nbsp;
+                            Balance
+                        </button>
+                        <button class="switch_item" data-tab-link="3">Transactions</button>
+                        <button class="switch_item" data-tab-link="4">Settings</button>
+                    </div>
+                </div>
+                <div class="account tab active" data-tab="1">
+                    <div class="account_view">
+                        <div class="account_info">
+                            <img src="/img/avatar-female.jpg" alt="" class="account_avatar">
+                            <div class="account_form">
+                                <div class="account_form-row">
+                                    <span class="account_name">
+                                        YellowSummer55
+                                        <img class="account_name-edit js-toggle-name-edit" src="/img/icons/edit.svg" alt="">
+                                        <input type="text" class="account_name-input" value="YellowSummer55">
+                                    </span>
+                                    <div class="account_status">
+                                        <span class="account_verification">
+                                            Verified account
+                                            <img class="account_verification-icon" src="/img/icons/verified.svg" alt="" />
+                                        </span>
+                                        Registration date: April 21, 2016 / 15:44
+                                    </div>
+                                </div>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item">
+                                        <label>Gender</label>
+                                        <input type="radio" name="gender" id="male">
+                                        <label for="male">Male</label>
+                                        <input type="radio" name="gender" id="female" checked>
+                                        <label for="female">Female</label>
+                                        <input type="radio" name="gender" id="unknown">
+                                        <label for="unknown">Unknown</label>
+                                    </div>
+                                </div>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item">
+                                        <label>Phone number</label>
+                                        <div class="phone">
+                                            <input type="tel" value="-5215-5872" disabled>
+                                            <div class="phone_code">
+                                                <img src="/img/icons/thailand.svg" alt="" class="phone_flag">
+                                                +668
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="account_form-row-item">
+                                        <label>E-mail</label>
+                                        <input type="email" value="yellow-summer-55@gmail.com" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account_balance">
+                            <div class="account_form-row">
+                                <div class="account_form-row-item">
+                                    <label>Balance</label>
+                                    <div class="balance balance__input">
+                                        <input class="balance_input user-balance" type="text" value="315€" disabled>
+                                        <div class="balance_button-wrapper">
+                                            <button class="balance_button refresh-user-balance-button">
+                                                <div class="refresh-user-balance-icon"></div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button class="account_deposit-button button">
+                                        <span class="button_icon fas fa-coins"></span>
+                                        Deposit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account_bottom">
+                            <button class="button button__secondary account_edit-button js-show-edit">Edit profile</button>
+                            <button class="button account_edit-save js-toggle-name-edit">Save changes</button>
+                        </div>
+                    </div>
+                    <form class="account_edit" method="POST" enctype="text/plain">
+                        <p class="error">Global form error</p>
+                        <div class="account_columns">
+                            <div class="account_column">
+                                <h2 class="account_title">Edit personal info</h2>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item invalid">
+                                        <label for="nickname">Nickname</label>
+                                        <input type="text" id="nickname" value="YellowSummer55">
+                                        <p class="form_error-message">Please fill the fields</p>
+                                    </div>
+                                    <div class="account_form-row-item">
+                                        <label for="currency">Select currency</label>
+                                        <select name="" id="currency">
+                                            <option value="">EUR, €</option>
+                                            <option value="">USD, $</option>
+                                            <option value="">VND, ₫</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item js-country">
+                                        <label for="country">Country</label>
+                                        <select name="" id="country js-country" data-mode="icons">
+                                            <option value="+668" data-icon="/img/icons/thailand.svg">Thailand (+668)</option>
+                                            <option value="+668" data-icon="/img/icons/vietnam.svg">Vietnam (+668)</option>
+                                        </select>
+                                    </div>
+                                    <div class="account_form-row-item account_form-row-item__noindent"></div>
+                                </div>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item">
+                                        <label>Phone number</label>
+                                        <div class="phone">
+                                            <input type="tel" value="-5215-5872">
+                                            <div class="phone_code">
+                                                <img src="/img/icons/thailand.svg" alt="" class="phone_flag">
+                                                +668
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="account_form-row-item account_form-row-item__noindent"></div>
+                                </div>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item">
+                                        <label>E-mail</label>
+                                        <input type="email" value="yellow-summer-55@gmail.com">
+                                    </div>
+                                    <div class="account_form-row-item account_form-row-item__noindent"></div>
+                                </div>
+                            </div>
+                            <div class="account_column">
+                                <h2 class="account_title">Change the password</h2>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item">
+                                        <label for="old-password">Old password</label>
+                                        <input type="password" id="old-password">
+                                    </div>
+                                </div>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item">
+                                        <label for="new-password">New password</label>
+                                        <input type="password" id="new-password">
+                                    </div>
+                                </div>
+                                <div class="account_form-row">
+                                    <div class="account_form-row-item">
+                                        <label for="confirm-password">Confirm password</label>
+                                        <input type="password" id="confirm-password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account_bottom">
+                            <button class="button button__secondary account_edit-back">
+                                <span class="button_icon fas fa-chevron-left"></span>
+                                Back to profile
+                            </button>
+                            <button class="button account_edit-save">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="account tab" data-tab="2">
+                    <h2 class="account_title">Replenish the balance</h2>
+                    <img class="account_payments" src="/img/payments.jpg" alt="">
+                </div>
+                <div class="account tab" data-tab="3">
+                    <h2 class="account_title">My transactions</h2>
+                    <div class="account_filters">
+                        <div class="account_filters-section">
+                            <select>
+                                <option value="all">All statuses</option>
+                            </select>
+                            <select>
+                                <option value="all">All Types</option>
+                            </select>
+                        </div>
+                        <div class="account_filters-section">
+                            <button class="button">
+                                <span class="button_icon fas fa-coins"></span>
+                                Deposit
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="account_transactions">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Type</th>
+                                    <th>Changing</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Info</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="table-number">#1</span>
+                                    </td>
+                                    <td>
+                                        Replenishment from Visa
+                                    </td>
+                                    <td>
+                                        <span class="amount-and-currency">+<span class="amount">515,3</span> <span class="currency">€</span></span>
+                                    </td>
+                                    <td>
+                                        April 21, 2019 / 18:30
+                                    </td>
+                                    <td>
+                                        Successfully
+                                    </td>
+                                    <td>
+                                        <div class="info">
+                                            <span class="info_icon fa fa-info-circle "></span>
+                                            <div class="info_text">Information text example. Information text example. Information text example.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="table-number">#2</span>
+                                    </td>
+                                    <td>
+                                        Payment
+                                    </td>
+                                    <td>
+                                        <span class="amount-and-currency">+<span class="amount">515,3</span> <span class="currency">€</span></span>
+                                    </td>
+                                    <td>
+                                        April 09, 2019 / 11:37
+                                    </td>
+                                    <td>
+                                        Successfully
+                                    </td>
+                                    <td>
+                                        <div class="info">
+                                            <span class="info_icon fa fa-info-circle "></span>
+                                            <div class="info_text">Information text example. Information text example. Information text example.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="table-number">#3</span>
+                                    </td>
+                                    <td>
+                                        Bonus
+                                    </td>
+                                    <td>
+                                        <span class="amount-and-currency">+<span class="amount">210,9</span> <span class="currency">€</span></span>
+                                    </td>
+                                    <td>
+                                        March 28, 2019 / 15:44
+                                    </td>
+                                    <td>
+                                        Successfully
+                                    </td>
+                                    <td>
+                                        <div class="info">
+                                            <span class="info_icon fa fa-info-circle "></span>
+                                            <div class="info_text">Information text example. Information text example. Information text example.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="table-number">#4</span>
+                                    </td>
+                                    <td>
+                                        Payment
+                                    </td>
+                                    <td>
+                                        <span class="amount-and-currency">-<span class="amount">1207,6</span> <span class="currency">€</span></span>
+                                    </td>
+                                    <td>
+                                        March 14, 2019 / 13:40
+                                    </td>
+                                    <td>
+                                        Successfully
+                                    </td>
+                                    <td>
+                                        <div class="info">
+                                            <span class="info_icon fa fa-info-circle "></span>
+                                            <div class="info_text">Information text example. Information text example. Information text example.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="table-number">#5</span>
+                                    </td>
+                                    <td>
+                                        Replenishment from Visa
+                                    </td>
+                                    <td>
+                                        <span class="amount-and-currency">—</span>
+                                    </td>
+                                    <td>
+                                        March 12, 2019 / 18:30
+                                    </td>
+                                    <td>
+                                        Fault
+                                    </td>
+                                    <td>
+                                        <div class="info">
+                                            <span class="info_icon fa fa-info-circle "></span>
+                                            <div class="info_text">Information text example. Information text example. Information text example.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="account_controls">
+                        <div class="account_controls-section">
+                            <select>
+                                <option value="5">5 per page</option>
+                                <option value="10">10 per page</option>
+                                <option value="15">15 per page</option>
+                            </select>
+                        </div>
+                        <div class="account_controls-section account_controls-section__right">
+                             <div class="pages">
+                                <a href="#" class="pages_link"><</a>
+                                <a href="#" class="pages_link pages_link__active">1</a>
+                                <a href="#" class="pages_link">2</a>
+                                <a href="#" class="pages_link">3</a>
+                                <a href="#" class="pages_link">...</a>
+                                <a href="#" class="pages_link">8</a>
+                                <a href="#" class="pages_link">></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account tab" data-tab="4">
+                    <h2 class="account_title">My settings</h2>
+                    <table class="account_settings">
+                        <thead>
+                            <tr>
+                                <th>1. Communication settings</th>
+                                <th>E-mail</th>
+                                <th>SMS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>System message</td>
+                                <td>
+                                    <input type="checkbox" name="sysem-message" value="sysem-message-email" id="sysem-message-email">
+                                    <label for="sysem-message-email"></label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="sysem-message" value="sysem-message-sms" id="sysem-message-email" checked>
+                                    <label for="sysem-message-email"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Notifications about promotions, bonuses, cashback, winnings</td>
+                                <td>
+                                    <input type="checkbox" name="notifications" value="notifications-email" id="notifications-email"checked>
+                                    <label for="notifications-email"></label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="notifications" value="notifications-sms" id="notifications-email">
+                                    <label for="notifications-email"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Newsletters</td>
+                                <td>
+                                    <input type="checkbox" name="newsletters" value="newsletters-email" id="newsletters-email">
+                                    <label for="newsletters-email"></label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="newsletters" value="newsletters-sms" id="newsletters-email" checked>
+                                    <label for="newsletters-email"></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="account_settings">
+                        <thead>
+                            <tr>
+                                <th>2. Other settings</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Enable payment in 1 click</td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="one-click" value="one-click" id="one-click">
+                                    <label for="one-click"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Save data for payments</td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="save-payments" value="save-payments" id="save-payments" checked>
+                                    <label for="save-payments"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>To freeze funds when creating payments</td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="freeze-funds" value="freeze-funds" id="freeze-funds" checked>
+                                    <label for="freeze-funds"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Take part in testing new functionality</td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="testing" value="testing" id="testing" checked>
+                                    <label for="testing"></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="account_bottom">
+                        <button class="button" disabled>Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="footer-menu"> 
+                <a href="#" class="footer-menu_link">Affiliates</a>
+                <a href="#" class="footer-menu_link">Privacy Policy </a>
+                <a href="#" class="footer-menu_link">Protection of Funds </a>
+                <a href="#" class="footer-menu_link">Player Protection </a>
+                <a href="#" class="footer-menu_link">Support</a>
+                <a href="#" class="footer-menu_link go-to-registration go-to-registration-link">Registration</a>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-methods_item"></div>
+                <div class="payment-methods_item"></div>
+                <div class="payment-methods_item"></div>
+                <div class="payment-methods_item"></div>
+                <div class="payment-methods_item"></div>
+                <div class="payment-methods_item"></div>
+                <div class="payment-methods_item"></div>
+                <div class="payment-methods_item"></div>
+            </div>
+            <div class="footer_info">
+                <img class="footer_info-icon" src="/img/icons/plus-18-movie.svg" alt="">
+                <p class="footer_info-text">Lucky7casino.com is fully owned and operated by OYINE N.V. and its registered address is E-Commerce Park Vredenberg z/n Curacao with the registration number 
+                    of the Chamber of Commerce : 144430.A curaçao gaming company registered with the reference number of the license of Antillephone N.V. 8048/JAZ.</p>
+                <a href="#" class="footer_info-link"><img class="footer_info-icon" src="/img/icons/curasao.svg" alt=""></a>            
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <a href="/" class="footer_logo">
+                <img src="/img/logo-dark.svg" alt="" class="footer_logo-img">
+            </a>
+            <p class="footer_copyright">2019  Lucky7casino.com All rights reserved</p>
+        </div>
+    </footer>
+
+    <div class="fade">
+        <div class="popup popup-authorization opened">
+            <p class="title">
+                <span class="title_text">
+                    SIGN <span class="title_bright">IN</span>
+                </span>
+            </p>
+            <form action="" method="POST" enctype="text/plain" class="form">
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="username">Login</label>
+                        <input type="text" id="username" placeholder="Enter your Login">
+                    </div>
+                    <div class="form_row-item">
+                        <label for="Password">Password</label>
+                        <input type="password" id="Password" placeholder="****  ">                        
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">SIGN IN</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-registration go-to-registration-open-window" href="/registration">registration</a> | 
+                            <a class="form_link" href="/password-reset">reset password</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="popup popup-registration">
+            <p class="title">
+                <span class="title_text">
+                    FAST <span class="title_bright">REGISTRATION</span>
+                </span>
+            </p>
+            <div class="switch">
+                <div class="switch_items">
+                    <button class="switch_item switch_item__active" data-tab-link="register-1">With phone number</button>
+                    <button class="switch_item" data-tab-link="register-2">With E-mail address</button>
+                </div>
+            </div>
+            <form action="" method="POST" enctype="text/plain" class="form tab active" data-tab="register-1" enctype="text/plain">
+                <div class="form_row">
+                    <div class="form_row-item invalid">
+                        <label for="country">Country</label>
+                        <select name="" id="country js-country" data-mode="icons">
+                            <option value="+668" data-icon="/img/icons/thailand.svg">Thailand (+668)</option>
+                            <option value="+668" data-icon="/img/icons/vietnam.svg">Vietnam (+668)</option>
+                        </select>
+                        <p class="form_error-message">Please choose your counry</p>
+                    </div>
+                    <div class="form_row-item">
+                        <label for="currency">Select currency</label>
+                        <select name="" id="currency">
+                            <option value="">EUR, €</option>
+                            <option value="">USD, $</option>
+                            <option value="">VND, ₫</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="phone">Phone number</label>
+                        <div class="phone">
+                            <div class="phone_code">
+                                <img src="/img/icons/thailand.svg" alt="" class="phone_flag">
+                                +668
+                            </div>
+                            <input type="tel" name="phone">
+                        </div>
+                        <p class="form_clarification">
+                            I am at least 18 years old and have read and accepted the 
+                            <a href="#">Terms and Conditions.</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">CREATE ACCOUNT</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-authorization go-to-authorization-open-window" href="/signin">sirn in</a> | 
+                            <a class="form_link" href="/password-reset">reset password</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="" method="POST" enctype="text/plain" class="form tab" data-tab="register-2" enctype="text/plain">
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="country-1">Country</label>
+                        <select name="" id="country-1" data-mode="icons">
+                            <option value="+668" data-icon="/img/icons/thailand.svg">Thailand (+668)</option>
+                            <option value="+668" data-icon="/img/icons/vietnam.svg">Vietnam (+668)</option>
+                        </select>
+                    </div>
+                    <div class="form_row-item">
+                        <label for="currency">Select currency</label>
+                        <select name="" id="currency">
+                            <option value="">EUR, €</option>
+                            <option value="">USD, $</option>
+                            <option value="">VND, ₫</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                        <p class="form_clarification">
+                            I am at least 18 years old and have read and accepted the 
+                            <a href="#">Terms and Conditions.</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">CREATE ACCOUNT</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-authorization go-to-authorization-open-window" href="/signin">sirn in</a> | 
+                            <a class="form_link" href="/password-reset">reset password</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Loader-->
+    <div class="loader">
+        <div class="coin">
+            <div class="coin__front"></div>
+            <div class="coin__edge">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="coin__back"></div>
+            <div class="coin__shadow"></div>
+        </div>
+    </div>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/imask.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/choices.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script>
+        $('.js-show-edit').on('click', function() {
+            $('.account_view').toggle();
+            $('.account_edit').toggle();
+        });
+
+        $('.js-toggle-name-edit').on('click', function() {
+            $('.account').toggleClass('account__name-edit');
+        });
+    </script>
+</body>
+</html>
