@@ -17,7 +17,7 @@ gulp.task('sync', function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('css/scss/**/*.scss')
+    return gulp.src('s**/*.scss')
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -35,7 +35,7 @@ gulp.task('img', () =>
 
 
 gulp.task('watch', function () {
-    gulp.watch(['css/scss/**/*.scss'], gulp.parallel('sass'));
+    gulp.watch(['s**/*.scss'], gulp.parallel('sass'));
 });
 
 
