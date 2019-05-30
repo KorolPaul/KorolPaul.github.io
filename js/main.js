@@ -29,8 +29,6 @@ $(document).ready(function () {
     }
 
     $('.fade').on('click', popupToggle);
-    $('.go-to-authorization-open-window').on('click', function () { popupToggle('.popup-authorization') });
-    $('.go-to-registration-open-window').on('click', function () { popupToggle('.popup-registration') });
 
     $('.go-to-authorization-open-window').on('click', function (event) {
         event.preventDefault();
@@ -41,6 +39,11 @@ $(document).ready(function () {
         event.preventDefault();
 
         openModal('.popup-registration')
+    });
+    $('.go-to-reset-password-open-window').on('click', function (event) {
+        event.preventDefault();
+
+        openModal('.popup-reset-password')
     });
 
     function openModal(targetElement) {
