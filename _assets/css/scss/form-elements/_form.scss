@@ -6,14 +6,14 @@
         }
     }
     &_row-item {
-        margin: 0 0 20px;
+        padding: 0 0 30px;
         flex-grow: 10;
+        position: relative;
         @include desktop {
         }
 
         &__center {
-                text-align: center;
-                margin: 0 0 5px;
+            text-align: center;
         }
         & + & {
             @include desktop {
@@ -37,4 +37,27 @@
     &_clarification {
         margin: 25px 0 0;
     }
+    &_error-message {
+        color: $bright_color;
+        font-size: 13px;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        bottom: 8px;
+        left: 10px;
+        margin: 0;
+        transition: .2s ease-in-out opacity .1s,
+                     .0001s ease-in-out visibility .2s;
+
+        .invalid & {
+            opacity: 1;
+            visibility: visible;
+            transition: .2s ease-in-out opacity .2s,
+                         .0001s ease-in-out visibility;
+        }
+    }
+}
+
+.error {
+    color: $bright_color;
 }

@@ -31,26 +31,26 @@
         <div class="header_top">
             <button class="menu-toggle"><div class="menu-toggle_line"></div></button>
             <a href="/" class="logo">
-                <img class="logo_image" src="img/logo.svg" alt="lucky7">
+                <img class="logo_image" src="/img/logo.svg" alt="lucky7">
             </a>
             <div class="header_option">
                 <button class="button button__secondary button__signin go-to-authorization go-to-authorization-open-window">
-                    <img src="img/icons/user.svg" alt="">
+                    <img src="/img/icons/user.svg" alt="">
                     Sign in
                 </button>
                 <button class="button button__register go-to-registration go-to-registration-open-window">
-                    <img src="img/icons/user-plus.svg" alt="">
+                    <img src="/img/icons/user-plus.svg" alt="">
                     Registration
                 </button>
                 <div class="lang light-select-wrapper">
                     <select name="" data-mode="icons">
-                        <option value="tha" data-icon="img/icons/thailand.svg">THA</option>
-                        <option value="ind" data-icon="img/icons/indonesia.svg">IND</option>
-                        <option value="phi" data-icon="img/icons/philippines.svg">PHI</option>
-                        <option value="vie" data-icon="img/icons/vietnam.svg">VIE</option>
-                        <option value="uk" data-icon="img/icons/uk.svg">UK</option>
-                        <option value="jpn" data-icon="img/icons/japan.svg">JPN</option>
-                        <option value="usa" data-icon="img/icons/usa.svg">USA</option>
+                        <option value="tha" data-icon="/img/icons/thailand.svg">THA</option>
+                        <option value="ind" data-icon="/img/icons/indonesia.svg">IND</option>
+                        <option value="phi" data-icon="/img/icons/philippines.svg">PHI</option>
+                        <option value="vie" data-icon="/img/icons/vietnam.svg">VIE</option>
+                        <option value="uk" data-icon="/img/icons/uk.svg">UK</option>
+                        <option value="jpn" data-icon="/img/icons/japan.svg">JPN</option>
+                        <option value="usa" data-icon="/img/icons/usa.svg">USA</option>
                     </select>
                 </div>
             </div>
@@ -61,11 +61,11 @@
                 Home
             </a>
             <a href="/games.html" class="menu_link">
-                <img src="img/icons/poker-chip.svg" alt="" class="menu_link-icon">
+                <img src="/img/icons/poker-chip.svg" alt="" class="menu_link-icon">
                 Casino games
             </a>
             <a href="/bonuses.html" class="menu_link">
-                <img src="img/icons/new.svg" alt="" class="menu_link-icon">
+                <img src="/img/icons/new.svg" alt="" class="menu_link-icon">
                 Promotions
             </a>
             <a href="/" class="menu_link">
@@ -106,18 +106,18 @@
                 <div class="account tab active" data-tab="1">
                     <div class="account_view">
                         <div class="account_info">
-                            <img src="img/avatar-female.jpg" alt="" class="account_avatar">
+                            <img src="/img/avatar-female.jpg" alt="" class="account_avatar">
                             <div class="account_form">
                                 <div class="account_form-row">
                                     <span class="account_name">
                                         YellowSummer55
-                                        <img class="account_name-edit js-toggle-name-edit" src="img/icons/edit.svg" alt="">
+                                        <img class="account_name-edit js-toggle-name-edit" src="/img/icons/edit.svg" alt="">
                                         <input type="text" class="account_name-input" value="YellowSummer55">
                                     </span>
                                     <div class="account_status">
                                         <span class="account_verification">
                                             Verified account
-                                            <img class="account_verification-icon" src="img/icons/verified.svg" alt="" />
+                                            <img class="account_verification-icon" src="/img/icons/verified.svg" alt="" />
                                         </span>
                                         Registration date: April 21, 2016 / 15:44
                                     </div>
@@ -139,7 +139,7 @@
                                         <div class="phone">
                                             <input type="tel" value="-5215-5872" disabled>
                                             <div class="phone_code">
-                                                <img src="img/icons/thailand.svg" alt="" class="phone_flag">
+                                                <img src="/img/icons/thailand.svg" alt="" class="phone_flag">
                                                 +668
                                             </div>
                                         </div>
@@ -176,13 +176,15 @@
                         </div>
                     </div>
                     <form class="account_edit" method="POST" enctype="text/plain">
+                        <p class="error">Global form error</p>
                         <div class="account_columns">
                             <div class="account_column">
                                 <h2 class="account_title">Edit personal info</h2>
                                 <div class="account_form-row">
-                                    <div class="account_form-row-item">
+                                    <div class="account_form-row-item invalid">
                                         <label for="nickname">Nickname</label>
                                         <input type="text" id="nickname" value="YellowSummer55">
+                                        <p class="form_error-message">Please fill the fields</p>
                                     </div>
                                     <div class="account_form-row-item">
                                         <label for="currency">Select currency</label>
@@ -197,13 +199,11 @@
                                     <div class="account_form-row-item js-country">
                                         <label for="country">Country</label>
                                         <select name="" id="country js-country" data-mode="icons">
-                                            <option value="+668" data-icon="img/icons/thailand.svg">Thailand (+668)</option>
-                                            <option value="+668" data-icon="img/icons/vietnam.svg">Vietnam (+668)</option>
+                                            <option value="+668" data-icon="/img/icons/thailand.svg">Thailand (+668)</option>
+                                            <option value="+668" data-icon="/img/icons/vietnam.svg">Vietnam (+668)</option>
                                         </select>
                                     </div>
-                                    <div class="account_form-row-item">
-
-                                    </div>
+                                    <div class="account_form-row-item account_form-row-item__noindent"></div>
                                 </div>
                                 <div class="account_form-row">
                                     <div class="account_form-row-item">
@@ -211,22 +211,19 @@
                                         <div class="phone">
                                             <input type="tel" value="-5215-5872">
                                             <div class="phone_code">
-                                                <img src="img/icons/thailand.svg" alt="" class="phone_flag">
+                                                <img src="/img/icons/thailand.svg" alt="" class="phone_flag">
                                                 +668
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="account_form-row-item">
-                                    </div>
+                                    <div class="account_form-row-item account_form-row-item__noindent"></div>
                                 </div>
                                 <div class="account_form-row">
                                     <div class="account_form-row-item">
                                         <label>E-mail</label>
                                         <input type="email" value="yellow-summer-55@gmail.com">
                                     </div>
-                                    <div class="account_form-row-item">
-                                        
-                                    </div>
+                                    <div class="account_form-row-item account_form-row-item__noindent"></div>
                                 </div>
                             </div>
                             <div class="account_column">
@@ -262,7 +259,7 @@
                 </div>
                 <div class="account tab" data-tab="2">
                     <h2 class="account_title">Replenish the balance</h2>
-                    <img class="account_payments" src="img/payments.jpg" alt="">
+                    <img class="account_payments" src="/img/payments.jpg" alt="">
                 </div>
                 <div class="account tab" data-tab="3">
                     <h2 class="account_title">My transactions</h2>
@@ -555,15 +552,15 @@
                 <div class="payment-methods_item"></div>
             </div>
             <div class="footer_info">
-                <img class="footer_info-icon" src="img/icons/plus-18-movie.svg" alt="">
+                <img class="footer_info-icon" src="/img/icons/plus-18-movie.svg" alt="">
                 <p class="footer_info-text">Lucky7casino.com is fully owned and operated by OYINE N.V. and its registered address is E-Commerce Park Vredenberg z/n Curacao with the registration number 
                     of the Chamber of Commerce : 144430.A curaçao gaming company registered with the reference number of the license of Antillephone N.V. 8048/JAZ.</p>
-                <a href="#" class="footer_info-link"><img class="footer_info-icon" src="img/icons/curasao.svg" alt=""></a>            
+                <a href="#" class="footer_info-link"><img class="footer_info-icon" src="/img/icons/curasao.svg" alt=""></a>            
             </div>
         </div>
         <div class="footer_bottom">
             <a href="/" class="footer_logo">
-                <img src="img/logo-dark.svg" alt="" class="footer_logo-img">
+                <img src="/img/logo-dark.svg" alt="" class="footer_logo-img">
             </a>
             <p class="footer_copyright">2019  Lucky7casino.com All rights reserved</p>
         </div>
@@ -612,12 +609,13 @@
             </div>
             <form action="" method="POST" enctype="text/plain" class="form tab active" data-tab="register-1" enctype="text/plain">
                 <div class="form_row">
-                    <div class="form_row-item">
+                    <div class="form_row-item invalid">
                         <label for="country">Country</label>
                         <select name="" id="country js-country" data-mode="icons">
-                            <option value="+668" data-icon="img/icons/thailand.svg">Thailand (+668)</option>
-                            <option value="+668" data-icon="img/icons/vietnam.svg">Vietnam (+668)</option>
+                            <option value="+668" data-icon="/img/icons/thailand.svg">Thailand (+668)</option>
+                            <option value="+668" data-icon="/img/icons/vietnam.svg">Vietnam (+668)</option>
                         </select>
+                        <p class="form_error-message">Please choose your counry</p>
                     </div>
                     <div class="form_row-item">
                         <label for="currency">Select currency</label>
@@ -633,7 +631,7 @@
                         <label for="phone">Phone number</label>
                         <div class="phone">
                             <div class="phone_code">
-                                <img src="img/icons/thailand.svg" alt="" class="phone_flag">
+                                <img src="/img/icons/thailand.svg" alt="" class="phone_flag">
                                 +668
                             </div>
                             <input type="tel" name="phone">
@@ -659,8 +657,8 @@
                     <div class="form_row-item">
                         <label for="country-1">Country</label>
                         <select name="" id="country-1" data-mode="icons">
-                            <option value="+668" data-icon="img/icons/thailand.svg">Thailand (+668)</option>
-                            <option value="+668" data-icon="img/icons/vietnam.svg">Vietnam (+668)</option>
+                            <option value="+668" data-icon="/img/icons/thailand.svg">Thailand (+668)</option>
+                            <option value="+668" data-icon="/img/icons/vietnam.svg">Vietnam (+668)</option>
                         </select>
                     </div>
                     <div class="form_row-item">
@@ -714,11 +712,11 @@
         </div>
     </div>
 
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/imask.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/choices.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/imask.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/choices.min.js"></script>
+    <script src="/js/main.js"></script>
 
     <script>
         $('.js-show-edit').on('click', function() {

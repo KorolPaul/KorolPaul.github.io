@@ -10,7 +10,7 @@ input[type="tel"] {
     border-radius: 8px;
     box-sizing: border-box;
     font: $font-size $font-family;
-    padding: 8px 25px 9px;
+    padding: 7px 25px 7px;
     width: 100%;
     transition: .2s ease-in border-color, .2s ease-in background;
     @include tablet {
@@ -28,8 +28,8 @@ input[type="tel"] {
         color: rgba(#4e565c, .3);
         border-color: rgba(#2e343c, .3);
     }
-    &:invalid,
-    &.invalid {
+
+    .invalid & {
         border-color: $bright_color;
     }
 }

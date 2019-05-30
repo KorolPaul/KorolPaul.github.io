@@ -59,4 +59,38 @@
     &_button {
        @include button; 
     }
+    &_stripe {
+        position: absolute;
+        right: 0;
+        top: 0;
+        box-sizing: border-box;
+        height: 20px;
+        padding: 4px 0;
+        font-size: 10px;
+        line-height: 1;
+        font-weight: bold;
+        color: $light_color;
+        text-align: center;
+        width: 100px;
+        text-transform: uppercase;
+        transform: rotate(45deg) translate(25%, -25%);
+
+        &__hot {
+            background: linear-gradient(to bottom, #e8332e, #d12c1c);
+        }
+        &__new {
+            background: linear-gradient(to bottom, #417bc2, #3e75b3);
+        }
+        &__top {
+            background: linear-gradient(to bottom, #f1d90e, #e6b31c);
+        }
+        &__hit {
+            background: linear-gradient(to bottom, #23b91e, #2a9b26);
+        }
+    }
+    &_stripe-icon {
+        height: 12px;
+        vertical-align: -2px;
+        margin: 0 5px 0 0;
+    }
 }

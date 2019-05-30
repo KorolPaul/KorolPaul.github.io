@@ -3,7 +3,6 @@
 ===============================*/
 .choices {
     position: relative;
-    margin-bottom: 24px;
 }
 
 .choices:focus {
@@ -70,10 +69,12 @@
     content: "\fe40";
     font-weight: bold;
     font-size: 16px;
+    line-height: 1;
     transform: scaleX(.5) scaleY(.8);
     position: absolute;
     right: 11.5px;
     top: 57%;
+    height: 3px;
     margin-top: -6px;
     pointer-events: none;
     z-index: 3;
@@ -82,8 +83,8 @@
         top: 35%;
         right: 0;
         @include tablet {
-            top: 50%;
-            right: 11.5px;
+            top: 55%;
+            right: 9px;
         }
     }
 }
@@ -122,12 +123,11 @@
     display: inline-block;
     width: 100%;
     background: $bg_color;
-    box-shadow: 0 0 0 1px #2b3036 inset;
     padding: 9.5px 20px 3.75px;
     border: 1px solid #2b3036;
     border-radius: 8px;
     font-size: 14px;
-    min-height: 40px;
+    min-height: 42px;
     overflow: hidden;
     vertical-align: top;
     box-sizing: border-box;
@@ -146,15 +146,15 @@
         padding-right: 0;
         padding-top: 0;
         padding-bottom: 0;
-        background: transparent;
+        background: linear-gradient(to bottom, #1e2124, #1b1e20);
         box-shadow: none;
-        border: 1px solid transparent;
+        border: 1px solid $dark_color;
         @include tablet {
-            padding: 7.5px 10px 3.75px;
-            background: $bg_color;
-            box-shadow: 0 0 0 1px #2b3036 inset;
-            border: 1px solid #2b3036;
+            padding: 12px 10px 3.75px;
         }
+    }
+    .invalid & {
+        border-color: $bright_color;
     }
 }
 
@@ -166,7 +166,7 @@
 
 .choices__list--single {
     display: inline-block;
-    padding: 2px 16px 0 4px;
+    padding: 0 16px 0 4px;
     width: 100%;
 }
 
