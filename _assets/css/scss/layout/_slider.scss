@@ -5,12 +5,13 @@
     background:  url(#{$img-path}/slider-line.png) no-repeat center bottom;
     background-size: 100% auto;
     padding: 0 0 20px;
-    margin: 0 0 20px;
+    margin: -140px 0 20px;
     @include tablet {
+        margin-top: -154px;
         padding: 0 0 10px;
     }
     @include desktop {
-        margin: -154px 0 38px;
+        margin-bottom: 38px;
     }
 
     &_item {
@@ -22,13 +23,21 @@
     }
     &_image {
         width: 100%;
-        margin: 0 0 80px;
         display: none;
-        @include tablet {
+        @include desktop {
             display: block;
             margin: 0;
         }
 
+        &__tablet {
+            display: none;
+            @include tablet {
+                display: block;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
         &__mobile {
             display: block;
             @include tablet {
@@ -38,28 +47,24 @@
     }
     &_text {
         position: absolute;
-        bottom: 15%;
+        bottom: 25%;
         left: 50%;
         transform: translate(-50%, 0);
-        @include tablet {
-            bottom: 21%;
-        }
         @include desktop {
             bottom: 11%;
         }
 
-        .slider_item:nth-child(3) & {
-            @include tablet {
-                left: auto;
-                right: 14%;
-                bottom: 35%;
-            }
-        }
+        .slider_item:nth-child(3) &,
         .slider_item:nth-child(4) & {
             @include tablet {
                 left: auto;
-                right: 15%;
-                bottom: 19%;
+                right: 17%;
+                bottom: 38%;
+            }
+            @include desktop {
+                left: auto;
+                right: 20%;
+                bottom: 32%;
             }
         }
     }

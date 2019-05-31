@@ -152,7 +152,7 @@
 .slick-dots {
     position: absolute;
     z-index: 2;
-    bottom: 1em;
+    bottom: 2em;
     left: 50%;
     display: inline-flex;
     list-style: none;
@@ -161,6 +161,9 @@
     padding: 3px;
     border-radius: 12px;
     margin: 0;
+    @include desktop {
+        bottom: 1em;
+    }
 
     li {
         position: relative;
