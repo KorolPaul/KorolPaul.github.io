@@ -12882,7 +12882,7 @@ h3,
 
 @media all and (min-width: 767px) {
   .lang .choices[data-type*="select-one"]:after {
-    top: 55%;
+    top: 60%;
     right: 9px;
     font-size: 16px;
   }
@@ -12958,7 +12958,7 @@ h3,
 
 @media all and (min-width: 767px) {
   .lang .choices__inner {
-    padding: 12px 10px 3.75px;
+    padding: 10px 10px 3.75px;
   }
 }
 
@@ -13041,13 +13041,17 @@ h3,
 }
 
 .lang .choices__list--dropdown {
-  width: 44px;
+  width: 53px;
   margin-left: 5px;
+  left: auto;
+  right: 0px;
 }
 
 @media all and (min-width: 767px) {
   .lang .choices__list--dropdown {
+    left: 0;
     width: auto;
+    right: 0;
     margin-left: inherit;
   }
 }

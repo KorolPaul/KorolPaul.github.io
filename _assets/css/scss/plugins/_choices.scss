@@ -80,11 +80,12 @@
     z-index: 3;
 
     .lang & {
-        top: 35%;
-        right: 0;
+        right: 2px;
+        font-size: 14px;
         @include tablet {
-            top: 55%;
+            top: 60%;
             right: 9px;
+            font-size: 16px;
         }
     }
 }
@@ -142,15 +143,13 @@
         border: 1px solid $dark_color;
     }
     .lang & {
-        padding-left: 10px;
-        padding-right: 0;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 6px 0 0px 5px;
+        min-height: 0;
         background: linear-gradient(to bottom, #1e2124, #1b1e20);
         box-shadow: none;
         border: 1px solid $dark_color;
         @include tablet {
-            padding: 12px 10px 3.75px;
+            padding: 10px 10px 3.75px;
         }
     }
     .invalid & {
@@ -228,10 +227,14 @@
         border: 1px solid #1d2023;
     }
     .lang & {
-        width: 44px;
+        width: 53px;
         margin-left: 5px;
+        left: auto;
+        right: 0px;
         @include tablet {
+            left: 0;
             width: auto;
+            right: 0;
             margin-left: inherit;
         }
     }
