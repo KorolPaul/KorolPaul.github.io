@@ -47,9 +47,12 @@
     }
     &_text {
         position: absolute;
-        bottom: 25%;
+        bottom: 10%;
         left: 50%;
         transform: translate(-50%, 0);
+        @include tablet {
+            bottom: 15%;
+        }
         @include desktop {
             bottom: 11%;
         }

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
     <link rel="shortcut icon" href="48x48px.ico">
     <link rel="icon" type="image/x-icon" href="48x48px.ico">
@@ -107,20 +107,24 @@
                 <div class="account tab active" data-tab="1">
                     <div class="account_view">
                         <div class="account_info">
-                            <img src="img/avatar-female.jpg" alt="" class="account_avatar">
+                            <div>
+                                <img src="img/avatar-female.jpg" alt="" class="account_avatar">
+                                <div class="account_status">
+                                    <span class="account_verification">
+                                        Verified account
+                                        <img class="account_verification-icon" src="img/icons/verified.svg" alt="" />
+                                    </span>
+                                    Registered: April 21, 2016 / 15:44
+                                </div>
+                            </div>
                             <div class="account_form">
                                 <div class="account_form-row">
-                                    <span class="account_name">
-                                        YellowSummer55
-                                        <img class="account_name-edit js-toggle-name-edit" src="img/icons/edit.svg" alt="">
-                                        <input type="text" class="account_name-input" value="YellowSummer55">
-                                    </span>
-                                    <div class="account_status">
-                                        <span class="account_verification">
-                                            Verified account
-                                            <img class="account_verification-icon" src="img/icons/verified.svg" alt="" />
+                                    <div class="account_form-row-item">
+                                        <span class="account_name">
+                                            YellowSummer55
+                                            <img class="account_name-edit js-toggle-name-edit" src="img/icons/edit.svg" alt="">
+                                            <input type="text" class="account_name-input" value="YellowSummer55">
                                         </span>
-                                        Registration date: April 21, 2016 / 15:44
                                     </div>
                                 </div>
                                 <div class="account_form-row">
@@ -145,10 +149,25 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="account_form-row">
                                     <div class="account_form-row-item">
                                         <label>E-mail</label>
                                         <input type="email" value="yellow-summer-55@gmail.com" disabled>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="bonus-widget bonus-widget__dark">
+                                <p class="bonus-widget_title">Current bonus</p>
+                                <div class="bonus-widget_text">
+                                    You have not active bonus
+                                    <a href="#" class="bonus-widget_link">>> Choose the bonus <<</a>
+                                </div>
+                                <div class="bonus-widget_text">
+                                    Wagering bonus status:
+                                    <span class="bonus-widget_bright-text">0%</span>
+                                </div>
+                                <div class="bonus-widget_progress-bar">
                                 </div>
                             </div>
                         </div>

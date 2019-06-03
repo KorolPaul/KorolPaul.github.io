@@ -20,8 +20,17 @@
     }
     &_items {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 20px;
+        text-align: inherit;
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 50px;
+            margin: 0;
+        }
     }
     &_filters {
         margin: 0 0 24px;
@@ -55,8 +64,8 @@
         width: 100%;
         text-align: center;
         @include desktop {
-            grid-column-start: 3;
-            grid-column-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 6;
         }
     }
     &_button {
@@ -70,9 +79,8 @@
         }
         @include desktop {
             .dashboard_grid & {
-                padding-left: 25px;
-                padding-right: 25px;
-                width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
             }
         }
 
