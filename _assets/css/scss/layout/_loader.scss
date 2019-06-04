@@ -30,8 +30,8 @@ $coin-color: #FF0000;
 // $coin-front: "https://cdn1.worldpng.ru/uploads/2019/4/27/ffeaf3f39952be3071e445df885af0e0-full.png";
 // $coin-back: "https://cdn1.worldpng.ru/uploads/2019/4/27/b92aeebbfb0094f423878910816eb677-full.png";
 // penny
-$coin-front: "https://cdn1.worldpng.ru/uploads/2019/4/27/ffeaf3f39952be3071e445df885af0e0-full.png";
-$coin-back: "https://cdn1.worldpng.ru/uploads/2019/4/27/b92aeebbfb0094f423878910816eb677-full.png";
+$coin-front: $img-path+"/coin-front.png";
+$coin-back: $img-path+"/coin-front.png";
 $edge-faces: 50;
 $edge-face-length: 3.14*$coin-diameter/$edge-faces;
 $turn-time: 1.5s;

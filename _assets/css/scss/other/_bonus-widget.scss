@@ -5,6 +5,7 @@
     border-radius: 13px;
     padding: 15px 25px;
     flex-shrink: 4;
+    position: relative;
     @include desktop {
         grid-column-start: 4;
         grid-column-end: 6;
@@ -23,6 +24,11 @@
         box-shadow: 0 0 10px rgba(#2f2f2f, .1);
     }
 
+    &_refresh {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
     &_title {
         color: $light_color;
         font-size: 22px;
@@ -79,7 +85,8 @@
 
         &::before {
             content: '';
-            background: url(#{$img-path}/progress-bg.png) repeat-x;
+            background: url(#{$img-path}/progress-bg.png) repeat-x 0 center;
+            background-size: auto 100%;
             position: absolute;
             top: 0;
             left: 0;
