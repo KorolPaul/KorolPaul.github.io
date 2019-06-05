@@ -9499,13 +9499,11 @@ h3,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  border-bottom: 1px solid #1f2428;
   padding: 0 10px 16px 0;
 }
 
 @media all and (min-width: 767px) {
   .header_option {
-    border-bottom-color: transparent;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -9785,7 +9783,7 @@ h3,
 .menu_leave {
   display: block;
   position: absolute;
-  left: 10px;
+  right: 10px;
   bottom: 30px;
   background: url(../img/icons/logout.svg) no-repeat 0 center;
   padding: 0 0 0 40px;

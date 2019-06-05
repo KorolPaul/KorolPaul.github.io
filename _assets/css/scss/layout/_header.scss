@@ -22,10 +22,8 @@
     &_option {
         display: flex;
         justify-content: flex-end;
-        border-bottom: 1px solid #1f2428;
         padding: 0 10px 16px 0;
         @include tablet {
-            border-bottom-color: transparent;
             justify-content: space-between;
             align-items: center;
             padding: 0;
