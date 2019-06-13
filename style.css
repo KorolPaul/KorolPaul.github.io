@@ -11335,8 +11335,10 @@ h3,
 
 .card {
   position: relative;
-  display: inline-block;
-  border-radius: 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 11%;
   overflow: hidden;
   width: 48%;
   margin: 0 0 22px;
@@ -11349,6 +11351,7 @@ h3,
 @media all and (min-width: 767px) {
   .card {
     width: 33%;
+    border-radius: 7%;
   }
 }
 
@@ -11392,14 +11395,14 @@ h3,
   right: 0;
   bottom: 0;
   top: 0;
-  opacity: .8;
-  -webkit-transition: .2s ease-in-out opacity;
-  transition: .2s ease-in-out opacity;
+  -webkit-transition: .2s ease-in-out filter;
+  transition: .2s ease-in-out filter;
   z-index: 2;
 }
 
 .card__locked:hover::before {
-  opacity: 1;
+  -webkit-filter: brightness(1.1);
+  filter: brightness(1.1);
 }
 
 .card_image {
