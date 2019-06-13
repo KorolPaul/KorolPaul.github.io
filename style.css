@@ -11336,12 +11336,14 @@ h3,
 .card {
   position: relative;
   display: inline-block;
-  border-radius: 11%;
+  border-radius: 7%;
   overflow: hidden;
   width: 48%;
   margin: 0 0 22px;
   background: url(../img/no-game.png) no-repeat center center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 0 1px #1a1c1e;
+  box-shadow: 0 0 0 1px #1a1c1e;
 }
 
 @media all and (min-width: 767px) {
@@ -11361,6 +11363,16 @@ h3,
   }
 }
 
+.card__locked {
+  -webkit-transition: .2s ease-in-out box-shadow;
+  transition: .2s ease-in-out box-shadow;
+}
+
+.card__locked:hover {
+  -webkit-box-shadow: 0 0 0 1px #212426;
+  box-shadow: 0 0 0 1px #212426;
+}
+
 .card__locked::after {
   content: '';
   background: rgba(0, 0, 0, 0.8);
@@ -11369,12 +11381,6 @@ h3,
   right: 0;
   bottom: 0;
   top: 0;
-  -webkit-transition: .2s ease-in-out background;
-  transition: .2s ease-in-out background;
-}
-
-.card__locked:hover::after {
-  background: rgba(0, 0, 0, 0.7);
 }
 
 .card__locked::before {
@@ -11389,6 +11395,7 @@ h3,
   opacity: .8;
   -webkit-transition: .2s ease-in-out opacity;
   transition: .2s ease-in-out opacity;
+  z-index: 2;
 }
 
 .card__locked:hover::before {
@@ -11396,8 +11403,12 @@ h3,
 }
 
 .card_image {
-  width: 100%;
-  border-radius: 10%;
+  width: 101%;
+  height: 103%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: -2px 0 0;
 }
 
 .card_info {
