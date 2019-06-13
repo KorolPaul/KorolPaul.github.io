@@ -17,5 +17,9 @@
             background: $gray_color;
             color: $color;
         }
+
+        &__disabled {
+            opacity: .5;
+        }
     }
 }

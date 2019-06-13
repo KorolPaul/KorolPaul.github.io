@@ -8737,8 +8737,8 @@ input[type="submit"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:hover, button__hover,
@@ -8779,8 +8779,8 @@ input[type="submit"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -9172,15 +9172,15 @@ label {
   bottom: 8px;
   left: 10px;
   margin: 0;
-  -webkit-transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
-  transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
+  -webkit-transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
+  transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
 }
 
 .invalid .form_error-message {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
-  transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
+  -webkit-transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
+  transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
 }
 
 .error {
@@ -9950,8 +9950,8 @@ h3,
   visibility: hidden;
   overflow: auto;
   padding: 10px;
-  -webkit-transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
-  transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
+  -webkit-transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
+  transition: .2s ease-in-out opacity .1s, .0001s ease-in-out visibility .2s;
 }
 
 @media all and (min-width: 767px) {
@@ -9963,8 +9963,8 @@ h3,
 .popup-opened .fade {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
-  transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
+  -webkit-transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
+  transition: .2s ease-in-out opacity .2s, .0001s ease-in-out visibility;
 }
 
 .popup-opened {
@@ -10411,15 +10411,15 @@ h3,
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: .3s ease-in-out opacity, .001s linear visibility;
-  transition: .3s ease-in-out opacity, .001s linear visibility;
+  -webkit-transition: .3s ease-in-out opacity, .001s linear visibility;
+  transition: .3s ease-in-out opacity, .001s linear visibility;
 }
 
 .loader.active {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: .3s ease-in-out opacity, .001s linear visibility .3s;
-  transition: .3s ease-in-out opacity, .001s linear visibility .3s;
+  -webkit-transition: .3s ease-in-out opacity, .001s linear visibility .3s;
+  transition: .3s ease-in-out opacity, .001s linear visibility .3s;
 }
 
 .coin {
@@ -11035,8 +11035,8 @@ h3,
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   display: inline-block;
   min-width: 220px;
 }
@@ -11245,6 +11245,10 @@ h3,
   color: #7f8a95;
 }
 
+.pages_link__disabled {
+  opacity: .5;
+}
+
 .switch-wrapper {
   text-align: center;
 }
@@ -11357,6 +11361,40 @@ h3,
   }
 }
 
+.card__locked::after {
+  content: '';
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  -webkit-transition: .2s ease-in-out background;
+  transition: .2s ease-in-out background;
+}
+
+.card__locked:hover::after {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.card__locked::before {
+  content: '';
+  background: url(../img/icons/lock-game.svg) no-repeat center center;
+  background-size: auto 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: .8;
+  -webkit-transition: .2s ease-in-out opacity;
+  transition: .2s ease-in-out opacity;
+}
+
+.card__locked:hover::before {
+  opacity: 1;
+}
+
 .card_image {
   width: 100%;
   border-radius: 10%;
@@ -11407,8 +11445,8 @@ h3,
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 .card_button:hover, .card_button__hover {
@@ -11481,6 +11519,13 @@ h3,
   .winners {
     grid-column-start: 4;
     grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .dashboard_grid__with-widget .winners {
     grid-row-start: 2;
     grid-row-end: 5;
   }
@@ -11631,8 +11676,8 @@ h3,
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   margin: 4px auto 0;
 }
 
@@ -12538,8 +12583,8 @@ h3,
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 .games-menu_button:hover, .games-menu_button__hover {

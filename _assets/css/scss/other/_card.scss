@@ -19,6 +19,38 @@
         }
     }
 
+    &__locked {
+
+        &::after {
+            content: '';
+            background: rgba(0, 0, 0, .8);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            transition: .2s ease-in-out background;
+        }
+        &:hover::after {
+            background: rgba(0, 0, 0, .7);
+        }
+        &::before {
+            content: '';
+            background: url(#{$img-path}/icons/lock-game.svg) no-repeat center center;
+            background-size: auto 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            opacity: .8;
+            transition: .2s ease-in-out opacity;
+        }
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
     //.dashboard_items & {
     //    width: 48%;
     //    margin: 0 0 22px;
