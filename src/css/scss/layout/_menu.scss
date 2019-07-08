@@ -1,0 +1,32 @@
+.menu {
+    margin: 0 50px 0 0;
+    width: 220px;
+
+    &_link {
+        display: block;
+        font: 300 19px $font-family__heading;
+        padding: 24px 0;
+        position: relative;
+        text-transform: uppercase;
+
+        &::after {
+            content: '';
+            border-bottom: 2px solid $bright_color;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin: 15px 0 0;
+            transform: scaleX(0);
+            transform-origin: 0 0;
+            transition: .2s ease-in-out transform;
+        }
+
+        &:hover,
+        &.active {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}

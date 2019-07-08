@@ -1,0 +1,43 @@
+.menu-toggle {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 0px;
+    color: transparent;
+    text-transform: uppercase;
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    z-index: 1;
+    @include desktop {
+        left: 50px;
+        top: 50%;
+        right: auto;
+        font: 300 13px $font-family__heading;
+        color: $color;
+        transform: translate(0, -50%);
+    }
+
+    &_line {
+        background: $bright_color;
+        height: 5px;
+        width: 39px;
+        margin: 0 0 4px;
+        transition: .2s ease transform;
+
+        &:nth-child(1) {
+            transform: scaleX(.5);
+            transform-origin: 0%;
+        }
+        &:nth-child(3) {
+            transform: scaleX(.5);
+            transform-origin: 100%;
+            margin-bottom: 10px;
+        }
+
+        .menu-toggle:hover &,
+        .menu-toggle.opened & {
+            transform: scaleX(1);
+        }
+    }
+}

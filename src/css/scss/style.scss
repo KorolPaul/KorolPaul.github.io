@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@import  "const";
+@import  "mixins";
+@import  "placeholders";
+
+/* basic */
+@import  "basic/normalize";
+@import  "basic/fonts";
+@import  "basic/default";
+
+/*Form elements*/
+@import  "form-elements/button";
+@import  "form-elements/input-text";
+@import  "form-elements/textarea";
+@import  "form-elements/radio";
+@import  "form-elements/checkbox";
+@import  "form-elements/label";
+@import  "form-elements/form";
+
+
+/*layout*/
+@import  "layout/headings";
+@import  "layout/header";
+@import  "layout/sidebar";
+@import  "layout/footer";
+@import  "layout/footer-menu";
+@import  "layout/menu";
+@import  "layout/menu-toggle";
+@import  "layout/logo";
+@import  "layout/content";
+@import  "layout/popup";
+@import  "layout/title";
+@import  "layout/lang";
+@import  "layout/tab";
+@import  "layout/slider";
+@import  "layout/page";
+@import  "layout/pages";
+@import  "layout/showcase";
+
+
+/*Other*/
+@import  "other/appointment";
+@import  "other/app";
+@import  "other/map";
+@import  "other/widget";
+@import  "other/contacts";
+@import  "other/social";
+@import  "other/about";
+@import  "other/service";
+@import  "other/prices";
+@import  "other/gallery";
+
+
+/*Plugins*/
+@import  "plugins/slick";
+@import  "plugins/owl";
+@import  "plugins/choices";
