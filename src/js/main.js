@@ -1,51 +1,51 @@
 $(document).ready(function () {
+    var isMobile = screen.width < 769;
+
     /* Menu toggle */
     const $sidebar = $('.sidebar');
     const $menuToggle = $('.js-menu-toggle');
 
-    $menuToggle.on('click', function (e) {
-        e.preventDefault();
+    function toggleMenu(e) {
+        if (e) {
+            e.preventDefault();
+        }
         $sidebar.toggleClass('opened');
+    }
+    $menuToggle.on('click', toggleMenu);
+
+    window.addEventListener('keydown', function(e) {
+        if ((e.key === 'Escape' || e.keyCode === 27) && $sidebar.hasClass('opened')) {
+            toggleMenu();
+        }
     });
 
-    $('.showcase_logo').on('mousemove', function (e) {
+    $('.showcase_logo-image').on('mousemove', function (e) {
         const { clientHeight, clientWidth } = e.currentTarget;
-        let { layerX, layerY } = e.originalEvent;
+        let { layerX, layerY, offsetX, offsetY } = e.originalEvent;
+        const x = offsetX || layerX;
+        const y = offsetY || layerY;
 
-        const percentX = (layerX / clientWidth * 100) - 50;
-        const percentY = (layerY / clientHeight * 100) - 50;
+        const percentX = (x / clientWidth * 100) - 50;
+        const percentY = (y / clientHeight * 100) - 50;
 
-        $(this).css('transform', `translate(-50%, -50%) rotateY(${percentX / 3}deg) rotateX(${-percentY / 20}deg)`);
+        $(this).css('transform', `rotateY(${percentX / 3}deg) rotateX(${-percentY / 20}deg)`);
     });
 
-    /* Slider */
-    //$('.slider').slick({
-    //    infinite: false,
-    //    slidesToShow: 3,
-    //    slidesToScroll: 1,
-    //    dots: false,
-    //    arrows: true,
-    //    appendArrows: $('.gallery_buttons'),
-    //    prevArrow: '<button type="button" class="slick-prev">prev</buttonn>',
-    //    nextArrow: '<button type="button" class="slick-next">next</button>'
-    //});
 
     /* Gallery */
     var $sliderItems = $('.slider_item');
-    var $galleryInfo = $('.gallery_info-content');
+    var $galleryImage = $('.gallery_image');
+    var $galleryInfoText = $('.gallery_info-text');
     var $galleryCount = $('.gallery_count-value');
     var $galleryCountTotal = $('.gallery_count-total');
 
     $galleryCountTotal.text($('.slider_column').children().length);
 
     $sliderItems.on('click', function (e) {
-        var title = $(this).find('.title').text();
-        var text = $(this).find('.text').text();
-        var date = $(this).find('.date').text();
         var src = $(this).find('.slider_image').attr('src');
-
-        var $newInfo = $(`<div class="gallery_info-image-wrapper"><img class="gallery_image" src="${src}" alt=""><div class="gallery_info-meta"><p class="gallery_info-title">${title}</p><p class="gallery_info-date">${date}</p></div></div><div class="gallery_info-text">${text}</div>`); 
-        $galleryInfo.html($newInfo);
+        var $newInfo = $(this).find('.slider_item-meta').html(); 
+        $galleryInfoText.html($newInfo);
+        $galleryImage.attr('src', src);
 
         $galleryCount.text($(this).data('number'));
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
         dots: false,
         items: 3,
         navContainer: $('.gallery_buttons'),
-        navText: ['prev','next']
+        navText: ['prev','next'],
     });
 
     /* Tabs */
@@ -77,5 +77,108 @@ $(document).ready(function () {
             $(`.widget_tab[data-tab="${tabNumber}"]`).addClass('active');
         }
     });
+
+    /* Counter */
+    var $counter = $('.appointment_button');
+    function generateSymbol() {
+        return Math.random().toString(36).substring(7).substring(0, 1);
+    }
+
+    /* Scroll */
+    var timeout = 500;
+    var isAninimating = false;
+    var activePage = 0;
+    var $pages = $('.page');
+    var $navigation = $('.pages_link');
+
+    function scrollPages(e) {
+        if (isAninimating) { return }
+        isAninimating = true;
+        setTimeout(() => {
+            isAninimating = false;
+        }, timeout);
+
+        $counter.text(generateSymbol());
+
+        var page = $pages.eq(activePage);
+        if (e) {
+            var isScrollDown = e.deltaY >= 0;
+            if (isScrollDown) {
+                if (activePage === 0 && !page.hasClass('scaled')) {
+                    page.addClass('scaled')
+                } else if (activePage < $pages.length - 1) {
+                    activePage++;
+                }
+            } else {
+                if (activePage === 0) {
+                    page.removeClass('scaled')
+                } else if (activePage !== 5) {
+                    activePage--
+                }
+            }
+        }
+        
+        $pages.removeClass('active');
+        $navigation.removeClass('active');
+        $pages.eq(activePage).addClass('active');
+        $navigation.eq(activePage).addClass('active');
+    }
+
+    if (!isMobile) {
+        document.addEventListener('wheel', scrollPages);
+    }
+
+    $navigation.on('click', function(e) {
+        if (!isMobile) {
+            e.preventDefault();
+            var index = $(this).index();
+            activePage = index;
+            scrollPages(false);
+        }
+    });
+
+    /* Navigation */
+    function navigateToPage() {
+        switch (document.location.hash) {
+            case '#about':
+                activePage = 1;
+                break;
+            case '#services':
+                activePage = 2;
+                break;
+            case '#price-lists':
+                activePage = 3;
+                break;
+            case '#gallery':
+                activePage = 4;
+                break;
+            case '#contact':
+                activePage = 5;
+                break;
+            default:
+                activePage = 0;
+        }
+        scrollPages();
+    }
+    window.addEventListener('popstate', navigateToPage);
+    navigateToPage();
+
+    /* Popup */
+    var $popup = $('.popup');
+    var $popupContent = $('.popup_content');
+
+    function togglePopup() {
+        $popup.toggleClass('opened');
+    }
+
+    $('.service_button').on('click', function(e) {
+        e.preventDefault();
+
+        var content = $(this).next().html();
+        $popupContent.html(content);
+        togglePopup();
+    });
+
+    $('.fade').on('click', togglePopup);
 
 });

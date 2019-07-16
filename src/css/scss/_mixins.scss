@@ -9,13 +9,16 @@
     white-space: nowrap;
 }
 @mixin tablet() {
-    @media all and (min-width: 767px) { @content; }
+    @media all and (min-width: 769px) { @content; }
 }
 @mixin desktop() {
-    @media all and (min-width: 1000px) { @content; }
+    @media all and (min-width: 1025px) { @content; }
 }
 @mixin media($resolution) {
     @media all and (min-width: $resolution) { @content; }
+}
+@mixin mediaHeight($resolution) {
+    @media all and (min-height: $resolution) { @content; }
 }
 @mixin placeholder-color($color) {
     &::-webkit-input-placeholder {
