@@ -424,7 +424,7 @@ input[type="button"] {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 button:active, button__active,
@@ -450,7 +450,7 @@ input[type="button"]:disabled {
   font-size: 16px;
   padding: 10px 20px;
   text-align: center;
-  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border-color, .2s ease-in-out background-color, .2s ease-in-out color;
   width: 100%;
 }
 
@@ -1117,17 +1117,9 @@ h3,
   }
 }
 
-.content_holder {
-  padding-left: 10px;
-  padding-right: 10px;
-  box-sizing: border-box;
-}
-
 @media all and (min-width: 769px) {
-  .content_holder {
-    max-width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
+  .content {
+    height: 100vh;
   }
 }
 
@@ -1303,8 +1295,10 @@ h3,
 
 @media all and (min-width: 1025px) {
   .page {
-    height: 100%;
+    min-height: 0;
+    bottom: 0;
     padding: 140px 160px 40px;
+    isolation: isolate;
   }
 }
 
@@ -1313,6 +1307,7 @@ h3,
     transform: translateY(0);
     -webkit-filter: blur(0px);
     filter: blur(0px);
+    z-index: 1;
   }
 }
 
@@ -1344,7 +1339,7 @@ h3,
 }
 
 .page__about {
-  background: url(src/img/gif.gif) no-repeat center center;
+  background: url(src/img/about-bg.jpg) no-repeat center center;
   background-size: cover;
   text-align: center;
 }
