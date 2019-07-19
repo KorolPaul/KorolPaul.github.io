@@ -1343,6 +1343,7 @@ h3,
 .page__main {
   padding: 0;
   z-index: 3;
+  overflow: hidden;
 }
 
 @media all and (min-width: 769px) {
