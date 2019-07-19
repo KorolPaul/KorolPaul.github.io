@@ -796,12 +796,20 @@ h3,
 .sidebar::before {
   content: 'MENU';
   color: rgba(219, 219, 219, 0.03);
-  font-size: 164px;
+  font-size: 94px;
   line-height: 1;
   font-weight: 900;
   position: absolute;
-  top: -30px;
-  right: -10px;
+  top: -11px;
+  right: 0px;
+}
+
+@media all and (min-width: 769px) {
+  .sidebar::before {
+    font-size: 164px;
+    top: -30px;
+    right: -10px;
+  }
 }
 
 .sidebar.opened {
@@ -819,6 +827,7 @@ h3,
   font: 300 13px "Oswald", sans-serif;
   text-transform: uppercase;
   transition: .2s ease-in-out color;
+  z-index: 2;
 }
 
 .sidebar_close::before, .sidebar_close::after {
@@ -1490,6 +1499,7 @@ h3,
   position: relative;
   height: 100%;
   z-index: 2;
+  overflow: hidden;
 }
 
 @media all and (min-width: 769px) {
@@ -1733,6 +1743,20 @@ h3,
 .popup_content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media all and (min-width: 769px) {
+  .popup_content {
+    width: auto;
+    padding: 0;
+    min-width: 700px;
+  }
+}
+
+.popup_content iframe {
+  width: 100%;
 }
 
 .fade {
