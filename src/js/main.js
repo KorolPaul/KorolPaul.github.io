@@ -165,12 +165,22 @@ $(document).ready(function () {
     window.scrollTo(0, 0);
     navigateToPage();
 
-    var hammer = new Hammer(document.body, {});
-    hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-    hammer.on('swipe', function(e) {
-        scrollPages(e, true);
-    });
+    if (!isMobile) {
+        var hammer = new Hammer(document.body, {});
+        hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+        hammer.on('swipe', function(e) {
+            scrollPages(e, true);
+        });
+    }
 
+    /* Load videos */
+    if (!isMobile) {
+        $('video source').each(function(e) {
+            console.log($(this).data('src'))
+            $(this).attr('src', $(this).data('src'))
+        });
+        document.querySelector('video').load();
+    }
 
     /* Popup */
     var $popup = $('.popup');
