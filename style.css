@@ -357,6 +357,10 @@ html {
   }
 }
 
+.sidebar-opened {
+  overflow: hidden;
+}
+
 body {
   background: #242424;
   color: #fff;

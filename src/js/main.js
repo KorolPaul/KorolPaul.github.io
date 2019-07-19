@@ -10,6 +10,7 @@ $(document).ready(function () {
             e.preventDefault();
         }
         $sidebar.toggleClass('opened');
+        $('html').toggleClass('sidebar-opened');
     }
     $menuToggle.on('click', toggleMenu);
 
