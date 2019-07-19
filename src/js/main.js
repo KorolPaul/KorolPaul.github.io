@@ -173,7 +173,7 @@ $(document).ready(function () {
             scrollPages(e, true);
         });
     } else {
-        var hammer = new Hammer(document.querySelector('.page__main'), {});
+        var hammer = new Hammer(document.querySelector('.showcase_bg'), {touchAction: "auto"});
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
         hammer.on('swipe', function(e) {
             if (e.deltaY < 0 ) {
