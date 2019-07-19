@@ -178,13 +178,17 @@ $(document).ready(function () {
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
         hammer.on('swipe', function(e) {
             if (e.deltaY < 0 ) {
-                if ($showcase.hasClass('scrolled')) {
+                if ($showcase.hasClass('scrollable')) {
                     e.srcEvent.stopPropagation()
                 } else {
                     $showcase.addClass('scrolled');
+                    setTimeout(() => {
+                        $showcase.addClass('scrollable');
+                    }, 300);
                 }
             } else {
                 $showcase.removeClass('scrolled');
+                $showcase.removeClass('scrollable');
             }
         });
     }
