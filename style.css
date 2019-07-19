@@ -1652,8 +1652,8 @@ h3,
 
 .showcase_mouse {
   position: absolute;
-  padding: 0 0 70px;
-  bottom: 50px;
+  padding: 0 0 120px;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -1669,9 +1669,9 @@ h3,
   content: '';
   background: #484848;
   width: 1px;
-  height: 200px;
   position: absolute;
-  top: 120%;
+  top: 80%;
+  bottom: 0;
   left: 46%;
 }
 
