@@ -1285,7 +1285,6 @@ h3,
 }
 
 .page {
-  min-height: 100vh;
   box-sizing: border-box;
   position: relative;
   padding: 100px 20px 40px;
@@ -1293,6 +1292,7 @@ h3,
 
 @media all and (min-width: 769px) {
   .page {
+    min-height: 100vh;
     position: absolute;
     left: 0;
     right: 0;
