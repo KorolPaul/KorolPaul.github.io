@@ -173,11 +173,12 @@ $(document).ready(function () {
             scrollPages(e, true);
         });
     } else {
-        var hammer = new Hammer(document.querySelector('.showcase_bg'), {touchAction: "auto"});
+        var hammer = new Hammer(document.querySelector('.page__main'), {touchAction: "auto"});
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
         hammer.on('swipe', function(e) {
             if (e.deltaY < 0 ) {
                 $('.showcase').addClass('scrolled');
+                e.srcEvent.stopPropagation()
             } else {
                 $('.showcase').removeClass('scrolled');
             }
