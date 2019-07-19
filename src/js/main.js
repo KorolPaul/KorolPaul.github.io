@@ -174,23 +174,21 @@ $(document).ready(function () {
         });
     } else {
         $showcase = $('.showcase');
-        var hammer = new Hammer(document.querySelector('.page__main'), {touchAction: "auto"});
+        var hammer = new Hammer(document.querySelector('.page__main'), { passive: true });
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-        hammer.on('swipe', function(e) {
+        hammer.on('swipe', function ev(e) {
             if (e.deltaY < 0 ) {
                 if ($showcase.hasClass('scrollable')) {
-                    e.srcEvent.stopPropagation()
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $(".page__about").offset().top
+                    }, 100, "linear");
                 } else {
                     $showcase.addClass('scrolled');
-                    setTimeout(() => {
-                        $showcase.addClass('scrollable');
-                    }, 300);
+                    $showcase.addClass('scrollable');
                 }
             } else {
                 $showcase.removeClass('scrolled');
-                 setTimeout(() => {
-                    $showcase.removeClass('scrollable');
-                }, 300);
+                $showcase.removeClass('scrollable');
             }
         });
     }
