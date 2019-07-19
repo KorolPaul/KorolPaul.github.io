@@ -173,14 +173,18 @@ $(document).ready(function () {
             scrollPages(e, true);
         });
     } else {
+        $showcase = $('.showcase');
         var hammer = new Hammer(document.querySelector('.page__main'), {touchAction: "auto"});
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
         hammer.on('swipe', function(e) {
             if (e.deltaY < 0 ) {
-                $('.showcase').addClass('scrolled');
-                e.srcEvent.stopPropagation()
+                if ($showcase.hasClass('scrolled')) {
+                    e.srcEvent.stopPropagation()
+                } else {
+                    $showcase.addClass('scrolled');
+                }
             } else {
-                $('.showcase').removeClass('scrolled');
+                $showcase.removeClass('scrolled');
             }
         });
     }
