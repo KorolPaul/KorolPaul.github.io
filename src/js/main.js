@@ -172,6 +172,16 @@ $(document).ready(function () {
         hammer.on('swipe', function(e) {
             scrollPages(e, true);
         });
+    } else {
+        var hammer = new Hammer(document.querySelector('.page__main'), {});
+        hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+        hammer.on('swipe', function(e) {
+            if (e.deltaY < 0 ) {
+                $('.showcase').addClass('scrolled');
+            } else {
+                $('.showcase').removeClass('scrolled');
+            }
+        });
     }
 
     /* Load videos */

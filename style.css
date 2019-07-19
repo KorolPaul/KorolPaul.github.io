@@ -1505,6 +1505,7 @@ h3,
   height: 100%;
   z-index: 2;
   overflow: hidden;
+  transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
 }
 
 @media all and (min-width: 769px) {
@@ -1514,7 +1515,6 @@ h3,
     left: 0;
     right: 0;
     bottom: 0;
-    transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
   }
 }
 
@@ -1566,12 +1566,17 @@ h3,
   left: 0;
   right: 0;
   bottom: 0;
+  transition: .3s ease-in-out transform;
 }
 
 @media all and (min-width: 769px) {
   .showcase_bg {
     background: transparent;
   }
+}
+
+.showcase.scrolled .showcase_bg {
+  transform: translateY(-100%);
 }
 
 .showcase_logo {
