@@ -188,7 +188,9 @@ $(document).ready(function () {
                 }
             } else {
                 $showcase.removeClass('scrolled');
-                $showcase.removeClass('scrollable');
+                 setTimeout(() => {
+                    $showcase.removeClass('scrollable');
+                }, 300);
             }
         });
     }

@@ -1567,6 +1567,7 @@ h3,
   right: 0;
   bottom: 0;
   transition: .3s ease-in-out transform;
+  z-index: 2;
 }
 
 @media all and (min-width: 769px) {
@@ -1694,6 +1695,29 @@ h3,
   position: absolute;
   left: -63px;
   top: 47px;
+}
+
+.showcase_mobile-video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media all and (min-width: 769px) {
+  .showcase_mobile-video {
+    display: none;
+  }
+}
+
+.showcase_mobile-video iframe {
+  margin: auto;
+  width: 90%;
 }
 
 @-webkit-keyframes mouse {
