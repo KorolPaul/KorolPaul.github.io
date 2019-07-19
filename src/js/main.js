@@ -174,22 +174,23 @@ $(document).ready(function () {
         });
     } else {
         $showcase = $('.showcase');
-        var hammer = new Hammer(document.querySelector('.page__main'), { passive: true });
+        var hammer = new Hammer(document.querySelector('.showcase_bg'));
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
         hammer.on('swipe', function ev(e) {
             if (e.deltaY < 0 ) {
-                if ($showcase.hasClass('scrollable')) {
-                    $([document.documentElement, document.body]).animate({
-                        scrollTop: $(".page__about").offset().top
-                    }, 100, "linear");
-                } else {
-                    $showcase.addClass('scrolled');
-                    $showcase.addClass('scrollable');
-                }
-            } else {
-                $showcase.removeClass('scrolled');
-                $showcase.removeClass('scrollable');
+                $showcase.addClass('scrolled');
             }
+        });
+        var hammer2 = new Hammer(document.querySelector('.showcase_mobile-video-bg'));
+        hammer2.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+        hammer2.on('swipe', function ev(e) {
+            if (e.deltaY > 0 ) {
+                $showcase.removeClass('scrolled');
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(".page__about").offset().top
+                }, 100, "linear");
+            };
         });
     }
 

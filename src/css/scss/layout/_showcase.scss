@@ -1,7 +1,7 @@
 .showcase {
     position: relative;
     height: 100%;
-    z-index: 2;
+    z-index: 3;
     overflow: hidden;
     transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
     @include tablet {
@@ -51,7 +51,7 @@
         right: 0;
         bottom: 0;
         transition: .3s ease-in-out transform;
-        z-index: 2;
+        z-index: 3;
         @include tablet {
             background: transparent;
         }
@@ -160,7 +160,7 @@
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 0);
-        z-index: 2;
+        z-index: 3;
         @include tablet {
             left: 80%;
             transform: none;
@@ -189,23 +189,41 @@
         left: -63px;
         top: 47px;
     }
+
     &_mobile-video {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 1;
+        top: 25%;
+        z-index: 2;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         @include tablet {
             display: none;
         }
 
         iframe {
             margin: auto;
-            width: 90%;
+            width: 90vw;
+        }
+
+        .showcase.scrolled ~ & {
+            z-index: 4;
+        }
+    }
+    &_mobile-video-bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
+        @include tablet {
+            display: none;
+        }
+
+        .showcase.scrolled ~ & {
+            z-index: 3;
         }
     }
 }

@@ -1503,7 +1503,7 @@ h3,
 .showcase {
   position: relative;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
   transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
 }
@@ -1567,7 +1567,7 @@ h3,
   right: 0;
   bottom: 0;
   transition: .3s ease-in-out transform;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media all and (min-width: 769px) {
@@ -1662,7 +1662,7 @@ h3,
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  z-index: 2;
+  z-index: 3;
 }
 
 @media all and (min-width: 769px) {
@@ -1702,12 +1702,10 @@ h3,
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 1;
+  top: 25%;
+  z-index: 2;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media all and (min-width: 769px) {
@@ -1718,7 +1716,30 @@ h3,
 
 .showcase_mobile-video iframe {
   margin: auto;
-  width: 90%;
+  width: 90vw;
+}
+
+.showcase.scrolled ~ .showcase_mobile-video {
+  z-index: 4;
+}
+
+.showcase_mobile-video-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@media all and (min-width: 769px) {
+  .showcase_mobile-video-bg {
+    display: none;
+  }
+}
+
+.showcase.scrolled ~ .showcase_mobile-video-bg {
+  z-index: 3;
 }
 
 @-webkit-keyframes mouse {
