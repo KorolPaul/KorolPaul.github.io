@@ -922,7 +922,7 @@ h3,
   position: fixed;
   right: 20px;
   top: 40px;
-  z-index: 2;
+  z-index: 4;
 }
 
 @media all and (min-width: 1025px) {
