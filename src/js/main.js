@@ -1,5 +1,3 @@
-screen.orientation.lock('portrait')
-
 $(document).ready(function () {
     var isMobile = screen.width < 769;
 
