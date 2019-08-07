@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var isMobile = screen.width < 769;
+    var isMobile = true;
 
     /* Menu toggle */
     const $sidebar = $('.sidebar');
