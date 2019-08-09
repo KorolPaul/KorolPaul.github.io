@@ -8,8 +8,8 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
 $(document).ready(function () {
     var isMobile = 'ontouchstart' in window || navigator.msMaxTouchPoints;
-
     alert(isMobile)
+
     /* Menu toggle */
     const $sidebar = $('.sidebar');
     const $menuToggle = $('.js-menu-toggle');
