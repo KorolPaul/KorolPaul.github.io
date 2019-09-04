@@ -139,6 +139,7 @@
     &_mouse-text {
         display: none;
         @include tablet {
+            display: block;
             font: 20px $font-family__heading;
             text-transform: uppercase;
             transform-origin: 100% 0;

@@ -1334,6 +1334,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 150px;
+}
+
+@media all and (min-width: 769px) {
+  .page__partners {
+    padding-top: 100px;
+  }
 }
 
 .page__contacts {
@@ -1572,6 +1579,7 @@ body {
 
 @media all and (min-width: 769px) {
   .showcase_mouse-text {
+    display: block;
     font: 20px "Oswald", sans-serif;
     text-transform: uppercase;
     transform-origin: 100% 0;
