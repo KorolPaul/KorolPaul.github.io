@@ -6,19 +6,22 @@
     bottom: 0;
     z-index: 3;
     overflow: hidden;
-    transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s;
+    transition: 1s ease-in-out transform, .3s ease-in-out opacity .5s, .001s z-index .3s;
 
     .scaled & {
         //@include tablet {
             transform: scale(30);
             opacity: 0;
+            z-index: 1;
         //}
     }
     
     &_video {
         object-fit: cover;
         height: 100vh;
-        width: 100vw;        
+        width: 100vw;
+        position: relative;
+        z-index: 2;
         @include tablet {
             display: block;
             object-fit: cover;
@@ -137,13 +140,17 @@
         animation: mouse 1.2s ease-out infinite;
     }
     &_mouse-text {
-        font: 20px $font-family__heading;
-        text-transform: uppercase;
-        transform-origin: 100% 0;
-        transform: rotate(-90deg);
-        position: absolute;
-        left: -63px;
-        top: 47px;
+        display: none;
+        @include tablet {
+            display: block;
+            font: 20px $font-family__heading;
+            text-transform: uppercase;
+            transform-origin: 100% 0;
+            transform: rotate(-90deg);
+            position: absolute;
+            left: -63px;
+            top: 47px;
+        }
     }
 
     //&_mobile-video {

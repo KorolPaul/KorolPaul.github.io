@@ -191,27 +191,6 @@ $(document).ready(function () {
     hammer.on('swipe', function(e) {
         scrollPages(e, true);
     });
-    //else {
-    //    $showcase = $('.showcase');
-    //    var hammer = new Hammer(document.querySelector('.showcase_bg'));
-    //    hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-    //    hammer.on('swipe', function ev(e) {
-    //        if (e.deltaY < 0 ) {
-    //            $showcase.addClass('scrolled');
-    //        }
-    //    });
-    //    var hammer2 = new Hammer(document.querySelector('.showcase_mobile-video-bg'));
-    //    hammer2.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-    //    hammer2.on('swipe', function ev(e) {
-    //        if (e.deltaY > 0 ) {
-    //            $showcase.removeClass('scrolled');
-    //        } else {
-    //            $([document.documentElement, document.body]).animate({
-    //                scrollTop: $(".page__about").offset().top
-    //            }, 100, "linear");
-    //        };
-    //    });
-    //}
 
     /* Partners */
     $('.carousel__partners').owlCarousel({
@@ -274,17 +253,20 @@ $(document).ready(function () {
                 $('.loc').each((i, el) => {
                     const word = el.dataset.word.split('.');
                     
-
-                    if (word.length === 1) {
-                        el.innerHTML = data[lang][word[0]];
-                    } else if (word.length === 2) {
-                        el.innerHTML = data[lang][word[0]][word[1]];
-                    } else if (word.length === 3) {
-                        el.innerHTML = data[lang][word[0]][word[1]][word[2]];
-                    } else if (word.length === 4) {
-                        el.innerHTML = data[lang][word[0]][parseInt(word[1])][word[2]][word[3]];
-                    } else if (word.length === 6) {
-                        el.innerHTML = data[lang][word[0]][word[1]][word[2]][parseInt(word[3])][word[4]][word[5]];
+                    try {
+                        if (word.length === 1) {
+                            el.innerHTML = data[lang][word[0]];
+                        } else if (word.length === 2) {
+                            el.innerHTML = data[lang][word[0]][word[1]];
+                        } else if (word.length === 3) {
+                            el.innerHTML = data[lang][word[0]][word[1]][word[2]];
+                        } else if (word.length === 4) {
+                            el.innerHTML = data[lang][word[0]][parseInt(word[1])][word[2]][word[3]];
+                        } else if (word.length === 6) {
+                            el.innerHTML = data[lang][word[0]][word[1]][word[2]][parseInt(word[3])][word[4]][word[5]];
+                        }
+                    } catch(err) {
+                        console.error(err);
                     }
                 })
             });
