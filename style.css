@@ -4425,6 +4425,14 @@ html {
   color: #FF9A19;
 }
 
+.ui-widget-header {
+  font-weight: normal;
+}
+
+.ui-widget-content {
+  border-color: #d7d7d7;
+}
+
 /*layout*/
 h1,
 .heading-1 {
