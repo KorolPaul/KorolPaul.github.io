@@ -1,0 +1,15 @@
+.more {
+    font-size: 15px;
+    font-weight: 500;
+    color: $dark_color;
+    background: #e8e8e8;
+    border-radius: 4px;
+    padding: 16px 45px;
+    @include tablet {
+        min-width: 290px;
+    }
+
+    &:hover {
+        color: $light_color;
+    }
+}

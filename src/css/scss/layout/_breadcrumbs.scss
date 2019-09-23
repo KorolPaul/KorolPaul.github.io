@@ -1,0 +1,19 @@
+.breadcrumbs {
+    font-size: $font-size__small;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    color: $gray_color;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    @include tablet {
+        margin-top: -15px;
+    }
+
+    &_link {
+        color: $gray_color;
+        &::after {
+            content: '•';
+            margin: 0 2px 0 8px;
+        }
+    }
+}

@@ -1,0 +1,263 @@
+.cards {
+    margin: 0 0 30px;
+    @include tablet {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin-left: -1.5%;
+        margin-right: -1.5%;
+    }
+    @include desktop {
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    &__3 {
+        justify-content: space-between;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    margin: 0 0 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transition: .2s ease-in-out box-shadow;
+    @include tablet {
+        display: block;
+        min-height: 555px;
+        margin-bottom: 30px;
+        width: 31%;
+        margin-left: 1%;
+        margin-right: 1%;
+        overflow: visible;
+    }
+    @include desktop {
+        width: 23%;
+    }
+
+    &__small {
+        display: block;
+        height: auto;
+        @include tablet {
+            margin-right: 0;
+        }
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+    &__empty {
+        animation: 1s pulsate ease-in-out infinite;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    .cards__3 & {
+        @include tablet {
+            width: 31%;
+        }
+    }
+
+    & > a {
+        flex-shrink: 0;
+        width: 25%;
+        margin: 0 10px 0 0;
+        min-width: 110px;
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &_image {
+        width: 100%;
+        border-radius: 6px;
+        object-fit: cover;
+        transition: .2s ease-in-out filter;
+        
+
+        .card__small & {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+        .card:hover & {
+            filter: brightness(.9);
+        }
+    }
+    &_info {
+        background: $light_color;
+        position: relative;
+        flex-grow: 2;
+        border-radius: 6px;
+        @include tablet {
+            overflow: hidden;
+            padding: 10px;
+            transition: .2s ease-in-out all;
+        }
+
+        .card:hover &,
+        .card:hover & {
+            @include tablet {
+                margin-top: -50px;
+                padding-bottom: 60px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .15);
+            }
+        }
+        
+
+        .card__small & {
+            height: auto;
+            padding: 10px 0;
+        }
+        .card__empty & {
+            padding: 12px;
+        }
+        .card__small:hover &,
+        .card__empty:hover & {
+            @include tablet {
+                margin-top: 0;
+                padding-bottom: 10px;
+                box-shadow: none;
+            }
+        }
+    }
+    &_title {
+        cursor: pointer;
+        display: block;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.18;
+        color: $dark_color;
+        min-height: 40px;
+        margin: 0 0 15px;
+        transition: .2s ease-in-out color;
+        @include tablet {
+            margin: 0 0 5px;
+        }
+
+        .card__small & {
+            width: calc(100% - 112px);
+            min-height: 0;
+        }
+
+        &:hover {
+            color: $bright_color;
+        }
+    }
+    &_date,
+    &_adress {
+        opacity: 0.6;
+        font-size: 15px;
+        line-height: 1.33;
+        color: #444444;
+        margin: 0;
+    }
+    &_date {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_price {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.33;
+        color: $dark_color;
+    }
+    &_button {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 6px 18px;
+        margin: 0;
+        @include tablet {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: calc(100% - 20px);
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.25;
+            padding: 16px;
+            transform: translateY(150%);
+            transition: .2s ease-in-out all;
+        }
+
+        .card:not(.card__small):hover &,
+        .card:not(.card__empty):hover & {
+            transform: translateY(0);
+        }
+    }
+    &_price-button {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px 16px;
+    }
+    &_tags {
+        display: none;
+        @include tablet {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            right: 15px;
+            display: block;
+        }
+    }
+    &_tag {
+        font-size: 15px;
+        line-height: 1.33;
+        margin: 0 10px 0 0;
+        color: $light_color;
+    }
+    &_image-placeholder {
+        background: #e8e8e8;
+        width: 100%;
+        height: 420px;
+        border-radius: 6px;
+    }
+    &_placeolder {
+        background: #e8e8e8;
+        height: 15px;
+        margin: 0 0 10px;
+
+        &:nth-child(1) {
+            width: 45%;
+        }
+        &:nth-child(2) {
+            width: 80%;
+        }
+        &:nth-child(3) {
+            width: 50%;
+        }
+        &:nth-child(4) {
+            width: 70%;
+        }
+        &:nth-child(5) {
+            width:  30%;
+        }
+        &:nth-child(6) {
+            width:20%;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;
+    }
+}

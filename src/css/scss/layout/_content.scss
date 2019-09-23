@@ -1,5 +1,39 @@
 .content {
+
+    &_holder {
+        @include layout;
+        padding: 20px $layout_indent 40px;
+        @include tablet {
+            padding: 46px $layout_indent 80px;
+        }
+    }
+    &_sidebar-wrapper {
+        @include desktop {
+            display: flex;
+            align-items: flex-start;
+            justify-content: stretch;
+        }
+    }
+}
+
+.sidebar {
+    padding: 0 0 40px;
     @include tablet {
-        height: 100vh;
+        margin: 0 0 40px;
+    }
+    @include desktop {
+        width: 383px;
+        margin: 0 0 0 55px;
+        flex-shrink: 0;
+    }
+
+    &__first {
+        order: 2;
+        padding-bottom: 0;
+        @include desktop {
+            position: sticky;
+            top: 130px;
+            z-index: 2;
+        }
     }
 }

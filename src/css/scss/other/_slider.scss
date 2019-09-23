@@ -1,0 +1,48 @@
+.slider {
+
+    &_item {
+        position: relative;
+    }
+    &_info {
+        color: $light_color;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 40px;
+        text-align: center;
+        @include tablet {
+            left: 20vh;
+            right: 20vh;
+            bottom: 66px;
+        }
+    }
+    &_image {
+        width: 100%;
+    }
+    &_title {
+        font: bold #{36px}/1.1 $font-family;
+        margin: 0 0 15px;
+        @include tablet {
+            font-size: bold #{54px}/1 $font-family;
+        }
+    }
+    &_date {
+        font-size: 17px;
+        line-height: 1.18;
+        margin: 0 0 6px;
+        @include tablet {
+            margin: 0 0 4px;
+        }
+    }
+    &_adress {
+        font-size: 17px;
+        line-height: 1.18;
+    }
+}
+
+.slider-count {
+    opacity: 0.6;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.33;
+}

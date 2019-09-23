@@ -1,0 +1,14 @@
+.socials {
+    @include invisible-text;
+    margin:  0 0 26px;
+
+    &_image {
+        margin: 0 10px 10px 0;
+        opacity: .4;
+        transition: .2s ease-in-out opacity;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

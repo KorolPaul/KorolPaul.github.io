@@ -1,0 +1,14 @@
+.payments {
+    @include invisible-text;
+    display: flex;
+    align-items: center;
+    margin: 0 0 31px;
+    @include tablet {
+        margin: 0 0 10px;
+    }
+
+    &_image {
+        width: 55px;
+        margin: 0 30px 0 0;
+    }
+}

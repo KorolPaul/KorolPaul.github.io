@@ -16,42 +16,44 @@
 @import  "form-elements/label";
 @import  "form-elements/form";
 
+/* Plugins */
+@import  "plugins/selectize";
+@import  "plugins/owl";
+@import  "plugins/fancybox";
+@import  "plugins/datapicker";
 
 /*layout*/
 @import  "layout/headings";
 @import  "layout/header";
-@import  "layout/sidebar";
 @import  "layout/footer";
 @import  "layout/footer-menu";
 @import  "layout/menu";
 @import  "layout/menu-toggle";
 @import  "layout/logo";
 @import  "layout/content";
-@import  "layout/title";
-@import  "layout/lang";
 @import  "layout/tab";
-@import  "layout/slider";
-@import  "layout/page";
-@import  "layout/pages";
-@import  "layout/showcase";
 @import  "layout/popup";
-
+@import  "layout/tabs";
+@import  "layout/cards";
+@import  "layout/filter";
+@import  "layout/more-text";
+@import  "layout/breadcrumbs";
 
 /*Other*/
-@import  "other/appointment";
-@import  "other/app";
-@import  "other/map";
-@import  "other/widget";
-@import  "other/contacts";
-@import  "other/social";
-@import  "other/about";
-@import  "other/service";
-@import  "other/prices";
-@import  "other/gallery";
-@import  "other/carousel";
-@import  "other/spinner";
-
-
-/*Plugins*/
-@import  "plugins/slick";
-@import  "plugins/owl";
+@import  "other/more";
+@import  "other/city-select";
+@import  "other/search";
+@import  "other/lang";
+@import  "other/slider";
+@import  "other/showcase";
+@import  "other/socials";
+@import  "other/payments";
+@import  "other/categories";
+@import  "other/document";
+@import  "other/participants";
+@import  "other/gallery-grid";
+@import  "other/reviews";
+@import  "other/smi";
+@import  "other/credits";
+@import  "other/tickets";
+@import  "other/event";

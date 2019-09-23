@@ -1,0 +1,66 @@
+.filter {
+    margin: 0 0 14px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: $light_color;
+    padding: 10px 0;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 40px;
+    }
+
+    &_column {
+        display: flex;
+        align-items: center;
+    }
+    &_buttons {
+        display: none;
+        @include desktop {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &_button {
+        height: 40px;
+        line-height: 38px;
+        font-size: 15px;
+        font-weight: 500;
+        color: $dark_color;
+        padding: 0 15px;
+        border-radius: 4px;
+        background-color: #e8e8e8;
+        margin: 0 0 0 10px;
+        white-space: nowrap;
+
+        &:first-child {
+            margin: 0;
+        }
+
+        &:hover,
+        &.active {
+            color: $bright_color;
+            background: #ffb8e4;
+        }
+
+        &.active {
+            border: 2px solid $bright_color;
+        }
+    }
+    &_select {
+        margin: 0 10px 0 0;
+        @include desktop {
+            margin: 0 0 0 10px;
+        }
+    }
+    &_all {
+        margin: 0 0 0 10px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 27px;
+        display: inline-block;
+        height: 40px;
+    }
+}

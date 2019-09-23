@@ -1,0 +1,56 @@
+.showcase {
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    &_image {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    &_info {
+        color: $light_color;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 40px;
+        z-index: 3;
+        @include tablet {
+            left: 0;
+            right: 0;
+        }
+    }
+    &_info-content {
+        @include tablet {
+            @include layout;
+        }
+    }
+    &_title {
+        font: bold #{36px}/1.1 $font-family;
+        margin: 0 0 15px;
+        @include tablet {
+            font-size: 54px;
+        }
+    }
+    &_date {
+        font-size: 17px;
+        line-height: 1.18;
+        margin: 0 0 6px;
+        @include tablet {
+            margin: 0 0 4px;
+        }
+    }
+    &_adress {
+        font-size: 17px;
+        line-height: 1.18;
+    }
+}

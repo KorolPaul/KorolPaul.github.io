@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mens space</title>
+    <title>Единое поле</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -12,8 +12,6 @@
     <link rel="icon" type="image/png" href="16x16px.png" sizes="16x16">
     <link rel="icon" type="image/png" href="32x32px.png" sizes="32x32">
     <link rel="icon" type="image/png" href="48x48px.png" sizes="48x48">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
     <meta content="telephone=no" name="format-detection">
     <meta name="HandheldFriendly" content="true">
 </head>
@@ -22,1194 +20,557 @@
         <div class="menu-toggle_line"></div>
         <div class="menu-toggle_line"></div>
         <div class="menu-toggle_line"></div>
-        <span class="loc" data-word="menu">menu</span>
+        menu
     </button>
-    <div class="sidebar">
-        <button class="sidebar_close js-menu-toggle">
-            close
-        </button>
-        <div class="sidebar_column">
-            <div class="lang">
-                <a href="en" class="lang_item">en</a>
-                <a href="ru" class="lang_item">ru</a>
-                <a href="pt" class="lang_item">pt</a>
-            </div>
-            <nav class="menu">
-                <a href="#main" class="menu_link">
-                    <span class="loc" data-word="home">HOME</span>
-                </a>
-                <a href="#about" class="menu_link">
-                    <span class="loc" data-word="aboutUs">ABOUT US</span>
-                </a>
-                <a href="#services" class="menu_link">
-                    <span class="loc" data-word="services">SERVICES</span>
-                </a>
-                <a href="#price-lists" class="menu_link">
-                    <span class="loc" data-word="priceList">PRICE LISTS</span>
-                </a>
-                <a href="#gallery" class="menu_link">
-                    <span class="loc" data-word="gallery">gallery</span>
-                </a>
-                <a href="#partners" class="menu_link">
-                    <span class="loc" data-word="partners">partners</span>
-                </a>
-                <a href="#contact" class="menu_link">
-                    <span class="loc" data-word="contact">contact</span>
-                </a>
-            </nav>
-        </div>
-        <div class="sidebar_column">
-            <div class="contacts">
-                <p class="contacts_phone">
-                    +351 123456789
-                </p>
-                <p class="contacts_time">
-                    <span class="loc" data-word="opening1">Monday to Saturday</span>
-                    <span class="loc" data-word="opening2">09:00 to 21:00</span>
-                </p>
-            </div>
-            <div class="social">
-                <p class="social_title">
-                    <span class="loc" data-word="followUs">FOLLOW US</span>
-                </p>
-                <a href="#" class="social_link social_link__fb">facebook</a>
-                <a href="#" class="social_link social_link__instagram">instagram</a>
-                <a href="#" class="social_link social_link__youtube">youtube</a>
-            </div>
-        </div>
-    </div>
     <header class="header">
-        <a class="logo" href="#main">
-            <img src="src/img/logo.svg" alt="" class="logo_icon">
-            <img src="src/img/title.svg" alt="" class="logo_title">
-        </a>
-        <div class="appointment">
-            <a href="/google" class="appointment_button">E</a>
-            <p class="appointment_title">
-                <span class="loc" data-word="apointment1">MAKE AN</span>
-                <span class="bright"><span class="loc" data-word="apointment2">APPOINTMENT</span></span>
-            </p>
+        <div class="header_holder">
+            <div class="header_left">
+                <a class="logo" href="#main">
+                    <img src="/src/img/logo.png" alt="" class="logo_icon">
+                </a>
+                <div class="header_navigation">
+                    <select id="select-search" class="search" placeholder="Поиск"></select>
+                    <nav class="menu">
+                        <div class="menu_langs">
+                            <a href="#" class="menu_lang active">RU</a>
+                            <a href="#" class="menu_lang">EN</a>
+                            <a href="#" class="menu_lang">UA</a>
+                            <a href="#" class="menu_lang">EE</a>
+                        </div>
+                        <a href="#" class="menu_link">Концерты</a>
+                        <a href="#" class="menu_link">Спектакли</a>
+                        <a href="#" class="menu_link">Последний шанс</a>
+                        <a href="#" class="menu_link">О проекте</a>
+                        <div class="menu_link menu_link__other submenu-wrapper">
+                            <span>...</span>
+                            <div class="submenu">
+                                <div class="submenu_list">
+                                    <a class="submenu_link" href="#">Контакты</a>
+                                    <a class="submenu_link" href="#">Реклама</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="header_controls">
+                    <div class="submenu-wrapper">
+                        <button class="city-select">Выбор города</button>
+                        <div class="submenu">
+                            <div class="submenu_list">
+                                <a class="submenu_link" href="#">Москва</a>
+                                <a class="submenu_link" href="#">Санкт-Петербург</a>
+                                <a class="submenu_link" href="#">Екатеринбург</a>
+                                <a class="submenu_link" href="#">Казань</a>
+                            </div>
+                        </div>
+                    </div>
+                    <select class="lang">
+                        <option>RU</option>
+                        <option>EN</option>
+                        <option>UA</option>
+                        <option>EE</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </header>
-    <nav class="pages">
-        <a href="#main" class="pages_link active">HOME</a>
-        <a href="#about" class="pages_link">ABOUT US</a>
-        <a href="#services" class="pages_link">SERVICES</a>
-        <a href="#price-lists" class="pages_link">PRICE LISTS</a>
-        <a href="#gallery" class="pages_link">gallery</a>
-        <a href="#partners" class="pages_link">partners</a>
-        <a href="#contact" class="pages_link">contact</a>
-    </nav>
-    <div class="pages-container">
-        <div class="page page__main active">
-            <div class="showcase">
-                <div class="showcase_bg"></div>
-                <div class="showcase_logo">
-                    <img class="showcase_logo-image" src="/src/img/showcase-filter.png" alt="" />
-                </div>
-                <div class="showcase_mouse">
-                    <img  class="showcase_mouse-icon" src="/src/img/mouse.svg" alt="">
-                    <span class="showcase_mouse-text">scroll</span>
+
+    <div class="content">
+        <div class="slider owl-carousel">
+            <div class="slider_item">
+                <img class="slider_image" src="src/img/slider-1.jpg" alt="">
+                <div class="slider_info">
+                    <p class="slider_date">cб 13 августа</p>
+                    <h1 class="slider_title">Симфонические рок-хиты</h1>
+                    <p class="slider_adress">Планета КВН</p>
                 </div>
             </div>
-            <video class="showcase_video" autoplay loop muted >
-                <source data-src="src/img/video.mp4" src="src/img/video-mobile.mp4" type="video/mp4">
-                <source data-src="src/img/video.webm" src="src/img/video-mobile.webm" type="video/webm">
-            </video>
-        </div>
-        <div class="page page__about">
-            <article class="about">
-                <h1 class="title title__shaver">
-                    <span class="loc" data-word="about.title1">ABOUT</span>
-                    <span class="bright"><span class="loc" data-word="about.title2">US</span></span>
-                </h1>
-                <div class="about_content">
-                    <h2>
-                        <strong><span class="loc" data-word="about.subtitle">Предлагаем духмяный односолодовый и вперед!</span></strong>
-                    </h2>
-                    <p>
-                        <span class="loc" data-word="about.text1">В нашем салоне мастера стремятся к изящному результату, чистые линии превыше всего, а соотношение форм изучается с математической точностью. Мы не барбер шоп. Мы не играем в ретро, но используем элементы классической берберской эстетики для создания правильной атмосферы.</span></p>
-                    <p>
-                        <span class="loc" data-word="about.text2">Мы угощаем. В нашем баре есть такие напитки как: старый добрый Джек, Дэниелс конечно, Мистер Башмил и Мистер Глэнливет, дедушка Портвейн…а вообще заходите к нам в гости, кто знает кого вы еще встретите! (Обычный шрифт)</span>
-                    </p>
+            <div class="slider_item">
+                <img class="slider_image" src="src/img/slider-1.jpg" alt="">
+                <div class="slider_info">
+                    <p class="slider_date">cб 13 августа</p>
+                    <h1 class="slider_title">Симфонические рок-хиты</h1>
+                    <p class="slider_adress">Планета КВН</p>
                 </div>
-            </article>
-        </div>
-        <div class="page page__services">
-            <div class="services">
-                <div class="services_title">
-                    <h1>SERVICES</h1>
-                </div>
-                <div class="services_list owl-carousel">
-                    <div class="services_wrapper">
-                        <div class="service">
-                            <h3 class="service_title">
-                                <span class="service_title-text">
-                                    <span class="loc" data-word="servs.0.service1.title">haircut</span>
-                                </span>
-                            </h3>
-                            <div class="service_content">
-                                <p>
-                                    <span class="loc" data-word="servs.0.service1.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
-                                </p>
-                                <a href="#" class="service_button">WATCH THE VIDEO</a>
-                                <div class="service_video">
-                                    <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h3 class="service_title">
-                                <span class="service_title-text">
-                                    <span class="loc" data-word="servs.1.service2.title">haircut</span>
-                                </span>
-                            </h3>
-                            <div class="service_content">
-                                <p>
-                                    <span class="loc" data-word="servs.1.service2.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
-                                </p>
-                                <a href="#" class="service_button">WATCH THE VIDEO</a>
-                                <div class="service_video">
-                                    <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services_wrapper">
-                        <div class="service">
-                            <h3 class="service_title">
-                                <span class="service_title-text">
-                                    <span class="loc" data-word="servs.2.service3.title">haircut</span>
-                                </span>
-                            </h3>
-                            <div class="service_content">
-                                <p>
-                                    <span class="loc" data-word="servs.2.service3.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
-                                </p>
-                                <a href="#" class="service_button">WATCH THE VIDEO</a>
-                                <div class="service_video">
-                                    <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h3 class="service_title">
-                                <span class="service_title-text">
-                                    <span class="loc" data-word="servs.3.service4.title">haircut</span>
-                                </span>
-                            </h3>
-                            <div class="service_content">
-                                <p>
-                                    <span class="loc" data-word="servs.3.service4.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat.</span>
-                                </p>
-                                <a href="#" class="service_button">WATCH THE VIDEO</a>
-                                <div class="service_video">
-                                    <iframe src="https://player.vimeo.com/video/19663698" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="slider_item">
+                <img class="slider_image" src="src/img/slider-1.jpg" alt="">
+                <div class="slider_info">
+                    <p class="slider_date">cб 13 августа</p>
+                    <h1 class="slider_title">Симфонические рок-хиты</h1>
+                    <p class="slider_adress">Планета КВН</p>
                 </div>
             </div>
         </div>
-        <div class="page page__pricelist">
-            <div>
-                <h1>PRICES <span class="bright">LIST</span></h1>
-                <div class="prices owl-carousel">
-                    <div class="prices_slide">
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.0.price1.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.0.price1.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup1.prcs.0.price1.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.1.price2.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.1.price2.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup1.prcs.1.price2.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.2.price3.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.2.price3.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup1.prcs.2.price3.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.3.price4.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup1.prcs.3.price4.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup1.prcs.3.price4.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
+        <div class="content_holder">
+            <div class="categories">
+                <a href="#" class="category">
+                    <img src="https://via.placeholder.com/587x145" alt="" class="category_image">
+                    <div class="category_text">
+                        <h1 class="category_title">Рок фетивали августа</h1>
+                        <span class="category_count">13 событий</span>
                     </div>
-                    <div class="prices_slide">
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.0.price1.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.0.price1.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup2.prcs.0.price1.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.1.price2.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.1.price2.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup2.prcs.1.price2.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.2.price3.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.2.price3.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup2.prcs.2.price3.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.3.price4.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup2.prcs.3.price4.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup2.prcs.3.price4.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="prices_slide">
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.0.price1.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.0.price1.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup3.prcs.0.price1.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.1.price2.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.1.price2.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup3.prcs.1.price2.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.2.price3.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.2.price3.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup3.prcs.2.price3.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                        <div class="price">
-                            <div class="price_header">
-                                <span class="price_title">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.3.price4.title">Classic haircut</span>
-                                </span>
-                                <div class="price_space"></div>
-                                <span class="price_value">
-                                    <span class="loc" data-word="prices.priceGroup3.prcs.3.price4.price">20.00€</span>
-                                </span>
-                            </div>
-                            <p>
-                                <span class="loc" data-word="prices.priceGroup3.prcs.3.price4.subtitle">Lorem ipsum dolor sit amet, consectetur.</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page page__gallery">
-            <div class="gallery">
-                <div class="gallery_title">
-                    <h1 class="title title__hairbrush">gallery</h1>
-                </div>
-                <div class="gallery_info">
-                    <div class="gallery_info-content">
-                        <div class="gallery_info-image-wrapper">
-                            <img class="gallery_image" src="src/img/slider/slider-1.jpg" alt="">
-                            <div class="spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                        </div>
-                        <div class="gallery_info-text">
-                            <div class="gallery_info-meta">
-                                <p class="gallery_info-title"><strong>cuts and whiskey</strong> inauguration party</p>
-                                <p class="gallery_info-date">10/05/2018</p>
-                            </div>
-                            <p>Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery_slider">
-                    <div class="slider owl-carousel owl-theme">
-                        <div class="slider_column">
-                            <div class="slider_item active" data-number="01" data-src="src/img/slider/slider-1.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-1.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.0.image1.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.0.image1.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.0.image1.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="02" data-src="src/img/slider/slider-2.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-2.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.1.image2.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.1.image2.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.1.image2.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="03" data-src="src/img/slider/slider-3.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-3.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                            <p class="gallery_info-title">
-                                                <span class="loc" data-word="gall.2.image3.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                            </p>
-                                            <p class="gallery_info-date">
-                                                <span class="loc" data-word="gall.2.image3.date">10/05/2018</span>
-                                            </p>
-                                        </div>
-                                        <p>
-                                            <span class="loc" data-word="gall.2.image3.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                        </p>
-                                    </div>
-                            </div>
-                            <div class="slider_item" data-number="04" data-src="src/img/slider/slider-4.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-4.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.3.image4.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.3.image4.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.3.image4.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="05" data-src="src/img/slider/slider-5.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-5.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.4.image5.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.4.image5.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.4.image5.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="06" data-src="src/img/slider/slider-6.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-6.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.5.image6.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.5.image6.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.5.image6.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="07" data-src="src/img/slider/slider-7.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-7.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.6.image7.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.6.image7.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.6.image7.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="08" data-src="src/img/slider/slider-8.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-8.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.7.image8.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.7.image8.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.7.image8.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="09" data-src="src/img/slider/slider-9.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-9.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.8.image9.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.8.image9.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.8.image9.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="10" data-src="src/img/slider/slider-10.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-10.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.9.image10.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.9.image10.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.9.image10.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="11" data-src="src/img/slider/slider-11.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-11.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.10.image11.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.10.image11.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.10.image11.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="12" data-src="src/img/slider/slider-12.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-12.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.11.image12.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.11.image12.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.11.image12.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="13" data-src="src/img/slider/slider-13.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-13.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.12.image13.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.12.image13.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.12.image13.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="14" data-src="src/img/slider/slider-14.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-14.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.13.image14.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.13.image14.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.13.image14.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="15" data-src="src/img/slider/slider-15.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-15.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.14.image15.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.14.image15.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.14.image15.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="16" data-src="src/img/slider/slider-16.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-16.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.15.image16.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.15.image16.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.15.image16.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="17" data-src="src/img/slider/slider-17.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-17.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.16.image17.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.16.image17.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.16.image17.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="18" data-src="src/img/slider/slider-18.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-18.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.17.image18.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.17.image18.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.17.image18.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="19" data-src="src/img/slider/slider-19.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-19.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.18.image19.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.18.image19.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.18.image19.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="20" data-src="src/img/slider/slider-20.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-20.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.19.image20.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.19.image20.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.19.image20.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="21" data-src="src/img/slider/slider-21.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-21.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.20.image21.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.20.image21.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.20.image21.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="22" data-src="src/img/slider/slider-22.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-22.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.21.image22.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.21.image22.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.21.image22.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="23" data-src="src/img/slider/slider-23.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-23.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.22.image23.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.22.image23.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.22.image23.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="24" data-src="src/img/slider/slider-24.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-24.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.23.image24.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.23.image24.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.23.image24.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="25" data-src="src/img/slider/slider-25.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-25.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.24.image25.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.24.image25.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.24.image25.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="26" data-src="src/img/slider/slider-26.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-26.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.25.image26.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.25.image26.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.25.image26.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="27" data-src="src/img/slider/slider-27.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-27.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.26.image27.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.26.image27.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.26.image27.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="28" data-src="src/img/slider/slider-28.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-28.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.27.image28.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.27.image28.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.27.image28.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="29" data-src="src/img/slider/slider-29.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-29.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.28.image29.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.28.image29.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.28.image29.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="30" data-src="src/img/slider/slider-30.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-30.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.29.image30.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.29.image30.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.29.image30.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="31" data-src="src/img/slider/slider-31.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-31.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.30.image31.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.30.image31.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.30.image31.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="32" data-src="src/img/slider/slider-32.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-32.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.31.image32.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.31.image32.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.31.image32.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="33" data-src="src/img/slider/slider-33.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-33.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.32.image33.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.32.image33.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.32.image33.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="34" data-src="src/img/slider/slider-34.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-34.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.33.image34.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.33.image34.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.33.image34.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider_column">
-                            <div class="slider_item" data-number="35" data-src="src/img/slider/slider-35.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-35.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.34.image35.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.34.image35.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.34.image35.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slider_item" data-number="36" data-src="src/img/slider/slider-36.jpg">
-                                <img  class="slider_image" src="src/img/slider/thumbs/slider-36.jpg" alt="">
-                                <div class="slider_item-meta">
-                                    <div class="gallery_info-meta">
-                                        <p class="gallery_info-title">
-                                            <span class="loc" data-word="gall.35.image36.title"><strong>cuts and whiskey</strong> inauguration party</span>
-                                        </p>
-                                        <p class="gallery_info-date">
-                                            <span class="loc" data-word="gall.35.image36.date">10/05/2018</span>
-                                        </p>
-                                    </div>
-                                    <p>
-                                        <span class="loc" data-word="gall.35.image36.subtitle">Maecenas auctor elementum mi, non commodo magna mattis eu. Nam euismod nisl et laoreet placerat. Curabitur et</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery_controls">
-                        <div class="gallery_navigation">
-                            <div class="gallery_progress">
-                                <div class="gallery__progress-value"></div>
-                            </div>
-                            <div class="gallery_count">
-                                <span class="gallery_count-value">01</span>
-                                <span class="gallery_count-total">12</span>
-                            </div>
-                        </div>
-                        <div class="gallery_buttons"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page page__partners owl-carousel">
-            <h1>
-                <span class="loc" data-word="parts.title1">OUR</span>
-                <span class="bright">
-                    <span class="loc" data-word="parts.title2">PARTNERS</span>
-                </span>
-            </h1>
-            <div class="carousel carousel__partners">
-                <a href="#" class="carousel_item">
-                    <img src="src/img/partners/BangOlufsen_2017Logo_Black.png" alt="" class="carousel_image">
                 </a>
-                <a href="#" class="carousel_item">
-                    <img src="src/img/partners/ZCup-PT-logo-120x120.png" alt="" class="carousel_image">
+                <a href="#" class="category">
+                    <img src="https://via.placeholder.com/587x145" alt="" class="category_image">
+                    <div class="category_text">        
+                        <p class="category_title">Спектакли для детей на выходные</p>
+                        <span class="category_count">13 событий</span>
+                    </div>
                 </a>
-                <a href="#" class="carousel_item">
-                    <img src="src/img/partners/logo-konzept-preto.png" alt="" class="carousel_image">
+                <a href="#" class="category">
+                    <img src="https://via.placeholder.com/587x145" alt="" class="category_image">
+                    <div class="category_text">
+                        <p class="category_title">Идеальные концерты для свидания</p>
+                        <span class="category_count">13 событий</span>
+                    </div>
                 </a>
-                <a href="#" class="carousel_item">
-                    <img src="src/img/partners/logo-rodape.png" alt="" class="carousel_image">
-                </a>
-                <a href="#" class="carousel_item">
-                    <img src="src/img/partners/logo.png" alt="" class="carousel_image">
+                <a href="#" class="category">
+                    <img src="https://via.placeholder.com/587x145" alt="" class="category_image">
+                    <div class="category_text">
+                        <p class="category_title">Скоро новый год!</p>
+                        <span class="category_count">13 событий</span>
+                    </div>
                 </a>
             </div>
-        </div>
-        <div class="page page__contacts">
-            <div class="widget">
-                <div class="widget_navigation">
-                    <button class="widget_navigation-button active" data-tab="1">
-                        <span class="loc" data-word="conts.title1">contact </span> <span class="loc" data-word="conts.title2">info</span>
-                    </button>
-                    <button class="widget_navigation-button" data-tab="2">
-                        <span class="loc" data-word="conts.getintouch">get in touch</span>
-                        
-                    </button>
-                </div>
-                <h1 class="title title__small title__scissors">
-                    <span class="loc" data-word="conts.title1">Contact </span>
-                    <span class="bright"><span class="loc" data-word="conts.title2">info</span></span>
-                </h1>
-                <div class="widget_tab active" data-tab="1">
-                    <div class="contacts">
-                        <p class="contacts_address">
-                            <a target="_blank" href="https://www.google.com/maps/place/Dreamsisters-vestu%C3%A1rio+De+Moda+Lda/@38.6992513,-9.4276396,21z/data=!4m5!3m4!1s0xd1ec43aad92ddb5:0x4fdb62288b54a265!8m2!3d38.6992719!4d-9.427441" class="map-link">
-                                Av. 25 de Abril 722, loja D15
-                                2750-512 Cascais
-                            </a>
-                        </p>
-                        <p class="contacts_time">
-                            Monday to Saturday
-                            09:00 to 21:00
-                        </p>
-                        <p class="contacts_phone">
-                            <a href="tel:+351123456789">+351 123456789</a>
-                        </p>
-                        <p class="contacts_email">
-                            <a href="mailto:contact@cutsandwhiskey.com">contact@cutsandwhiskey.com</a>
-                        </p>
-                    </div>
-                    <div class="social">
-                        <p class="social_title">
-                            <span class="loc" data-word="followUs">FOLLOW US</span>
-                        </p>
-                        <a href="#" class="social_link social_link__fb">facebook</a>
-                        <a href="#" class="social_link social_link__instagram">instagram</a>
-                        <a href="#" class="social_link social_link__youtube">youtube</a>
+
+            <h2 class="heading-1">Топ 3</h2>
+            <div class="cards cards__3">
+                <div class="card card__small">
+                    <img src="https://via.placeholder.com/383x255" alt="" class="card_image">
+                    <div class="card_info">
+                        <a href="#" class="card_title">Большой футбольный день в Нарве</a>
+                        <p class="card_date">вт • 9 Сентября</p>
+                        <p class="card_adress">Москва, Московский театр оперетты</p>
+                        <button class="card_price-button"> От 500 ₽</button>
                     </div>
                 </div>
-                <div class="widget_tab" data-tab="2">
-                    <form class="form">
-                        <div class="form_row">
-                            <input type="text" placeholder="Your Name">
-                        </div>
-                        <div class="form_row">
-                            <input type="email" placeholder="Your E-mail">
-                        </div>
-                        <div class="form_row">
-                            <input type="text" placeholder="Subject">
-                        </div>
-                        <div class="form_row">
-                            <textarea placeholder="Your Message"></textarea>
-                        </div>
-                        <div class="form_row form_row__right">
-                            <input type="submit" value="send">
-                        </div>
-                    </form>
+                <div class="card card__small">
+                    <img src="https://via.placeholder.com/383x255" alt="" class="card_image">
+                    <div class="card_info">
+                        <a href="#" class="card_title">Сказка о королевских подснежниках</a>
+                        <p class="card_date">вт • 9 Сентября</p>
+                        <p class="card_adress">Москва, Московский театр оперетты</p>
+                        <button class="card_price-button"> От 500 ₽</button>
+                    </div>
+                </div>
+                <div class="card card__small">
+                    <img src="https://via.placeholder.com/383x255" alt="" class="card_image">
+                    <div class="card_info">
+                        <a href="#" class="card_title">Женихи</a>
+                        <p class="card_date">вт • 9 Сентября</p>
+                        <p class="card_adress">Москва, Московский театр оперетты</p>
+                        <button class="card_price-button"> От 500 ₽</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="map" id="map"></div>
-            <script>
-                var isMobile = screen.width < 1025;
-                mapboxgl.accessToken = 'pk.eyJ1IjoiY3Nza2luZyIsImEiOiJjank0anpnaXowMDNiM2JwNnpnYXhlcGZ1In0.JqaN0QdsUpWPbwvS7vdN9A';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/dark-v10',
-                    center: isMobile ? [-9.427870, 38.699050] : [-9.427270, 38.699050],
-                    zoom: isMobile ? 15 : 18
-                });
-
-                map.scrollZoom.disable();
-                map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-                var marker = new mapboxgl.Marker();
-                marker.setLngLat([-9.427870, 38.699050]);
-                marker.addTo(map);
-            </script>
-
-            <footer class="footer">
-                <p class="copyright">Cuts & Whiskey Men Space - 2019  All right reserved </p>
-                <div class="app">
-                    <p class="app_title">DOWNLOAD CUTS & wHISKEY APP</p>
-                    <a href="#" class="app_link">
-                        <img class="app_icon" src="src/img/appstore.svg" alt="">
-                    </a>
-                    <a href="#" class="app_link">
-                        <img class="app_icon" src="src/img/googleplay.svg" alt="">
-                    </a>
+            <div class="filter">
+                <div class="filter_column">
+                    <div class="filter_buttons">
+                        <button class="filter_button active">Сегодня</button>
+                        <button class="filter_button">Завтра</button>
+                        <button class="filter_button">На выходные</button>
+                    </div>
+                    <div class="filter_select">
+                        <input type='text' class="date-input" placeholder="Дата" data-position="right top" />
+                    </div>
+                    <div class="filter_select mobile-only">
+                        <select placeholder="Жанр">
+                            <option>Жанр</option>
+                            <option>Театр</option>
+                            <option>Балет</option>
+                            <option>Концерт</option>
+                            <option>Фестиваль</option>
+                            <option>Для детей</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="footer_menu">
-                    <a href="#" class="footer_menu-link">
-                        <span class="loc" data-word="terms">Terms of Use</span>
-                    </a>
-                    <a href="#" class="footer_menu-link">
-                        <span class="loc" data-word="privacy">Privacy policy</span>
-                    </a>
+                <div class="filter_column">
+                    <div class="filter_buttons">
+                        <button class="filter_button">Театр</button>
+                        <button class="filter_button">Балет</button>
+                        <button class="filter_button">Концерт</button>
+                        <button class="filter_button">Фестиваль</button>
+                        <button class="filter_button">Для детей</button>
+                        <div class="submenu-wrapper">
+                            <span class="filter_all">...</span>
+                            <div class="submenu">
+                                <div class="submenu_list">
+                                    <a class="submenu_link" href="#">Мюзикл</a>
+                                    <a class="submenu_link" href="#">Балет</a>
+                                    <a class="submenu_link" href="#">Музей</a>
+                                    <a class="submenu_link" href="#">Спорт</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </footer>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Алиса в стране чудес</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Лебединое озеро. Балет</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Женихи</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Гори, гори моя звезда... Анна Герман Гори, гори моя звезда... Анна Герман Гори, гори моя звезда... Анна Герман Гори, гори моя звезда... Анна Герман</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Алиса в стране чудес</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Лебединое озеро. Балет</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Женихи</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Гори, гори моя звезда... Анна Герман</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Алиса в стране чудес</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Лебединое озеро. Балет</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Женихи</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_tags">
+                        <a href="#" class="card_tag">спектакль</a>
+                        <a href="#" class="card_tag">шоу</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/280x420" alt="" class="card_image">
+                    </a>
+                    <div class="card_info">
+                        <p class="card_date">
+                            <span>пт • 26 Февраля</span>
+                            <span>19:00</span>
+                        </p>
+                        <a href="#" class="card_title">Гори, гори моя звезда... Анна Герман</a>
+                        <p class="card_adress">Москва, Планета КВН</p>
+                        <p class="card_price">от 500 ₽</p>
+                        <button class="card_button">Купить билет</button>
+                    </div>
+                </div>
+                <div class="card card__empty">
+                    <div class="card_image-placeholder"></div>
+                    <div class="card_info">
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                    </div>
+                </div>
+                <div class="card card__empty">
+                    <div class="card_image-placeholder"></div>
+                    <div class="card_info">
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                    </div>
+                </div>
+                <div class="card card__empty">
+                    <div class="card_image-placeholder"></div>
+                    <div class="card_info">
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                    </div>
+                </div>
+                <div class="card card__empty">
+                    <div class="card_image-placeholder"></div>
+                    <div class="card_info">
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                        <div class="card_placeolder"></div>
+                    </div>
+                </div>
+                <button class="more">Показать еще</button>
+            </div>
         </div>
     </div>
-    <div class="popup">
-        <div class="fade"></div>
-        <div class="popup_content"></div>
-    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_top">
+                <div class="footer_column">
+                    <a href="">
+                        <img src="src/img/logo.png" alt="" class="footer_logo">
+                    </a>
+                    <div class="footer_adress">
+                        <p>+7 (495) 123-45-68</p>
+                        <p>241015, г. Старое Шайгово, ул. Добрынинская, д. 34, кв. 6</p>
+                    </div>
+                </div>
+                <div class="footer_column">
+                    <div class="footer-menu">
+                        <div class="footer-menu_column">
+                            <p class="footer-menu_title">Куда сходить</p>
+                            <a href="#" class="footer-menu_link">Концерты</a>
+                            <a href="#" class="footer-menu_link">Выставки</a>
+                            <a href="#" class="footer-menu_link">Спектакли</a>
+                        </div>
+                        <div class="footer-menu_column">
+                            <p class="footer-menu_title">Покупателям</p>
+                            <a href="#" class="footer-menu_link">Правила возврата</a>
+                            <a href="#" class="footer-menu_link">Доставка</a>
+                            <a href="#" class="footer-menu_link">Оплата</a>
+                        </div>
+                        <div class="footer-menu_column">
+                            <p class="footer-menu_title">О нас</p>
+                            <a href="#" class="footer-menu_link">О проекте</a>
+                            <a href="#" class="footer-menu_link">Публичная оферта</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_column">
+                    <p class="footer_title">Мы в социальных сетях</p>
+                    <div class="socials">
+                        <a href="" class="socials_link">
+                            <img class="socials_image" src="src/img/social/facebook.svg" alt="">
+                        </a>
+                        <a href="" class="socials_link">
+                            <img class="socials_image" src="src/img/social/vk.svg" alt="">
+                        </a>
+                        <a href="" class="socials_link">
+                            <img class="socials_image" src="src/img/social/telegram.svg" alt="">
+                        </a>
+                        <a href="" class="socials_link">
+                            <img class="socials_image" src="src/img/social/ok.svg" alt="">
+                        </a>
+                        <a href="" class="socials_link">
+                            <img class="socials_image" src="src/img/social/instagram.svg" alt="">
+                        </a>
+                        <a href="" class="socials_link">
+                            <img class="socials_image" src="src/img/social/twitter.svg" alt="">
+                        </a>
+                        <a href="" class="socials_link">
+                            <img class="socials_image" src="src/img/social/google.svg" alt="">
+                        </a>
+                    </div>
+                    <p class="footer_title">Возможности оплаты</p>
+                    <div class="payments">
+                        <img src="src/img/payments/mc.svg" alt="" class="payments_image">
+                        <img src="src/img/payments/visa.svg" alt="" class="payments_image">
+                        <img src="src/img/payments/mir.svg" alt="" class="payments_image">
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_column">
+                    <span class="copyright">© 2019, Единое Поле</span>
+                </div>
+                <div class="footer_column">
+                    <span class="made-by">Сделано в </span>
+                    <a class="made-by_link" href="#">«Единое Поле»</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="./src/js/jquery-3.4.1.min.js"></script>
-    <script src="./src/js/hammer.min.js"></script>
     <script src="./src/js/owl.carousel.min.js"></script>
+    <script src="./src/js/selectize.min.js"></script>
+    <script src="./src/js/datepicker.min.js"></script>
     <script src="./src/js/main.js"></script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
-        ym(54518566, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/54518566" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    
-    
-    
-    
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144232568-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    
-    gtag('config', 'UA-144232568-1');
-    </script>
- 
+
 </body>
 </html>

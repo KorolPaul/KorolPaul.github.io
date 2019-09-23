@@ -1,19 +1,22 @@
 $img: "src/img";
 
-$bg_color: #242424;
+$bg_color: #fff;
+$light_color: #fff;
 
-$color: #fff;
-$gray_color: #dbdbdb;
-$dark_color: #202020;
-$bright_color: #8f7b54;
+$color: #444;
+$gray_color: #a1a1a1;
+$dark_color: #151515;
+
+$bright_color: #e3008c;
+$bright_color__light: #ff2bae;
+$bright_color__dark: #aa0069;
+$yellow_color: #d4b85d;
 $input_color: #373e44;
 
-$font-family: 'Montserrat', sans-serif;
-$font-family__heading: 'Oswald', sans-serif;
-$font-family__predator: 'Predator';
+$font-family: 'Roboto', sans-serif;
 
-$font-size: 18px;
-$font-size__small: 16px;
+$font-size: 15px;
+$font-size__small: 13px;
 
-$max-width: 1160px;
-$layout_indent: 10px;
+$max-width: 1280px;
+$layout_indent: 16px;

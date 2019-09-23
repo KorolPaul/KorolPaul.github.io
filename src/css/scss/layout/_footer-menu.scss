@@ -6,13 +6,32 @@
         justify-content: space-between;
     }
 
+    &_column {
+        width: 33%;
+        box-sizing: border-box;
+        padding-right: 15px;
+    }
+    &_title {
+        display: none;
+        @include tablet {
+            display: block;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0 0 11px;
+        }
+    }
     &_link {
         display: block;
-        text-align: center;
+        color: $light_color;
+        opacity: .8;
         margin: 0 0 14px;
+        transition: .2s ease-in-out opacity;
         @include tablet {
-            display: inline;
             text-align: left;
+        }
+
+        &:hover {
+            opacity: 1;
         }
     }
 }

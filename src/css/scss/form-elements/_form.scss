@@ -1,9 +1,48 @@
 .form {
-    &_row {
-        margin: 0 0 20px;
+    background: $bright_color;
+    border-radius: 20px;
+    padding: 40px 14px 20px;
+    color: $light_color;
+    @include tablet {
+        padding: 72px 110px;
+    }
 
-        &__right {
-            text-align: right;
+    &_row {
+        @include tablet {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .button {
+            width: 100%;
+            @include tablet {
+                width: auto;
+            }
+        }
+    }
+    &_row-item {
+        @include tablet {
+            width: calc(50% - 5px);
+        }
+    }
+    &_fieldset {
+        border: none;
+        padding: 0;
+        margin: 0 0 20px;
+        @include tablet {
+            margin: 0 0 16px;
+        }
+    }
+    &_clarification {
+        opacity: 0.5;
+        font-size: 14px;
+        line-height: 1.43;
+        color: $light_color;
+        margin: 0;
+        @include tablet {
+            font-size: 17px;
+            margin: 0 0 0 18px;
         }
     }
 }

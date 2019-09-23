@@ -4,35 +4,34 @@
     background: transparent;
     font-size: 0px;
     color: transparent;
-    text-transform: uppercase;
-    position: fixed;
-    right: 20px;
-    top: 40px;
-    z-index: 4;
-    @include desktop {
-        left: 50px;
-        top: 50%;
-        right: auto;
-        font: 300 13px $font-family__heading;
-        color: $color;
-        transform: translate(0, -50%);
+    position: absolute;
+    padding: 0;
+    top: 20px;
+    left: 15px;
+    height: 18px;
+    width: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    z-index: 5;
+    @include tablet {
+        display: none;
+    }
+
+    &:hover,
+    &:active {
+        background: transparent;
     }
 
     &_line {
-        background: $bright_color;
-        height: 5px;
-        width: 39px;
-        margin: 0 0 4px;
+        background: $light_color;
+        height: 2px;
+        width: 100%;
         transition: .2s ease transform;
 
-        &:nth-child(1) {
-            transform: scaleX(.5);
-            transform-origin: 0%;
-        }
-        &:nth-child(3) {
-            transform: scaleX(.5);
-            transform-origin: 100%;
-            margin-bottom: 10px;
+        &:nth-child(2) {
+            width: 70%;
         }
 
         .menu-toggle:hover &,
