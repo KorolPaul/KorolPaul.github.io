@@ -61,7 +61,7 @@ $(document).ready(function () {
                 },
                 success: function(res) {
                     console.log(res)
-                    callback(res.slice(0, 10));
+                    callback(res.repositories.slice(0, 10));
                 }
             });
         }
