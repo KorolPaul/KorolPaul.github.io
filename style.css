@@ -4416,6 +4416,10 @@ html {
   color: #4EB5E6;
 }
 
+.ui-state-highlight, .ui-widget-content .ui-state-hover {
+  background: #f0f0f0;
+}
+
 .ui-datepicker th {
   font-weight: normal;
   color: #FF9A19;
