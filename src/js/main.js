@@ -53,7 +53,7 @@ $(document).ready(function () {
         load: function(query, callback) {
             if (!query.length) return callback();
             $.ajax({
-                url: 'https://www.ticketbest.eu/performances/search?query=' + encodeURIComponent(query),
+                url: 'https://afishabox.edinoepole.ru/performances/search?query=' + encodeURIComponent(query),
                 type: 'GET',
                 crossDomain: true,
                 error: function() {
@@ -61,7 +61,7 @@ $(document).ready(function () {
                 },
                 success: function(res) {
                     console.log(res)
-                    callback(res.repositories.slice(0, 10));
+                    callback(res.slice(0, 10));
                 }
             });
         }
