@@ -62,9 +62,8 @@ $(document).ready(function () {
                     callback();
                 },
                 success: function(res) {
-                    var resp = JSON.parse(res)
-                    console.log(res, resp)
-                    callback(res.repositories.slice(0, 10));
+                    console.log(res, callback)
+                    callback(res.repositories);
                 }
             });
         }
