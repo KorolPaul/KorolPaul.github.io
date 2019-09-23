@@ -45,13 +45,6 @@ $(document).ready(function () {
                 return '<a onclick="alert(1)" href="' + item.url + '">' + escape(item.name) +'</a>';
             }
         },
-        score: function(search) {
-            console.info('score', search);
-            var score = this.getScoreFunction(search);
-            return function(item) {
-                return score(item) * (1 + Math.min(item.watchers / 100, 1));
-            };
-        },
         load: function(query, callback) {
             if (!query.length) return callback();
             $.ajax({
