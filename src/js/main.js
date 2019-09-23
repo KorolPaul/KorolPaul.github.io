@@ -41,6 +41,7 @@ $(document).ready(function () {
         },
         render: {
             option: function(item, escape) {
+                console.info(item, escape)
                 return '<a onclick="alert(1)" href="' + item.url + '">' + escape(item.name) +'</a>';
             }
         },
