@@ -1,82 +1,67 @@
 .footer {
-    background: $dark_color;
-    color: $light_color;
-    padding: 37px 15px 36px;
-    font-size: 14px;
-    line-height: 1.43;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 35px;
+    width: calc(100% + 40px);
+    margin: 0 -20px;
     @include tablet {
-        padding: 43px 0 37px;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+        padding: 0;
+        width: auto;
+        margin: 0;
+    }
+    @include desktop {
+        flex-wrap: nowrap;
+        left: 65px;
+        right: 65px;
     }
 
-    &_container {
+    &_menu {
+        order: 3;
+        display: flex;
+        justify-content: space-around;
+        order: inherit;
         @include tablet {
-            @include layout;
+            width: 30%;
+        }
+        @include desktop {
+            display: block;
+            width: auto;
         }
     }
-    &_top {
+    &_menu-link {
+        font-size: $font-size__small;
+        font-weight: 400;
+        margin: 0;
         @include tablet {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
+            margin: 0 0 0 30px;
         }
-    }
-    &_bottom {
-        @include tablet {
-            display: flex;
+        @include desktop {
+            margin: 0 0 0 60px;
         }
-    }
-    &_logo {
-        width: 146px;
-        display: block;
-        margin: 0 0 14px;
-    }
-    &_column {
-        @include tablet {
-            flex-grow: 1;
-        }
-
-        &:first-child {
-            @include tablet {
-                width: 290px;
-                margin: 0 16px 0 0;
-                flex-grow: 0;
-            }
-        }
-        &:last-child {
-            @include tablet {
-                flex-grow: 0;
-            }
-        }
-    }
-    &_adress {
-        opacity: .6;
-
-        p {
-            margin: 0 0 5px;
-        }
-    }
-    &_title {
-        font-size: 15px;
-        font-weight: bold;
-        line-height: normal;
-        margin: 0 0 15px;
     }
 }
 
-.copyright,
-.made-by {
-    color: $light_color;
-    opacity: .6;
-}
-.made-by {
-    &_link {
-        color: $light_color;
-        text-decoration: none;
-        opacity: .6;
-        transition: .2s ease-in-out opacity;
-
-        &:hover {
-            opacity: 1;
-        }
+.copyright {
+    color: $gray_color;
+    font-size: $font-size__small;
+    font-weight: 300;
+    margin: 0;
+    order: 2;
+    flex-shrink: 2;
+    text-align: center;
+    @include tablet {
+        order: inherit;
+        text-align: left;
+        width: 30%;
+    }
+    @include desktop {
+        width: auto;
     }
 }

@@ -1,41 +1,4 @@
 .header {
-    background: $dark_color;
     position: relative;
-    z-index: 4;
-    
-    &_holder {
-        @include layout;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 16px 10px 56px;
-        @include tablet {
-            padding: 15px $layout_indent;
-        }
-    }
-    &_controls {
-        @include tablet {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
-    &_navigation {
-        display: flex;
-        margin: 0 25px;
-        min-height: 40px;
-        @include desktop {
-            position: relative;
-            padding: 0 0 0 130px;
-        }
-    }
-    &_left {
-        display: flex;
-        align-items: center;
-        flex-grow: 10;
-        justify-content: space-between;
-        @include tablet {
-            justify-content: flex-start;
-        }
-    }
+    z-index: 2;
 }

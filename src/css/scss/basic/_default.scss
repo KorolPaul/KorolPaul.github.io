@@ -1,11 +1,20 @@
+html,
+body {
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.sidebar-opened {
+    overflow: hidden;
+}
+
 body {
     background: $bg_color;
     color: $color;
-    font: #{$font-size__small} $font-family;
-    line-height: 1.33;
-    padding: 0;
+    font: 200 #{$font-size} $font-family;
     @include tablet {
-        font-size: $font-size;
+        background-size: 100% auto;
     }
 }
 
@@ -16,7 +25,6 @@ a {
 
     &:hover,
     &.hover {
-        color: $bright_color;
         outline: none;
     }
     &:active,
@@ -26,53 +34,12 @@ a {
 }
 
 p {
-    margin: 0 0 15px;
-    font-size: $font-size;
+    margin: 0 0 30px;
 }
 
 ul,
 ol {
-    padding: 0;
-    margin: 0 0 40px;
-
-    li {
-        font-size: $font-size;
-        line-height: 20px;
-        margin: 0 0 16px;
-        padding: 0 0 0 35px;
-        position: relative;
-    }
-}
-
-ul li {
-    list-style: none;
-
-    &::before {
-        content: '';
-        height: 8px;
-        width: 8px;
-        border-radius: 50%;
-        background: $bright_color;
-        position: absolute;
-        left: 0;
-        top: 5px;
-    }
-}
-
-ol {
-    list-style: none;
-    counter-reset: counter;
-
-    li {
-        counter-increment: counter;
-
-        &::before {
-            content: counter(counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-    }
+    padding: 0 0 0 20px;
 }
 
 img {
@@ -92,43 +59,6 @@ table {
     width: 100%;
 }
 
-figure {
-    margin: 0;
-}
-
-figcaption {
-    margin: 20px 0;
-    font-size: $font-size__small;
-    line-height: 1.38;
-    color: #a1a1a1;
-}
-
-blockquote {
-    padding: 38px 0 0 0;
-    font-size: 17px;
-    line-height: 1.41;
-    background: url(#{$img}/quotes.svg) no-repeat 0 0;
-}
-
-.menu-opened {
-    overflow: hidden;
-    @include tablet {
-        overflow: auto;
-    }
-}
-
-.intro-text {
-    font-size: 17px;
-    line-height: 1.47;
-    color: #444444;
-}
-
-article {
-    min-width: 0; //flex fix
-}
-
-.mobile-only {
-    @include desktop {
-        display: none;
-    }
+.bright {
+    color: $bright_color;
 }

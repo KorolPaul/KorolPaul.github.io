@@ -4,20 +4,20 @@ input[type="search"],
 input[type="email"],
 input[type="url"],
 input[type="tel"] {
-    @include placeholder-color(#100f10);
-    color: $color;
+    @include placeholder-color(#bcbcbc);
+    color: #bcbcbc;
+    background: transparent;
     border: none;
+    border-bottom: 1px solid rgba($color, .12);
     box-sizing: border-box;
-    font: 500 15px $font-family;
-    padding: 14px 17px;
+    font: 300 15px $font-family;
+    padding: 7px 5px;
     width: 100%;
-    margin: 0 0 10px;
-    border-radius: 6px;
-    background-color: #ffffff;
-    transition: .2s ease-in opacity, .2s ease-in color;
+    transition: .2s ease-in border-color, .2s ease-in color;
 
-    &:focus {
-        opacity: 1;
+    &:focus,
+    &.focus {
+        color: $color;
     }
 }
 

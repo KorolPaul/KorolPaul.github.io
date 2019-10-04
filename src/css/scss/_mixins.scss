@@ -26,7 +26,10 @@
     }
     &::-moz-placeholder {
         color: $color;
-        opacity:1;
+    }
+    &:-ms-input-placeholder
+    {
+        color: $color;
     }
 }
 

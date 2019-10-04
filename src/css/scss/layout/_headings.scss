@@ -1,17 +1,21 @@
 %heading-1 {
-    font: 500 28px $font-family;
-    margin: 0 0 28px;
+    font: 41px $font-family__heading;
+    margin: 0 0 20px;
     @include tablet {
-        font: bold 34px $font-family;
+        font-size: 58px;
+        margin: 40px 0 20px;
     }
 }
 %heading-2 {
-    color: $dark_color;
-    font: 500 #{24px}/1.25 $font-family;
-    margin: 63px 0 30px;
+    font: italic 200 #{25px}/1 $font-family__heading;
+    margin: 0 0 20px;
+    @include tablet {
+        font-size: 31px;
+
+    }
 }
 %heading-3 {
-    font: 500 #{21px}/1.43 $font-family;
+    font: italic #{26px}/1 $font-family__heading;
 }
 
 h1,

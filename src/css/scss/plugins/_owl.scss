@@ -1,21 +1,22 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
 .owl-carousel {
-    display: none;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
     /* position relative and z-index fix webkit rendering fonts issue */
     position: relative;
     z-index: 1;
 }
-.owl-stage {
+.owl-carousel .owl-stage {
     position: relative;
     -ms-touch-action: pan-Y;
     touch-action: manipulation;
-    backface-visibility: hidden;
+    display: flex;
+    -moz-backface-visibility: hidden;
     /* fix firefox animation glitch */
-
-    .smi & {
-        padding: 0 0 20px;
-    }
 }
 .owl-carousel .owl-stage:after {
     content: ".";
@@ -25,34 +26,34 @@
     line-height: 0;
     height: 0;
 }
-.owl-stage-outer {
+.owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
     /* fix for flashing background */
-    transform: translate3d(0px, 0px, 0px);
-
-    .reviews &,
-    .smi & {
-        padding: 10px;
-        margin: -10px;
-    }
+    -webkit-transform: translate3d(0px, 0px, 0px);
 }
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item {
-    backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
 }
 .owl-carousel .owl-item {
     position: relative;
     min-height: 1px;
     float: left;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
 }
-.owl-carousel .owl-item img:not([class]) {
+.owl-carousel .owl-item img {
     display: block;
     width: 100%;
+    //height: 100%;
+    //object-fit: cover;
 }
 .owl-carousel .owl-nav.disabled,
 .owl-carousel .owl-dots.disabled {
@@ -62,6 +63,10 @@
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
     cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 .owl-carousel .owl-nav button.owl-prev,
@@ -71,6 +76,10 @@
     border: none;
     padding: 0 !important;
     font: inherit;
+}
+.owl-carousel button.owl-dot {
+    background: transparent;
+    min-width: 0;
 }
 .owl-carousel.owl-loaded {
     display: block;
@@ -86,7 +95,6 @@
     visibility: hidden;
 }
 .owl-carousel.owl-drag .owl-item {
-    -ms-touch-action: pan-y;
     touch-action: pan-y;
     user-select: none;
 }
@@ -101,6 +109,40 @@
     float: right;
 }
 
+/* No Js */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/*
+   *  Owl Carousel - Animate Plugin
+   */
+.owl-carousel .animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+    animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /*
    * 	Owl Carousel - Auto Height Plugin
    */
@@ -108,9 +150,6 @@
     transition: height 500ms ease-in-out;
 }
 
-/*
-   * 	Owl Carousel - Lazy Load Plugin
-   */
 .owl-carousel .owl-item .owl-lazy {
     opacity: 0;
     transition: opacity 400ms ease;
@@ -123,168 +162,90 @@
     transform-style: preserve-3d;
 }
 
-/*
-   * 	Owl Carousel - Video Plugin
-   */
-.owl-carousel .owl-video-wrapper {
-    position: relative;
-    height: 100%;
-    background: #000;
-}
-
-.owl-carousel .owl-video-play-icon {
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    left: 50%;
-    top: 50%;
-    margin-left: -40px;
-    margin-top: -40px;
-    background: url("owl.video.play.png") no-repeat;
-    cursor: pointer;
-    z-index: 1;
-    -webkit-backface-visibility: hidden;
-    transition: transform 100ms ease;
-}
-
-.owl-carousel .owl-video-play-icon:hover {
-    -ms-transform: scale(1.3, 1.3);
-    transform: scale(1.3, 1.3);
-}
-
-.owl-carousel .owl-video-playing .owl-video-tn,
-.owl-carousel .owl-video-playing .owl-video-play-icon {
-    display: none;
-}
-
-.owl-carousel .owl-video-tn {
-    opacity: 0;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: opacity 400ms ease;
-}
-
-.owl-carousel .owl-video-frame {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-}
-
-.owl-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translate(-50%, 0);
-    @include tablet {
-        bottom: 27px;
-    }
-}
-
-.owl-dot {
-    width: 30px;
-    height: 10px;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-    transition: .2s ease-in-out opacity;
-
-    &:hover {
-        background-color: transparent;
-        opacity: .7;
-    }
-
-    span {
-        display: inline-block;
-        height: 100%;
-        width: 10px;
-        background-color: $bright_color;
-        border-radius: 5px;
-        vertical-align: top;
-        transition: .2s ease-in-out width;
-
-        .slider &,
-        .gallery-grid & {
-            background-color: $light_color;
-        }
-    }
-
-    &.active {
-        span {
-            width: 100%;
-        }
-    }
-}
-
-.owl-nav {
-    position: absolute;
-    right: 0;
-    top: -50px;
-
-    span {
-        display: none;
-    }
-
-    .smi & {
-        position: static;
-    }
-}
-
 .owl-prev,
 .owl-next {
-    background-color: transparent; 
-    height: 24px;
-    width: 24px;
-    margin: 0 0 0 12px;
-    background-position: center center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    transition: .2s ease-in-out opacity, .2s ease-in-out background;
-
-    &:hover {
-        opacity: .6;
-        background-color: transparent; 
-    }
-    &.disabled {
-        opacity: 0;
-    }
-
-    .smi & {
-        background-color: $bright_color;
-        background-size: 14px 14px;
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        position: absolute;
-        top: 50px;
-
-        &:hover {
-            opacity: 1;
-            background-color: $bright_color__light;
-        }
-        &:active {
-            background-color: $bright_color__dark;
-        }
+    border-radius: 0;
+    font: italic 12px $font-family__heading;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    @include tablet {
+        padding: 12px 20px;
     }
 }
 
 .owl-prev {
-    background-image: url(#{$img}/arrow-left.svg);
+    background: url(#{$img}/prev.svg) no-repeat 0 center;
+    background-size: 7px auto;
 
-    .smi & {
-        display: none;
+    .carousel & {
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        transform: translate(0, -50%);
+        height: 60px;
+        width: 60px;
+        background-size: auto 100%;
+        transition: .2s ease-in-out filter;
+        @include desktop {
+            left: -50px;
+        }
+
+        &:hover {
+            filter: grayscale(1);
+        }
     }
 }
 .owl-next {
-    background-image: url(#{$img}/arrow-right.svg);
+    background: url(#{$img}/next.svg) no-repeat right center;
+    background-size: 7px auto;
+    border-left: 1px solid #333333;
 
-    .smi & {
-        background-image: url(#{$img}/arrow-right-small.svg);
+    .carousel & {
+        position: absolute;
+        top: 50%;
         right: -10px;
+        transform: translate(0, -50%);
+        height: 60px;
+        width: 60px;
+        background-size: auto 100%;
+        transition: .2s ease-in-out filter;
+        @include desktop {
+            right: -50px;
+        }
+
+        &:hover {
+            filter: grayscale(1);
+        }
     }
+}
+
+.owl-prev:hover,
+.owl-prev:focus,
+.owl-next:hover,
+.owl-next:focus {
+    color: $bright_color;
+    outline: none;
+}
+.owl-prev.owl-disabled:before,
+.owl-next.owl-disabled:before {
+    opacity: 0.25;
+}
+
+.owl-dots {
+    text-align: center;
+}
+.owl-dot span {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    background: rgba($gray_color, .5);
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: .2s ease-in-out background;
+}
+.owl-dot.active span {
+    background: $color;
 }

@@ -1,0 +1,65 @@
+.title {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    @include tablet {
+        padding: 30px 0 0;
+    };
+    
+    &::before {
+        @include tablet {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -5px;
+            transform: translate(-50%, 0);
+            height: 6px;
+            width: 162px;
+            background: url(#{$img}/dots.svg) no-repeat center center;
+            background-size: 80% auto;
+        }
+    }
+    &::after {
+        @include tablet {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -30px;
+            transform: translate(-50%, 0);
+            height: 55px;
+            width: 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80% auto;
+        }
+    }
+
+    &__small {
+        font-size: 33px;
+    }
+    &__shaver {
+        &::after {
+            background-image: url(#{$img}/shaver.svg);
+        }
+    }
+    &__instruments {
+        &::after {
+            background-image: url(#{$img}/instruments.svg);
+        }
+    }
+    &__mustache {
+        &::after {
+            background-image: url(#{$img}/mustache.svg);
+        }
+    }
+    &__hairbrush {
+        &::after {
+            background-image: url(#{$img}/hairbrush.svg);
+        }
+    }
+    &__scissors {
+        &::after {
+            background-image: url(#{$img}/scissors.svg);
+        }
+    }
+}
