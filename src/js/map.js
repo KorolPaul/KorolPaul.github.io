@@ -1,4 +1,6 @@
 window.onload = function() {
+    document.body.classList.add('loaded');
+
     var isMobile = screen.width < 768;
     if (!isMobile) {
         mapboxgl.accessToken = 'pk.eyJ1IjoiY3Nza2luZyIsImEiOiJjank0anpnaXowMDNiM2JwNnpnYXhlcGZ1In0.JqaN0QdsUpWPbwvS7vdN9A';

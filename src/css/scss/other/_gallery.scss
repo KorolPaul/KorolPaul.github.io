@@ -8,8 +8,6 @@
         grid-column-gap: 10px;
     }
     @include desktop {
-        grid-template-columns: 30% 70%;
-
         display: flex;
         flex-wrap: wrap;
         min-height: 100%;
@@ -49,6 +47,7 @@
             flex-grow: 2;
             max-width: 60%;
             position: relative;
+            align-self: flex-end;
         }
     }
     &_info-content {
@@ -62,15 +61,17 @@
         min-height: 200px;
         @include desktop {
             height: 100%;
+            display: flex;
+            align-items: flex-end;
         }
     }
     &_image {
         position: relative;
         z-index: 2;
         @include desktop {
-            max-height: 100%;
             width: 100%;
             object-fit: cover;
+            height: 100%;
         }
     }
     &_info-meta {
