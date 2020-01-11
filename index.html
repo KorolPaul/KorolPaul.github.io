@@ -15,14 +15,10 @@
     <meta name="HandheldFriendly" content="true">
 </head>
 <body>
-    <h2>Without controls and unmuted with autoplay</h2>
-    <video src="https://yoyo-website-2019-vitali-amends-dev.yoyodesign.com/media/4wpjsrrm/menu-transition.mp4" autoplay playsinline="" loop=""></video>
-    <h2>Without controls and unmuted</h2>
-    <video src="https://yoyo-website-2019-vitali-amends-dev.yoyodesign.com/media/4wpjsrrm/menu-transition.mp4" loop=""></video>
-    <h2>With controls and unmuted</h2>
-    <video src="https://yoyo-website-2019-vitali-amends-dev.yoyodesign.com/media/4wpjsrrm/menu-transition.mp4" controls playsinline="" loop=""></video>
-    <h2>With controls and muted</h2>
-    <video src="https://yoyo-website-2019-vitali-amends-dev.yoyodesign.com/media/4wpjsrrm/menu-transition.mp4" controls muted playsinline="" loop=""></video>
+
+    <video src="https://yoyo-website-2019-vitali-amends-dev.yoyodesign.com/media/4wpjsrrm/menu-transition.mp4"  autoplay playsInline loop muted id="poster"></video>
+    <button>Play</button>
+    <video src="https://yoyo-website-2019-vitali-amends-dev.yoyodesign.com/media/od3by31p/yoyo-showreel-2019.mp4" playsInline loop id="main"></video>
  
     <style>
         body {
@@ -32,5 +28,14 @@
             width: 100%;
         }
     </style>
+    <script>
+        document.querySelector('button').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.getElementById('poster').pause();
+            document.getElementById('main').play();
+
+        })
+    </script>
 </body>
 </html>
