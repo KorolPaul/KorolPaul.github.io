@@ -1,0 +1,298 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucky7</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./_assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="48x48px.ico">
+    <link rel="icon" type="image/x-icon" href="48x48px.ico">
+    <link rel="icon" type="image/png" href="16x16px.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="32x32px.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="48x48px.png" sizes="48x48">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+    <meta property="og:title" content="#{data.title}">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="300">
+    <meta property="twitter:description" content="">
+</head>
+<body>
+    <header class="header">
+        <div class="header_top">
+            <button class="menu-toggle"><div class="menu-toggle_line"></div><div class="menu-toggle_line"></div><div class="menu-toggle_line"></div></button>
+            <a href="/" class="logo">
+                <img class="logo_image" src="_assets/img/logo.svg" alt="lucky7">
+            </a>
+            <div class="header_option">
+                <button class="button button__secondary button__signin go-to-authorization go-to-authorization-open-window">
+                    <img src="_assets/img/icons/user.svg" alt="">
+                    Sign in
+                </button>
+                <button class="button button__register go-to-registration go-to-registration-open-window">
+                    <img src="_assets/img/icons/user-plus.svg" alt="">
+                    Registration
+                </button>
+                <div class="lang light-select-wrapper">
+                    <select name="" data-mode="icons">
+                        <option value="tha" data-icon="_assets/img/icons/thailand.svg">THA</option>
+                        <option value="ind" data-icon="_assets/img/icons/indonesia.svg">IND</option>
+                        <option value="phi" data-icon="_assets/img/icons/philippines.svg">PHI</option>
+                        <option value="vie" data-icon="_assets/img/icons/vietnam.svg">VIE</option>
+                        <option value="uk" data-icon="_assets/img/icons/uk.svg">UK</option>
+                        <option value="jpn" data-icon="_assets/img/icons/japan.svg">JPN</option>
+                        <option value="usa" data-icon="_assets/img/icons/usa.svg">USA</option>
+                        <option value="rus" data-icon="_assets/img/icons/russia.svg">RUS</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <a href="/" class="menu_link active">
+                <span class="menu_link-icon fa fa-home"></span>
+                Home
+            </a>
+            <a href="/games.html" class="menu_link">
+                <img src="_assets/img/icons/poker-chip.svg" alt="" class="menu_link-icon">
+                Casino games
+            </a>
+            <a href="/bonuses.html" class="menu_link">
+                <img src="_assets/img/icons/new.svg" alt="" class="menu_link-icon">
+                Promotions
+            </a>
+            <a href="/" class="menu_link">
+                <span class="menu_link-icon fa fa-info-circle" style="font-size: 20px;"></span>
+                Game rules
+            </a>
+            <a href="/" class="menu_link">
+                <span class="menu_link-icon fa fa-envelope" style="font-size: 20px;"></span>
+                Contact us
+            </a> 
+            <button class="menu_leave">Exit</button>
+        </nav>
+    </header>
+    <main class="content">
+        <div class="transaction">
+            <h1 class="transaction_title">Transaction successful!</h1>
+            <img src="_assets/img/caps-green.png" alt="" class="transaction_image">
+            <p class="transaction_subtitle">A PAYMENT HAS BEEN COMPLETED</p>
+            <p class="transaction_text">Do you want to go to the Slots page?</p>
+            <a href="#" class="button button__secondary button__wide">Back to Slots</a>
+        </div>
+    </main>
+
+    <div class="fade_red">
+        <div class="popup popup-authorization">
+            <p class="title">
+                <span class="title_text">
+                    SIGN <span class="title_bright">IN</span>
+                </span>
+            </p>
+            <form action="" method="POST" enctype="text/plain" class="form">
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="username">Login</label>
+                        <input type="text" id="username" placeholder="Enter your Login">
+                    </div>
+                    <div class="form_row-item">
+                        <label for="Password">Password</label>
+                        <input type="password" id="Password" placeholder="****  ">                        
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">SIGN IN</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-registration go-to-registration-open-window" href="/registration">registration</a> | 
+                            <a class="form_link go-to-reset-password-open-window" href="/password-reset.html">reset password</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="popup popup-registration">
+            <p class="title">
+                <span class="title_text">
+                    FAST <span class="title_bright">REGISTRATION</span>
+                </span>
+            </p>
+            <div class="switch">
+                <div class="switch_items">
+                    <button class="switch_item switch_item__active" data-tab-link="register-1">With phone number</button>
+                    <button class="switch_item" data-tab-link="register-2">With E-mail address</button>
+                </div>
+            </div>
+            <form action="" method="POST" enctype="text/plain" class="form tab active" data-tab="register-1" enctype="text/plain">
+                <div class="form_row">
+                    <div class="form_row-item invalid">
+                        <label for="country">Country</label>
+                        <select name="" id="country js-country" data-mode="icons">
+                            <option value="+668" data-icon="_assets/img/icons/thailand.svg">Thailand (+668)</option>
+                            <option value="+668" data-icon="_assets/img/icons/vietnam.svg">Vietnam (+668)</option>
+                        </select>
+                        <p class="form_error-message">Please choose your counry</p>
+                    </div>
+                    <div class="form_row-item">
+                        <label for="currency">Select currency</label>
+                        <select name="" id="currency">
+                            <option value="">EUR, €</option>
+                            <option value="">USD, $</option>
+                            <option value="">VND, ₫</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="phone">Phone number</label>
+                        <div class="phone">
+                            <div class="phone_code">
+                                <img src="_assets/img/icons/thailand.svg" alt="" class="phone_flag">
+                                +668
+                            </div>
+                            <input type="tel" name="phone">
+                        </div>
+                        <p class="form_clarification">
+                            <input type="checkbox" id="confirm18" />
+                            <label for="confirm18">I am at least 18 years old and have read and have read and accepted the 
+                            <a href="#">Terms and Conditions.</a></label>
+                        </p>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">CREATE ACCOUNT</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-authorization go-to-authorization-open-window" href="/registration.html">sign in</a> | 
+                            <a class="form_link go-to-reset-password-open-window" href="/password-reset.html">reset password</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="" method="POST" enctype="text/plain" class="form tab" data-tab="register-2" enctype="text/plain">
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="country-1">Country</label>
+                        <select name="" id="country-1" data-mode="icons">
+                            <option value="+668" data-icon="_assets/img/icons/thailand.svg">Thailand (+668)</option>
+                            <option value="+668" data-icon="_assets/img/icons/vietnam.svg">Vietnam (+668)</option>
+                        </select>
+                    </div>
+                    <div class="form_row-item">
+                        <label for="currency">Select currency</label>
+                        <select name="" id="currency">
+                            <option value="">EUR, €</option>
+                            <option value="">USD, $</option>
+                            <option value="">VND, ₫</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                        <p class="form_clarification">
+                            <input type="checkbox" id="confirm18" />
+                            <label for="confirm18">I am at least 18 years old and have read and have read and accepted the 
+                            <a href="#">Terms and Conditions.</a></label>
+                        </p>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">CREATE ACCOUNT</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-authorization go-to-authorization-open-window" href="/registration.html">sign in</a> | 
+                            <a class="form_link" href="/password-reset">reset password</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="popup popup-reset-password">
+            <p class="title">
+                <span class="title_text">
+                    RESET <span class="title_bright">PASSWORD</span>
+                </span>
+            </p>
+            <div class="switch">
+                <div class="switch_items">
+                    <button class="switch_item switch_item__active" data-tab-link="reset-1">With phone number</button>
+                    <button class="switch_item" data-tab-link="reset-2">With E-mail address</button>
+                </div>
+            </div>
+            <form action="" method="POST" enctype="text/plain" class="form tab active" data-tab="reset-1" enctype="text/plain">
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="email">Phone number</label>
+                        <input type="tel" placeholder="Enter your phone number">
+                        <p class="form_clarification">You will receive a login and password on your phone number.</p>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">Reset password</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-authorization go-to-authorization-open-window" href="/registration.html">sign in</a> | 
+                            <a class="form_link" href="/password-reset">reset password</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="" method="POST" enctype="text/plain" class="form tab" data-tab="reset-2" enctype="text/plain">
+                <div class="form_row">
+                    <div class="form_row-item">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <p class="form_clarification">You will receive a login and password on your email.</p>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_row-item form_row-item__center">
+                        <button class="form_submit">Reset password</button>
+                        <div class="form_links">
+                            <a class="form_link go-to-authorization go-to-authorization-open-window" href="/registration.html">sign in</a> | 
+                            <a class="form_link" href="/registration.html">registration</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Loader-->
+    <div class="loader active">
+        <div class="coin">
+            <div class="coin__front"></div>
+            <div class="coin__edge">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+
+            </div>
+            <div class="coin__back"></div>
+            <div class="coin__shadow"></div>
+        </div>
+    </div>
+
+    <script src="./_assets/js/jquery-3.4.1.min.js"></script>
+    <script src="./_assets/js/imask.min.js"></script>
+    <script src="./_assets/js/slick.min.js"></script>
+    <script src="./_assets/js/choices.min.js"></script>
+    <script src="./_assets/js/main.js"></script>
+
+</body>
+</html>

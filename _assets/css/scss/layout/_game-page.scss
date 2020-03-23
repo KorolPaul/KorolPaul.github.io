@@ -1,0 +1,158 @@
+.game-page {
+    background: url(#{$img-path}/game-bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    position: relative;
+
+    &_content {
+        @include tablet {
+            width: 100%;
+            max-width: 1160px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-grow: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        iframe {
+            left: 0;
+            right: 0;
+            height: calc(100vh - 120px);
+            width: 100%;
+            @include desktop {
+                position: static;
+                width: 100%;
+                height: 70%;
+            }
+
+            .game-page__fullscreen & {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 60px;
+                height: calc(100% - 60px);
+            }
+        }
+    }
+    &_title {
+        color: $light_color;
+        font-weight: 600;
+        font-size: 26px;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0 0 22px;
+        display: none;
+        @include desktop {
+            display: block;
+        }
+    }
+    &_breadcrumbs {
+        width: 100%;
+        margin: 20px 15px;
+        white-space: nowrap;
+        overflow: auto;
+        @include desktop {
+            margin: 0 0 30px;
+            overflow: hidden;
+        }
+    }
+    &_breadcrumbs-link {
+        color: $light_color;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 300;
+        text-transform: uppercase;
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+    &_breadcrumbs-page {
+        color: $light_color;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+    &_demo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 0 16px;
+
+        span {
+            color: #fffc00;
+            font-weight: bold;
+        }
+        strong {
+            font-weight: bold;
+        }
+
+        .add-button {
+            display: none;
+            @include desktop {
+                display: block;
+                padding: 9px 20px;
+            }
+        }
+    }
+    &_demo-bubble {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 36px;
+        background: $bright_color;
+        padding: 10px 12px 10px 30px;
+        font-size: 14px;
+        font-weight: 300;
+        color: $light_color;
+        text-transform: uppercase;
+        position: relative;
+        margin: 0 15px;
+        @include tablet {
+            font-size: 18px;
+            padding: 10px 15px 10px 15px;
+            margin: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin: 0 0 0 -10px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: $bright_color  transparent transparent transparent;
+            @include tablet {
+                left: 80px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+    &_demo-mobile-button {
+        display: none;
+        color: #52ac62;
+        background: $light_color;
+        margin: 0 0 0 10px;
+        font-weight: 600;
+        @include media(500px) {
+            display: block;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+}

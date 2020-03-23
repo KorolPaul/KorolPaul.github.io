@@ -1,0 +1,55 @@
+.menu-toggle {
+    $box-shadow: 1px 0 0 0 rgba(#fff, 0.5), 0 1px 0 0 rgba(#fff, 0.5), -1px 0 0 0 rgba(#fff, 0.5), 0 -1px 0 0 rgba(#fff, 0.5);
+    box-sizing: content-box;
+    background: transparent;
+    border: none;
+    padding: 11px;
+    margin: 0;
+    width: 21px;
+    overflow: visible;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    z-index: 2;
+    position: absolute;
+    @include tablet {
+        display: none;
+    }
+
+    &:hover,
+    &:active {
+        background: transparent;
+        border: none;
+    }
+
+    .game-page & {
+        left: auto;
+        right: 0;
+        z-index: 3;
+        @include tablet {
+            display: block;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &_line {
+        background: $light_color;
+        box-shadow: $box-shadow;
+        height: 2px;
+        margin: 6px 0;
+        transition: .2s ease background, .2s ease box-shadow, .2s ease-in-out height, .2s ease-in-out transform;
+
+        .menu-toggle.opened &:nth-child(2) {
+            background: transparent;
+            box-shadow: none;
+        }
+        .menu-toggle.opened &:nth-child(1) {
+            transform: rotateZ(45deg) translate(3px, 6px);
+        }
+        .menu-toggle.opened &:nth-child(3) {
+            transform: rotateZ(-45deg) translate(5px, -8px);
+        }
+    }
+}

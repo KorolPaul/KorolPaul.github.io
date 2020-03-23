@@ -1,0 +1,21 @@
+.breadcrumbs {
+    margin: 0 0 14px;
+    font-size: 18px;
+    @include tablet {
+        margin-bottom: 28px;
+    }
+
+    &_link {
+        color: $light_color;
+
+        &::after {
+            content: '/';
+            color: $bright_color;
+            font-size: 24px;
+            margin: 0 20px;
+        }
+    }
+    &_page {
+        color: $light_color;
+    }
+}

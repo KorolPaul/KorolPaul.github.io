@@ -1,0 +1,28 @@
+.errors-summary {
+    color: $light_color;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 18px auto;
+    padding: 8px 20px 8px 40px;
+    margin: -10px 0 20px;
+    @include tablet {
+        margin-top: -20px;
+    }
+
+    &__error {
+        border-color: $bright_color;
+        background-image: url(#{$img-path}/icons/cancel-red.svg);
+    }
+    &__info {
+        border-color: #2a5475;
+        background-image: url(#{$img-path}/icons/information-blue.svg);
+    }
+    &__success {
+        border-color: #346d32;
+        background-image: url(#{$img-path}/icons/success-green.svg);
+    }
+}

@@ -1,0 +1,126 @@
+.popup {
+    padding: 20px 10px 0;
+    background: #1e2226;
+    display: none;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #30363c;
+    position: relative;
+    @include tablet {
+        width: auto;
+        padding: 20px 20px 0;
+        min-width: 400px;
+    }
+    @include desktop {
+        box-sizing: border-box;
+        padding-left: 75px;
+        padding-right: 75px;
+        max-width: 600px;
+    }
+
+    &__columned {
+        max-width: 920px;
+        @include tablet {
+            width: 95vw;
+        }
+        @include desktop {
+            width: 920px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+    &__wide {
+        max-width: 1200px;
+        min-width: 80vw;
+    }
+    &__small {
+        @include desktop {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    &_content {
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+        & > * {
+            max-width: 100%;
+        }
+    }
+
+    &.opened {
+        display: block;
+    }
+
+    &_close {
+        background: transparent;
+        padding: 0;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $dark-blue_color;
+        font-size: 30px;
+        line-height: 30px;
+        transition: .2s ease-in-out color;
+
+        &:hover,
+        &:active {
+            color: $light_color;
+            background: transparent;
+        }
+    }
+    &_title {
+        color: $light_color;
+        font-size: 24px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 20px 0 20px;
+        @include tablet {
+            font-size: 32px;
+        }
+    }
+    &_smile {
+        margin: 60px auto 50px;
+        display: block;
+    }
+    &_description {
+        width: 200px;
+        color: $light_color;
+        margin: 0 auto 40px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    &_columns {
+        @include tablet {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            margin: 0 0 50px;
+        }
+
+        & > * {
+            @include tablet {
+                width: 46%;
+                max-width: 350px;
+            }
+        }
+
+        &::after {
+            @include tablet {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: $bright_color;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.popup-game {
+    max-width: 500px;
+    margin: auto;
+
+    &_title {
+        @extend %heading-1;
+        text-transform: uppercase;
+        margin: 26px auto 10px;
+    }
+    &_description {
+        color: $light_color;
+        font-size: 18px;
+        margin: 0 0 24px;
+        line-height: 1.2;
+    }
+    &_image {
+        @include tablet {
+            margin: 0 -20px 20px;
+            max-width: calc(100% + 40px);
+        }
+    }
+    &_button-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 45px;
+    }
+}

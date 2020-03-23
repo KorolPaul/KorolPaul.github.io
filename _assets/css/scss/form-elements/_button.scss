@@ -1,0 +1,147 @@
+@mixin button {
+    background: $bright_color;
+    border: 2px solid $bright_color;
+    border-radius: 36px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: $light_color;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    white-space: nowrap;
+    transition: .2s ease-in-out border-color,
+                .2s ease-in-out background-color,
+                .2s ease-in-out box-shadow,
+                .2s ease-in-out color;
+
+    &:hover {
+        background-color: $bright_color__hover;
+        border-color: $bright_color__hover;
+    }
+    &:active {
+        background-color: $bright_color__active;
+        border-color: $bright_color__active;
+        color: rgba(#fff, .3);
+    }
+    &:disabled {
+        background: #141516;
+        border-color: #2b3036;
+        color: #2b3036;
+    }
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    @include button;
+}
+
+.button {
+    @include button;
+    width: 100%;
+    @include tablet {
+        width: auto;
+        min-width: 220px;
+    }
+
+    &__hover {
+        background-color: $bright_color__hover;
+        border-color: $bright_color__hover;
+    }
+    &__active {
+        background-color: $bright_color__active;
+        border-color: $bright_color__active;
+        color: rgba(#fff, .3);
+    }
+    
+    &_icon {
+        margin: 0 10px 0 0;
+
+        &__animated {
+            animation: 3s ease-in-out plus-animation 1s infinite;
+            transition: 1s ease-in-out transform;
+
+            .button:hover & {
+                animation: none;
+                transform: scale(2);
+            }
+        }
+    }
+    &__secondary {
+        color: $bright_color;
+        background: transparent;
+    }
+    &__secondary:hover,
+    &__secondary.button__hover {
+        background: transparent;
+        border-color: $bright_color;
+        color: $bright_color__hover;
+        box-shadow: 0 0 8px 4px rgba(#ae1e23, .25);
+    }
+    &__secondary:active,
+    &__secondary.button__active {
+        background: transparent;
+        color: $bright_color__active;
+        border-color: $bright_color__active;
+    }
+    &__secondary-filled {
+        color: #8c949e;
+        background: #2a3036;
+        border-color: #2a3036;
+    }
+    &__secondary-filled:hover {
+        background: $bg_color;
+        border-color: $bg_color;
+        color: $light_color;
+    }
+    &__secondary-filled:active {
+        background: $bg_color;
+        border-color: $bg_color;
+        color: $light_color;
+    }
+    &__signin,
+    &__register {
+        min-width: 0;
+        width: auto;
+        
+        img {
+            height: 16px;;
+        }
+    }
+    &__register {
+        margin: 0 0 0 15px; 
+    }
+    &__middle {
+        width: auto;
+        min-width: 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &__small {
+        width: auto;
+        min-width: 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    &__shadow {
+        box-shadow: 0 0 5px 3px rgba(#ae1e23, .25) inset, 0 0 5px 3px rgba(#ae1e23, .25);
+    }
+    &__wide {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}
+
+@keyframes plus-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
