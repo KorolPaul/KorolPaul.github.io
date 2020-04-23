@@ -1,0 +1,94 @@
+body {
+  background: #000;
+}
+
+svg {
+  height: 50vmin;
+  margin: 0 1vw;
+}
+
+.right,
+.left,
+.center {
+  fill: #fff;
+}
+
+.borders path {
+  fill: #fff;
+}
+
+.borders {
+  mask: url(#border-mask);
+}
+.borders__second {
+  mask: url(#border-mask2);
+}
+.borders__reversed {
+  mask: url(#border-mask3);
+}
+
+.mask {
+  stroke-width: 6px;
+  stroke: #fff;
+  stroke-dasharray: 305%;
+  stroke-dashoffset: -305%;
+  animation: mask-animation 2.8s ease-in-out 1.4s infinite;
+}
+.mask__second {
+  animation-delay: 0.1s;
+}
+.mask__reversed {
+  animation-delay: 0.1s;
+  animation-direction: reverse;
+}
+
+.center,
+.left,
+.right {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.5;
+  stroke-dasharray: 290%;
+  stroke-dashoffset: -290%;
+  transform: scale(0.98);
+  transform-origin: center center;
+  animation: stroke-animation 2.1s ease-in-out forwards, fill-animation 2.1s ease-in-out forwards;
+}
+
+.left,
+.right {
+  animation: stroke-animation 2.1s ease-in-out 0.35s forwards, fill-animation 2.1s ease-in-out forwards;
+}
+
+@keyframes mask-animation {
+  0% {
+    stroke-dashoffset: -305%;
+  }
+  50% {
+    stroke-dashoffset: -610%;
+  }
+  100% {
+    stroke-dashoffset: -915%;
+  }
+}
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: -290%;
+  }
+  100% {
+    stroke-dashoffset: -580%;
+  }
+}
+@keyframes fill-animation {
+  0% {
+    fill: #fff0;
+  }
+  45% {
+    fill: #fff0;
+  }
+  100% {
+    fill: #fff;
+  }
+}
+
+/*# sourceMappingURL=/icon.66ae6931.css.map */
