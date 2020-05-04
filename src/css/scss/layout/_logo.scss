@@ -1,0 +1,22 @@
+.logo {
+    &_image {
+        display: block;
+        @include tablet {
+            width: 66px;
+            height: 89px;
+        }
+        @include desktop {
+            width: 108px;
+            height: 147px;
+        }
+        @include desktop-large {
+            width: 149px;
+            height: 202px;
+        }
+
+        .fixed-header & {
+            width: 25px;
+            height: 33px;
+        }
+    }
+}

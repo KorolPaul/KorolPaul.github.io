@@ -1,0 +1,19 @@
+{
+  "name": "Little bronnaya theatre frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "author": "Pavel Korol",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-haml": "^1.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "browserslist": {
+    " > .5%, last 2 versions"
+  }
+}

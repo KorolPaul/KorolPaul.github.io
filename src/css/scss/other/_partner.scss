@@ -1,0 +1,43 @@
+.partner {
+    display: none;
+    background: #68D2DB url(#{$img}/mihoels.svg) no-repeat center right 50px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 110px;
+    font-size: 11px;
+    line-height: 14px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 190px 0 16px;
+    text-align: right;
+    z-index: -1;
+    @include tablet {
+        display: flex;
+    }
+
+    &__mobile {
+        display: flex;
+        position: relative;
+        margin: 40px -16px 80px;
+        left: auto;
+        font-size: 12px;
+        line-height: 18px;
+        background-size: 57px 49px;
+        justify-content: flex-start;
+        padding-right: 110px;
+        @include tablet {
+            display: none;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: -#{$layout_indent} - 16px;
+            right: -#{$layout_indent} - 16px;
+            border-top: 1px solid #9B9B9B;
+        }
+    }
+}

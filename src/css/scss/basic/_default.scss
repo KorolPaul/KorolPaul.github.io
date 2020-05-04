@@ -1,0 +1,71 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $bg_color;
+    color: $color;
+    font: #{$font-size}/24px $font-family;
+    @include tablet {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    @include desktop {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    @include desktop-large {
+        font-size: 26px;
+        line-height: 48px;
+    }
+}
+
+a {
+    color: $color;
+    text-decoration: none;
+    transition: .2s ease-in-out color;
+
+    &:hover,
+    &.hover {
+        color: $bright_color__hover;
+        outline: none;
+    }
+    &:active,
+    &.active {
+        color: $bright_color__active;
+        outline: none;
+    }
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul,
+ol {
+    padding: 0 0 0 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.fixed-header {
+    padding-top: 115px;
+    @include tablet {
+        padding: 0;
+    }
+}

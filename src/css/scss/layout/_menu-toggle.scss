@@ -1,0 +1,43 @@
+.menu-toggle {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 24px;
+    width: 24px;
+    overflow: visible;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    right: 0;
+    top: 1px;
+    z-index: 2;
+    @include tablet {
+        display: none;
+    }
+
+    &:hover,
+    &:active {
+        background: transparent;
+        border: none;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        background: #4A4A4A;
+        height: 2px;
+        width: 100%;
+        margin: 3px 0;
+        transition: .2s ease-in-out transform;
+    }
+
+    &.opened::before {
+        transform: rotateZ(45deg) translate(0px, 5px);
+    }
+    &.opened::after {
+        transform: rotateZ(-45deg) translate(1px, -6px);
+    }
+}

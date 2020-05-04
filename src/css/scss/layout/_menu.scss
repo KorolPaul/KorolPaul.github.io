@@ -1,0 +1,65 @@
+.menu {
+    position: absolute;
+    right: $layout_indent;
+    top: 20px;
+    padding: 0 24px 0 0;
+    text-align: right;
+    @include tablet {
+        position: fixed;
+        left: 16px;
+        bottom: 30px;
+        right: auto;
+        top: auto;
+        text-align: left;
+        max-width: 92px;
+    }
+    @include desktop {
+        left: 24px;
+        max-width: 135px;
+    }
+    @include desktop-large {
+        left: 34px;
+        bottom: 40px;
+        max-width: 200px;
+    }
+
+    &_link {
+        color: #4A4A4A;
+        font-size: 13px;
+        line-height: 16px;
+        margin: 0 11px;
+        display: none;
+        @include tablet {
+            display: block;
+            font-size: 12px;
+            line-height: 20px;
+            margin: 7px 0;
+        }
+        @include desktop {
+            font-size: 13px;
+            line-height: 22px;
+            margin: 5px 0;
+        }
+        @include desktop-large {
+            font-size: 18px;
+            line-height: 22px;
+            margin: 10px 0;
+        }
+
+        &__mobile {
+            display: inline;
+            @include tablet {
+                display: block;
+            }
+        }
+        &__indent {
+            margin: 36px 0 46px;
+        }
+    }
+    &_social {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+}

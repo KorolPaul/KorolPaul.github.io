@@ -1,0 +1,21 @@
+.header {
+    padding: 20px $layout_indent;
+    position: relative;
+
+    .fixed-header & {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background: rgba(227, 227, 227, 0.96);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @include tablet {
+            position: relative;
+            background: transparent;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}

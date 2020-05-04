@@ -1,0 +1,25 @@
+.form {
+    &_row {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_row-item {
+        padding: 0 0 30px;
+        flex-grow: 10;
+        position: relative;
+        @include desktop {
+        }
+
+        &__center {
+            text-align: center;
+        }
+        & + & {
+            @include desktop {
+                margin-left: 30px;
+            }
+        }
+    }
+    
+}

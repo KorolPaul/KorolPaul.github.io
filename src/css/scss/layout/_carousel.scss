@@ -1,0 +1,101 @@
+.carousel {
+    &_item {
+        display: block;
+    }
+    &_item-image {
+        height: 124px;
+        width: 124px;
+        margin: 0 0 20px;
+        max-width: none;
+        @include tablet {
+            height: 64px;
+            width: 64px;
+            margin-bottom: 12px;
+        }
+        @include desktop {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 16px;
+        }
+        @include desktop-large {
+            height: 128px;
+            width: 128px;
+            margin-bottom: 16px;
+        }
+
+        &__rounded {
+            border-radius: 50%;
+        }
+    }
+    &_item-title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        display: block;
+        position: relative;
+        @include tablet {
+            font-size: 11px;
+            line-height: 14px;
+        }
+        @include desktop {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        @include desktop-large {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        &__decorated {
+            &::before {
+                content: '';
+                background-color: currentColor;
+                height: 14px;
+                width: 1px;
+                position: absolute;
+                left: -9px;
+                top: 0;
+                transform: rotate(35deg);
+            }
+        }
+    }
+    &_item-subtitle {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: normal;
+        @include desktop-large {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    &_button {
+        border: none;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: .2s ease-in-out opacity;
+        height: 46px;
+        width: 30px;
+        padding: 0;
+        display: none;
+        @include tablet {
+            display: inline-block;
+        }
+
+        &__prev {
+            background-image: url(#{$img}/prev.svg);
+        }
+        &__next {
+            background-image: url(#{$img}/next.svg);
+        }
+
+        &:hover {
+            background-color: transparent;
+            opacity: .3;
+        }
+        &:active {
+            background-color: transparent;
+            opacity: .6;
+        }
+    }
+}

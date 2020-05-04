@@ -1,0 +1,42 @@
+%heading-1 {
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    @include tablet {
+        font-size: 46px;
+        line-height: 46px;
+    }
+    @include desktop {
+        font-size: 72px;
+        line-height: 70px;
+    }
+    @include desktop-large {
+        font-size: 100px;
+        line-height: 100px;
+    }
+}
+%heading-2 {
+    font: 18px $font-family;
+    margin: 40px 0 20px;
+    @include tablet {
+        font: 22px $font-family;
+    }
+}
+%heading-3 {
+    font: 16px $font-family;
+    margin: 0;
+}
+
+h1,
+.heading-1 {
+    @extend %heading-1;
+}
+h2,
+.heading-2 {
+    @extend %heading-2;
+}
+h3,
+.heading-3 {
+    @extend %heading-3;
+}

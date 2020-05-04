@@ -1,0 +1,104 @@
+.social {
+    &_title {
+        font-size: 14px;
+        line-height: 46px;
+    }
+    &_links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_link {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: .2s ease opacity;
+        @include tablet {
+            background-size: 100% 100%;
+        }
+
+        $socials: 'vk', 'fb', 'insta', 'youtube', 'tw';
+        @each $s in $socials {
+            &__#{$s} {
+                background-image: url(#{$img}/social/#{$s}.svg);
+            }
+        }
+
+        &__vk {
+            @include tablet {
+                height: 5px;
+                width: 8px;
+            }
+            @include desktop {
+                height: 6px;
+                width: 12px;
+            }
+            @include desktop-large {
+                height: 8px;
+                width: 14px;
+            }
+        }
+        &__fb {
+            @include tablet {
+                height: 9px;
+                width: 4px;
+            }
+            @include desktop {
+                height: 13px;
+                width: 6px;
+            }
+            @include desktop-large {
+                height: 15px;
+                width: 7px;
+            }
+        }
+        &__insta {
+            @include tablet {
+                height: 12px;
+                width: 12px;
+            }
+            @include desktop {
+                height: 16px;
+                width: 16px;
+            }
+            @include desktop-large {
+                height: 20px;
+                width: 20px;
+            }
+        }
+        &__youtube {
+            @include tablet {
+                height: 9px;
+                width: 12px;
+            }
+            @include desktop {
+                height: 13px;
+                width: 18px;
+            }
+            @include desktop-large {
+                height: 16px;
+                width: 21px;
+            }
+        }
+        &__tw {
+            @include tablet {
+                height: 6px;
+                width: 8px;
+            }
+            @include desktop {
+                height: 9px;
+                width: 12px;
+            }
+            @include desktop-large {
+                height: 10px;
+                width: 14px;
+            }
+        }
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
