@@ -26,10 +26,25 @@ a {
     position: relative;
     transition: .2s ease-in-out color;
 
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-bottom: 1px solid currentColor;
+        transition: .1s ease-in-out transform;
+        transform-origin: right center;
+    }
+
     &:hover,
     &.hover {
         color: $bright_color;
         outline: none;
+
+        &::after {
+            transform: scaleX(0);
+        }
     }
     &:active,
     &.active {

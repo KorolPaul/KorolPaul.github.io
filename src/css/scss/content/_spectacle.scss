@@ -79,6 +79,10 @@
         right: 24px;
         top: 17px;
         text-decoration: none;
+
+        &::after {
+            display: none;
+        }
     }
     &_tags {
         position: absolute;
@@ -92,10 +96,13 @@
         line-height: 14px;
         padding: 0 14px 0 12px;
         position: relative;
-        text-decoration: none;
         @include desktop {
             font-size: 14px;
             padding-right: 30px;
+        }
+
+        &::after {
+            display: none;
         }
 
         &__bright {

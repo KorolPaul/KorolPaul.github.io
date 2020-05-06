@@ -1,6 +1,10 @@
 .carousel {
     &_item {
         display: block;
+        
+        &::after {
+            display: none;
+        }
     }
     &_item-image {
         width: 100%;

@@ -46,6 +46,10 @@
             margin: 10px 0;
         }
 
+        &::after {
+            display: none;
+        }
+
         &__mobile {
             display: inline;
             @include tablet {
