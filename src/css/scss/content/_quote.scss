@@ -1,4 +1,35 @@
 .quote {
-  &_text {
-  }
+    background: rgba(0, 0, 0, .03);
+    padding: 30px;
+    position: relative;
+    text-align: right;
+    margin: 0 0 30px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url(#{$img}/qoute.svg) no-repeat center center / contain;
+        width: 27px;
+        height: 18px;
+        left: 30px;
+        top: -30px;
+    }
+
+    &_text {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0 0 4px;
+        text-align: left;
+    }
+    &_date {
+        color: $bright_color;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+        display: block;
+    }
+    &_link {
+        font-size: 14px;
+        line-height: 46px;
+    }
 }

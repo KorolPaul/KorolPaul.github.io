@@ -1,6 +1,6 @@
 .partner {
     display: none;
-    background: #68D2DB url(#{$img}/mihoels.svg) no-repeat center right 50px;
+    background: #68D2DB;
     height: 90px;
     position: absolute;
     top: 0;
@@ -8,13 +8,22 @@
     left: 110px;
     font-size: 11px;
     line-height: 14px;
-    justify-content: flex-end;
     align-items: center;
-    padding: 0 190px 0 16px;
+    padding: 0 16px;
     text-align: right;
-    z-index: -1;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
     @include tablet {
         display: flex;
+        padding-bottom: 20px;
+    }
+    @include desktop {
+        left: 19vw;
+        margin-left: -2vw;
+    }
+    @include desktop-large {
+        left: 18vw;
     }
 
     &__mobile {
@@ -25,8 +34,7 @@
         font-size: 12px;
         line-height: 18px;
         background-size: 57px 49px;
-        justify-content: flex-start;
-        padding-right: 110px;
+        text-align: left;
         @include tablet {
             display: none;
         }
@@ -35,9 +43,20 @@
             content: '';
             position: absolute;
             bottom: -40px;
-            left: -#{$layout_indent} - 16px;
-            right: -#{$layout_indent} - 16px;
+            left: -#{$layout_indent - 16px};
+            right: -#{$layout_indent - 16px};
             border-top: 1px solid #9B9B9B;
+        }
+    }
+
+    &_title {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+    &_gallery {
+        margin: 0 0 0 16px;
+        @include tablet {
+            width: 140px;
         }
     }
 }

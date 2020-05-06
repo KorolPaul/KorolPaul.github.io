@@ -23,11 +23,12 @@ body {
 a {
     color: $color;
     text-decoration: none;
+    position: relative;
     transition: .2s ease-in-out color;
 
     &:hover,
     &.hover {
-        color: $bright_color__hover;
+        color: $bright_color;
         outline: none;
     }
     &:active,

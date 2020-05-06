@@ -41,19 +41,45 @@
                             %a.social_link.social_link__youtube(href="#")
                             %a.social_link.social_link__tw(href="#")
 
-        %main.content
+        %main.content.content__big-indent  
 
-            .partner генеральный партнер театра
-                %a.logo(href="/")
+            .partner
+                %span.partner_title генеральный партнер театра
+                .partner_gallery 
+                    .gallery
+                        .gallery_items
+                            .gallery_item
+                                %img(src="src/img/mihoels.svg" alt="")
+                            .gallery_item
+                                %img(src="src/img/nauka-i-sport.svg" alt="")
 
             .spectacles
                 .spectacle.spectacle__big
-                    .spectacle_image-wrapper
-                        %img.spectacle_image(src="src/img/temp/spectacle-1.jpg" alt="")
-                        %a.spectacle_date(href="/") сегодня
-                        .spectacle_tags
-                            %a.spectacle_tag.spectacle_tag__bright(href="/") премьера
-                            %a.spectacle_tag(href="/") детский
+                    .spectacle_gallery
+                        .gallery
+                            .gallery_items
+                                .gallery_item
+                                    .spectacle_image-wrapper
+                                        %img.spectacle_image(src="src/img/temp/spectacle-1.jpg" alt="")
+                                        %a.spectacle_date(href="/") сегодня
+                                        .spectacle_tags
+                                            %a.spectacle_tag.spectacle_tag__bright(href="/") премьера
+                                            %a.spectacle_tag(href="/") детский
+                                .gallery_item
+                                    .spectacle_image-wrapper
+                                        %img.spectacle_image(src="src/img/temp/spectacle-1.jpg" alt="")
+                                        %a.spectacle_date(href="/") сегодня
+                                        .spectacle_tags
+                                            %a.spectacle_tag.spectacle_tag__bright(href="/") премьера
+                                            %a.spectacle_tag(href="/") детский
+                                .gallery_item
+                                    .spectacle_image-wrapper
+                                        %img.spectacle_image(src="src/img/temp/spectacle-1.jpg" alt="")
+                                        %a.spectacle_date(href="/") сегодня
+                                        .spectacle_tags
+                                            %a.spectacle_tag.spectacle_tag__bright(href="/") премьера
+                                            %a.spectacle_tag(href="/") детский
+
                     %h2.spectacle_title Кентервильское привидение
                     %p.spectacle_description Сказка по мотивам повести Оскара Уайльда
                     .spectacle_info
@@ -71,8 +97,15 @@
                         .spectacle_controls-column
                             %a.spectacle_more-info(href="/") подробнее
 
-                .partner.partner__mobile генеральный партнер театра
-                    %a.logo(href="/")
+                .partner.partner__mobile 
+                    %span.partner_title генеральный партнер театра
+                    .partner_gallery 
+                        .gallery
+                            .gallery_items
+                                .gallery_item
+                                    %img(src="src/img/mihoels-mobile.svg" alt="")
+                                .gallery_item
+                                    %img(src="src/img/nauka-i-sport.svg" alt="")
 
                 .spectacle
                     .spectacle_image-wrapper
@@ -80,8 +113,9 @@
                         %a.spectacle_date(href="/") завтра
                         .spectacle_tags
                             %a.spectacle_tag.spectacle_tag__bright(href="/") премьера
-                    %h2.spectacle_title Кентервильское привидение
-                    %p.spectacle_description Сказка по мотивам повести Оскара Уайльда
+                    .spectacle_header
+                        %h2.spectacle_title Кентервильское привидение
+                        %p.spectacle_description Сказка по мотивам повести Оскара Уайльда
                     .spectacle_info
                         %a.spectacle_adress(href="#") Центр «На Страстном»
                         .spectacle_creators
@@ -157,8 +191,9 @@
                     .spectacle_image-wrapper
                         %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
                         %a.spectacle_date(href="/") 6 февраля
-                    %h2.spectacle_title Ревизор
-                    %p.spectacle_description сцены из романа Льва Толстого «Война и мир»
+                    .spectacle_header
+                        %h2.spectacle_title Ревизор
+                        %p.spectacle_description сцены из романа Льва Толстого «Война и мир»
                     .spectacle_info
                         %a.spectacle_adress(href="#") Центр «На Страстном»
                         .spectacle_creators
@@ -173,7 +208,9 @@
                     .spectacle_image-wrapper
                         %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
                         %a.spectacle_date(href="/") 7 февраля
-                    %h2.spectacle_title Норма
+                    .spectacle_header 
+                        %h2.spectacle_title Подлинная история Фрекен Бок. Подлинная история Фрекен Бок
+                        %p.spectacle_description Сказка по мотивам повести  Оскара Уайльда
                     .spectacle_info
                         %a.spectacle_adress(href="#") Центр «На Страстном»
                         .spectacle_creators
@@ -184,7 +221,23 @@
                     .spectacle_controls
                         %button.spectacle_button купить билет
                         %a.spectacle_more-info(href="/") подробнее
-
+                .spectacle
+                    .spectacle_image-wrapper
+                        %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
+                        %a.spectacle_date(href="/") 6 февраля
+                    .spectacle_header
+                        %h2.spectacle_title Макбет
+                        %p.spectacle_description сцены из романа Льва Толстого «Война и мир»
+                    .spectacle_info
+                        %a.spectacle_adress(href="#") Центр «На Страстном»
+                        .spectacle_creators
+                            %span.spectacle_creators-line Автор: Леонид Зорин
+                            %span.spectacle_creators-line Режиссёр: Сергей Голомазов
+                            %span.spectacle_creators-line В ролях: Юлия Пересильд, Даниил Страхов
+                            .spectacle_info-rating 16+
+                    .spectacle_controls
+                        %button.spectacle_button купить билет
+                        %a.spectacle_more-info(href="/") подробнее
    
             .widget.carousel
                 .widget_header
@@ -247,8 +300,9 @@
                     .spectacle_image-wrapper
                         %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
                         %a.spectacle_date(href="/") 8 февраля
-                    %h2.spectacle_title Белые ночи
-                    %p.spectacle_description сентиментальная история
+                    .spectacle_header
+                        %h2.spectacle_title Белые ночи
+                        %p.spectacle_description сентиментальная история
                     .spectacle_info
                         %a.spectacle_adress(href="#") Центр «На Страстном»
                         .spectacle_creators
@@ -263,8 +317,26 @@
                     .spectacle_image-wrapper
                         %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
                         %a.spectacle_date(href="/") 9 февраля
-                    %h2.spectacle_title Деревья умирают стоя
-                    %p.spectacle_description трагикомедия
+                    .spectacle_header
+                        %h2.spectacle_title Деревья умирают стоя
+                        %p.spectacle_description трагикомедия
+                    .spectacle_info
+                        %a.spectacle_adress(href="#") Центр «На Страстном»
+                        .spectacle_creators
+                            %span.spectacle_creators-line Автор: Леонид Зорин
+                            %span.spectacle_creators-line Режиссёр: Сергей Голомазов
+                            %span.spectacle_creators-line В ролях: Юлия Пересильд, Даниил Страхов
+                            .spectacle_info-rating 16+
+                    .spectacle_controls
+                        %button.spectacle_button купить билет
+                        %a.spectacle_more-info(href="/") подробнее
+                .spectacle
+                    .spectacle_image-wrapper
+                        %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
+                        %a.spectacle_date(href="/") 9 февраля
+                    .spectacle_header
+                        %h2.spectacle_title Деревья умирают стоя
+                        %p.spectacle_description трагикомедия
                     .spectacle_info
                         %a.spectacle_adress(href="#") Центр «На Страстном»
                         .spectacle_creators

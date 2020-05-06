@@ -1,12 +1,46 @@
 .tickets {
-  &_button {
-  }
-  &_more {
-  }
-  &_price {
-  }
-  &_title {
-  }
-  &_unavailible {
-  }
+    background: rgba(0, 0, 0, 0.03);
+    margin: 0 0 32px;
+    padding: 8px 16px 20px;
+    border-bottom: 1px solid #9b9b9b;
+    margin: 0 0 18px;
+    
+    &_title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        display: block;
+    }
+    &_price {
+        font-weight: 300;
+        font-size: 8px;
+        line-height: 14px;
+        color: #9b9b9b;
+    }
+    &_button {
+    }
+    &_more {
+        color: $color;
+        background: transparent;
+        padding: 0;
+        border: none;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+
+        &:hover {
+            background: transparent;
+        }
+        &:active {
+            background: transparent;
+        }
+    }
+    &_unavailible {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #9b9b9b;
+    }
 }

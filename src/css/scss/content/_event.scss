@@ -1,41 +1,122 @@
 .event {
-  &_image-wrapper {
-      margin: 0 -#{$layout_indent} 10px;
-  }
-  &_image {
-  }
-  &_adress {
-  }
-  &_description {
-  }
-  &_duration {
-  }
-  &_info {
-  }
-  &_info-column {
-  }
-  &_info-rating {
-  }
-  &_meta {
-  }
-  &_people {
-  }
-  &_people-image {
-  }
-  &_people-item {
-  }
-  &_people-more {
-  }
-  &_people-title {
-  }
-  &_subtitle {
-  }
-  &_tag {
-    &__bright {
+    &_slider-wrapper {
+        margin: 0 -#{$layout_indent} 10px;
+        position: relative;
+        //@include tablet {
+        //    margin-right: -;
+        //}
     }
-  }
-  &_tags {
-  }
-  &_title {
-  }
+    &_tags {
+        position: absolute;
+        left: 22px;
+        top: 18px;
+        z-index: 1;
+        @include tablet {
+            left: 22px;
+            top: 18px;
+        }
+    }
+    &_tag {
+        color: $light_color;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0 14px 0 12px;
+        position: relative;
+        @include desktop {
+            font-size: 14px;
+            padding-right: 30px;
+        }
+
+        &__bright {
+            color: $bright_color;
+        }
+
+        &::before {
+            content: "";
+            background-color: currentColor;
+            height: 14px;
+            width: 2px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: rotate(35deg);
+        }
+    }
+    &_title {
+        margin: 0 0 5px;
+    }
+    &_subtitle {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &_info {
+        display: flex;
+        padding: 0 0 20px;
+        border-bottom: 1px solid #9b9b9b;
+        margin: 0 0 18px;
+    }
+
+    &_info-column {
+    }
+    &_duration,
+    &_adress {
+        color: $bright_color;
+        font-size: 14px;
+        line-height: 22px;
+        position: relative;
+    }
+    &_duration {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -27px;
+            width: 20px;
+            height: 20px;
+            background: url(#{$img}/clock.svg) no-repeat 0 0 / contain;
+        }
+    }
+    &_adress {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 20px;
+            height: 40px;
+            background: url(#{$img}/marker.svg) no-repeat 0 0 / contain;
+        }
+    }
+    &_rating {
+        color: $bright_color;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: -0.583333px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 1px solid $bright_color;
+        text-align: center;
+        padding: 0 0 0 3px;
+        box-sizing: border-box;
+    }
+    &_meta {
+        margin: 0 0 12px;
+
+        td {
+            padding: 3px 0;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+        td + td {
+            font-weight: bold;
+        }
+    }
+    &_description {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }

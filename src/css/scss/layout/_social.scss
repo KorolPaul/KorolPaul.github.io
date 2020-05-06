@@ -14,7 +14,8 @@
         width: 50px;
         background-position: center center;
         background-repeat: no-repeat;
-        transition: .2s ease opacity;
+        filter: grayscale(1);
+        transition: .2s ease filter, .2s ease-in-out transform;
         @include tablet {
             background-size: 100% 100%;
         }
@@ -98,7 +99,8 @@
         }
 
         &:hover {
-            opacity: .6;
+            filter: none;
+            transform: scale(1.2);
         }
     }
 }

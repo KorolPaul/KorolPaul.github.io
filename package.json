@@ -1,5 +1,5 @@
 {
-  "name": "Little bronnaya theatre frontend",
+  "name": "little-bronnaya",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -13,7 +13,5 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0"
   },
-  "browserslist": {
-    " > .5%, last 2 versions"
-  }
+  "browserslist": " > .5%, last 2 versions"
 }

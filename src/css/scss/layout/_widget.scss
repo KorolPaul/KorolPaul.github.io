@@ -2,6 +2,20 @@
     background: rgba(0, 0, 0, 0.03);
     padding: 20px 16px;
     margin: 0 -16px 40px;
+    @include tablet {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    @include desktop {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    @include desktop-large {
+        padding-left: 44px;
+        padding-right: 44px;
+    }
 
     &_header {
         display: flex;

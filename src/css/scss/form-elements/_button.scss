@@ -8,11 +8,25 @@
     line-height: 18px;
     padding: 12px 20px;
     text-align: center;
-    transition: .2s ease-in-out background-color,
-                .2s ease-in-out color;
+    transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
     @include tablet {
         white-space: nowrap;
-
+        font-size: 12px;
+        line-height: 24px;
+        padding-top: 6px;
+        padding-bottom: 7px;
+    }
+    @include desktop {
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+    @include desktop-large {
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 25px;
+        padding-bottom: 35px;
     }
 
     &:hover {
@@ -22,7 +36,7 @@
         background-color: $bright_color__active;
     }
     &:disabled {
-        opacity: .6;
+        opacity: 0.6;
     }
 }
 

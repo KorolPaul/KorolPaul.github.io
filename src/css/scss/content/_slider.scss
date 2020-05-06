@@ -1,5 +1,8 @@
 .slider {
     padding: 0 $layout_indent;
+    @include tablet {
+        padding-right: 0;
+    }
 
     &_item {
         
