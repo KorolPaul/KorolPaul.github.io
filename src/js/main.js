@@ -114,6 +114,7 @@ if (galleries.length) {
             autoplayButton: false,
             autoplayButtonOutput: false,
             container: gallery,
+            speed: 1000,
             items: 1,
             nav: false,
             controls: false,
