@@ -1,15 +1,14 @@
 .carousel {
     &_item {
         display: block;
-        
+
         &::after {
             display: none;
         }
     }
-    &_item-image {
+    &_item-image-wrapper {
+        overflow: hidden;
         width: 100%;
-        margin: 0 0 20px;
-        max-width: none;
         @include tablet {
             height: 64px;
             width: 64px;
@@ -28,6 +27,17 @@
 
         &__rounded {
             border-radius: 50%;
+        }
+    }
+    &_item-image {
+        width: 100%;
+        margin: 0 0 20px;
+        max-width: none;
+        transform-origin: center center;
+        transition: 0.2s ease-in-out transform;
+
+        &:hover {
+            transform: scale(1.15);
         }
     }
     &_item-title {
@@ -51,7 +61,7 @@
 
         &__decorated {
             &::before {
-                content: '';
+                content: "";
                 background-color: currentColor;
                 height: 14px;
                 width: 1px;
@@ -76,7 +86,7 @@
         background-color: transparent;
         background-position: center center;
         background-repeat: no-repeat;
-        transition: .2s ease-in-out opacity;
+        transition: 0.2s ease-in-out opacity;
         height: 46px;
         width: 30px;
         padding: 0;
@@ -94,11 +104,11 @@
 
         &:hover {
             background-color: transparent;
-            opacity: .3;
+            opacity: 0.3;
         }
         &:active {
             background-color: transparent;
-            opacity: .6;
+            opacity: 0.6;
         }
     }
 }

@@ -316,6 +316,9 @@
             left: -16px;
             top: 2px;
         }
+        &::after {
+            display: none;
+        }
     }
     &_creators {
         font-size: 12px;
@@ -479,6 +482,10 @@
             @include tablet {
                 text-align: left;
             }
+        }
+
+        &::after {
+            display: none;
         }
     }
 }

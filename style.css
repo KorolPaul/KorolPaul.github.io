@@ -977,7 +977,7 @@ h3,
 }
 
 .header {
-  padding: 20px 20px;
+  padding: 20px 26px;
   position: relative;
   -webkit-transition: .2s ease-in-out background;
   transition: .2s ease-in-out background;
@@ -1041,7 +1041,7 @@ h3,
 
 .menu {
   position: absolute;
-  right: 20px;
+  right: 26px;
   top: 20px;
   padding: 0 24px 0 0;
   text-align: right;
@@ -1194,7 +1194,7 @@ h3,
 }
 
 .content {
-  padding: 20px 20px;
+  padding: 20px 26px;
 }
 
 @media all and (min-width: 767px) {
@@ -1393,7 +1393,7 @@ h3,
 
 .footer {
   background: rgba(0, 0, 0, 0.03);
-  padding: 16px 20px 24px;
+  padding: 16px 26px 24px;
 }
 
 @media all and (min-width: 767px) {
@@ -1743,8 +1743,8 @@ h3,
   background: #9b9b9b;
   position: absolute;
   bottom: 0;
-  left: -20px;
-  right: -20px;
+  left: -26px;
+  right: -26px;
 }
 
 @media all and (min-width: 767px) {
@@ -2150,6 +2150,10 @@ h3,
   top: 2px;
 }
 
+.spectacle_adress::after {
+  display: none;
+}
+
 .spectacle_creators {
   font-size: 12px;
   line-height: 16px;
@@ -2430,8 +2434,12 @@ h3,
   }
 }
 
+.spectacle_more-info::after {
+  display: none;
+}
+
 .event_slider-wrapper {
-  margin: 0 -20px 10px;
+  margin: 0 -26px 10px;
   position: relative;
 }
 
@@ -2658,7 +2666,7 @@ h3,
 }
 
 .slider {
-  padding: 0 20px;
+  padding: 0 26px;
 }
 
 @media all and (min-width: 767px) {
@@ -2779,8 +2787,8 @@ h3,
   content: '';
   position: absolute;
   bottom: -40px;
-  left: -4px;
-  right: -4px;
+  left: -10px;
+  right: -10px;
   border-top: 1px solid #9B9B9B;
 }
 
