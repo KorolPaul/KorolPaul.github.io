@@ -49,7 +49,7 @@ if (carousels.length) {
     for (let i = 0; i < carousels.length; i++) {
         const carousel = carousels[i].querySelector('.carousel_track');
         const carouselControls = carousels[i].querySelector('.carousel_controls');
-        const slider = tns({
+        tns({
             container: carousel,
             items: 2.4,
             gutter: 30,
@@ -59,18 +59,22 @@ if (carousels.length) {
             controlsContainer: carouselControls,
             responsive: {
                 1920: {
+                    gutter: 74,
                     items: 9,
-                    gutter: 74
                 },
                 1366: {
-                    gutter: 38
+                    gutter: 38,
+                    items: 8,
                 },
                 1260: {
-                    gutter: 54
+                    gutter: 54,
+                },
+                1024: {
+                    items: 6
                 },
                 768: {
                     autoWidth: true,
-                    items: 8
+                    items: 5
                 }
             }
         });

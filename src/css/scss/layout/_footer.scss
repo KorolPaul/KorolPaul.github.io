@@ -25,5 +25,9 @@
         text-align: center;
         text-decoration: none;
         margin: 0 0 25px;
+
+        &::after {
+            display: none;
+        }
     }
 }

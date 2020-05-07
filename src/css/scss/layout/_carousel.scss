@@ -8,7 +8,9 @@
     }
     &_item-image-wrapper {
         overflow: hidden;
-        width: 100%;
+        height: 124px;
+        width: 124px;
+        margin: 0 0 20px;
         @include tablet {
             height: 64px;
             width: 64px;
@@ -27,11 +29,25 @@
 
         &__rounded {
             border-radius: 50%;
+            height: 135px;
+            width: 135px;
+            @include tablet {
+                height: 64px;
+                width: 64px;
+            }
+            @include desktop {
+                height: 100px;
+                width: 100px;
+            }
+            @include desktop-large {
+                height: 128px;
+                width: 128px;
+            }
         }
     }
     &_item-image {
         width: 100%;
-        margin: 0 0 20px;
+        height: 100%;
         max-width: none;
         transform-origin: center center;
         transition: 0.2s ease-in-out transform;

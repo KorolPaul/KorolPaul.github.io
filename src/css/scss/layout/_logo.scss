@@ -1,4 +1,5 @@
 .logo {
+
     &_image {
         display: block;
         @include tablet {
@@ -14,9 +15,20 @@
             height: 202px;
         }
 
+        
+        &__mobile-fixed {
+            display: none;
+
+            .fixed-header & {
+                display: block;
+            }
+        }
+
         .fixed-header & {
             width: 25px;
             height: 33px;
+            display: none;
         }
+
     }
 }

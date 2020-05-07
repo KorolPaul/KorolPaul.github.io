@@ -19,10 +19,12 @@
         padding-bottom: 20px;
     }
     @include desktop {
+        height: 112px;
         left: 19vw;
         margin-left: -2vw;
     }
     @include desktop-large {
+        height: 158px;
         left: 18vw;
     }
 

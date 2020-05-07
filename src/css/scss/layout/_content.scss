@@ -17,5 +17,11 @@
         @include tablet {
             padding-top: 70px;
         }
+        @include desktop {
+            padding-top: 92px;
+        }
+        @include desktop-large {
+            padding-top: 138px;
+        }
     }
 }
