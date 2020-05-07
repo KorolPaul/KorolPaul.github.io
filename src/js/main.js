@@ -28,7 +28,7 @@ function touchMove(event) {
     endPosition = event.touches[0].pageY;
 }
 
-document.addEventListener("touchmove", function(e) {
+document.addEventListener("scroll", function(e) {
     const FIXED_NAVBAR_POSITION = 80;
     const position = window.scrollY;
     const fixedModifier = 'fixed-header';
