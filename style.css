@@ -990,6 +990,12 @@ h3,
 }
 
 .fixed-header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -1086,7 +1092,7 @@ h3,
 .menu_link {
   color: #040304;
   font-size: 13px;
-  line-height: 16px;
+  line-height: 20px;
   margin: 0 11px;
   display: none;
 }
@@ -1181,7 +1187,7 @@ h3,
   -ms-flex-pack: stretch;
   justify-content: stretch;
   right: 0;
-  top: 1px;
+  top: 5px;
   z-index: 2;
 }
 
@@ -1884,6 +1890,20 @@ h3,
   text-decoration: none;
 }
 
+@media all and (min-width: 1259px) {
+  .spectacle_date {
+    right: 30px;
+    top: 26px;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .spectacle_date {
+    right: 46px;
+    top: 40px;
+  }
+}
+
 .spectacle_date::after {
   display: none;
 }
@@ -1892,6 +1912,26 @@ h3,
   position: absolute;
   left: 17px;
   bottom: 20px;
+}
+
+@media all and (min-width: 767px) {
+  .spectacle_tags {
+    left: 30px;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .spectacle_tags {
+    left: 43px;
+    bottom: 26px;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .spectacle_tags {
+    left: 46px;
+    bottom: 46px;
+  }
 }
 
 .spectacle_tag {
@@ -2166,9 +2206,7 @@ h3,
   line-height: 16px;
   text-decoration: none;
   position: relative;
-  text-decoration: underline;
-  -webkit-text-decoration-style: dashed;
-  text-decoration-style: dashed;
+  border-bottom: 1px dashed currentColor;
 }
 
 @media all and (min-width: 767px) {
@@ -2271,6 +2309,7 @@ h3,
 @media all and (min-width: 1259px) {
   .spectacle_info {
     max-width: 540px;
+    padding-right: 40px;
   }
 }
 
@@ -2323,12 +2362,13 @@ h3,
   .spectacle_info-rating {
     font-size: 11px;
     top: auto;
-    bottom: 0;
+    bottom: 5px;
   }
 }
 
 @media all and (min-width: 1259px) {
   .spectacle_info-rating {
+    bottom: 7px;
     font-size: 14px;
     line-height: 18px;
   }

@@ -79,6 +79,14 @@
         right: 24px;
         top: 17px;
         text-decoration: none;
+        @include desktop {
+            right: 30px;
+            top: 26px;
+        }
+        @include desktop-large {
+            right: 46px;
+            top: 40px;
+        }
 
         &::after {
             display: none;
@@ -88,6 +96,17 @@
         position: absolute;
         left: 17px;
         bottom: 20px;
+        @include tablet {
+            left: 30px;
+        }
+        @include desktop {
+            left: 43px;
+            bottom: 26px;
+        }
+        @include desktop-large {
+            left: 46px;
+            bottom: 46px;
+        }
     }
     &_tag {
         color: $light_color;
@@ -282,8 +301,7 @@
         line-height: 16px;
         text-decoration: none;
         position: relative;
-        text-decoration: underline;
-        text-decoration-style: dashed;
+        border-bottom: 1px dashed currentColor;
         @include tablet {
             font-size: 11px;
             line-height: 14px;
@@ -352,6 +370,7 @@
         }
         @include desktop {
             max-width: 540px;
+            padding-right: 40px;
         }
         @include desktop-large {
             max-width: 640px;
@@ -395,9 +414,10 @@
         @include tablet {
             font-size: 11px;
             top: auto;
-            bottom: 0;
+            bottom: 5px;
         }
         @include desktop {
+            bottom: 7px;
             font-size: 14px;
             line-height: 18px;
         }
