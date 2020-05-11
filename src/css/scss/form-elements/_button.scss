@@ -1,6 +1,6 @@
 @mixin button {
     background: $bright_color;
-    border: 1px solid $bright_color;
+    border: 1px solid currentColor;
     box-sizing: border-box;
     cursor: pointer;
     color: $light_color;

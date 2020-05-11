@@ -32,17 +32,22 @@
 
 /*Content*/
 @import  "content/spectacle";
-@import  "content/event";
 @import  "content/press";
 @import  "content/quote";
 @import  "content/tickets";
 @import  "content/slider";
 @import  "content/gallery";
 @import  "content/people";
+@import  "content/event";
+@import  "content/partners";
+@import  "content/events";
 
 /*Other*/
 @import  "other/partner";
-@import  "other/tiny-slider";
+@import  "other/share";
+
 
 /*Plugins*/
-
+@import  "plugins/tiny-slider";
+@import  "plugins/addthis";
+@import  "plugins/photoswipe";

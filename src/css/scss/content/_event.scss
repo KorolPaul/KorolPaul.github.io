@@ -1,10 +1,17 @@
 .event {
+    position: relative;
+
     &_slider-wrapper {
         margin: 0 -#{$layout_indent} 10px;
         position: relative;
-        //@include tablet {
-        //    margin-right: -;
-        //}
+        @include desktop {
+            margin-right: -19vw;
+            margin-bottom: 22px;
+        }
+        @include desktop-large {
+            margin-right: -18vw;
+            margin-bottom: 32px;
+        }
     }
     &_tags {
         position: absolute;
@@ -12,8 +19,17 @@
         top: 18px;
         z-index: 1;
         @include tablet {
-            left: 22px;
-            top: 18px;
+            left: calc(100vw - 230px - 128px);
+            top: 100%;
+            margin: 25px 0 0;
+        }
+        @include desktop {
+            left: calc(100vw - 384px - 19vw);
+            margin-top: 35px;
+        }
+        @include desktop-large {
+            left: calc(100vw - 585px - 18vw);
+            margin-top: 50px;
         }
     }
     &_tag {
@@ -23,9 +39,23 @@
         line-height: 14px;
         padding: 0 14px 0 12px;
         position: relative;
-        @include desktop {
+        @include tablet {
+            color: $color;
             font-size: 14px;
-            padding-right: 30px;
+            line-height: 22px;
+            padding-right: 16px;
+        }
+        @include desktop {
+            font-size: 22px;
+            line-height: 32px;
+            padding-left: 23px;
+            padding-right: 45px;
+        }
+        @include desktop-large {
+            font-size: 32px;
+            line-height: 40px;
+            padding-left: 33px;
+            padding-right: 60px;
         }
 
         &__bright {
@@ -41,15 +71,44 @@
             left: 0;
             top: 0;
             transform: rotate(35deg);
+
+            @include tablet {
+                height: 17px;
+            }
+            @include desktop {
+                height: 26px;
+            }
+            @include desktop-large {
+                height: 32px;
+            }
+        }
+        &::after {
+            display: none;
         }
     }
     &_title {
         margin: 0 0 5px;
+        @include tablet {
+            margin: 0 0 8px;
+        }
     }
     &_subtitle {
         font-weight: bold;
         font-size: 14px;
         line-height: 22px;
+        @include tablet {
+            margin: 0 0 35px;
+        }
+        @include desktop {
+            font-size: 22px;
+            line-height: 32px;
+            margin: 0 0 42px;
+        }
+        @include desktop-large {
+            font-size: 32px;
+            line-height: 56px;
+            margin: 0 0 62px;
+        }
     }
     &_info {
         display: flex;
@@ -59,34 +118,70 @@
     }
 
     &_info-column {
+        width: auto;
+
+        &:nth-child(1) {
+            width: 55%;
+            flex-shrink: 0;
+        }
+        &:nth-child(2) {
+            width: 40%;
+        }
+        &:nth-child(3) {
+            flex-grow: 0;
+            justify-self: flex-end;
+        }
     }
     &_duration,
     &_adress {
+        display: block;
         color: $bright_color;
         font-size: 14px;
         line-height: 22px;
         position: relative;
+        box-sizing: border-box;
+        @include desktop {
+            font-size: 22px;
+            line-height: 32px;
+        }
+        @include desktop-large {
+            font-size: 32px;
+            line-height: 48px;
+        }
     }
     &_duration {
+        padding-right: 40px;
+        padding-left: 27px;
+
         &::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: -27px;
+            top: 3px;
+            left: 0;
             width: 20px;
             height: 20px;
             background: url(#{$img}/clock.svg) no-repeat 0 0 / contain;
         }
     }
     &_adress {
+        padding-right: 20px;
+
         &::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: -30px;
+            top: 2px;
+            left: -25px;
             width: 20px;
             height: 40px;
             background: url(#{$img}/marker.svg) no-repeat 0 0 / contain;
+        }
+    }
+    &_adress-link {
+        color: $bright_color;
+        border-bottom: 1px dashed currentColor;
+
+        &::after {
+            display: none;
         }
     }
     &_rating {
@@ -97,6 +192,7 @@
         letter-spacing: -0.583333px;
         height: 20px;
         width: 20px;
+        margin: 2px 0 0;
         border-radius: 50%;
         border: 1px solid $bright_color;
         text-align: center;
@@ -105,18 +201,147 @@
     }
     &_meta {
         margin: 0 0 12px;
+        @include tablet {
+            margin-bottom: 22px;
+        }
+        @include desktop {
+            margin-bottom: 32px;
+        }
+        @include tablet {
+            margin-bottom: 40px;
+        }
 
         td {
             padding: 3px 0;
             font-size: 12px;
             line-height: 1.2;
+            padding-right: 20px;
+            width: 55%;
+            @include tablet {
+                line-height: 22px;
+            }
+            @include desktop {
+                font-size: 18px;
+                line-height: 32px;
+            }
+            @include desktop-large {
+                font-size: 26px;
+                line-height: 48px;
+            }
         }
         td + td {
             font-weight: bold;
+            width: auto;
+            padding-right: 0;
         }
     }
     &_description {
         font-size: 14px;
         line-height: 24px;
+        margin: 0 0 16px;
+        @include tablet {
+            font-size: 12px;
+            line-height: 22px;
+        }
+        @include desktop {
+            font-size: 18px;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+        @include desktop-large {
+            font-size: 26px;
+            line-height: 48px;
+            margin-bottom: 48px;
+        }
+    }
+    &_info-more {
+        color: $color;
+        border: none;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 22px;
+        padding: 15px 20px 15px 0;
+        background: url(#{$img}/arrow-down.svg) no-repeat right center;
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+        }
+    }
+    &_main-info {
+        border-bottom: 1px solid #9b9b9b;
+        margin: 0 0 30px;
+    }
+    &_hided-info {
+        display: none;
+    }
+    &_fixed-button {
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        max-width: none;
+        width: auto;
+        padding: 11px 55px 13px;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        z-index: 1;
+        @include tablet {
+            display: none;
+        }
+    }
+    &_header,
+    &_content {
+        position: relative;
+        @include tablet {
+            padding-right: 234px;
+        }
+        @include desktop {
+            padding-right: 394px;
+        }
+        @include desktop-large {
+            padding-right: 556px;
+        }
+    }
+    &_content {
+        @include tablet {
+            border-bottom: none;
+        }
+
+        &::after {
+            content: "";
+            border-bottom: 1px solid #9b9b9b;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+    &_tickets {
+        @include tablet {
+            width: 217px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        @include desktop {
+            width: 360px;
+        }
+        @include desktop-large {
+            width: 508px;
+        }
+    }
+    &_share {
+        @include tablet {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 217px;
+        }
+        @include desktop {
+            width: 360px;
+        }
+        @include desktop-large {
+            width: 508px;
+        }
     }
 }

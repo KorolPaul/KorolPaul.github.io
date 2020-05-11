@@ -42,6 +42,7 @@
                             %a.social_link.social_link__tw(href="#")
 
         %main.content
+            %span.content_title афиша
 
             .event
                 .event_slider-wrapper
@@ -49,6 +50,7 @@
                         %a.event_tag.event_tag__bright(href="/") премьера
                         %a.event_tag(href="/") детский
                     .slider
+                        .slider_counter
                         .slider_track
                             .slider_item
                                 %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
@@ -60,91 +62,168 @@
                                 %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
                         
 
-                %h1.event_title Кентервильское привидение
-                %p.event_subtitle Сказка по мотивам повести Оскара Уайльда
-                .event_info
-                    .event_info-column
-                        %a.event_duration(href="#") 2 часа 30 минут с антрактом
-                    .event_info-column
-                        %a.event_adress(href="#") ТКЗ «Дворец на Яузе»
-                    .event_info-column
-                        .event_rating 12+
-                %table.event_meta
-                    %tbody
-                        %tr
-                            %td Официальная премьера
-                            %td 5 февраля 2017
-                        %tr
-                            %td Автор
-                            %td Федор Достоевский
-                        %tr
-                            %td Режиссер
-                            %td Геннадий Сайфулин
+                .event_header
+                    %h1.event_title Кентервильское привидение
+                    %p.event_subtitle Сказка по мотивам повести Оскара Уайльда
 
-                .people
-                    %span.people_title В спектакле заняты
-                    .people_items
-                        %a.people_item(href="#")
-                            %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
-                            %span.people_item-title Марья Иванова
-                        %a.people_item(href="#")
-                            %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
-                            %span.people_item-title Иван Николаев
-                        %a.people_item(href="#")
-                            %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
-                            %span.people_item-title Марья Иванова
-                        %a.people_item(href="#")
-                            %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
-                            %span.people_item-title Иван Николаев
-                        %a.people_item(href="#")
-                            %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
-                            %span.people_item-title Марья Иванова
-                        %a.people_item(href="#")
-                            %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
-                            %span.people_item-title Иван Николаев    
+                .event_content
+                    .event_main-info
+                        .event_info
+                            .event_info-column
+                                %span.event_duration 2 часа 30 минут с антрактом
+                            .event_info-column
+                                %span.event_adress
+                                    %a.event_adress-link(href="#") ТКЗ «Дворец на Яузе»
+                            .event_info-column
+                                .event_rating 12+
+                        %table.event_meta
+                            %tbody
+                                %tr
+                                    %td Официальная премьера
+                                    %td 5 февраля 2017
+                                %tr
+                                    %td Автор
+                                    %td Федор Достоевский
+                                %tr
+                                    %td Режиссер
+                                    %td 
+                                        %a(href="#") Геннадий Сайфулин
+                            %tbody.event_hided-info
+                                %tr
+                                    %td Автор
+                                    %td Федор Достоевский
+                                %tr
+                                    %td Режиссер
+                                    %td 
+                                        %a(href="#") Геннадий Сайфулин
 
-                    %button.people_more весь коллектив и исполнители
+                        .people
+                            %span.people_title В спектакле заняты
+                            .people_items
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                                    %span.people_item-title Марья Иванова
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                                    %span.people_item-title Иван Николаев
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                                    %span.people_item-title Марья Иванова
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                                    %span.people_item-title Иван Николаев
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                                    %span.people_item-title Марья Иванова
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                                    %span.people_item-title Иван Николаев
+                            .people_items.event_hided-info
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                                    %span.people_item-title Марья Иванова
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                                    %span.people_item-title Иван Николаев
+                                %a.people_item(href="#")
+                                    %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                                    %span.people_item-title Марья Иванова
 
-                .tickets
-                    %table
-                        %tbody
-                            %tr
-                                %td
-                                    %span.tickets_title сегодня, 30 сентября 19:00
-                                    %span.tickets_price от 2500₽
-                                %td 
-                                    %span.tickets_unavailible билетов нет
-                            %tr
-                                %td
-                                    %span.tickets_title завтра, 1 октября 20:00
-                                    %span.tickets_price от 2500₽
-                                %td 
-                                    %button.tickets_button купить
-                            %tr
-                                %td
-                                    %span.tickets_title 3 октября 19:00
-                                    %span.tickets_price от 2500₽
-                                %td 
-                                    %button.tickets_button купить
-                    %button.tickets_more все даты
-                
-                .event_description
-                    %p В одном небольшом испанском городке при театре работает фирма «Ариэль». Сотрудники фирмы занимаются необычным делом: они доставляют людям на дом... счастье! В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. Вот уже 20 лет она занята только перепиской с ним - в ее мыслях он предстает блестящим молодым человеком. Искусные актеры готовы подарить бабушке три счастливых дня в компании любимого внука и его молодой жены. Но неожиданное стечение обстоятельств меняет ход запланированных событий…
-                    %p В трагикомической постановке Юрия Иоффе интригующий сюжет вовлекает зрителя в игровой и философский разговор о правде и лжи, о существовании на тонкой грани реальности и вымысла. Можно ли прожить всю жизнь в притворстве и как измерить ценность истинной правды, если она может 
+                        
+                        
+                        %button.event_info-more весь коллектив и исполнители
 
-                .press
-                    %span.press_title пресса о спектакле
-                    .quote
-                        %p.quote_text «Норма» Максима Диденко, поставленная силами Театра на Малой Бронной и Мастерской Брусникина: советская реальность, поданная в звуковых, визуальных, языковых и вкусовых ощущениях. Театральный критик Алла Шендерова посмотрела спектакль по знаменитому роману Владимира Сорокина и задумалась, почему есть норму
-                        %span.quote_date 9 декабря 2019, m24.ru
-                        %a.quote_link(href="#") читать полностью
-                    .quote
-                        %p.quote_text Одна из самых громких театральных премьер осени — спектакль по мотивам первого романа Владимира Сорокина «Норма», поставленный Максимом Диденко. В интервью Forbes Life режиссер рассказал о том, почему писатель отказался смотреть постановку до премьеры, чем эволюция
-                        %span.quote_date 9 декабря 2019, m24.ru
-                        %a.quote_link(href="#") читать полностью
-
-                .share
+                    .event_tickets
+                        .tickets
+                            %table
+                                %tbody
+                                    %tr
+                                        %td
+                                            %span.tickets_title сегодня, 
+                                                %span 30 сентября 
+                                                %span.tickets_time 19:00
+                                            %span.tickets_price от 2500₽
+                                        %td 
+                                            %span.tickets_unavailible билетов нет
+                                    %tr
+                                        %td
+                                            %span.tickets_title завтра,
+                                                %span 1 октября 
+                                                %span.tickets_time 20:00
+                                            %span.tickets_price от 2500₽
+                                        %td 
+                                            %button.tickets_button купить
+                                    %tr
+                                        %td
+                                            %span.tickets_title 
+                                                %span 3 октября
+                                                %span.tickets_time 19:00
+                                            %span.tickets_price от 2500₽
+                                        %td 
+                                            %button.tickets_button купить
+                            %button.tickets_more все даты
                     
+                    .event_description
+                        %p В одном небольшом испанском городке при театре работает фирма «Ариэль». Сотрудники фирмы занимаются необычным делом: они доставляют людям на дом... счастье! В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. Вот уже 20 лет она занята только перепиской с ним - в ее мыслях он предстает блестящим молодым человеком. Искусные актеры готовы подарить бабушке три счастливых дня в компании любимого внука и его молодой жены. Но неожиданное стечение обстоятельств меняет ход запланированных событий…
+                        %p В трагикомической постановке Юрия Иоффе интригующий сюжет вовлекает зрителя в игровой и философский разговор о правде и лжи, о существовании на тонкой грани реальности и вымысла. Можно ли прожить всю жизнь в притворстве и как измерить ценность истинной правды, если она может 
+
+                    .press
+                        %span.press_title пресса о спектакле
+                        .quote
+                            %p.quote_text «Норма» Максима Диденко, поставленная силами Театра на Малой Бронной и Мастерской Брусникина: советская реальность, поданная в звуковых, визуальных, языковых и вкусовых ощущениях. Театральный критик Алла Шендерова посмотрела спектакль по знаменитому роману Владимира Сорокина и задумалась, почему есть норму
+                            %span.quote_date 9 декабря 2019, m24.ru
+                            %a.quote_link(href="#") читать полностью
+                        .quote
+                            %p.quote_text Одна из самых громких театральных премьер осени — спектакль по мотивам первого романа Владимира Сорокина «Норма», поставленный Максимом Диденко. В интервью Forbes Life режиссер рассказал о том, почему писатель отказался смотреть постановку до премьеры, чем эволюция
+                            %span.quote_date 9 декабря 2019, m24.ru
+                            %a.quote_link(href="#") читать полностью
+
+                    .event_share
+                        .share
+                            .share_title поделиться
+                            .addthis_sharing_toolbox
+
+                    .partners
+                        .partners_list
+                            %span.partners_list-title партнеры спектакля
+                            %a.partners_item(href="#" target="__blank")
+                                %img.partners_image(src="src/img/partners/lg.svg" alt="")
+                            %a.partners_item(href="#" target="__blank")
+                                %img.partners_image(src="src/img/partners/simple-waters.svg" alt="")
+                            %a.partners_item(href="#" target="__blank")
+                                %img.partners_image(src="src/img/partners/mihoels.svg" alt="")
+                        .partners_list
+                            %span.partners_list-title информационные партнеры спектакля
+                            %a.partners_item(href="#" target="__blank")
+                                %img.partners_image(src="src/img/partners/pioner.svg" alt="")
+                            %a.partners_item(href="#" target="__blank")
+                                %img.partners_image(src="src/img/partners/tass.svg" alt="")
+                            %a.partners_item(href="#" target="__blank")
+                                %img.partners_image(src="src/img/partners/kommersatnt.svg" alt="")
+
+                    
+
+                    %button.event_fixed-button купить билет
+
+            .events
+                %span.events_title наши премьеры
+                .events_list
+                    %a.events_item
+                        .events_item-image-wrapper
+                            %img.events_item-image(src="src/img/temp/event-small-1.jpg" alt="")
+                        %span.events_item-title Ревизор
+                    %a.events_item
+                        .events_item-image-wrapper
+                            %img.events_item-image(src="src/img/temp/event-small-2.jpg" alt="")
+                        %span.events_item-title Подлинная история Фрекен Бок
+                    %a.events_item
+                        .events_item-image-wrapper
+                            %img.events_item-image(src="src/img/temp/event-small-3.svg" alt="")
+                        %span.events_item-title Макбет
+                    %a.events_item
+                        .events_item-image-wrapper
+                            %img.events_item-image(src="src/img/temp/event-small-4.jpg" alt="")
+                        %span.events_item-title Княжна Марья
 
         %footer.footer
             .social
@@ -165,7 +244,8 @@
                 %a.footer_menu-link(href="#") партнеры театра
                 %a.footer_menu-link(href="#") контакты
 
-        
+
+        %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")
         %script(src="src/js/tiny-slider.min.js")
         %script(src="src/js/main.js")
                                 

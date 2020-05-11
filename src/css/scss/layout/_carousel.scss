@@ -1,6 +1,7 @@
 .carousel {
     &_item {
         display: block;
+        background: rgba(#040304, .35);
 
         &::after {
             display: none;

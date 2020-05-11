@@ -1,0 +1,13 @@
+.at-share-btn-elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.at-share-btn {
+    background-color: transparent !important;
+    border: 1px solid $color !important;
+
+    svg {
+        fill: $color !important;
+    }
+}

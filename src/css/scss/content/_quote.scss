@@ -1,18 +1,48 @@
 .quote {
-    background: rgba(0, 0, 0, .03);
+    background: rgba(0, 0, 0, 0.03);
     padding: 30px;
     position: relative;
     text-align: right;
     margin: 0 0 30px;
+    @include tablet {
+        padding: 37px;
+        margin: 0 0 20px 8px;
+    }
+    @include desktop {
+        padding: 60px;
+        margin: 0 0 34px 14px;
+    }
+    @include desktop-large {
+        padding: 70px;
+        margin: 0 0 50px 20px;
+    }
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
-        background: url(#{$img}/qoute.svg) no-repeat center center / contain;
+        background: url(#{$img}/quote.svg) no-repeat center center / contain;
         width: 27px;
         height: 18px;
         left: 30px;
-        top: -30px;
+        top: -10px;
+        @include tablet {
+            top: 40px;
+            left: -10px;
+            width: 31px;
+            height: 21px;
+        }
+        @include desktop {
+            top: 74px;
+            left: -16px;
+            width: 52px;
+            height: 36px;
+        }
+        @include desktop-large {
+            top: 108px;
+            left: -22px;
+            width: 73px;
+            height: 51px;
+        }
     }
 
     &_text {
@@ -20,6 +50,19 @@
         line-height: 28px;
         margin: 0 0 4px;
         text-align: left;
+        @include tablet {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        @include desktop {
+            font-size: 22px;
+            line-height: 35px;
+        }
+        @include desktop-large {
+            font-size: 34px;
+            line-height: 56px;
+            margin-bottom: 14px;
+        }
     }
     &_date {
         color: $bright_color;
@@ -27,9 +70,36 @@
         line-height: 20px;
         text-align: left;
         display: block;
+        @include tablet {
+            font-size: 12px;
+            line-height: 20px;
+            display: inline;
+            margin: 0 10px 0 0;
+        }
+        @include desktop {
+            font-size: 18px;
+            line-height: 20px;
+            margin: 0 28px 0 0;
+        }
+        @include desktop-large {
+            font-size: 26px;
+            line-height: 48px;
+        }
     }
     &_link {
         font-size: 14px;
         line-height: 46px;
+        @include tablet {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        @include desktop {
+            font-size: 18px;
+            line-height: 20px;
+        }
+        @include desktop-large {
+            font-size: 26px;
+            line-height: 48px;
+        }
     }
 }

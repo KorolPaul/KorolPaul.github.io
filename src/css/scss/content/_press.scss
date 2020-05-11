@@ -1,8 +1,23 @@
 .press {
     &_title {
+        display: block;
         font-size: 14px;
         line-height: 46px;
         color: $bright_color;
         margin: 0 0 10px;
+        @include tablet {
+            font-size: 12px;
+            line-height: 46px;
+        }
+        @include desktop {
+            font-size: 18px;
+            line-height: 46px;
+            margin-bottom: 22px;
+        }
+        @include desktop-large {
+            font-size: 26px;
+            line-height: 46px;
+            margin-bottom: 40px;
+        }
     }
 }

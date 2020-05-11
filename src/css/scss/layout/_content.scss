@@ -1,5 +1,6 @@
 .content {
-    padding: 20px $layout_indent;
+    padding: 10px $layout_indent;
+    position: relative;
     @include tablet {
         padding-left: 128px;
         padding-top: 50px;
@@ -22,6 +23,60 @@
         }
         @include desktop-large {
             padding-top: 138px;
+        }
+    }
+
+    &_title {
+        display: block;
+        font-size: 17px;
+        line-height: 30px;
+        padding: 0 0 0 15px;
+        position: absolute;
+        top: -44px;
+        left: 120px;
+        @include tablet {
+            font-weight: bold;
+            position: relative;
+            font-size: 16px;
+            line-height: 18px;
+            margin: 0 0 16px;
+            padding-left: 14px;
+            top: 0;
+            left: 0;
+        }
+        @include desktop {
+            font-size: 24px;
+            line-height: 24px;
+            margin: 0 0 24px;
+            padding-left: 22px;
+        }
+        @include desktop-large {
+            font-size: 36px;
+            line-height: 24px;
+            margin: 0 0 30px;
+            padding-left: 27px;
+        }
+
+        &::before {
+            content: "";
+            background-color: currentColor;
+            height: 14px;
+            width: 1px;
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            transform: rotate(35deg);
+            @include tablet {
+                top: 2px;
+                width: 2px;
+                height: 17px;
+            }
+            @include desktop {
+                height: 26px;
+            }
+            @include desktop-large {
+                height: 32px;
+            }
         }
     }
 }

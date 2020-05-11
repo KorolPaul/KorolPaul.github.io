@@ -1,0 +1,30 @@
+.share {
+    border-bottom: 1px solid #9b9b9b;
+    padding: 0 0 40px;
+    margin: 0 0 40px;
+    @include tablet {
+        border-bottom: none;
+    }
+
+    &_title {
+        font-size: 14px;
+        line-height: 30px;
+        display: block;
+        margin: 0 0 10px;
+        @include tablet {
+            font-size: 12px;
+            line-height: 30px;
+            margin-bottom: 4px;
+        }
+        @include desktop {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 14px;
+        }
+        @include desktop-large {
+            font-size: 26px;
+            line-height: 30px;
+            margin-bottom: 28px;
+        }
+    }
+}
