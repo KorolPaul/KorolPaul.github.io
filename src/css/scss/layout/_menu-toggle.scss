@@ -3,8 +3,8 @@
     border: none;
     padding: 0;
     margin: 0;
-    height: 24px;
-    width: 24px;
+    height: 24rem;
+    width: 24rem;
     overflow: visible;
     position: absolute;
     display: flex;
@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: stretch;
     right: 0;
-    top: 5px;
+    top: 5rem;
     z-index: 2;
     @include tablet {
         display: none;
@@ -28,16 +28,16 @@
     &::after {
         content: '';
         background: #4A4A4A;
-        height: 2px;
+        height: 2rem;
         width: 100%;
-        margin: 3px 0;
+        margin: 3rem 0;
         transition: .2s ease-in-out transform;
     }
 
     &.opened::before {
-        transform: rotateZ(45deg) translate(0px, 5px);
+        transform: rotateZ(45deg) translate(0rem, 5rem);
     }
     &.opened::after {
-        transform: rotateZ(-45deg) translate(1px, -6px);
+        transform: rotateZ(-45deg) translate(1rem, -6rem);
     }
 }

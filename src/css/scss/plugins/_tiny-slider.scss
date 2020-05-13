@@ -11,38 +11,38 @@
     }
 
     .widget & {
-        margin-left: -16px;
-        margin-right: -16px;
+        margin-left: -16rem;
+        margin-right: -16rem;
         @include tablet {
-            margin-left: -18px;
-            margin-right: -18px;
+            margin-left: -18rem;
+            margin-right: -18rem;
         }
         @include desktop {
-            margin-left: -32px;
-            margin-right: -32px;
+            margin-left: -32rem;
+            margin-right: -32rem;
         }
         @include desktop-large {
-            margin-left: -44px;
-            margin-right: -44px;
+            margin-left: -44rem;
+            margin-right: -44rem;
         }
     }
 }
 
 .tns-ovh {
     .widget & {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 16rem;
+        padding-right: 16rem;
         @include tablet {
-            padding-left: 18px;
-            padding-right: 18px;
+            padding-left: 18rem;
+            padding-right: 18rem;
         }
         @include desktop {
-            padding-left: 32px;
-            padding-right: 32px;
+            padding-left: 32rem;
+            padding-right: 32rem;
         }
         @include desktop-large {
-            padding-left: 44px;
-            padding-right: 44px;
+            padding-left: 44rem;
+            padding-right: 44rem;
         }
     }
 }
@@ -88,7 +88,7 @@
 .tns-gallery {
     position: relative;
     left: 0;
-    min-height: 1px; // make sure slider container is visible
+    min-height: 1rem; // make sure slider container is visible
     // overflow: hidden;
     > .tns-item {
         position: absolute;
@@ -157,8 +157,8 @@
 }
 
 // *** Detecting browser capability ***
-$width: 310px;
-$height: 10px;
+$width: 310rem;
+$height: 10rem;
 $count: 70;
 $perpage: 3;
 
@@ -192,7 +192,7 @@ $perpage: 3;
 .tns-nav {
     position: absolute;
     left: 50%;
-    bottom: 16px;
+    bottom: 16rem;
     z-index: 1;
     transform: translateX(-50%);
 
@@ -200,9 +200,9 @@ $perpage: 3;
         border: none;
         background: rgba(255, 255, 255, 0.54);
         border-radius: 50%;
-        height: 7px;
-        width: 7px;
-        margin: 0 6px;
+        height: 7rem;
+        width: 7rem;
+        margin: 0 6rem;
         padding: 0;
         transition: 0.2s ease-in-out background-color;
 

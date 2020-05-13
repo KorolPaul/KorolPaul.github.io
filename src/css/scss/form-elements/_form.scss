@@ -6,7 +6,7 @@
         }
     }
     &_row-item {
-        padding: 0 0 30px;
+        padding: 0 0 30rem;
         flex-grow: 10;
         position: relative;
         @include desktop {
@@ -17,7 +17,7 @@
         }
         & + & {
             @include desktop {
-                margin-left: 30px;
+                margin-left: 30rem;
             }
         }
     }

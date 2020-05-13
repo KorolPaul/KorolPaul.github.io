@@ -3,16 +3,16 @@
     &_image {
         display: block;
         @include tablet {
-            width: 66px;
-            height: 89px;
+            width: 66rem;
+            height: 89rem;
         }
         @include desktop {
-            width: 108px;
-            height: 147px;
+            width: 108rem;
+            height: 147rem;
         }
         @include desktop-large {
-            width: 149px;
-            height: 202px;
+            width: 149rem;
+            height: 202rem;
         }
 
         
@@ -25,8 +25,8 @@
         }
 
         .fixed-header & {
-            width: 25px;
-            height: 33px;
+            width: 25rem;
+            height: 33rem;
             display: none;
         }
 

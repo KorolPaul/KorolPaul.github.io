@@ -2,60 +2,60 @@
     position: relative;
 
     &_slider-wrapper {
-        margin: 0 -#{$layout_indent} 10px;
+        margin: 0 -#{$layout_indent} 10rem;
         position: relative;
         @include desktop {
             margin-right: -19vw;
-            margin-bottom: 22px;
+            margin-bottom: 22rem;
         }
         @include desktop-large {
             margin-right: -18vw;
-            margin-bottom: 32px;
+            margin-bottom: 32rem;
         }
     }
     &_tags {
         position: absolute;
-        left: 22px;
-        top: 18px;
+        left: 22rem;
+        top: 18rem;
         z-index: 1;
         @include tablet {
-            left: calc(100vw - 230px - 128px);
+            left: calc(100vw - 230rem - 128rem);
             top: 100%;
-            margin: 25px 0 0;
+            margin: 25rem 0 0;
         }
         @include desktop {
-            left: calc(100vw - 384px - 19vw);
-            margin-top: 35px;
+            left: calc(100vw - 384rem - 19vw);
+            margin-top: 35rem;
         }
         @include desktop-large {
-            left: calc(100vw - 585px - 18vw);
-            margin-top: 50px;
+            left: calc(100vw - 585rem - 18vw);
+            margin-top: 50rem;
         }
     }
     &_tag {
         color: $light_color;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 14px;
-        padding: 0 14px 0 12px;
+        font-size: 12rem;
+        line-height: 14rem;
+        padding: 0 14rem 0 12rem;
         position: relative;
         @include tablet {
             color: $color;
-            font-size: 14px;
-            line-height: 22px;
-            padding-right: 16px;
+            font-size: 14rem;
+            line-height: 22rem;
+            padding-right: 16rem;
         }
         @include desktop {
-            font-size: 22px;
-            line-height: 32px;
-            padding-left: 23px;
-            padding-right: 45px;
+            font-size: 22rem;
+            line-height: 32rem;
+            padding-left: 23rem;
+            padding-right: 45rem;
         }
         @include desktop-large {
-            font-size: 32px;
-            line-height: 40px;
-            padding-left: 33px;
-            padding-right: 60px;
+            font-size: 32rem;
+            line-height: 40rem;
+            padding-left: 33rem;
+            padding-right: 60rem;
         }
 
         &__bright {
@@ -65,21 +65,21 @@
         &::before {
             content: "";
             background-color: currentColor;
-            height: 14px;
-            width: 2px;
+            height: 14rem;
+            width: 2rem;
             position: absolute;
             left: 0;
             top: 0;
             transform: rotate(35deg);
 
             @include tablet {
-                height: 17px;
+                height: 17rem;
             }
             @include desktop {
-                height: 26px;
+                height: 26rem;
             }
             @include desktop-large {
-                height: 32px;
+                height: 32rem;
             }
         }
         &::after {
@@ -87,34 +87,34 @@
         }
     }
     &_title {
-        margin: 0 0 5px;
+        margin: 0 0 5rem;
         @include tablet {
-            margin: 0 0 8px;
+            margin: 0 0 8rem;
         }
     }
     &_subtitle {
         font-weight: bold;
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 14rem;
+        line-height: 22rem;
         @include tablet {
-            margin: 0 0 35px;
+            margin: 0 0 35rem;
         }
         @include desktop {
-            font-size: 22px;
-            line-height: 32px;
-            margin: 0 0 42px;
+            font-size: 22rem;
+            line-height: 32rem;
+            margin: 0 0 42rem;
         }
         @include desktop-large {
-            font-size: 32px;
-            line-height: 56px;
-            margin: 0 0 62px;
+            font-size: 32rem;
+            line-height: 56rem;
+            margin: 0 0 62rem;
         }
     }
     &_info {
         display: flex;
-        padding: 0 0 20px;
-        border-bottom: 1px solid #9b9b9b;
-        margin: 0 0 18px;
+        padding: 0 0 20rem;
+        border-bottom: 1rem solid #9b9b9b;
+        margin: 0 0 18rem;
     }
 
     &_info-column {
@@ -136,49 +136,75 @@
     &_adress {
         display: block;
         color: $bright_color;
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 14rem;
+        line-height: 22rem;
         position: relative;
         box-sizing: border-box;
         @include desktop {
-            font-size: 22px;
-            line-height: 32px;
+            font-size: 22rem;
+            line-height: 32rem;
         }
         @include desktop-large {
-            font-size: 32px;
-            line-height: 48px;
+            font-size: 32rem;
+            line-height: 48rem;
         }
     }
     &_duration {
-        padding-right: 40px;
-        padding-left: 27px;
+        padding-right: 40rem;
+        padding-left: 27rem;
+        @include desktop {
+            padding-left: 50rem;
+        }
+        @include desktop-large {
+            padding-left: 72rem;
+        }
 
         &::before {
             content: "";
             position: absolute;
-            top: 3px;
+            top: 3rem;
             left: 0;
-            width: 20px;
-            height: 20px;
+            width: 20rem;
+            height: 20rem;
             background: url(#{$img}/clock.svg) no-repeat 0 0 / contain;
+            @include desktop {
+                width: 34rem;
+                height: 34rem;
+                background-size: 100% auto;
+            }
+            @include desktop-large {
+                width: 48rem;
+                height: 48rem;
+            }
         }
     }
     &_adress {
-        padding-right: 20px;
+        padding-right: 20rem;
 
         &::before {
             content: "";
             position: absolute;
-            top: 2px;
-            left: -25px;
-            width: 20px;
-            height: 40px;
+            top: 2rem;
+            left: -25rem;
+            width: 20rem;
+            height: 40rem;
             background: url(#{$img}/marker.svg) no-repeat 0 0 / contain;
+            @include desktop {
+                width: 34rem;
+                height: 40rem;
+                left: -50rem;
+                background-size: 100% auto;
+            }
+            @include desktop-large {
+                width: 48rem;
+                height: 57rem;
+                left: -72rem;
+            }
         }
     }
     &_adress-link {
         color: $bright_color;
-        border-bottom: 1px dashed currentColor;
+        border-bottom: 1rem dashed currentColor;
 
         &::after {
             display: none;
@@ -187,46 +213,46 @@
     &_rating {
         color: $bright_color;
         font-weight: 300;
-        font-size: 10px;
-        line-height: 18px;
-        letter-spacing: -0.583333px;
-        height: 20px;
-        width: 20px;
-        margin: 2px 0 0;
+        font-size: 10rem;
+        line-height: 18rem;
+        letter-spacing: -0.583333rem;
+        height: 20rem;
+        width: 20rem;
+        margin: 2rem 0 0;
         border-radius: 50%;
-        border: 1px solid $bright_color;
+        border: 1rem solid $bright_color;
         text-align: center;
-        padding: 0 0 0 3px;
+        padding: 0 0 0 3rem;
         box-sizing: border-box;
     }
     &_meta {
-        margin: 0 0 12px;
+        margin: 0 0 12rem;
         @include tablet {
-            margin-bottom: 22px;
+            margin-bottom: 22rem;
         }
         @include desktop {
-            margin-bottom: 32px;
+            margin-bottom: 32rem;
         }
         @include tablet {
-            margin-bottom: 40px;
+            margin-bottom: 40rem;
         }
 
         td {
-            padding: 3px 0;
-            font-size: 12px;
+            padding: 3rem 0;
+            font-size: 12rem;
             line-height: 1.2;
-            padding-right: 20px;
+            padding-right: 20rem;
             width: 55%;
             @include tablet {
-                line-height: 22px;
+                line-height: 22rem;
             }
             @include desktop {
-                font-size: 18px;
-                line-height: 32px;
+                font-size: 18rem;
+                line-height: 32rem;
             }
             @include desktop-large {
-                font-size: 26px;
-                line-height: 48px;
+                font-size: 26rem;
+                line-height: 48rem;
             }
         }
         td + td {
@@ -236,31 +262,31 @@
         }
     }
     &_description {
-        font-size: 14px;
-        line-height: 24px;
-        margin: 0 0 16px;
+        font-size: 14rem;
+        line-height: 24rem;
+        margin: 0 0 16rem;
         @include tablet {
-            font-size: 12px;
-            line-height: 22px;
+            font-size: 12rem;
+            line-height: 22rem;
         }
         @include desktop {
-            font-size: 18px;
-            line-height: 32px;
-            margin-bottom: 24px;
+            font-size: 18rem;
+            line-height: 32rem;
+            margin-bottom: 24rem;
         }
         @include desktop-large {
-            font-size: 26px;
-            line-height: 48px;
-            margin-bottom: 48px;
+            font-size: 26rem;
+            line-height: 48rem;
+            margin-bottom: 48rem;
         }
     }
     &_info-more {
         color: $color;
         border: none;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 22px;
-        padding: 15px 20px 15px 0;
+        font-size: 12rem;
+        line-height: 22rem;
+        padding: 15rem 20rem 15rem 0;
         background: url(#{$img}/arrow-down.svg) no-repeat right center;
 
         &:hover,
@@ -269,8 +295,8 @@
         }
     }
     &_main-info {
-        border-bottom: 1px solid #9b9b9b;
-        margin: 0 0 30px;
+        border-bottom: 1rem solid #9b9b9b;
+        margin: 0 0 30rem;
     }
     &_hided-info {
         display: none;
@@ -278,13 +304,14 @@
     &_fixed-button {
         position: fixed;
         left: 50%;
-        bottom: 20px;
+        bottom: 20rem;
         max-width: none;
         width: auto;
-        padding: 11px 55px 13px;
+        padding: 11rem 55rem 13rem;
         transform: translateX(-50%);
         white-space: nowrap;
         z-index: 1;
+        border: none;
         @include tablet {
             display: none;
         }
@@ -293,13 +320,13 @@
     &_content {
         position: relative;
         @include tablet {
-            padding-right: 234px;
+            padding-right: 234rem;
         }
         @include desktop {
-            padding-right: 394px;
+            padding-right: 394rem;
         }
         @include desktop-large {
-            padding-right: 556px;
+            padding-right: 556rem;
         }
     }
     &_content {
@@ -309,7 +336,7 @@
 
         &::after {
             content: "";
-            border-bottom: 1px solid #9b9b9b;
+            border-bottom: 1rem solid #9b9b9b;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -318,16 +345,16 @@
     }
     &_tickets {
         @include tablet {
-            width: 217px;
+            width: 217rem;
             position: absolute;
             right: 0;
             top: 0;
         }
         @include desktop {
-            width: 360px;
+            width: 360rem;
         }
         @include desktop-large {
-            width: 508px;
+            width: 508rem;
         }
     }
     &_share {
@@ -335,13 +362,13 @@
             position: absolute;
             right: 0;
             bottom: 0;
-            width: 217px;
+            width: 217rem;
         }
         @include desktop {
-            width: 360px;
+            width: 360rem;
         }
         @include desktop-large {
-            width: 508px;
+            width: 508rem;
         }
     }
 }

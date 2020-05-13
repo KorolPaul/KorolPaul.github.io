@@ -1,6 +1,6 @@
 /* Mobile layout check */
 if (window.innerWidth < 768) {
-    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=375, user-scalable=0')
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=320, user-scalable=0')
 }
 /* Menu toggle */
 const menuElement = document.querySelector('.menu');

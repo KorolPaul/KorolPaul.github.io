@@ -3,16 +3,16 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
-        column-gap: 15px;
+        column-gap: 15rem;
     }
     @include desktop {
-        column-gap: 30px;
+        column-gap: 30rem;
     }
 }
 
 .spectacle {
-    margin: 0 0 40px;
-    padding: 0 0 30px;
+    margin: 0 0 40rem;
+    padding: 0 0 30rem;
     position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -24,7 +24,7 @@
 
     &::after {
         content: "";
-        height: 1px;
+        height: 1rem;
         background: #9b9b9b;
         position: absolute;
         bottom: 0;
@@ -39,7 +39,7 @@
         grid-column: 1 / 3;
         @include tablet {
             grid-template-columns: 2fr 3fr;
-            column-gap: 20px;
+            column-gap: 20rem;
         }
     }
 
@@ -52,17 +52,17 @@
         grid-column: 1 / 3;
         background: $gray_color;
         position: relative;
-        margin: 0 0 13px;
-        height: 180px;
+        margin: 0 0 13rem;
+        height: 180rem;
 
         @include tablet {
-            height: 150px;
+            height: 150rem;
         }
         @include desktop {
-            height: 230px;
+            height: 230rem;
         }
         @include desktop-large {
-            height: 352px;
+            height: 352rem;
         }
     }
     &_image {
@@ -73,19 +73,19 @@
     }
     &_date {
         color: $light_color;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 14rem;
+        line-height: 14rem;
         position: absolute;
-        right: 24px;
-        top: 17px;
+        right: 24rem;
+        top: 17rem;
         text-decoration: none;
         @include desktop {
-            right: 30px;
-            top: 26px;
+            right: 30rem;
+            top: 26rem;
         }
         @include desktop-large {
-            right: 46px;
-            top: 40px;
+            right: 46rem;
+            top: 40rem;
         }
 
         &::after {
@@ -94,30 +94,30 @@
     }
     &_tags {
         position: absolute;
-        left: 17px;
-        bottom: 20px;
+        left: 17rem;
+        bottom: 20rem;
         @include tablet {
-            left: 30px;
+            left: 30rem;
         }
         @include desktop {
-            left: 43px;
-            bottom: 26px;
+            left: 43rem;
+            bottom: 26rem;
         }
         @include desktop-large {
-            left: 46px;
-            bottom: 46px;
+            left: 46rem;
+            bottom: 46rem;
         }
     }
     &_tag {
         color: $light_color;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 14px;
-        padding: 0 14px 0 12px;
+        font-size: 12rem;
+        line-height: 14rem;
+        padding: 0 14rem 0 12rem;
         position: relative;
         @include desktop {
-            font-size: 14px;
-            padding-right: 30px;
+            font-size: 14rem;
+            padding-right: 30rem;
         }
 
         &::after {
@@ -131,8 +131,8 @@
         &::before {
             content: "";
             background-color: currentColor;
-            height: 14px;
-            width: 2px;
+            height: 14rem;
+            width: 2rem;
             position: absolute;
             left: 0;
             top: 0;
@@ -143,113 +143,113 @@
         grid-row: 2 / 3;
         grid-column: 1 / 3;
         @include tablet {
-            min-height: 100px;
+            min-height: 100rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         @include desktop {
-            min-height: 110px;
+            min-height: 110rem;
         }
         @include desktop-large {
-            min-height: 145px;
+            min-height: 145rem;
         }
     }
     &_title {
         grid-row: 2 / 3;
         grid-column: 1 / 3;
         font-weight: bold;
-        font-size: 33px;
-        line-height: 34px;
-        margin: 0 0 4px;
+        font-size: 33rem;
+        line-height: 34rem;
+        margin: 0 0 4rem;
         @include tablet {
-            font-size: 23px;
-            line-height: 25px;
-            margin-bottom: 6px;
+            font-size: 23rem;
+            line-height: 25rem;
+            margin-bottom: 6rem;
         }
         @include desktop {
-            font-size: 36px;
-            line-height: 40px;
-            margin-bottom: 8px;
+            font-size: 36rem;
+            line-height: 40rem;
+            margin-bottom: 8rem;
         }
         @include desktop-large {
-            font-size: 51px;
-            line-height: 52px;
-            margin-bottom: 10px;
+            font-size: 51rem;
+            line-height: 52rem;
+            margin-bottom: 10rem;
         }
 
         &__small {
             @include tablet {
-                font-size: 16px;
-                line-height: 18px;
+                font-size: 16rem;
+                line-height: 18rem;
             }
             @include desktop {
-                font-size: 22px;
-                line-height: 28px;
+                font-size: 22rem;
+                line-height: 28rem;
             }
             @include desktop-large {
-                font-size: 36px;
-                line-height: 42px;
+                font-size: 36rem;
+                line-height: 42rem;
             }
         }
         &__big {
             @include tablet {
-                font-size: 31px;
-                line-height: 24px;
+                font-size: 31rem;
+                line-height: 24rem;
             }
             @include desktop {
-                font-size: 50px;
-                line-height: 40px;
+                font-size: 50rem;
+                line-height: 40rem;
             }
             @include desktop-large {
-                font-size: 72px;
-                line-height: 50px;
+                font-size: 72rem;
+                line-height: 50rem;
             }
         }
 
         .spectacle__big & {
             @include tablet {
-                font-size: 46px;
-                line-height: 48px;
-                margin-bottom: 30px;
+                font-size: 46rem;
+                line-height: 48rem;
+                margin-bottom: 30rem;
             }
             @include desktop {
-                font-size: 66px;
-                line-height: 66px;
-                margin-bottom: 34px;
+                font-size: 66rem;
+                line-height: 66rem;
+                margin-bottom: 34rem;
             }
             @include desktop-large {
-                font-size: 90px;
-                line-height: 86px;
-                margin-bottom: 56px;
+                font-size: 90rem;
+                line-height: 86rem;
+                margin-bottom: 56rem;
             }
 
             &__small {
                 @include tablet {
-                    font-size: 31px;
-                    line-height: 32px;
+                    font-size: 31rem;
+                    line-height: 32rem;
                 }
                 @include desktop {
-                    font-size: 50px;
-                    line-height: 52px;
+                    font-size: 50rem;
+                    line-height: 52rem;
                 }
                 @include desktop-large {
-                    font-size: 64px;
-                    line-height: 66px;
+                    font-size: 64rem;
+                    line-height: 66rem;
                 }
             }
             &__big {
                 @include tablet {
-                    font-size: 55px;
-                    line-height: 48px;
+                    font-size: 55rem;
+                    line-height: 48rem;
                 }
                 @include desktop {
-                    font-size: 86px;
-                    line-height: 86px;
+                    font-size: 86rem;
+                    line-height: 86rem;
                 }
                 @include desktop-large {
-                    font-size: 123px;
-                    line-height: 90px;
+                    font-size: 123rem;
+                    line-height: 90rem;
                 }
             }
         }
@@ -258,37 +258,37 @@
         grid-row: 3 / 4;
         grid-column: 1 / 3;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 18px;
-        margin: 0 0 22px;
+        font-size: 12rem;
+        line-height: 18rem;
+        margin: 0 0 22rem;
         @include tablet {
-            font-size: 11px;
-            line-height: 16px;
-            margin: 0 0 10px;
+            font-size: 11rem;
+            line-height: 16rem;
+            margin: 0 0 10rem;
         }
         @include desktop {
-            font-size: 14px;
-            line-height: 20px;
-            margin-bottom: 2px;
+            font-size: 14rem;
+            line-height: 20rem;
+            margin-bottom: 2rem;
         }
         @include desktop-large {
-            margin-bottom: 22px;
+            margin-bottom: 22rem;
         }
 
         .spectacle__big & {
             @include tablet {
                 grid-row: 3 / 4;
                 grid-column: 1 / 2;
-                font-size: 11px;
-                line-height: 16px;
+                font-size: 11rem;
+                line-height: 16rem;
             }
             @include desktop {
-                font-size: 14px;
-                line-height: 20px;
-                margin-bottom: 22px;
+                font-size: 14rem;
+                line-height: 20rem;
+                margin-bottom: 22rem;
             }
             @include desktop-large {
-                margin-bottom: 16px;
+                margin-bottom: 16rem;
             }
         }
     }
@@ -296,24 +296,24 @@
     &_adress {
         color: $color;
         display: inline-block;
-        margin: 0 0 10px 16px;
-        font-size: 12px;
-        line-height: 16px;
+        margin: 0 0 10rem 16rem;
+        font-size: 12rem;
+        line-height: 16rem;
         text-decoration: none;
         position: relative;
-        border-bottom: 1px dashed currentColor;
+        border-bottom: 1rem dashed currentColor;
         @include tablet {
-            font-size: 11px;
-            line-height: 14px;
-            margin-bottom: 14px;
+            font-size: 11rem;
+            line-height: 14rem;
+            margin-bottom: 14rem;
         }
         @include desktop {
-            font-size: 14px;
-            line-height: 18px;
-            margin-bottom: 18px;
+            font-size: 14rem;
+            line-height: 18rem;
+            margin-bottom: 18rem;
         }
         @include desktop-large {
-            margin-bottom: 20px;
+            margin-bottom: 20rem;
         }
 
         .spectacle__big & {
@@ -331,27 +331,27 @@
         &::before {
             content: url(#{$img}/adress.svg);
             position: absolute;
-            left: -16px;
-            top: 2px;
+            left: -16rem;
+            top: 2rem;
         }
         &::after {
             display: none;
         }
     }
     &_creators {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 12rem;
+        line-height: 16rem;
         @include tablet {
-            font-size: 11px;
-            line-height: 15px;
+            font-size: 11rem;
+            line-height: 15rem;
         }
         @include desktop {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 14rem;
+            line-height: 20rem;
         }
         @include desktop-large {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 14rem;
+            line-height: 20rem;
         }
     }
     &_creators-line {
@@ -360,26 +360,26 @@
     &_info {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
-        padding: 0 24px 0 0;
+        padding: 0 24rem 0 0;
         position: relative;
         @include tablet {
             grid-row: 4 / 5;
             grid-column: 1 / 3;
-            margin: 0 0 20px;
-            max-width: 420px;
+            margin: 0 0 20rem;
+            max-width: 420rem;
         }
         @include desktop {
-            max-width: 540px;
-            padding-right: 40px;
+            max-width: 540rem;
+            padding-right: 40rem;
         }
         @include desktop-large {
-            max-width: 640px;
+            max-width: 640rem;
         }
 
         .spectacle__big & {
             @include tablet {
                 display: contents;
-                padding-right: 50px;
+                padding-right: 50rem;
             }
         }
     }
@@ -394,38 +394,38 @@
                 grid-row: 4 / 5;
                 grid-column: 1 / 2;
                 width: auto;
-                margin: 0 0 20px;
+                margin: 0 0 20rem;
             }
             &:nth-child(2) {
                 @include tablet {
                     grid-row: 3 / 5;
                     grid-column: 2 / 3;
-                    padding-right: 30px;
+                    padding-right: 30rem;
                 }
             }
         }
     }
     &_info-rating {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 12rem;
+        line-height: 16rem;
         position: absolute;
         top: 0;
         right: 0;
         @include tablet {
-            font-size: 11px;
+            font-size: 11rem;
             top: auto;
-            bottom: 5px;
+            bottom: 5rem;
         }
         @include desktop {
-            bottom: 7px;
-            font-size: 14px;
-            line-height: 18px;
+            bottom: 7rem;
+            font-size: 14rem;
+            line-height: 18rem;
         }
     }
     &_controls {
         grid-row: 4 / 5;
         grid-column: 2 / 3;
-        margin: 0 0 0 18px;
+        margin: 0 0 0 18rem;
         text-align: center;
         @include tablet {
             grid-row: 5 / 6;
@@ -439,7 +439,7 @@
         .spectacle__big & {
             @include tablet {
                 display: contents;
-                padding-right: 50px;
+                padding-right: 50rem;
             }
         }
     }
@@ -467,35 +467,35 @@
     }
     &_button {
         @include button;
-        margin: 0 0 12px;
+        margin: 0 0 12rem;
         @include tablet {
             margin: 0;
-            min-width: 106px;
+            min-width: 106rem;
         }
         @include desktop {
-            min-width: 190px;
+            min-width: 190rem;
         }
         @include desktop-large {
-            min-width: 266px;
+            min-width: 266rem;
         }
     }
     &_more-info {
         display: block;
         color: $bright_color;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 14rem;
+        line-height: 18rem;
         text-align: center;
         @include tablet {
-            font-size: 12px;
-            line-height: 24px;
+            font-size: 12rem;
+            line-height: 24rem;
         }
         @include desktop {
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 16rem;
+            line-height: 24rem;
         }
         @include desktop-large {
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 20rem;
+            line-height: 24rem;
         }
 
         .spectacle__big & {

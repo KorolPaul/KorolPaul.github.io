@@ -1,32 +1,32 @@
 .events {
-    margin: 0 0 20px;
+    margin: 0 0 20rem;
 
     &_title {
         display: block;
-        font-size: 14px;
-        line-height: 46px;
+        font-size: 14rem;
+        line-height: 46rem;
         color: $bright_color;
         @include tablet {
-            font-size: 12px;
-            line-height: 46px;
+            font-size: 12rem;
+            line-height: 46rem;
         }
         @include desktop {
-            font-size: 18px;
-            line-height: 46px;
-            margin-bottom: 22px;
+            font-size: 18rem;
+            line-height: 46rem;
+            margin-bottom: 22rem;
         }
         @include desktop-large {
-            font-size: 26px;
-            line-height: 46px;
-            margin-bottom: 40px;
+            font-size: 26rem;
+            line-height: 46rem;
+            margin-bottom: 40rem;
         }
     }
     &_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        row-gap: 32px;
-        column-gap: 32px;
+        row-gap: 32rem;
+        column-gap: 32rem;
         @include tablet {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
@@ -38,9 +38,9 @@
     }
     &_item-image-wrapper {
         overflow: hidden;
-        margin: 0 0 8px;
+        margin: 0 0 8rem;
         @include desktop {
-            margin-bottom: 14px;
+            margin-bottom: 14rem;
         }
     }
     &_item-image {
@@ -53,15 +53,15 @@
     }
     &_item-title {
         font-weight: bold;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 16rem;
+        line-height: 24rem;
         @include desktop {
-            font-size: 22px;
-            line-height: 32px;
+            font-size: 22rem;
+            line-height: 32rem;
         }
         @include desktop-large {
-            font-size: 36px;
-            line-height: 50px;
+            font-size: 36rem;
+            line-height: 50rem;
         }
     }
 }

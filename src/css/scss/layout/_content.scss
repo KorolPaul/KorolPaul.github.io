@@ -1,9 +1,9 @@
 .content {
-    padding: 10px $layout_indent;
+    padding: 10rem $layout_indent;
     position: relative;
     @include tablet {
-        padding-left: 128px;
-        padding-top: 50px;
+        padding-left: 128rem;
+        padding-top: 50rem;
     }
     @include desktop {
         padding-right: 3vw;
@@ -16,66 +16,66 @@
 
     &__big-indent {
         @include tablet {
-            padding-top: 70px;
+            padding-top: 70rem;
         }
         @include desktop {
-            padding-top: 92px;
+            padding-top: 92rem;
         }
         @include desktop-large {
-            padding-top: 138px;
+            padding-top: 138rem;
         }
     }
 
     &_title {
         display: block;
-        font-size: 17px;
-        line-height: 30px;
-        padding: 0 0 0 15px;
+        font-size: 17rem;
+        line-height: 30rem;
+        padding: 0 0 0 15rem;
         position: absolute;
-        top: -44px;
-        left: 120px;
+        top: -44rem;
+        left: 120rem;
         @include tablet {
             font-weight: bold;
             position: relative;
-            font-size: 16px;
-            line-height: 18px;
-            margin: 0 0 16px;
-            padding-left: 14px;
+            font-size: 16rem;
+            line-height: 18rem;
+            margin: 0 0 16rem;
+            padding-left: 14rem;
             top: 0;
             left: 0;
         }
         @include desktop {
-            font-size: 24px;
-            line-height: 24px;
-            margin: 0 0 24px;
-            padding-left: 22px;
+            font-size: 24rem;
+            line-height: 24rem;
+            margin: 0 0 24rem;
+            padding-left: 22rem;
         }
         @include desktop-large {
-            font-size: 36px;
-            line-height: 24px;
-            margin: 0 0 30px;
-            padding-left: 27px;
+            font-size: 36rem;
+            line-height: 24rem;
+            margin: 0 0 30rem;
+            padding-left: 27rem;
         }
 
         &::before {
             content: "";
             background-color: currentColor;
-            height: 14px;
-            width: 1px;
+            height: 14rem;
+            width: 1rem;
             position: absolute;
-            left: 5px;
-            top: 10px;
+            left: 5rem;
+            top: 10rem;
             transform: rotate(35deg);
             @include tablet {
-                top: 2px;
-                width: 2px;
-                height: 17px;
+                top: 2rem;
+                width: 2rem;
+                height: 17rem;
             }
             @include desktop {
-                height: 26px;
+                height: 26rem;
             }
             @include desktop-large {
-                height: 32px;
+                height: 32rem;
             }
         }
     }

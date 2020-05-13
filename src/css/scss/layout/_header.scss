@@ -1,5 +1,5 @@
 .header {
-    padding: 20px $layout_indent;
+    padding: 20rem $layout_indent;
     position: relative;
     transition: .2s ease-in-out background;
     @include tablet {
@@ -15,13 +15,13 @@
         right: 0;
         z-index: 2;
         background: rgba(227, 227, 227, 0.96);
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 15rem;
+        padding-bottom: 15rem;
         @include tablet {
             position: relative;
             background: transparent;
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 20rem;
+            padding-bottom: 20rem;
         }
     }
 }

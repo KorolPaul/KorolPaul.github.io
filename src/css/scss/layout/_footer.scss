@@ -1,30 +1,30 @@
 .footer {
     background: rgba(0, 0, 0, 0.03) ;
-    padding: 16px $layout_indent 24px;
+    padding: 16rem $layout_indent 24rem;
     @include tablet {
         display: none;
     }
 
     &_menu {
-        margin: 50px 0 0;
+        margin: 50rem 0 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
     &_menu-link {
-        font-size: 14px;
-        line-height: 18px;
-        border: 1px solid currentColor;
-        min-height: 60px;
+        font-size: 14rem;
+        line-height: 18rem;
+        border: 1rem solid currentColor;
+        min-height: 60rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px;
+        padding: 10rem;
         box-sizing: border-box;
         width: 45%;
         text-align: center;
         text-decoration: none;
-        margin: 0 0 25px;
+        margin: 0 0 25rem;
 
         &::after {
             display: none;

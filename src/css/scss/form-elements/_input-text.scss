@@ -8,13 +8,13 @@ input[type="number"],
 input[type="tel"] {
     background-color: $dark_color;
     color: #4e565c;
-    border: 1px solid #4b525c;
-    border-radius: 8px;
+    border: 1rem solid #4b525c;
+    border-radius: 8rem;
     box-sizing: border-box;
     font: $font-size $font-family;
-    padding: 7px 25px 7px;
+    padding: 7rem 25rem 7rem;
     width: 100%;
-    box-shadow: 0 2px 3px rgba(#000, .17) inset;
+    box-shadow: 0 2rem 3rem rgba(#000, .17) inset;
     transition: .2s ease-in border-color, .2s ease-in background;
     @include tablet {
         //width: inherit;
@@ -38,25 +38,25 @@ input[type="tel"] {
 }
 
 input[type="password"] {
-    padding-left: 40px;
+    padding-left: 40rem;
     background-repeat: no-repeat;
-    background-position: 12px center;
+    background-position: 12rem center;
     background-image: url(#{$img}/icons/lock.svg);
-    background-size: 16px auto;
+    background-size: 16rem auto;
 }
 input[type="email"] {
-    padding-left: 40px;
+    padding-left: 40rem;
     background-repeat: no-repeat;
-    background-position: 12px center;
+    background-position: 12rem center;
     background-image: url(#{$img}/icons/envelope.svg);
-    background-size: 16px auto;
+    background-size: 16rem auto;
 }
 input[type="search"] {
-    padding-right: 40px;
+    padding-right: 40rem;
     background-repeat: no-repeat;
     background-position: 95% center;
     background-image: url(#{$img}/icons/search.svg);
-    border-radius: 30px;
+    border-radius: 30rem;
     background-color: $dark_color;
 }
 
@@ -66,9 +66,9 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  border: 1px solid #2e343c;
+  border: 1rem solid #2e343c;
   background-color: $dark_color !important;
   -webkit-text-fill-color:  #4e565c;
-  -webkit-box-shadow: 0 0 0px 1000px $dark_color inset;
+  -webkit-box-shadow: 0 0 0rem 1000rem $dark_color inset;
   transition: background-color 5000s ease-in-out 0s;
 }

@@ -1,22 +1,26 @@
 html {
+    font-size: 0.83px;
     scroll-behavior: smooth;
+    @include tablet {
+        font-size: 1px;
+    }
 }
 
 body {
     background: $bg_color;
     color: $color;
-    font: #{$font-size}/24px $font-family;
+    font: #{$font-size}/24rem $font-family;
     @include tablet {
-        font-size: 12px;
-        line-height: 22px;
+        font-size: 12rem;
+        line-height: 22rem;
     }
     @include desktop {
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 18rem;
+        line-height: 32rem;
     }
     @include desktop-large {
-        font-size: 26px;
-        line-height: 48px;
+        font-size: 26rem;
+        line-height: 48rem;
     }
 }
 
@@ -32,7 +36,7 @@ a {
         right: 0;
         left: 0;
         bottom: 0;
-        border-bottom: 1px solid currentColor;
+        border-bottom: 1rem solid currentColor;
         transition: .1s ease-in-out transform;
         transform-origin: right center;
     }
@@ -54,12 +58,12 @@ a {
 }
 
 p {
-    margin: 0 0 10px;
+    margin: 0 0 10rem;
 }
 
 ul,
 ol {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 20rem;
 }
 
 img {
@@ -80,7 +84,7 @@ table {
 }
 
 .fixed-header {
-    padding-top: 115px;
+    padding-top: 115rem;
     @include tablet {
         padding: 0;
     }

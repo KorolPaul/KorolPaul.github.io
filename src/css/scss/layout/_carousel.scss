@@ -1,7 +1,7 @@
 .carousel {
     &_item {
         display: block;
-        background: rgba(#040304, .35);
+        //background: rgba(#040304, .35);
 
         &::after {
             display: none;
@@ -9,40 +9,40 @@
     }
     &_item-image-wrapper {
         overflow: hidden;
-        height: 124px;
-        width: 124px;
-        margin: 0 0 20px;
+        height: 124rem;
+        width: 124rem;
+        margin: 0 0 20rem;
         @include tablet {
-            height: 64px;
-            width: 64px;
-            margin-bottom: 12px;
+            height: 64rem;
+            width: 64rem;
+            margin-bottom: 12rem;
         }
         @include desktop {
-            height: 100px;
-            width: 100px;
-            margin-bottom: 16px;
+            height: 100rem;
+            width: 100rem;
+            margin-bottom: 16rem;
         }
         @include desktop-large {
-            height: 128px;
-            width: 128px;
-            margin-bottom: 16px;
+            height: 128rem;
+            width: 128rem;
+            margin-bottom: 16rem;
         }
 
         &__rounded {
             border-radius: 50%;
-            height: 135px;
-            width: 135px;
+            height: 135rem;
+            width: 135rem;
             @include tablet {
-                height: 64px;
-                width: 64px;
+                height: 64rem;
+                width: 64rem;
             }
             @include desktop {
-                height: 100px;
-                width: 100px;
+                height: 100rem;
+                width: 100rem;
             }
             @include desktop-large {
-                height: 128px;
-                width: 128px;
+                height: 128rem;
+                width: 128rem;
             }
         }
     }
@@ -59,43 +59,43 @@
     }
     &_item-title {
         font-weight: bold;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 14rem;
+        line-height: 18rem;
         display: block;
         position: relative;
         @include tablet {
-            font-size: 11px;
-            line-height: 14px;
+            font-size: 11rem;
+            line-height: 14rem;
         }
         @include desktop {
-            font-size: 14px;
-            line-height: 18px;
+            font-size: 14rem;
+            line-height: 18rem;
         }
         @include desktop-large {
-            font-size: 18px;
-            line-height: 26px;
+            font-size: 18rem;
+            line-height: 26rem;
         }
 
         &__decorated {
             &::before {
                 content: "";
                 background-color: currentColor;
-                height: 14px;
-                width: 1px;
+                height: 14rem;
+                width: 1rem;
                 position: absolute;
-                left: -9px;
+                left: -9rem;
                 top: 0;
                 transform: rotate(35deg);
             }
         }
     }
     &_item-subtitle {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 12rem;
+        line-height: 16rem;
         font-weight: normal;
         @include desktop-large {
-            font-size: 16px;
-            line-height: 22px;
+            font-size: 16rem;
+            line-height: 22rem;
         }
     }
     &_button {
@@ -104,8 +104,8 @@
         background-position: center center;
         background-repeat: no-repeat;
         transition: 0.2s ease-in-out opacity;
-        height: 46px;
-        width: 30px;
+        height: 46rem;
+        width: 30rem;
         padding: 0;
         display: none;
         @include tablet {

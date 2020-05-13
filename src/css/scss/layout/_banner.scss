@@ -1,16 +1,16 @@
 .banner {
     background: $bright_color;
     color: $light_color;
-    font-size: 16px;
+    font-size: 16rem;
     font-weight: 300;
     text-transform: uppercase;
-    padding: 13px 15px;
-    width: calc(100% - 30px);
+    padding: 13rem 15rem;
+    width: calc(100% - 30rem);
     white-space: nowrap;
     overflow: auto;
-    margin: 0 0 30px;
+    margin: 0 0 30rem;
     @include desktop {
-        margin: 0 0 50px;
+        margin: 0 0 50rem;
     }
 
     &_bright {

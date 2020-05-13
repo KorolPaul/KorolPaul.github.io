@@ -1,51 +1,51 @@
 .tickets {
     background: rgba(0, 0, 0, 0.03);
-    margin: 0 0 32px;
-    padding: 8px 16px 20px;
+    margin: 0 0 32rem;
+    padding: 8rem 16rem 20rem;
     @include tablet {
-        padding: 21px 14px 21px 21px;
+        padding: 21rem 14rem 21rem 21rem;
     }
     @include desktop {
-        padding: 30px 34px;
+        padding: 30rem 34rem;
     }
     @include desktop-large {
-        padding: 48px;
+        padding: 48rem;
     }
 
     &_title {
         font-weight: bold;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 14rem;
+        line-height: 20rem;
         display: block;
         @include tablet {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 14rem;
+            line-height: 20rem;
         }
         @include desktop {
-            font-size: 18px;
-            line-height: 28px;
+            font-size: 18rem;
+            line-height: 28rem;
         }
         @include desktop-large {
-            font-size: 26px;
-            line-height: 40px;
+            font-size: 26rem;
+            line-height: 40rem;
         }
     }
     &_price {
         font-weight: 300;
-        font-size: 8px;
-        line-height: 14px;
+        font-size: 8rem;
+        line-height: 14rem;
         color: #9b9b9b;
         @include tablet {
-            font-size: 10px;
-            line-height: 28px;
+            font-size: 10rem;
+            line-height: 28rem;
         }
         @include desktop {
-            font-size: 14px;
-            line-height: 28px;
+            font-size: 14rem;
+            line-height: 28rem;
         }
         @include desktop-large {
-            font-size: 20px;
-            line-height: 28px;
+            font-size: 20rem;
+            line-height: 28rem;
         }
     }
     &_time {
@@ -55,16 +55,16 @@
         width: 100%;
         background: transparent;
         color: $bright_color;
-        padding: 14px 20px 16px;
-        margin: 5px 0 0;
+        padding: 14rem 20rem 16rem;
+        margin: 5rem 0 0;
         @include tablet {
-            margin-top: 7px;
+            margin-top: 7rem;
         }
         @include desktop {
-            margin-top: 12px;
+            margin-top: 12rem;
         }
         @include desktop-large {
-            margin-top: 16px;
+            margin-top: 16rem;
         }
 
         &:hover,
@@ -81,20 +81,20 @@
         text-decoration: underline;
         text-decoration-style: dashed;
         font-weight: bold;
-        font-size: 14px;
-        line-height: 20px;
-        margin: 5px 0 0;
+        font-size: 14rem;
+        line-height: 20rem;
+        margin: 5rem 0 0;
         @include tablet {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 14rem;
+            line-height: 20rem;
         }
         @include desktop {
-            font-size: 18px;
-            line-height: 28px;
+            font-size: 18rem;
+            line-height: 28rem;
         }
         @include desktop-large {
-            font-size: 26px;
-            line-height: 40px;
+            font-size: 26rem;
+            line-height: 40rem;
         }
 
         &:hover {
@@ -106,37 +106,37 @@
     }
     &_unavailible {
         display: block;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 14rem;
+        line-height: 20rem;
         text-align: center;
         color: #9b9b9b;
-        padding: 0 10px;
+        padding: 0 10rem;
         @include tablet {
-            padding: 0 2px;
-            font-size: 12px;
-            line-height: 22px;
+            padding: 0 2rem;
+            font-size: 12rem;
+            line-height: 22rem;
         }
         @include desktop {
-            font-size: 18px;
-            line-height: 28px;
+            font-size: 18rem;
+            line-height: 28rem;
         }
         @include desktop-large {
-            font-size: 26px;
-            line-height: 42px;
+            font-size: 26rem;
+            line-height: 42rem;
         }
     }
 
     td {
-        padding: 7px 50px 7px 0;
+        padding: 7rem 50rem 7rem 0;
         vertical-align: top;
         @include tablet {
-            padding: 12px 14px 12px 0;
+            padding: 12rem 14rem 12rem 0;
         }
         @include desktop {
-            padding: 15px 28px 15px 0;
+            padding: 15rem 28rem 15rem 0;
         }
         @include desktop-large {
-            padding: 23px 40px 23px 0;
+            padding: 23rem 40rem 23rem 0;
         }
 
         span {

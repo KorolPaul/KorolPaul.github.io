@@ -1,41 +1,41 @@
 .partner {
     display: none;
     background: #68D2DB;
-    height: 90px;
+    height: 90rem;
     position: absolute;
     top: 0;
     right: 0;
-    left: 110px;
-    font-size: 11px;
-    line-height: 14px;
+    left: 110rem;
+    font-size: 11rem;
+    line-height: 14rem;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 16rem;
     text-align: right;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     @include tablet {
         display: flex;
-        padding-bottom: 20px;
+        padding-bottom: 20rem;
     }
     @include desktop {
-        height: 112px;
+        height: 112rem;
         left: 19vw;
         margin-left: -2vw;
     }
     @include desktop-large {
-        height: 158px;
+        height: 158rem;
         left: 18vw;
     }
 
     &__mobile {
         display: flex;
         position: relative;
-        margin: 40px -16px 80px;
+        margin: 40rem -16rem 80rem;
         left: auto;
-        font-size: 12px;
-        line-height: 18px;
-        background-size: 57px 49px;
+        font-size: 12rem;
+        line-height: 18rem;
+        background-size: 57rem 49rem;
         text-align: left;
         @include tablet {
             display: none;
@@ -44,10 +44,10 @@
         &::after {
             content: '';
             position: absolute;
-            bottom: -40px;
-            left: -#{$layout_indent - 16px};
-            right: -#{$layout_indent - 16px};
-            border-top: 1px solid #9B9B9B;
+            bottom: -40rem;
+            left: -#{$layout_indent - 16rem};
+            right: -#{$layout_indent - 16rem};
+            border-top: 1rem solid #9B9B9B;
         }
     }
 
@@ -56,9 +56,9 @@
         flex-shrink: 0;
     }
     &_gallery {
-        margin: 0 0 0 16px;
+        margin: 0 0 0 16rem;
         @include tablet {
-            width: 140px;
+            width: 140rem;
         }
     }
 }

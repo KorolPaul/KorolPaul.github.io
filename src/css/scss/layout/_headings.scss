@@ -1,30 +1,30 @@
 %heading-1 {
-    font-size: 36px;
-    line-height: 38px;
+    font-size: 36rem;
+    line-height: 38rem;
     font-weight: bold;
-    margin: 40px 0 20px;
+    margin: 40rem 0 20rem;
     @include tablet {
-        font-size: 46px;
-        line-height: 46px;
+        font-size: 46rem;
+        line-height: 46rem;
     }
     @include desktop {
-        font-size: 72px;
-        line-height: 70px;
+        font-size: 72rem;
+        line-height: 70rem;
     }
     @include desktop-large {
-        font-size: 100px;
-        line-height: 100px;
+        font-size: 100rem;
+        line-height: 100rem;
     }
 }
 %heading-2 {
-    font: 18px $font-family;
-    margin: 40px 0 20px;
+    font: 18rem $font-family;
+    margin: 40rem 0 20rem;
     @include tablet {
-        font: 22px $font-family;
+        font: 22rem $font-family;
     }
 }
 %heading-3 {
-    font: 16px $font-family;
+    font: 16rem $font-family;
     margin: 0;
 }
 

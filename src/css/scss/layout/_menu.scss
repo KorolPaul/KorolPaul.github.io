@@ -1,49 +1,49 @@
 .menu {
     position: absolute;
     right: $layout_indent;
-    top: 20px;
-    padding: 0 36px 0 0;
+    top: 20rem;
+    padding: 0 36rem 0 0;
     text-align: right;
     @include tablet {
         position: fixed;
-        left: 16px;
-        bottom: 30px;
+        left: 16rem;
+        bottom: 30rem;
         right: auto;
         top: auto;
         text-align: left;
-        max-width: 92px;
+        max-width: 92rem;
     }
     @include desktop {
-        left: 24px;
-        max-width: 135px;
+        left: 24rem;
+        max-width: 135rem;
     }
     @include desktop-large {
-        left: 34px;
-        bottom: 40px;
-        max-width: 200px;
+        left: 34rem;
+        bottom: 40rem;
+        max-width: 200rem;
     }
 
     &_link {
         color: $color;
-        font-size: 13px;
-        line-height: 20px;
-        margin: 0 11px;
+        font-size: 13rem;
+        line-height: 20rem;
+        margin: 0 11rem;
         display: none;
         @include tablet {
             display: block;
-            font-size: 12px;
-            line-height: 20px;
-            margin: 18px 0;
+            font-size: 12rem;
+            line-height: 20rem;
+            margin: 18rem 0;
         }
         @include desktop {
-            font-size: 13px;
-            line-height: 22px;
-            margin: 11px 0;
+            font-size: 13rem;
+            line-height: 22rem;
+            margin: 11rem 0;
         }
         @include desktop-large {
-            font-size: 18px;
-            line-height: 22px;
-            margin: 22px 0;
+            font-size: 18rem;
+            line-height: 22rem;
+            margin: 22rem 0;
         }
 
         &::after {
@@ -59,12 +59,12 @@
             }
         }
         &__indent {
-            margin: 38px 0 30px;
+            margin: 38rem 0 30rem;
             @include desktop {
-                margin: 27px 0 34px;
+                margin: 27rem 0 34rem;
             }
             @include desktop-large {
-                margin: 46px 0 40px;
+                margin: 46rem 0 40rem;
             }
         }
     }

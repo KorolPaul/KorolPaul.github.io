@@ -1,7 +1,7 @@
 .social {
     &_title {
-        font-size: 14px;
-        line-height: 46px;
+        font-size: 14rem;
+        line-height: 46rem;
     }
     &_links {
         display: flex;
@@ -10,8 +10,8 @@
     }
     &_link {
         display: inline-block;
-        height: 50px;
-        width: 50px;
+        height: 50rem;
+        width: 50rem;
         background-position: center center;
         background-repeat: no-repeat;
         filter: grayscale(1) brightness(.5);
@@ -33,72 +33,72 @@
 
         &__vk {
             @include tablet {
-                height: 5px;
-                width: 8px;
+                height: 5rem;
+                width: 8rem;
             }
             @include desktop {
-                height: 6px;
-                width: 12px;
+                height: 6rem;
+                width: 12rem;
             }
             @include desktop-large {
-                height: 8px;
-                width: 14px;
+                height: 8rem;
+                width: 14rem;
             }
         }
         &__fb {
             @include tablet {
-                height: 9px;
-                width: 4px;
+                height: 9rem;
+                width: 4rem;
             }
             @include desktop {
-                height: 13px;
-                width: 6px;
+                height: 13rem;
+                width: 6rem;
             }
             @include desktop-large {
-                height: 15px;
-                width: 7px;
+                height: 15rem;
+                width: 7rem;
             }
         }
         &__insta {
             @include tablet {
-                height: 12px;
-                width: 12px;
+                height: 12rem;
+                width: 12rem;
             }
             @include desktop {
-                height: 16px;
-                width: 16px;
+                height: 16rem;
+                width: 16rem;
             }
             @include desktop-large {
-                height: 20px;
-                width: 20px;
+                height: 20rem;
+                width: 20rem;
             }
         }
         &__youtube {
             @include tablet {
-                height: 9px;
-                width: 12px;
+                height: 9rem;
+                width: 12rem;
             }
             @include desktop {
-                height: 13px;
-                width: 18px;
+                height: 13rem;
+                width: 18rem;
             }
             @include desktop-large {
-                height: 16px;
-                width: 21px;
+                height: 16rem;
+                width: 21rem;
             }
         }
         &__tw {
             @include tablet {
-                height: 6px;
-                width: 8px;
+                height: 6rem;
+                width: 8rem;
             }
             @include desktop {
-                height: 9px;
-                width: 12px;
+                height: 9rem;
+                width: 12rem;
             }
             @include desktop-large {
-                height: 10px;
-                width: 14px;
+                height: 10rem;
+                width: 14rem;
             }
         }
 
