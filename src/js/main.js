@@ -91,9 +91,9 @@ if (sliders.length) {
         }
 
         const sliderTNS = tns({
-            autoplay: true,
-            autoplayButton: false,
-            autoplayButtonOutput: false,
+            //autoplay: true,
+            //autoplayButton: false,
+            //autoplayButtonOutput: false,
             animateDelay: 3000,
             container: slider,
             items: 1,
@@ -131,9 +131,9 @@ if (galleries.length) {
 
         tns({
             mode: 'gallery',
-            autoplay: true,
-            autoplayButton: false,
-            autoplayButtonOutput: false,
+            //autoplay: true,
+            //autoplayButton: false,
+            //autoplayButtonOutput: false,
             container: gallery,
             speed: 1000,
             items: 1,
