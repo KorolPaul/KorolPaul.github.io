@@ -1,0 +1,114 @@
+.accordion {
+    &_item {
+        border-top: 1rem dashed #9b9b9b;
+
+        &:first-child {
+            border-top: none;
+        }
+    }
+    &_header {
+        background: $blue_color;
+        font-size: 18rem;
+        line-height: 30rem;
+        font-weight: bold;
+        padding: 13rem 40rem 19rem 28rem;
+        position: relative;
+        @include tablet {
+            font-size: 14rem;
+            line-height: 30rem;
+            padding: 11rem 40rem 12rem 20rem;
+        }
+        @include desktop {
+            font-size: 22rem;
+            line-height: 30rem;
+            padding: 27rem 40rem 33rem 34rem;
+        }
+        @include desktop-large {
+            font-size: 32rem;
+            line-height: 56rem;
+            padding: 31rem 60rem 41rem 48rem;
+        }
+
+        .accordion__secondary & {
+            background: transparent;
+            font-size: 28rem;
+            line-height: 36rem;
+            padding: 17rem 0 22rem;
+            @include tablet {
+                font-size: 40rem;
+                line-height: 48rem;
+                padding: 12rem 0 26rem;
+            }
+            @include desktop {
+                font-size: 90rem;
+                line-height: 106rem;
+                padding: 25rem 0 35rem;
+            }
+            @include desktop-large {
+                font-size: 90rem;
+                line-height: 106rem;
+                padding: 35rem 0 50rem;
+            }
+        }
+
+        .accordion_item__disabled & {
+            color: #9b9b9b;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 28rem;
+            width: 20rem;
+            background: url(#{$img}/accordion-arrow.svg) no-repeat center center;
+            @include desktop {
+                width: 30rem;
+                right: 54rem;
+                background-size: 100% auto;
+            }
+
+            .accordion__secondary & {
+                right: 0;
+            }
+            .accordion_item__disabled & {
+                display: none;
+            }
+        }
+    }
+    &_header-subtitle {
+        color: #68d2db;
+        font-size: 14rem;
+        line-height: 16rem;
+        display: block;
+        @include desktop {
+            font-size: 22rem;
+            line-height: 16rem;
+        }
+        @include desktop-large {
+            font-size: 32rem;
+            line-height: 56rem;
+        }
+    }
+    &_content {
+        padding: 0 $layout_indent;
+        @include tablet {
+            padding-left: 90rem;
+        }
+        @include desktop {
+            padding-left: 200rem;
+            padding-right: 50rem;
+        }
+        @include desktop-large {
+            padding-left: 260rem;
+        }
+
+        .accordion__secondary & {
+            @include tablet {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}

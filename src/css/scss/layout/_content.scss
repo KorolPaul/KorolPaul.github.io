@@ -3,15 +3,17 @@
     position: relative;
     @include tablet {
         padding-left: 128rem;
-        padding-top: 50rem;
+        padding-top: 16rem;
     }
     @include desktop {
         padding-right: 3vw;
         padding-left: 19vw;
+        padding-top: 26rem;
     }
     @include desktop-large {
         padding-right: 5vw;
         padding-left: 18vw;
+        padding-top: 40rem;
     }
 
     &__big-indent {

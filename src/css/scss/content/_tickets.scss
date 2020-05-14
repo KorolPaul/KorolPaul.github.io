@@ -78,8 +78,7 @@
         background: transparent;
         padding: 0;
         border: none;
-        text-decoration: underline;
-        text-decoration-style: dashed;
+        border-bottom: 1px dashed currentColor;
         font-weight: bold;
         font-size: 14rem;
         line-height: 20rem;
@@ -124,6 +123,9 @@
             font-size: 26rem;
             line-height: 42rem;
         }
+    }
+    &_hided-row {
+        display: none;
     }
 
     td {

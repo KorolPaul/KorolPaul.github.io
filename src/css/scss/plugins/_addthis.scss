@@ -4,10 +4,37 @@
 }
 
 .at-share-btn {
+    box-sizing: border-box;
     background-color: transparent !important;
     border: 1rem solid $color !important;
+    width: 50rem !important;
+    height: 50rem !important;
+    display: inline-block !important;
+    @include tablet {
+        width: 30rem !important;
+        height: 30rem !important;
+    }
+    @include desktop {
+        width: 50rem !important;
+        height: 50rem !important;
+    }
+    @include desktop-large {
+        width: 70rem !important;
+        height: 70rem !important;
+    }
 
     svg {
         fill: $color !important;
+    }
+
+    .at-icon-wrapper {
+        box-sizing: border-box;
+        height: 100% !important;
+        width: 100% !important;
+
+        svg {
+            height: 100% !important;
+            width: 100% !important;
+        }
     }
 }

@@ -1,6 +1,15 @@
 .partners {
     border-bottom: 1rem solid #9b9b9b;
     margin: 0 0 40rem;
+    @include tablet {
+        padding: 40rem 0 0;
+    }
+    @include desktop {
+        padding-top: 70rem;
+    }
+    @include desktop-large {
+        padding-top: 100rem;
+    }
 
     &_list {
         display: flex;

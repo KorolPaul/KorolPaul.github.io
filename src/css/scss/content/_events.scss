@@ -29,6 +29,16 @@
         column-gap: 32rem;
         @include tablet {
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 40rem;
+            column-gap: 40rem;
+        }
+        @include desktop {
+            row-gap: 62rem;
+            column-gap: 62rem;
+        }
+        @include desktop-large {
+            row-gap: 100rem;
+            column-gap: 100rem;
         }
     }
     &_item {

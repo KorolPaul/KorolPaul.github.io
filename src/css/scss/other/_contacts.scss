@@ -1,0 +1,104 @@
+.contacts {
+    font-size: 12rem;
+    line-height: 18rem;
+    @include tablet {
+        font-size: 12rem;
+        line-height: 22rem;
+    }
+    @include desktop {
+        font-size: 18rem;
+        line-height: 32rem;
+    }
+    @include desktop-large {
+        font-size: 26rem;
+        line-height: 48rem;
+    }
+
+    &_section {
+        border-bottom: 1rem dashed #9b9b9b;
+    }
+    &_row {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        @include tablet {
+            margin: 16px 0 24px;
+        }
+        @include desktop {
+            margin: 26px 0 30px;
+        }
+        @include desktop-large {
+            margin: 30px 0 40px;
+        }
+    }
+    &_left {
+        @include tablet {
+            width: 33%;
+        }
+    }
+    &_right {
+        @include tablet {
+            width: 63%;
+        }
+    }
+    &_description {
+        font-size: 12rem;
+        line-height: 18rem;
+        margin: 0 0 26rem;
+        @include tablet {
+            font-size: 12rem;
+            line-height: 22rem;
+            margin-bottom: 15rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            line-height: 32rem;
+            margin-bottom: 30rem;
+        }
+        @include desktop-large {
+            font-size: 26rem;
+            line-height: 48rem;
+            margin-bottom: 36rem;
+        }
+    }
+    &_title {
+        font-weight: bold;
+        font-size: 24rem;
+        line-height: 36rem;
+        display: block;
+        text-decoration: none;
+        @include tablet {
+            font-size: 31rem;
+            line-height: 38rem;
+        }
+        @include desktop {
+            font-size: 50rem;
+            line-height: 64rem;
+        }
+        @include desktop-large {
+            font-size: 72rem;
+            line-height: 90rem;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+    &_subtitle {
+        font-weight: bold;
+        font-size: 22rem;
+        line-height: 30rem;
+        @include tablet {
+            font-size: 20rem;
+            line-height: 28rem;
+        }
+        @include desktop {
+            font-size: 32rem;
+            line-height: 42rem;
+        }
+        @include desktop-large {
+            font-size: 42rem;
+            line-height: 58rem;
+        }
+    }
+}

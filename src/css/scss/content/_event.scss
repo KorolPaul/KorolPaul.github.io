@@ -115,6 +115,7 @@
         padding: 0 0 20rem;
         border-bottom: 1rem solid #9b9b9b;
         margin: 0 0 18rem;
+        position: relative;
     }
 
     &_info-column {
@@ -125,11 +126,7 @@
             flex-shrink: 0;
         }
         &:nth-child(2) {
-            width: 40%;
-        }
-        &:nth-child(3) {
-            flex-grow: 0;
-            justify-self: flex-end;
+            width: 35%;
         }
     }
     &_duration,
@@ -224,6 +221,9 @@
         text-align: center;
         padding: 0 0 0 3rem;
         box-sizing: border-box;
+        position: absolute;
+        right: 0;
+        top: 3px;
     }
     &_meta {
         margin: 0 0 12rem;
@@ -288,7 +288,18 @@
         line-height: 22rem;
         padding: 15rem 20rem 15rem 0;
         background: url(#{$img}/arrow-down.svg) no-repeat right center;
-
+        @include tablet {
+            line-height: 22rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 26rem;
+            line-height: 48rem;
+        }
+        
         &:hover,
         &:active {
             background-color: transparent;
@@ -331,7 +342,14 @@
     }
     &_content {
         @include tablet {
+            padding-bottom: 20rem;
             border-bottom: none;
+        }
+        @include desktop {
+            padding-bottom: 32rem;
+        }
+        @include desktop-large {
+            padding-bottom: 42rem;
         }
 
         &::after {

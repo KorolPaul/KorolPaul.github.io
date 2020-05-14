@@ -40,6 +40,31 @@
     }
 }
 
+@mixin blue-button {
+    color: $color;
+    background: $blue_color;
+    border: none;
+
+    &:hover {
+        background-color: $blue_color;
+    }
+    &:active {
+        background-color: $blue_color;
+    }
+}
+@mixin light-button {
+    color: $color;
+    background: $light_color;
+    border: 1px solid currentColor;
+
+    &:hover {
+        background-color: $blue_color;
+    }
+    &:active {
+        background-color: $blue_color;
+    }
+}
+
 button,
 input[type="button"],
 input[type="submit"] {

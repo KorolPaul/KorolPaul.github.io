@@ -4,6 +4,7 @@
     margin: 0 0 40rem;
     @include tablet {
         border-bottom: none;
+        padding-bottom: 20rem;
     }
 
     &_title {

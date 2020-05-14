@@ -91,9 +91,9 @@ if (sliders.length) {
         }
 
         const sliderTNS = tns({
-            //autoplay: true,
-            //autoplayButton: false,
-            //autoplayButtonOutput: false,
+            autoplay: true,
+            autoplayButton: false,
+            autoplayButtonOutput: false,
             animateDelay: 3000,
             container: slider,
             items: 1,
@@ -111,15 +111,17 @@ if (sliders.length) {
                 1260: {
                     gutter: 32,
                 },
-                1260: {
+                1920: {
                     gutter: 46,
                 }
             },
             onInit: setcounter
         });
 
-        sliderTNS.events.on('transitionEnd', setcounter);
-        sliderTNS.events.on('transitionEnd', setcounter);
+        if (currentSlideEl) {
+            sliderTNS.events.on('transitionEnd', setcounter);
+            sliderTNS.events.on('transitionEnd', setcounter);
+        }
     }
 }
 
@@ -131,9 +133,9 @@ if (galleries.length) {
 
         tns({
             mode: 'gallery',
-            //autoplay: true,
-            //autoplayButton: false,
-            //autoplayButtonOutput: false,
+            autoplay: true,
+            autoplayButton: false,
+            autoplayButtonOutput: false,
             container: gallery,
             speed: 1000,
             items: 1,
@@ -158,12 +160,30 @@ for (let i = 0; i < spectacleTitles.length; i++) {
 }
 
 /* Event page */
-document.querySelector('.event_info-more').addEventListener('click', function(e) {
-    e.preventDefault();
+const evenMoreInfo = document.querySelector('.event_info-more');
+if (evenMoreInfo) {
+    evenMoreInfo.addEventListener('click', function(e) {
+        e.preventDefault();
 
-    const hidedElements = document.querySelectorAll('.event_hided-info');
-    for (let i = 0; i < hidedElements.length; i++) {
-        hidedElements[i].classList.remove('event_hided-info');
-    }
-    e.target.style.display = 'none';
-})
+        const hidedElements = document.querySelectorAll('.event_hided-info');
+        for (let i = 0; i < hidedElements.length; i++) {
+            hidedElements[i].classList.remove('event_hided-info');
+        }
+        e.target.style.display = 'none';
+    })
+}
+
+const ticketsMoreEl = document.querySelector('.tickets_more');
+if (ticketsMoreEl) {
+    ticketsMoreEl.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const hidedElements = document.querySelectorAll('.tickets_hided-row');
+        for (let i = 0; i < hidedElements.length; i++) {
+            
+            console.log(hidedElements[i].classList)
+            hidedElements[i].classList.remove('tickets_hided-row');
+        }
+        e.target.style.display = 'none';
+    })
+}

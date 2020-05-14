@@ -57,11 +57,13 @@
                                 .accordion_content
                                     .place
                                         .place_adress
-                                            .plase_metro Электрозаводская Площадь Журавлева, 1
-                                            %button.plase_shcema посмотреть схему зала
+                                            .place_metro Электрозаводская Площадь Журавлева, 1
+                                            %button.place_scheme-button посмотреть схему зала
                                         .place_map-holder
                                             %div(style="position:relative;overflow:hidden;")
-                                                %a(href="https://yandex.by/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.by/maps/213/moscow/house/ploshchad_zhuravlyova_10/Z04YcQdkTEYPQFtvfXt5cn5rYg==/?ll=37.704749%2C55.783214&utm_medium=mapframe&utm_source=maps&z=18.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">Площадь Журавлёва, 10 — Яндекс.Карты</a><iframe src="https://yandex.by/map-widget/v1/-/C8sMQWlE" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;")
+                                                %a(href="https://yandex.by/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;") Москва
+                                                %a(href="https://yandex.by/maps/213/moscow/house/ploshchad_zhuravlyova_10/Z04YcQdkTEYPQFtvfXt5cn5rYg==/?ll=37.704749%2C55.783214&utm_medium=mapframe&utm_source=maps&z=18.2" style="color:#eee;font-size:12px;position:absolute;top:14px;") Площадь Журавлёва, 10 — Яндекс.Карты
+                                                %iframe(src="https://yandex.by/map-widget/v1/-/C8sMQWlE" width="560" height="400" frameborder="0" allowfullscreen="true" style="position:relative;")
                                             .place_map-buttons
                                                 %button.place_map-button открыть в Google Maps
                                                 %button.place_map-button открыть в Яндекс.Картах
@@ -71,11 +73,13 @@
                                 .accordion_content
                                     .place
                                         .place_adress
-                                            .plase_metro Электрозаводская Площадь Журавлева, 1
-                                            %button.plase_shcema посмотреть схему зала
+                                            .place_metro Электрозаводская Площадь Журавлева, 1
+                                            %button.place_scheme-button посмотреть схему зала
                                         .place_map-holder
                                             %div(style="position:relative;overflow:hidden;")
-                                                %a(href="https://yandex.by/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.by/maps/213/moscow/house/ploshchad_zhuravlyova_10/Z04YcQdkTEYPQFtvfXt5cn5rYg==/?ll=37.704749%2C55.783214&utm_medium=mapframe&utm_source=maps&z=18.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">Площадь Журавлёва, 10 — Яндекс.Карты</a><iframe src="https://yandex.by/map-widget/v1/-/C8sMQWlE" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;")
+                                                %a(href="https://yandex.by/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;") Москва
+                                                %a(href="https://yandex.by/maps/213/moscow/house/ploshchad_zhuravlyova_10/Z04YcQdkTEYPQFtvfXt5cn5rYg==/?ll=37.704749%2C55.783214&utm_medium=mapframe&utm_source=maps&z=18.2" style="color:#eee;font-size:12px;position:absolute;top:14px;") Площадь Журавлёва, 10 — Яндекс.Карты
+                                                %iframe(src="https://yandex.by/map-widget/v1/-/C8sMQWlE" width="560" height="400" frameborder="0" allowfullscreen="true" style="position:relative;")
                                             .place_map-buttons
                                                 %button.place_map-button открыть в Google Maps
                                                 %button.place_map-button открыть в Яндекс.Картах
@@ -96,12 +100,13 @@
                         .contacts
                             .contacts_section
                                 .contacts_row
+                                    .contacts_left
                                     .contacts_right
-                                        %p.contacts_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы «Московский драматический театр  на Малой Бронной» / ИНН 7703001970
+                                        %p.contacts_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы «Московский драматический театр на Малой Бронной» / ИНН 7703001970
                                         %span электронный адрес
                                 .contacts_row
                                     .contacts_left
-                                    %a.contacts_title(href="mailto:#mbronnaya@theatre.ru") mbronnaya@theatre.ru
+                                        %a.contacts_title(href="mailto:#mbronnaya@theatre.ru") mbronnaya@theatre.ru
                             .contacts_section
                                 .contacts_row
                                     .contacts_left
@@ -120,6 +125,8 @@
                                 .contacts_row
                                     .contacts_left
                                         %span.contacts_title(href="mailto:#mbronnaya@theatre.ru") Заказ, бронирование и доставка билетов
+                                .contacts_row
+                                    .contacts_left
                                     .contacts_right
                                         %a.contacts_title(href="tel:+7(495)690-59-53") +7 (495) 690-59-53
                                         %a.contacts_title(href="tel:+7(495)690 43 97") +7 (495) 690 43 97
