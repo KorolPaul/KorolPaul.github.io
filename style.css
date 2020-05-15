@@ -3357,6 +3357,7 @@ h3,
 .event_slider-wrapper {
   margin: 0 -26rem 10rem;
   position: relative;
+  overflow: hidden;
 }
 
 @media all and (min-width: 1259px) {
@@ -4672,17 +4673,17 @@ h3,
 }
 
 .contacts_row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   margin: 20rem 0;
 }
 
 @media all and (min-width: 767px) {
   .contacts_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 16rem 0 24rem;
   }
 }
@@ -4930,6 +4931,92 @@ h3,
 
 .contacts_hidden {
   display: none;
+}
+
+.contacts_working_hours {
+  font-size: 14rem;
+  line-height: 22rem;
+}
+
+@media all and (min-width: 767px) {
+  .contacts_working_hours {
+    font-size: 12rem;
+    line-height: 22rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_working_hours {
+    font-size: 18rem;
+    line-height: 32rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .contacts_working_hours {
+    font-size: 26rem;
+    line-height: 48rem;
+  }
+}
+
+.contacts_working_hours td {
+  padding: 0 10rem 0 0;
+}
+
+.contacts_working_hours td + td {
+  padding: 0;
+  text-align: right;
+}
+
+.contacts_working_hours-time {
+  font-weight: bold;
+  padding-left: 16rem;
+  position: relative;
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_working_hours-time {
+    padding-left: 24rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .contacts_working_hours-time {
+    padding-left: 36rem;
+  }
+}
+
+.contacts_working_hours-time::before {
+  content: "";
+  background-color: currentColor;
+  height: 14rem;
+  width: 1rem;
+  position: absolute;
+  left: 4rem;
+  top: 3rem;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+@media all and (min-width: 767px) {
+  .contacts_working_hours-time::before {
+    top: 1px;
+    width: 2rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_working_hours-time::before {
+    top: 2rem;
+    height: 18px;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .contacts_working_hours-time::before {
+    top: 6rem;
+    height: 24px;
+  }
 }
 
 /*Plugins*/
