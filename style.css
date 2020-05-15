@@ -965,15 +965,37 @@ h1,
 }
 
 h2,
-.heading-2 {
-  font: 18rem Gerbera, Helvetica, Arial, sans-serif;
-  margin: 40rem 0 20rem;
+.heading-2, .contacts_big-text {
+  margin: 25rem 0 15rem;
+  font-size: 22rem;
+  line-height: 32rem;
+  font-weight: bold;
 }
 
 @media all and (min-width: 767px) {
   h2,
-  .heading-2 {
-    font: 22rem Gerbera, Helvetica, Arial, sans-serif;
+  .heading-2, .contacts_big-text {
+    margin: 20rem 0 20rem;
+    font-size: 23rem;
+    line-height: 34rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  h2,
+  .heading-2, .contacts_big-text {
+    margin: 33rem 0 13rem;
+    font-size: 36rem;
+    line-height: 48rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  h2,
+  .heading-2, .contacts_big-text {
+    margin: 50rem 0 30rem;
+    font-size: 51rem;
+    line-height: 77rem;
   }
 }
 
@@ -3047,6 +3069,11 @@ h3,
   }
 }
 
+.slider__accordion {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .slider_counter {
   right: 26rem;
   top: 100%;
@@ -3114,6 +3141,7 @@ h3,
 
 .people {
   margin: 0 0 24rem;
+  text-align: right;
 }
 
 @media all and (min-width: 767px) {
@@ -3123,6 +3151,7 @@ h3,
 }
 
 .people_title {
+  text-align: left;
   font-size: 12rem;
   line-height: 22rem;
   display: block;
@@ -3161,6 +3190,7 @@ h3,
   -moz-column-gap: 24rem;
   column-gap: 24rem;
   margin: 0 0 24rem;
+  text-align: left;
 }
 
 @media all and (min-width: 767px) {
@@ -3193,9 +3223,66 @@ h3,
   }
 }
 
+.people__four .people_items {
+  grid-template-columns: 1fr 1fr;
+  row-gap: 36rem;
+  -webkit-column-gap: 36rem;
+  -moz-column-gap: 36rem;
+  column-gap: 36rem;
+}
+
+@media all and (min-width: 767px) {
+  .people__four .people_items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 30rem;
+    -webkit-column-gap: 20rem;
+    -moz-column-gap: 20rem;
+    column-gap: 20rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .people__four .people_items {
+    row-gap: 42rem;
+    -webkit-column-gap: 36rem;
+    -moz-column-gap: 36rem;
+    column-gap: 36rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .people__four .people_items {
+    row-gap: 56rem;
+    -webkit-column-gap: 50rem;
+    -moz-column-gap: 50rem;
+    column-gap: 50rem;
+  }
+}
+
 .people_item {
   display: block;
-  text-decoration: underline;
+  font-size: 12rem;
+  line-height: 18rem;
+}
+
+@media all and (min-width: 767px) {
+  .people_item {
+    line-height: 22rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .people_item {
+    font-size: 18rem;
+    line-height: 32rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .people_item {
+    font-size: 26rem;
+    line-height: 48rem;
+  }
 }
 
 .people_item::after {
@@ -3228,27 +3315,38 @@ h3,
 
 .people_item-title {
   font-weight: bold;
-  font-size: 12rem;
-  line-height: 20rem;
+  text-decoration: underline;
+}
+
+.people_item-subtitle {
+  color: #4a4a4a;
+  display: block;
+}
+
+.people_more {
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 46rem;
 }
 
 @media all and (min-width: 767px) {
-  .people_item-title {
-    line-height: 22rem;
+  .people_more {
+    font-size: 12rem;
+    line-height: 28rem;
   }
 }
 
 @media all and (min-width: 1259px) {
-  .people_item-title {
+  .people_more {
     font-size: 18rem;
-    line-height: 32rem;
+    line-height: 28rem;
   }
 }
 
 @media all and (min-width: 1799px) {
-  .people_item-title {
+  .people_more {
     font-size: 26rem;
-    line-height: 48rem;
+    line-height: 28rem;
   }
 }
 
@@ -3263,14 +3361,14 @@ h3,
 
 @media all and (min-width: 1259px) {
   .event_slider-wrapper {
-    margin-right: -19vw;
+    margin-right: -3vw;
     margin-bottom: 22rem;
   }
 }
 
 @media all and (min-width: 1799px) {
   .event_slider-wrapper {
-    margin-right: -18vw;
+    margin-right: -5vw;
     margin-bottom: 32rem;
   }
 }
@@ -4021,11 +4119,33 @@ h3,
   }
 }
 
-.accordion_item {
+.accordion {
+  margin: 0 0 20rem;
+}
+
+@media all and (min-width: 767px) {
+  .accordion {
+    margin-bottom: 40rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .accordion {
+    margin-bottom: 64rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .accordion {
+    margin-bottom: 88rem;
+  }
+}
+
+.accordion__secondary .accordion_item {
   border-top: 1rem dashed #9b9b9b;
 }
 
-.accordion_item:first-child {
+.accordion__secondary .accordion_item:first-child {
   border-top: none;
 }
 
@@ -4145,25 +4265,24 @@ h3,
 }
 
 .accordion_content {
-  padding: 0 26rem;
+  padding: 52rem 26rem 4rem;
 }
 
 @media all and (min-width: 767px) {
   .accordion_content {
-    padding-left: 90rem;
+    padding: 30rem 26rem 0 90rem;
   }
 }
 
 @media all and (min-width: 1259px) {
   .accordion_content {
-    padding-left: 200rem;
-    padding-right: 50rem;
+    padding: 30rem 50rem 0 200rem;
   }
 }
 
 @media all and (min-width: 1799px) {
   .accordion_content {
-    padding-left: 260rem;
+    padding: 58rem 50rem 6rem 260rem;
   }
 }
 
@@ -4559,24 +4678,24 @@ h3,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20rem 0;
 }
 
 @media all and (min-width: 767px) {
   .contacts_row {
-    margin: 16px 0 24px;
+    margin: 16rem 0 24rem;
   }
 }
 
 @media all and (min-width: 1259px) {
   .contacts_row {
-    margin: 26px 0 30px;
+    margin: 26rem 0 30rem;
   }
 }
 
 @media all and (min-width: 1799px) {
   .contacts_row {
-    margin: 30px 0 40px;
+    margin: 30rem 0 40rem;
   }
 }
 
@@ -4682,6 +4801,137 @@ h3,
   }
 }
 
+.contacts_big-text {
+  font-weight: 400;
+}
+
+@media all and (min-width: 767px) {
+  .contacts_buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 -8rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_buttons {
+    margin: 0 -16rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .contacts_buttons {
+    margin: 0 -24rem;
+  }
+}
+
+.contacts_button {
+  color: #040304;
+  background: #68D2DB;
+  border: none;
+  display: block;
+  font-size: 12rem;
+  line-height: 16rem;
+  padding: 13rem 20rem 17rem;
+  margin: 0 0 34rem;
+  width: 100%;
+  text-align: center;
+}
+
+.contacts_button:hover {
+  background-color: #68D2DB;
+}
+
+.contacts_button:active {
+  background-color: #68D2DB;
+}
+
+@media all and (min-width: 767px) {
+  .contacts_button {
+    font-size: 11rem;
+    line-height: 16rem;
+    padding: 9rem 12rem 12rem;
+    margin: 0 8rem;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_button {
+    font-size: 16rem;
+    line-height: 16rem;
+    padding: 20rem 33rem 24rem;
+    margin: 0 16rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .contacts_button {
+    font-size: 20rem;
+    line-height: 16rem;
+    margin: 0 24rem;
+  }
+}
+
+.contacts_button::after {
+  display: none;
+}
+
+.contacts_more {
+  background: url(src/img/arrow-down-bold.svg) no-repeat right center;
+  border: none;
+  color: #040304;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 46rem;
+  padding: 0 26rem 0 0;
+  width: 100%;
+  text-align: right;
+}
+
+@media all and (min-width: 767px) {
+  .contacts_more {
+    font-size: 12rem;
+    line-height: 28rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_more {
+    background-size: 16rem 16rem;
+    font-size: 18rem;
+    line-height: 28rem;
+    padding-right: 48rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .contacts_more {
+    background-size: 24rem 24rem;
+    font-size: 26rem;
+    line-height: 28rem;
+    padding-right: 66rem;
+  }
+}
+
+.contacts_more:hover {
+  background-color: transparent;
+}
+
+.contacts_more:active {
+  background-color: transparent;
+}
+
+.contacts_hidden {
+  display: none;
+}
+
 /*Plugins*/
 .tns-outer {
   padding: 0 !important;
@@ -4720,6 +4970,29 @@ h3,
   .widget .tns-outer {
     margin-left: -44rem;
     margin-right: -44rem;
+  }
+}
+
+.accordion .tns-outer {
+  margin-left: -26rem;
+  margin-right: -26rem;
+}
+
+@media all and (min-width: 767px) {
+  .accordion .tns-outer {
+    margin-right: -52rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .accordion .tns-outer {
+    margin-right: calc(-50px - 3vw);
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .accordion .tns-outer {
+    margin-right: calc(-50px - 5vw);
   }
 }
 
