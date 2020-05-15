@@ -1,18 +1,35 @@
 .accordion {
-    &_item {
-        border-top: 1rem dashed #9b9b9b;
+    margin: 0 0 20rem;
+    @include tablet {
+        margin-bottom: 40rem;
+    }
+    @include desktop {
+        margin-bottom: 64rem;
+    }
+    @include desktop-large {
+        margin-bottom: 88rem;
+    }
 
-        &:first-child {
-            border-top: none;
+    &_item {
+
+        .accordion__secondary & {
+            border-top: 1rem dashed #9b9b9b;
+
+            &:first-child {
+                border-top: none;
+            }
         }
     }
     &_header {
+        cursor: pointer;
         background: $blue_color;
         font-size: 18rem;
         line-height: 30rem;
         font-weight: bold;
         padding: 13rem 40rem 19rem 28rem;
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 2;
         @include tablet {
             font-size: 14rem;
             line-height: 30rem;
@@ -29,11 +46,19 @@
             padding: 31rem 60rem 41rem 48rem;
         }
 
+        //@for $i from 1 to 10 {
+        //    .accordion_item:nth-child(#{$i}) & {
+        //        top: calc(42rem * #{$i - 1});
+        //    }
+        //}
+
         .accordion__secondary & {
             background: transparent;
             font-size: 28rem;
             line-height: 36rem;
             padding: 17rem 0 22rem;
+            position: relative;
+            z-index: 1;
             @include tablet {
                 font-size: 40rem;
                 line-height: 48rem;
@@ -62,7 +87,7 @@
             bottom: 0;
             right: 28rem;
             width: 20rem;
-            background: url(#{$img}/accordion-arrow.svg) no-repeat center center;
+            background: url(#{$img}/accordion-arrow.svg) no-repeat center 60%;
             @include desktop {
                 width: 30rem;
                 right: 54rem;
@@ -74,6 +99,10 @@
             }
             .accordion_item__disabled & {
                 display: none;
+            }
+            .accordion_item__closed & {
+                transform: rotate(180deg);
+                background-position: center center;
             }
         }
     }
@@ -92,16 +121,15 @@
         }
     }
     &_content {
-        padding: 0 $layout_indent;
+        padding: 52rem $layout_indent 4rem;
         @include tablet {
-            padding-left: 90rem;
+            padding: 30rem $layout_indent 0 90rem;
         }
         @include desktop {
-            padding-left: 200rem;
-            padding-right: 50rem;
+            padding: 30rem 50rem 0 200rem;
         }
         @include desktop-large {
-            padding-left: 260rem;
+            padding: 58rem 50rem 6rem 260rem;
         }
 
         .accordion__secondary & {
@@ -109,6 +137,9 @@
                 padding-left: 0;
                 padding-right: 0;
             }
+        }
+        .accordion_item__closed & {
+            display: none;
         }
     }
 }

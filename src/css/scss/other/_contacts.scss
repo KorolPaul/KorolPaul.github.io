@@ -16,24 +16,49 @@
 
     &_section {
         border-bottom: 1rem dashed #9b9b9b;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
     &_row {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0;
+        margin: 20rem 0;
         @include tablet {
-            margin: 16px 0 24px;
+            display: flex;
+            justify-content: space-between;
+            margin: 16rem 0 24rem;
         }
         @include desktop {
-            margin: 26px 0 30px;
+            margin: 26rem 0 30rem;
         }
         @include desktop-large {
-            margin: 30px 0 40px;
+            margin: 30rem 0 40rem;
+        }
+
+        &__big-indent {
+            @include tablet {
+                margin: 20rem 0 40rem;
+            }
+            @include desktop {
+                margin: 40rem 0 60rem;
+            }
+            @include desktop-large {
+                margin: 60rem 0 80rem;
+            }
         }
     }
     &_left {
         @include tablet {
             width: 33%;
+        }
+        @include desktop {
+            min-width: 300rem;
+        }
+
+        &__long {
+            @include tablet {
+                width: 65%;
+            }
         }
     }
     &_right {
@@ -83,6 +108,10 @@
         &::after {
             display: none;
         }
+
+        &__nowrap {
+            white-space: nowrap;
+        }
     }
     &_subtitle {
         font-weight: bold;
@@ -99,6 +128,170 @@
         @include desktop-large {
             font-size: 42rem;
             line-height: 58rem;
+        }
+    }
+    &_big-text {
+        @extend %heading-2;
+        font-weight: 400;
+    }
+    &_buttons {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            margin: 0 -8rem;
+        }
+        @include desktop {
+            margin: 0 -16rem;
+        }
+        @include desktop-large {
+            margin: 0 -24rem;
+        }
+    }
+    &_button {
+        @include blue-button;
+        display: block;
+        font-size: 12rem;
+        line-height: 16rem;
+        padding: 13rem 20rem 17rem;
+        margin: 0 0 34rem;
+        width: 100%;
+        text-align: center;
+        @include tablet {
+            font-size: 11rem;
+            line-height: 16rem;
+            padding: 9rem 12rem 12rem;
+            margin: 0 8rem;
+            flex-grow: 1;
+        }
+        @include desktop {
+            font-size: 16rem;
+            line-height: 16rem;
+            padding: 20rem 33rem 24rem;
+            margin: 0 16rem;
+        }
+        @include desktop-large {
+            font-size: 20rem;
+            line-height: 16rem;
+            margin: 0 24rem;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+    &_more {
+        background: url(#{$img}/arrow-down-bold.svg) no-repeat right center;
+        border: none;
+        color: $color;
+        font-weight: bold;
+        font-size: 14rem;
+        line-height: 46rem;
+        padding: 0 26rem 0 0;
+        width: 100%;
+        text-align: right;
+        margin: 0 0 22rem;
+        @include tablet {
+            font-size: 12rem;
+            line-height: 28rem;
+            margin-bottom: 28rem;
+        }
+        @include desktop {
+            background-size: 16rem 16rem;
+            font-size: 18rem;
+            line-height: 28rem;
+            padding-right: 48rem;
+            margin-bottom: 40rem;
+        }
+        @include desktop-large {
+            background-size: 24rem 24rem;
+            font-size: 26rem;
+            line-height: 28rem;
+            padding-right: 66rem;
+            margin-bottom: 46rem;
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
+        &:active {
+            background-color: transparent;
+        }
+    }
+    &_hidden {
+        display: none;
+    }
+    &_working_hours {
+        font-size: 14rem;
+        line-height: 22rem;
+        @include tablet {
+            font-size: 12rem;
+            line-height: 22rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 26rem;
+            line-height: 48rem;
+        }
+
+        td {
+            padding: 0 10rem 0 0;
+        }
+        td + td {
+            padding: 0;
+            text-align: right;
+        }
+    }
+    &_working_hours-time {
+        font-weight: bold;
+        padding-left: 16rem;
+        position: relative;
+        @include desktop {
+            padding-left: 24rem;
+        }
+        @include desktop-large {
+            padding-left: 36rem;
+        }
+
+        &::before {
+            content: "";
+            background-color: currentColor;
+            height: 14rem;
+            width: 1rem;
+            position: absolute;
+            left: 4rem;
+            top: 3rem;
+            transform: rotate(35deg);
+            @include tablet {
+                top: 1px;
+                width: 2rem;
+            }
+            @include desktop {
+                top: 2rem;
+                height: 18px;
+            }
+            @include desktop-large {
+                top: 6rem;
+                height: 24px;
+            }
+        }
+    }
+    &_messenger {
+        vertical-align: middle;
+        margin: 0 0 0 3rem;
+        @include tablet {
+            vertical-align: baseline;
+            margin-left: 6rem;
+        }
+        @include desktop {
+            height: 32rem;
+            margin-left: 10rem;
+        }
+        @include desktop-large {
+            height: 46rem;
+            margin-left: 14rem;
         }
     }
 }

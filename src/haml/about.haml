@@ -16,17 +16,16 @@
                 %picture.logo_image
                     %source(srcset="src/img/logo-mobile.svg" media="(max-width: 767px)")
                     %img(src="src/img/logo.svg" alt="")
+                %img.logo_image__mobile-fixed(src="src/img/logo-mobile-small.svg" alt="")
 
             %nav.menu
-                %a.menu-toggle(href="#")
+                .menu-toggle
 
                 %a.menu_link.menu_link__mobile(href="/") купить билет
                 %a.menu_link.menu_link__mobile(href="/") адреса
                 %a.menu_link(href="/") афиша
                 %a.menu_link(href="/") о театре
-                %a.menu_link(href="/") новости
-                %a.menu_link(href="/") магазин
-                %a.menu_link(href="/") архив
+                %a.menu_link(href="/") события
                 %a.menu_link(href="/") пресса о театре
                 %a.menu_link(href="/") клуб волонтеров
                 %a.menu_link(href="/") партнеры театра
@@ -39,7 +38,6 @@
                             %a.social_link.social_link__fb(href="#")
                             %a.social_link.social_link__insta(href="#")
                             %a.social_link.social_link__youtube(href="#")
-                            %a.social_link.social_link__tw(href="#")
 
         %main.content
             %span.content_title о театре
@@ -47,13 +45,13 @@
             .accordion
                 .accordion_item
                     .accordion_header(data-tab="1")
-                        %span.accordion_header-title Адреса
+                        %span.accordion_header-title адреса
                     .accordion_content
 
                         .accordion.accordion__secondary
                             .accordion_item
                                 .accordion_header(data-tab="adress-1")
-                                    %span.accordion_header-title ТКЗ «Дворец на Яузе»
+                                    %span.accordion_header-title ТКЗ «Дворец на&nbsp;Яузе»
                                 .accordion_content
                                     .place
                                         .place_adress
@@ -67,9 +65,9 @@
                                             .place_map-buttons
                                                 %button.place_map-button открыть в Google Maps
                                                 %button.place_map-button открыть в Яндекс.Картах
-                            .accordion_item
+                            .accordion_item.accordion_item__closed
                                 .accordion_header(data-tab="adress-2")
-                                    %span.accordion_header-title Театральный центр  «На Страстном»
+                                    %span.accordion_header-title Театральный центр  «На&nbsp;Страстном»
                                 .accordion_content
                                     .place
                                         .place_adress
@@ -117,53 +115,56 @@
                                             %tbody
                                                 %tr
                                                     %td  Открыта ежедневно
-                                                    %td  12:00 – 19:30
+                                                    %td  
+                                                        %span.contacts_working_hours-time 12:00 – 19:30
                                                 %tr
                                                     %td  Перерыв
-                                                    %td  15:00 – 16:00
+                                                    %td 
+                                                        %span.contacts_working_hours-time 15:00 – 16:00
                             .contacts_section
                                 .contacts_row
-                                    .contacts_left
+                                    .contacts_left.contacts_left__long
                                         %span.contacts_title(href="mailto:#mbronnaya@theatre.ru") Заказ, бронирование и доставка билетов
                                 .contacts_row
                                     .contacts_left
                                     .contacts_right
-                                        %a.contacts_title(href="tel:+7(495)690-59-53") +7 (495) 690-59-53
-                                        %a.contacts_title(href="tel:+7(495)690 43 97") +7 (495) 690 43 97
-                                        %a.contacts_title(href="tel:+7(905)544-14-21") +7 (905) 544-14-21
+                                        %a.contacts_title.contacts_title__nowrap(href="tel:+7(495)690-59-53") +7 (495) 690-59-53
+                                        %a.contacts_title.contacts_title__nowrap(href="tel:+7(495)690 43 97") +7 (495) 690 43 97
+                                        %a.contacts_title.contacts_title__nowrap(href="tel:+7(905)544-14-21") +7 (905) 544-14-21
+                                            %img.contacts_messenger(src="/src/img/whatsapp.svg" alt="")
 
                             .contacts_section
-                                .contacts_row
+                                .contacts_row.contacts_row__big-indent
                                     .contacts_left
                                         %span.contacts_subtitle Художественный руководитель
                                     .contacts_right
                                         %span Константин Юрьевич Богомолов
                                         %a.contacts_title(href="mailto:mail@gmail.com") mail@gmail.com
-                                .contacts_row
+                                .contacts_row.contacts_row__big-indent
                                     .contacts_left
                                         %span.contacts_subtitle Директор
                                     .contacts_right
                                         %span Константин Юрьевич Богомолов
                                         %a.contacts_title(href="mailto:mail@gmail.com") mail@gmail.com
-                                .contacts_row
+                                .contacts_row.contacts_row__big-indent
                                     .contacts_left
                                         %span.contacts_subtitle Заместитель директора
                                     .contacts_right
                                         %span Ирина Александровна Грачева 
                                         %a.contacts_title(href="tel:690-04-51") 690-04-51 / 1-29
-                                .contacts_row
+                                .contacts_row.contacts_row__big-indent
                                     .contacts_left
                                         %span.contacts_subtitle Заместитель директора
                                     .contacts_right
                                         %span Лариса Васильевна Гладкая 
                                         %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-05
-                                .contacts_row
+                                .contacts_row.contacts_row__big-indent
                                     .contacts_left
                                         %span.contacts_subtitle Заместитель директора
                                     .contacts_right
                                         %span Ирина Александровна Грачева 
                                         %a.contacts_title(href="tel:690-04-51") 690-04-51 / 1-29
-                                .contacts_row
+                                .contacts_row.contacts_row__big-indent
                                     .contacts_left
                                         %span.contacts_subtitle Заместитель директора
                                     .contacts_right
@@ -171,37 +172,66 @@
                                         %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-03
 
 
+                                %button.contacts_more все контакты
+
+                                .contacts_hidden
+                                    .contacts_row
+                                        .contacts_left
+                                            %span.contacts_subtitle Заместитель директора
+                                        .contacts_right
+                                            %span Лариса Васильевна Гладкая 
+                                            %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-05
+                                    .contacts_row
+                                        .contacts_left
+                                            %span.contacts_subtitle Заместитель директора
+                                        .contacts_right
+                                            %span Ирина Александровна Грачева 
+                                            %a.contacts_title(href="tel:690-04-51") 690-04-51 / 1-29
+                                    .contacts_row
+                                        .contacts_left
+                                            %span.contacts_subtitle Заместитель директора
+                                        .contacts_right
+                                            %span Арина Владимировна Богданчик
+                                            %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-03
+
                 .accordion_item
                     .accordion_header(data-tab="3")
-                        %span.accordion_header-title Люди театра
+                        %span.accordion_header-title люди театра
                     .accordion_content
-                        .people
-                            %span.people_title В спектакле заняты
+                        .people.people__four
                             .people_items
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
+                                    %span.people_item-subtitle Заслуженный артист РФ
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
+                                    %span.people_item-subtitle Заслуженный артист РФ
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
+                                    %span.people_item-subtitle Заслуженный артист РФ
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
+                                    %span.people_item-subtitle Заслуженный артист РФ
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
+                                    %span.people_item-subtitle Заслуженный артист РФ
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
+                                    %span.people_item-subtitle Заслуженный артист РФ
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
+                                    %span.people_item-subtitle Заслуженный артист РФ
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
+                                    %span.people_item-subtitle Заслуженный артист РФ
                             .people_items.event_hided-info
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
@@ -215,12 +245,13 @@
                                 %a.people_item(href="#")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
+                            %a.people(href="#") весь коллектив
                 
                 .accordion_item
                     .accordion_header(data-tab="4")
                         %span.accordion_header-title история театра
                     .accordion_content
-                        .slider
+                        .slider.slider__noindent
                             .slider_track
                                 .slider_item
                                     %img.slider_image(src="src/img/temp/history-1.jpg" alt="")
@@ -231,12 +262,19 @@
                                 .slider_item
                                     %img.slider_image(src="src/img/temp/history-2.jpg" alt="")
                         
-                        %h2 В 1945 году на театральной карте столицы появился новый творческий коллектив — московский драматический театр, который возглавил режиссер Cергей Майоров. 
+                        %h2.contacts_big-text В 1945 году на театральной карте столицы появился новый творческий коллектив — московский драматический театр, который возглавил режиссер Cергей Майоров. 
                         .contacts
                             .contacts_row
+                                .contacts_left
                                 .contacts_right
                                     %p Основу новой труппы составили актеры разных московских театров и несколько выпускников театрального училища им. М. С. Щепкина. Театру было предоставлено здание на Спартаковской улице, 26, рядом со станцией метро «Бауманская». Репетиции шли параллельно с реконструкцией здания театра, двери которого открылись для зрителей 9 марта 1946 года, когда был показан первый спектакль («Золотой обруч», пьеса М. Козакова и А. Мариенгофа).
-                                    %span электронный адрес
+                                    %button.contacts_more читать все
+                                    .contacts_hidden
+                                        %p Основу новой труппы составили актеры разных московских театров и несколько выпускников театрального училища им. М. С. Щепкина. Театру было предоставлено здание на Спартаковской улице, 26, рядом со станцией метро «Бауманская». Репетиции шли параллельно с реконструкцией здания театра, двери которого открылись для зрителей 9 марта 1946 года, когда был показан первый спектакль («Золотой обруч», пьеса М. Козакова и А. Мариенгофа).
+                            .contacts_buttons
+                                %a.contacts_button(href="#") архив спектаклей
+                                %a.contacts_button(href="#") легенды театра
+                                %a.contacts_button(href="#") музей
                         
 
         %footer.footer
@@ -262,6 +300,7 @@
         %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")
         %script(src="src/js/tiny-slider.min.js")
         %script(src="src/js/main.js")
+        %script(src="src/js/about.js")
                                 
 
 

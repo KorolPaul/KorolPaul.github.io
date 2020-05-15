@@ -17,10 +17,24 @@
     }
 }
 %heading-2 {
-    font: 18rem $font-family;
-    margin: 40rem 0 20rem;
+    margin: 25rem 0 15rem;
+    font-size: 22rem;
+    line-height: 32rem;
+    font-weight: bold;
     @include tablet {
-        font: 22rem $font-family;
+        margin: 20rem 0 20rem;
+        font-size: 23rem;
+        line-height: 34rem;
+    }
+    @include desktop {
+        margin: 33rem 0 13rem;
+        font-size: 36rem;
+        line-height: 48rem;
+    }
+    @include desktop-large {
+        margin: 50rem 0 30rem;
+        font-size: 51rem;
+        line-height: 77rem;
     }
 }
 %heading-3 {

@@ -16,17 +16,16 @@
                 %picture.logo_image
                     %source(srcset="src/img/logo-mobile.svg" media="(max-width: 767px)")
                     %img(src="src/img/logo.svg" alt="")
+                %img.logo_image__mobile-fixed(src="src/img/logo-mobile-small.svg" alt="")
 
             %nav.menu
-                %a.menu-toggle(href="#")
+                .menu-toggle
 
                 %a.menu_link.menu_link__mobile(href="/") купить билет
                 %a.menu_link.menu_link__mobile(href="/") адреса
                 %a.menu_link(href="/") афиша
                 %a.menu_link(href="/") о театре
-                %a.menu_link(href="/") новости
-                %a.menu_link(href="/") магазин
-                %a.menu_link(href="/") архив
+                %a.menu_link(href="/") события
                 %a.menu_link(href="/") пресса о театре
                 %a.menu_link(href="/") клуб волонтеров
                 %a.menu_link(href="/") партнеры театра
@@ -39,7 +38,6 @@
                             %a.social_link.social_link__fb(href="#")
                             %a.social_link.social_link__insta(href="#")
                             %a.social_link.social_link__youtube(href="#")
-                            %a.social_link.social_link__tw(href="#")
 
         %main.content
             %span.content_title афиша
@@ -255,4 +253,5 @@
         %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")
         %script(src="src/js/tiny-slider.min.js")
         %script(src="src/js/main.js")
+        %script(src="src/js/event.js")
                                 

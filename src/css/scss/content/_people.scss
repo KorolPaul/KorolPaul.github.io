@@ -1,10 +1,12 @@
 .people {
     margin: 0 0 24rem;
+    text-align: right;
     @include tablet {
         margin-bottom: 34rem;
     }
 
     &_title {
+        text-align: left;
         font-size: 12rem;
         line-height: 22rem;
         display: block;
@@ -31,6 +33,7 @@
         row-gap: 24rem;
         column-gap: 24rem;
         margin: 0 0 24rem;
+        text-align: left;
         @include tablet {
             row-gap: 18rem;
             column-gap: 32rem;
@@ -46,10 +49,41 @@
             column-gap: 52rem;
             margin-bottom: 52rem;
         }
+
+        .people__four & {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 36rem;
+            column-gap: 36rem;
+            @include tablet {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                row-gap: 30rem;
+                column-gap: 20rem;
+            }
+            @include desktop {
+                row-gap: 42rem;
+                column-gap: 36rem;
+            }
+            @include desktop-large {
+                row-gap: 56rem;
+                column-gap: 50rem;
+            }
+        }
     }
     &_item {
         display: block;
-        text-decoration: underline;
+        font-size: 12rem;
+        line-height: 18rem;
+        @include tablet {
+            line-height: 22rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 26rem;
+            line-height: 48rem;
+        }
 
         &::after {
             display: none;
@@ -71,18 +105,27 @@
     }
     &_item-title {
         font-weight: bold;
-        font-size: 12rem;
-        line-height: 20rem;
+        text-decoration: underline;
+    }
+    &_item-subtitle {
+        color: #4a4a4a;
+        display: block;
+    }
+    &_more {
+        font-weight: bold;
+        font-size: 14rem;
+        line-height: 46rem;
         @include tablet {
-            line-height: 22rem;
+            font-size: 12rem;
+            line-height: 28rem;
         }
         @include desktop {
             font-size: 18rem;
-            line-height: 32rem;
+            line-height: 28rem;
         }
         @include desktop-large {
             font-size: 26rem;
-            line-height: 48rem;
+            line-height: 28rem;
         }
     }
 }
