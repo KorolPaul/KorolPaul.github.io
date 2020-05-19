@@ -29,6 +29,7 @@
 @import  "layout/footer";
 @import  "layout/widget";
 @import  "layout/carousel";
+@import  "layout/tabs";
 
 /*Content*/
 @import  "content/spectacle";
@@ -42,12 +43,19 @@
 @import  "content/partners";
 @import  "content/events";
 @import  "content/accordion";
+@import  "content/filters";
+@import  "content/spectacle-date";
+@import  "content/spectacles-title";
+@import  "content/events";
+@import  "content/article";
+@import  "content/person";
 
 /*Other*/
 @import  "other/partner";
 @import  "other/share";
 @import  "other/place";
 @import  "other/contacts";
+@import  "other/switcher";
 
 
 /*Plugins*/

@@ -23,13 +23,13 @@
 
                 %a.menu_link.menu_link__mobile(href="/") купить билет
                 %a.menu_link.menu_link__mobile(href="/") адреса
-                %a.menu_link(href="/") афиша
-                %a.menu_link(href="/") о театре
-                %a.menu_link(href="/") события
-                %a.menu_link(href="/") пресса о театре
-                %a.menu_link(href="/") клуб волонтеров
-                %a.menu_link(href="/") партнеры театра
-                %a.menu_link.menu_link__indent(href="/") поиск
+                %a.menu_link(href="/afisha.html") афиша
+                %a.menu_link(href="/about.html") о театре
+                %a.menu_link(href="/events.html") события
+                %a.menu_link(href="/press.html") пресса о театре
+                %a.menu_link(href="/volunteers.html") клуб волонтеров
+                %a.menu_link(href="/partners.html") партнеры театра
+                %a.menu_link.menu_link__indent(href="/search.html") поиск
 
                 .menu_social
                     .social
@@ -77,7 +77,6 @@
                                             %div(style="position:relative;overflow:hidden;")
                                                 %a(href="https://yandex.by/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;") Москва
                                                 %a(href="https://yandex.by/maps/213/moscow/house/ploshchad_zhuravlyova_10/Z04YcQdkTEYPQFtvfXt5cn5rYg==/?ll=37.704749%2C55.783214&utm_medium=mapframe&utm_source=maps&z=18.2" style="color:#eee;font-size:12px;position:absolute;top:14px;") Площадь Журавлёва, 10 — Яндекс.Карты
-                                                %iframe(src="https://yandex.by/map-widget/v1/-/C8sMQWlE" width="560" height="400" frameborder="0" allowfullscreen="true" style="position:relative;")
                                             .place_map-buttons
                                                 %button.place_map-button открыть в Google Maps
                                                 %button.place_map-button открыть в Яндекс.Картах
@@ -200,49 +199,49 @@
                     .accordion_content
                         .people.people__four
                             .people_items
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
                                     %span.people_item-subtitle Заслуженный артист РФ
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
                                     %span.people_item-subtitle Заслуженный артист РФ
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
                                     %span.people_item-subtitle Заслуженный артист РФ
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
                                     %span.people_item-subtitle Заслуженный артист РФ
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
                                     %span.people_item-subtitle Заслуженный артист РФ
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
                                     %span.people_item-subtitle Заслуженный артист РФ
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
                                     %span.people_item-subtitle Заслуженный артист РФ
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
                                     %span.people_item-subtitle Заслуженный артист РФ
                             .people_items.event_hided-info
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
                                     %span.people_item-title Иван Николаев
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
-                                %a.people_item(href="#")
+                                %a.people_item(href="/person.html")
                                     %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
                                     %span.people_item-title Марья Иванова
                             %a.people(href="#") весь коллектив
@@ -251,7 +250,7 @@
                     .accordion_header(data-tab="4")
                         %span.accordion_header-title история театра
                     .accordion_content
-                        .slider.slider__noindent
+                        .slider.slider__accordion
                             .slider_track
                                 .slider_item
                                     %img.slider_image(src="src/img/temp/history-1.jpg" alt="")
@@ -278,23 +277,45 @@
                         
 
         %footer.footer
-            .social
-                %span.social_title подписывайтесь на нас в соцсетях
-                .social_links
-                    %a.social_link.social_link__vk(href="#")
-                    %a.social_link.social_link__fb(href="#")
-                    %a.social_link.social_link__insta(href="#")
-                    %a.social_link.social_link__youtube(href="#")
-                    %a.social_link.social_link__tw(href="#")
-            .footer_menu
-                %a.footer_menu-link(href="#") афиша
-                %a.footer_menu-link(href="#") адреса
-                %a.footer_menu-link(href="#") купить билет
-                %a.footer_menu-link(href="#") схема зала
-                %a.footer_menu-link(href="#") фотобанк
-                %a.footer_menu-link(href="#") клуб волонтеров
-                %a.footer_menu-link(href="#") партнеры театра
-                %a.footer_menu-link(href="#") контакты
+            .footer_mobile
+                .social
+                    %span.social_title подписывайтесь на нас в соцсетях
+                    .social_links
+                        %a.social_link.social_link__vk(href="#")
+                        %a.social_link.social_link__fb(href="#")
+                        %a.social_link.social_link__insta(href="#")
+                        %a.social_link.social_link__youtube(href="#")
+                        %a.social_link.social_link__tw(href="#")
+                .footer_menu
+                    %a.footer_menu-link(href="afisha.html") афиша
+                    %a.footer_menu-link(href="/about.html") адреса
+                    %a.footer_menu-link(href="#") купить билет
+                    %a.footer_menu-link(href="#") схема зала
+                    %a.footer_menu-link(href="#") фотобанк
+                    %a.footer_menu-link(href="volunteers.html") клуб волонтеров
+                    %a.footer_menu-link(href="/partners.html") партнеры театра
+                    %a.footer_menu-link(href="#") контакты
+            .footer_content
+                .footer_columns
+                    .footer_column.footer_column__flex
+                        %img.footer_logo(src="src/img/dkm.svg" alt="")
+                        %div.footer_contacts
+                            .footer_adress
+                                %span Москва 
+                                %span Малая Бронная, 4
+                                %a(href="mailto:mbronnaya@theatre.ru") mbronnaya@theatre.ru
+                            %a.footer_contacts-button все контакты
+                    .footer_column
+                        %p.footer_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы  «Московский драматический театр на Малой Бронной» 
+                        .footer_documents
+                            %span.footer_inn ИНН 7703001970
+                            %a.footer_documents-link Документы
+                .footer_bottom
+                    %img.footer_bottom-image(src="src/img/bank-of-vacancies.jpg" alt="")
+                    %img.footer_bottom-image(src="src/img/active-citizen.jpg" alt="")
+                    %img.footer_bottom-image(src="src/img/year-of-theatre.jpg" alt="")
+                    %a.footer_outer-link(href="#") mos.ru
+
 
 
         %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")

@@ -1,25 +1,27 @@
 .form {
     &_row {
-        @include desktop {
+        @include tablet {
             display: flex;
-            justify-content: space-between;
         }
     }
-    &_row-item {
-        padding: 0 0 30rem;
-        flex-grow: 10;
-        position: relative;
-        @include desktop {
+    &_cell {
+        margin: 0 0 22rem;
+        @include tablet {
+            margin-bottom: 16rem;
         }
 
-        &__center {
-            text-align: center;
-        }
         & + & {
+            @include tablet {
+                width: 48%;
+                flex-shrink: 0;
+                margin-left: 16rem;
+            }
             @include desktop {
-                margin-left: 30rem;
+                margin-left: 0 0 0 34rem;
+            }
+            @include desktop {
+                margin-left: 0 0 0 48rem;
             }
         }
     }
-    
 }

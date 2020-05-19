@@ -1,0 +1,144 @@
+.filters {
+    background: rgba(227, 227, 227, 0.96);
+    padding: 15rem $layout_indent 12rem;
+    margin: 0 -#{$layout_indent};
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13rem 22rem;
+        margin: 0;
+    }
+    @include desktop {
+        padding: 20rem 34rem;
+    }
+    @include desktop-large {
+        padding: 30rem 48rem;
+    }
+
+    &__fixed {
+        @include tablet {
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+    }
+
+    &_mode {
+        margin: 0 0 16rem;
+        @include tablet {
+            width: 35%;
+            margin: 0;
+        }
+        @include desktop-large {
+            min-width: 580rem;
+        }
+    }
+    &_controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_control {
+        color: $color;
+        font-size: 12rem;
+        line-height: 14rem;
+        background: transparent;
+        padding: 0 16rem 0 0;
+        border: none;
+        position: relative;
+        @include tablet {
+            margin: 0 0 0 40rem;
+        }
+        @include desktop {
+            font-size: 16rem;
+            line-height: 14rem;
+            padding-right: 22rem;
+            margin-left: 44rem;
+        }
+        @include desktop-large {
+            font-size: 22rem;
+            line-height: 14rem;
+            padding-right: 30rem;
+            margin-left: 80rem;
+        }
+
+        &__active {
+            background: url(#{$img}/check.svg) no-repeat right center;
+            background-size: 12rem auto;
+            @include desktop {
+                background-size: 18rem auto;
+            }
+            @include desktop-large {
+                background-size: 22rem auto;
+            }
+        }
+        &__mobile {
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+        }
+    }
+    &_control-text {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            border-bottom: 1rem solid currentColor;
+            transform: scaleX(0);
+            transform-origin: left 0;
+            transition: 0.2s ease-in-out transform;
+        }
+        .filters_control:hover &::before,
+        .filters_switcher-button:hover &::before,
+        .filters_control.active &::before,
+        .filters_switcher-button.active &::before {
+            transform: scaleX(1);
+        }
+    }
+    &_control-icon {
+        margin: 0 8rem 0 0;
+        vertical-align: middle;
+        @include tablet {
+            margin-right: 10rem;
+        }
+        @include desktop {
+            margin-right: 18rem;
+        }
+        @include desktop-large {
+            margin-right: 26rem;
+        }
+    }
+    &_switcher-button {
+        padding: 0;
+        background: transparent;
+        border: none;
+        color: $color;
+        font-size: 12rem;
+        line-height: 17rem;
+        margin: 0 20rem;
+
+        &:hover,
+        &:active {
+            color: $color;
+            background: transparent;
+        }
+    }
+    &_switcher-divider {
+        display: inline-block;
+        height: 15rem;
+        width: 1px;
+        background: $color;
+        vertical-align: middle;
+    }
+}

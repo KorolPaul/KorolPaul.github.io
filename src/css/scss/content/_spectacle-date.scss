@@ -1,0 +1,29 @@
+.spectacle-date {
+    background: rgba(227, 227, 227, 0.3);
+    color: #4A4A4A;
+    font-size: 14rem;
+    line-height: 20rem;
+    font-weight: bold;
+    padding: 35rem $layout_indent 15rem;
+    margin: 0 -#{$layout_indent};
+    @include tablet {
+        font-size: 12rem;
+        line-height: 20rem;
+        padding: 18rem 22rem 12rem;
+        margin: 0;
+    }
+    @include desktop {
+        font-size: 16rem;
+        line-height: 20rem;
+        padding: 38rem 36rem 22rem;
+    }
+    @include desktop-large {
+        font-size: 22rem;
+        line-height: 20rem;
+        padding: 58rem 50rem 38rem;
+    }
+
+    &__today {
+        color: $bright_color;
+    }
+}

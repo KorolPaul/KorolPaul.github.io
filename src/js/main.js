@@ -41,6 +41,20 @@ document.addEventListener("scroll", function(e) {
     }
 });
 
+/* Title size calculation */
+const spectacleTitles = document.querySelectorAll('.spectacle_title');
+if (spectacleTitles) {
+    for (let i = 0; i < spectacleTitles.length; i++) {
+        const title = spectacleTitles[i];
+        const titleTextLength = title.innerText.length;
+        if (titleTextLength < 10) {
+            title.classList.add('spectacle_title__big');
+        } else if (titleTextLength > 40) {
+            title.classList.add('spectacle_title__small');
+        }
+    }
+}
+
 /* Carousel */
 var carousels = document.querySelectorAll('.carousel');
 if (carousels.length) {
@@ -114,6 +128,32 @@ if (accordions) {
     for (let j = 0; j < accordionHeaders.length; j++) {
         const accordionHeader = accordionHeaders[j];
         accordionHeader.addEventListener('click', toggleAccordion)
+        
+    }
+}
+
+/* Tabs */
+const tabLinks = document.querySelectorAll('[data-tab-link]');
+const tabContents = document.querySelectorAll('[data-tab]');
+if (tabLinks) {
+    for (let i = 0; i < tabLinks.length; i++) {
+        const link = tabLinks[i];
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tab = e.target.dataset.tabLink;
+            for (let j = 0; j < tabLinks.length; j++) {
+                const tabLink = tabLinks[j];
+                tabLink.classList.remove('active');
+            }
+            for (let j = 0; j < tabContents.length; j++) {
+                const tabContent = tabContents[j];
+                tabContent.classList.remove('active');
+            }
+
+            e.target.classList.add('active');
+            document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+
+        });
         
     }
 }

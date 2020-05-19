@@ -1,4 +1,13 @@
 .press {
+    &__big {
+        padding:28rem 0 36rem;
+        @include tablet {
+            max-width: 80%;
+        }
+        @include desktop {
+            padding-top: 46rem;
+        }
+    }
 
     &_title {
         display: block;

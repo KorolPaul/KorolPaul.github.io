@@ -1,0 +1,211 @@
+%html(lang="en")
+    %head
+        %meta(charset="UTF-8")/
+        %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+        %title Театр на Малой Бронной
+        %meta(name="description" content="")/
+        %meta(name="keywords" content="")/
+        %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
+        %meta(name="format-detection" content="telephone=no")/
+        %meta(name="HandheldFriendly" content="true")/
+        %link(rel="stylesheet" href="style.css")/
+    %body
+        %header.header 
+
+            %a.logo(href="/")
+                %picture.logo_image
+                    %source(srcset="src/img/logo-mobile.svg" media="(max-width: 767px)")
+                    %img(src="src/img/logo.svg" alt="")
+                %img.logo_image__mobile-fixed(src="src/img/logo-mobile-small.svg" alt="")
+
+            %nav.menu
+                .menu-toggle
+
+                %a.menu_link.menu_link__mobile(href="/") купить билет
+                %a.menu_link.menu_link__mobile(href="/") адреса
+                %a.menu_link(href="/afisha.html") афиша
+                %a.menu_link(href="/about.html") о театре
+                %a.menu_link(href="/events.html") события
+                %a.menu_link(href="/press.html") пресса о театре
+                %a.menu_link(href="/volunteers.html") клуб волонтеров
+                %a.menu_link(href="/partners.html") партнеры театра
+                %a.menu_link.menu_link__indent(href="/search.html") поиск
+
+                .menu_social
+                    .social
+                        .social_links
+                            %a.social_link.social_link__vk(href="#")
+                            %a.social_link.social_link__fb(href="#")
+                            %a.social_link.social_link__insta(href="#")
+                            %a.social_link.social_link__youtube(href="#")
+
+        %main.content
+            %span.content_title люди театра
+
+            .filters.filters__fixed
+                .filters_switcher
+                    %button.filters_switcher-button.active
+                        %span.filters_control-text действующие
+                    .filters_switcher-divider
+                    %button.filters_switcher-button
+                        %span.filters_control-text бывшие
+            
+            .people.people__four.people__big
+                .people_items
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                        %span.people_item-title Марья Иванова
+                        %span.people_item-subtitle Заслуженный артист РФ
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                        %span.people_item-title Иван Николаев
+                        %span.people_item-subtitle Заслуженный артист РФ
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                        %span.people_item-title Марья Иванова
+                        %span.people_item-subtitle Заслуженный артист РФ
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                        %span.people_item-title Иван Николаев
+                        %span.people_item-subtitle Заслуженный артист РФ
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                        %span.people_item-title Марья Иванова
+                        %span.people_item-subtitle Заслуженный артист РФ
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                        %span.people_item-title Иван Николаев
+                        %span.people_item-subtitle Заслуженный артист РФ
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-1.jpg" alt="")
+                        %span.people_item-title Марья Иванова
+                        %span.people_item-subtitle Заслуженный артист РФ
+                    %a.people_item(href="/person.html")
+                        %img.people_item-image(src="src/img/temp/people-2.jpg" alt="")
+                        %span.people_item-title Иван Николаев
+                        %span.people_item-subtitle Заслуженный артист РФ
+                
+            .widget.carousel
+                .widget_header
+                    %span.widget_title другие события
+                    .widget_controls
+                        .carousel_controls
+                            %button.carousel_button.carousel_button__prev
+                            %button.carousel_button.carousel_button__next
+                        %a.widget_link(href="#") читать все
+
+                .carousel_track
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-1.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-2.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-3.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-4.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-5.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-6.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-7.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-5.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-1.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-2.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-3.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-4.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-5.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-6.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-7.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
+                    %a.carousel_item(href="#")
+                        .carousel_item-image-wrapper
+                            %img.carousel_item-image(src="src/img/temp/news-5.jpg" alt="")
+                        %span.carousel_item-title.carousel_item-title__decorated Лица победы
+
+        %footer.footer
+            .footer_mobile
+                .social
+                    %span.social_title подписывайтесь на нас в соцсетях
+                    .social_links
+                        %a.social_link.social_link__vk(href="#")
+                        %a.social_link.social_link__fb(href="#")
+                        %a.social_link.social_link__insta(href="#")
+                        %a.social_link.social_link__youtube(href="#")
+                        %a.social_link.social_link__tw(href="#")
+                .footer_menu
+                    %a.footer_menu-link(href="afisha.html") афиша
+                    %a.footer_menu-link(href="/about.html") адреса
+                    %a.footer_menu-link(href="#") купить билет
+                    %a.footer_menu-link(href="#") схема зала
+                    %a.footer_menu-link(href="#") фотобанк
+                    %a.footer_menu-link(href="volunteers.html") клуб волонтеров
+                    %a.footer_menu-link(href="/partners.html") партнеры театра
+                    %a.footer_menu-link(href="#") контакты
+            .footer_content
+                .footer_columns
+                    .footer_column.footer_column__flex
+                        %img.footer_logo(src="src/img/dkm.svg" alt="")
+                        %div.footer_contacts
+                            .footer_adress
+                                %span Москва 
+                                %span Малая Бронная, 4
+                                %a(href="mailto:mbronnaya@theatre.ru") mbronnaya@theatre.ru
+                            %a.footer_contacts-button все контакты
+                    .footer_column
+                        %p.footer_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы  «Московский драматический театр на Малой Бронной» 
+                        .footer_documents
+                            %span.footer_inn ИНН 7703001970
+                            %a.footer_documents-link Документы
+                .footer_bottom
+                    %img.footer_bottom-image(src="src/img/bank-of-vacancies.jpg" alt="")
+                    %img.footer_bottom-image(src="src/img/active-citizen.jpg" alt="")
+                    %img.footer_bottom-image(src="src/img/year-of-theatre.jpg" alt="")
+                    %a.footer_outer-link(href="#") mos.ru
+
+
+
+        %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")
+        %script(src="src/js/tiny-slider.min.js")
+        %script(src="src/js/main.js")
+        %script(src="src/js/about.js")
+                                
+
+

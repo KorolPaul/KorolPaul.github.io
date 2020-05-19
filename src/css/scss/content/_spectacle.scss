@@ -8,6 +8,10 @@
     @include desktop {
         column-gap: 30rem;
     }
+
+    &__line {
+        display: block;
+    }
 }
 
 .spectacle {
@@ -42,6 +46,33 @@
             column-gap: 20rem;
         }
     }
+    &__alternate {
+        display: block;
+    }
+    &__line {
+        display: flex;
+        padding-top: 28rem;
+        margin: 0 0 20rem;
+        @include tablet {
+            padding-top: 22rem;
+            padding-bottom: 20rem;
+        }
+        @include desktop {
+            padding-top: 36rem;
+        }
+        @include desktop-large {
+            padding-top: 50rem;
+        }
+
+        &::after {
+            left: 134rem;
+            right: 0;
+            @include tablet {
+                display: block;
+                left: 0;
+            }
+        }
+    }
 
     &_gallery {
         grid-row: 1 / 2;
@@ -54,7 +85,6 @@
         position: relative;
         margin: 0 0 13rem;
         height: 180rem;
-
         @include tablet {
             height: 150rem;
         }
@@ -63,6 +93,28 @@
         }
         @include desktop-large {
             height: 352rem;
+        }
+
+        .spectacle__line & {
+            margin: 0 18rem 0 0;
+            width: 116rem;
+            height: 116rem;
+            flex-shrink: 0;
+            @include tablet {
+                width: 90rem;
+                height: 90rem;
+                margin-right: 12rem;
+            }
+            @include desktop {
+                width: 144rem;
+                height: 144rem;
+                margin-right: 28rem;
+            }
+            @include desktop-large {
+                width: 206rem;
+                height: 206rem;
+                margin-right: 40rem;
+            }
         }
     }
     &_image {
@@ -107,6 +159,21 @@
             left: 46rem;
             bottom: 46rem;
         }
+
+        .spectacle__line & {
+            position: static;
+            margin: 0 0 5rem 6rem;
+            left: 6rem;
+            top: 5rem;
+            bottom: auto;
+            @include tablet {
+                margin: 0;
+                position: absolute;
+                left: 6rem;
+                top: 1rem;
+                bottom: auto;
+            }
+        }
     }
     &_tag {
         color: $light_color;
@@ -123,11 +190,6 @@
         &::after {
             display: none;
         }
-
-        &__bright {
-            color: $bright_color;
-        }
-
         &::before {
             content: "";
             background-color: currentColor;
@@ -138,6 +200,15 @@
             top: 0;
             transform: rotate(35deg);
         }
+
+        .spectacle__line & {
+            color: #9B9B9B;
+        }
+        &__bright,
+        .spectacle__line &__bright {
+            color: $bright_color;
+        }
+
     }
     &_header {
         grid-row: 2 / 3;
@@ -153,6 +224,18 @@
         }
         @include desktop-large {
             min-height: 145rem;
+        }
+
+        .spectacle__line & {
+            @include tablet {
+                min-height: 52rem;
+            }
+            @include desktop {
+                min-height: 80rem;
+            }
+            @include desktop-large {
+                min-height: 118rem;
+            }
         }
     }
     &_title {
@@ -253,6 +336,9 @@
                 }
             }
         }
+        .spectacle__line & {
+            margin-bottom: 12rem;
+        }
     }
     &_description {
         grid-row: 3 / 4;
@@ -293,7 +379,8 @@
         }
     }
 
-    &_adress {
+    &_adress,
+    &_duration {
         color: $color;
         display: inline-block;
         margin: 0 0 10rem 16rem;
@@ -301,7 +388,6 @@
         line-height: 16rem;
         text-decoration: none;
         position: relative;
-        border-bottom: 1rem dashed currentColor;
         @include tablet {
             font-size: 11rem;
             line-height: 14rem;
@@ -327,15 +413,83 @@
                 margin-bottom: 0;
             }
         }
+        .spectacle__line & {
+            margin-left: 20rem;
+            @include tablet {
+                display: inline-block;
+                margin-right: 12rem;
+                margin-bottom: 2rem;
+            }
+            @include desktop {
+                margin-right: 60rem;
+            }
+
+            &::before {
+                left: -20rem;
+            }
+        }
+    }
+    &_adress {
+        border-bottom: 1rem dashed currentColor;
 
         &::before {
-            content: url(#{$img}/adress.svg);
+            content: '';
+            background: url(#{$img}/adress.svg) no-repeat center center / 100% auto;
             position: absolute;
             left: -16rem;
             top: 2rem;
+            height: 13rem;
+            width: 11rem;
+            @include tablet {
+                height: 11rem;
+                width: 9rem;
+            }
+            @include desktop {
+                height: 12rem;
+                width: 10rem;
+                top: 4rem;
+            }
+            @include desktop-large {
+                height: 18rem;
+                width: 14rem;
+                top: 2rem;
+            }
         }
         &::after {
             display: none;
+        }
+
+        .spectacle__line & {
+            margin-bottom: 0;
+        }
+    }
+    &_duration {
+        &::before {
+            content: '';
+            background: url(#{$img}/clock-dark.svg) no-repeat center center /  auto 100%;
+            position: absolute;
+            left: -16rem;
+            top: 2rem;
+            height: 11rem;
+            width: 11rem;
+            @include tablet {
+                height: 9rem;
+                width: 9rem;
+            }
+            @include desktop {
+                height: 12rem;
+                width: 12rem;
+                top: 4rem;
+            }
+            @include desktop-large {
+                height: 14rem;
+                width: 14rem;
+                top: 2rem;
+            }
+
+            .spectacle__line & {
+                left: -21rem;
+            }
         }
     }
     &_creators {
@@ -382,6 +536,12 @@
                 padding-right: 50rem;
             }
         }
+        .spectacle__alternate & {
+            padding: 0;
+        }
+        .spectacle__line & {
+            margin: 0;
+        }
     }
     &_info-column {
         @include tablet {
@@ -420,6 +580,18 @@
             bottom: 7rem;
             font-size: 14rem;
             line-height: 18rem;
+        }
+
+        .spectacle__alternate & {
+            top: auto;
+            bottom: 1rem;
+        }
+        .spectacle__line & {
+            top: auto;
+            bottom: 10rem;
+            @include tablet {
+                bottom: 0;
+            }
         }
     }
     &_controls {
@@ -478,6 +650,17 @@
         @include desktop-large {
             min-width: 266rem;
         }
+
+        .spectacle__alternate & {
+            margin-top: 3rem;
+            white-space: normal;
+        }
+        .spectacle__line & {
+            margin: 0;
+            @include tablet {
+                margin: 12rem 0;
+            }
+        }
     }
     &_more-info {
         display: block;
@@ -503,9 +686,106 @@
                 text-align: left;
             }
         }
+        .spectacle__alternate & {
+            display: inline-block;
+            margin: 8rem 0 0;
+        }
+        .spectacle__line & {
+            @include tablet {
+                line-height: 1.3;
+                order: 3;
+            }
+        }
 
         &::after {
             display: none;
+
+            .spectacle__alternate &,
+            .spectacle__line & {
+                display: block;
+            }
+        }
+    }
+    &_bottom {
+        border-top: 1rem dashed #9b9b9b;
+        padding: 16rem 0 0;
+        margin: 16rem 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include desktop {
+            padding-top: 26rem;
+            margin-top: 26rem;
+        }
+
+        .spectacle__line & {
+            align-items: flex-end;
+            padding: 0;
+            border: none;
+            @include tablet {
+                flex-direction: column;
+                justify-content: center;
+                align-items:  center;
+                text-align: center;
+                flex-shrink: 0;
+                padding: 0 0 0 36rem;
+                border-left: 1rem dashed #9B9B9B;
+                margin: 0;
+            }
+        }
+    }
+    &_bottom-info {
+        padding-right: 30rem;
+        @include tablet {
+            padding-right: 20rem;
+        }
+        @include desktop {
+            padding-right: 30rem;
+        }
+
+        .spectacle__line & {
+            @include tablet {
+                display: contents;
+            }
+        }
+    }
+    &_bottom-date {
+        display: block;
+        font-weight: bold;
+        font-size: 14rem;
+        line-height: 20rem;
+        @include tablet {
+            font-size: 11rem;
+            line-height: 16rem;
+        }
+        @include desktop {
+            font-size: 14rem;
+            line-height: 24rem;
+        }
+    }
+    &_content {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        @include tablet {
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+    }
+    &_content-column {
+        width: 100%;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 16rem 34rem 0 0;
+        }
+        @include desktop {
+            padding: 25rem 100rem 0 0;
+        }
+        @include desktop-large {
+            padding: 25rem 140rem 0 0;
         }
     }
 }

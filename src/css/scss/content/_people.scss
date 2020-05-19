@@ -5,6 +5,30 @@
         margin-bottom: 34rem;
     }
 
+    &__big {
+        position: relative;
+        padding:28rem 0 36rem;
+        @include tablet {
+            padding-bottom: 0;
+        }
+        @include desktop {
+            padding-top: 46rem;
+        }
+
+        &::after {
+            content: "";
+            height: 1rem;
+            background: #9b9b9b;
+            position: absolute;
+            bottom: 0;
+            left: -$layout_indent;
+            right: -$layout_indent;
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
     &_title {
         text-align: left;
         font-size: 12rem;

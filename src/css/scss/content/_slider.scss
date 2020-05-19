@@ -1,12 +1,24 @@
 .slider {
     padding: 0 $layout_indent;
+    overflow: hidden;
     @include tablet {
         padding-right: 0;
     }
 
-    &__accordion {
+    &__noindent {
         padding-left: 0;
         padding-right: 0;
+    }
+    &__accordion {
+        margin: 0 -#{$layout_indent * 2};
+        padding: 0 #{$layout_indent * 2};
+        @include desktop {
+            margin: 0 calc(#{$layout_indent * -2} - 3vw + 2rem) 0 0;
+            padding: 0;
+        }
+        @include desktop-large {
+            margin: 0 calc(#{$layout_indent * -2} - 5vw + 2rems) 0 0;
+        }
     }
 
     &_counter {

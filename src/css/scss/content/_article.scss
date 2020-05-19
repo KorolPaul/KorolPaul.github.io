@@ -1,0 +1,110 @@
+.article {
+    
+    &_slider-wrapper {
+        margin: 0 -#{$layout_indent} 10rem;
+        position: relative;
+        overflow: hidden;
+        @include desktop {
+            margin-right: -3vw;
+            margin-bottom: 22rem;
+        }
+        @include desktop-large {
+            margin-right: -5vw;
+            margin-bottom: 32rem;
+        }
+    }
+    &_columns {
+        margin: 0 0 28rem;
+        @include tablet {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 36rem;
+        }
+        @include desktop {
+            margin-bottom: 48rem;
+        }
+        @include desktop-large {
+            margin-bottom: 72rem;
+        }
+
+        &__indent {
+            @include tablet {
+                width: 50%;
+            }
+        }
+    }
+    &_content {
+        @include tablet {
+            flex-grow: 1;
+            padding: 34rem 0 0 0;
+        }
+        @include desktop {
+            padding-top: 48rem;
+        }
+        @include desktop-large {
+            padding-top: 100rem;
+        }
+
+        iframe {
+            width: 100%;
+            margin: 0 0 30rem;
+            @include tablet {
+                margin-top: 20rem;
+            }
+            @include desktop {
+                margin-bottom: 46rem;
+            }
+            @include desktop-large {
+                margin-bottom: 88rem;
+            }
+        }
+    }
+    &_image {
+        width: 100%;
+        margin: 0 0 $layout_indent;
+        @include tablet {
+            order: 2;
+            margin: 0 0 0 16rem;
+            flex-grow: 1;
+            flex-shrink: 0;
+            width: 48%;
+        }
+        @include desktop {
+            margin-left: 0 0 0 34rem;
+        }
+        @include desktop {
+            margin-left: 0 0 0 48rem;
+        }
+    }
+    &_date {
+        color: $bright_color;
+        font-weight: bold;
+        font-size: 12rem;
+        line-height: 32rem;
+        margin: 0 0 0 18rem;
+        position: relative;
+        @include tablet {
+            font-size: 10rem;
+            line-height: 16rem;
+        }
+        @include desktop {
+            font-size: 14rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 20rem;
+            line-height: 32rem;
+        }
+
+        &::before {
+            content: "";
+            background-color: currentColor;
+            height: 14rem;
+            width: 1rem;
+            position: absolute;
+            left: -11rem;
+            top: 1rem;
+            transform: rotate(35deg);
+        }
+    }
+}

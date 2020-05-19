@@ -1,0 +1,81 @@
+.person {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #9B9B9B;
+    padding: 0 0 32rem 0;
+    @include tablet {
+        flex-direction: row;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+    @include desktop {
+        padding-bottom: 42rem;
+    }
+    @include desktop-large {
+        padding-bottom: 52rem;
+    }
+
+    &_content {
+        display: contents;
+        @include tablet {
+            display: block;
+        }
+    }
+    &_title {
+        order: 1;
+        margin-top: 0;
+        @include tablet {
+            order: initial;
+        }
+    }
+    &_subtitle {
+        font-size: 16rem;
+        line-height: 26rem;
+        color: #4a4a4a;
+        margin: 0 0 18rem;
+        order: 2;
+        @include tablet {
+            order: initial;
+            font-size: 12rem;
+            line-height: 22rem;
+            margin-bottom: $layout_indent;
+            max-width: 120rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 26rem;
+            line-height: 48rem;
+            margin-bottom: 54rem;
+        }
+    }
+
+    &_image {
+        margin: 0 0 30rem;
+        width: 100%;
+        order: 3;
+        flex-shrink: 0;
+        @include tablet {
+            order: initial;
+            width: 250px;
+            margin: 0 16rem 0 0;
+        }
+        @include desktop {
+            width: 414px;
+            margin: 0 36rem 0 0;
+        }
+        @include desktop-large {
+            width: 590px;
+            margin: 0 48rem 0 0;
+        }
+    }
+    &_text {
+        order: 4;
+        @include tablet {
+            order: initial;
+            max-width: 75%;
+        }
+    }
+}

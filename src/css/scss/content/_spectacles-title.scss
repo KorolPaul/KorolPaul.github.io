@@ -1,0 +1,24 @@
+.spectacles-title {
+    font-weight: bold;
+    font-size: 14rem;
+    line-height: 46rem;
+    color: $bright_color;
+    margin: 10rem 0 $layout_indent;
+    display: block;
+    @include tablet {
+        font-size: 12rem;
+        line-height: 46rem;
+        margin-top: 0;
+        margin-bottom: 10rem;
+    }
+    @include desktop {
+        font-size: 14rem;
+        line-height: 46rem;
+        margin-bottom: 16rem;
+    }
+    @include desktop-large {
+        font-size: 20rem;
+        line-height: 46rem;
+        margin-bottom: 30rem;
+    }
+}

@@ -93,7 +93,7 @@
             left: 0;
             right: 0;
             background: rgba(#fff, .8);
-            padding: 10rem 4rem 12rem;
+            padding: 10rem 0 12rem;
         }
         @include desktop {
             padding: 20rem 4rem 20rem;
@@ -106,9 +106,11 @@
         @include light-button;
         max-width: 47%;
         @include tablet {
+            padding-left: 8rem;
+            padding-right: 8rem;
             max-width: none;
             flex-grow: 1;
-            margin: 0 16rem;
+            margin: 0 8rem;
         }
         @include desktop-large {
             margin: 0 20rem;

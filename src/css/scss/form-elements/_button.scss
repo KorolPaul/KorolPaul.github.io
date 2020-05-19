@@ -12,19 +12,17 @@
     @include tablet {
         white-space: nowrap;
         font-size: 12rem;
-        line-height: 24rem;
-        padding-top: 6rem;
-        padding-bottom: 7rem;
+        line-height: 18rem;
+        padding-top: 8rem;
+        padding-bottom: 9rem;
     }
     @include desktop {
         font-size: 16rem;
-        line-height: 24rem;
-        padding-top: 16rem;
-        padding-bottom: 20rem;
+        padding-top: 18rem;
+        padding-bottom: 22rem;
     }
     @include desktop-large {
         font-size: 20rem;
-        line-height: 24rem;
         padding-top: 25rem;
         padding-bottom: 35rem;
     }
@@ -55,13 +53,32 @@
 @mixin light-button {
     color: $color;
     background: $light_color;
-    border: 1px solid currentColor;
+    border: 1rem solid currentColor;
 
     &:hover {
         background-color: $blue_color;
     }
     &:active {
         background-color: $blue_color;
+    }
+}
+@mixin bright-button {
+    display: block;
+    color: $bright_color;
+    background: $light_color;
+    border: 1rem solid currentColor;
+    transition: 0.2s ease-in-out color, 0.2s ease-in-out backround-color, 0.2s ease-in-out opacity;
+
+    &:hover {
+        background-color: $bright_color;
+        color: $light_color;
+        border-color: $bright_color;
+    }
+    &:active {
+        background-color: $bright_color;
+        color: $light_color;
+        border-color: $bright_color;
+        opacity: 0.8;
     }
 }
 
@@ -73,4 +90,26 @@ input[type="submit"] {
 
 .button {
     @include button;
+}
+
+input[type="submit"] {
+    @include bright-button;
+    height: 62rem;
+    width: 100%;
+    box-sizing: border-box;
+    @include tablet {
+        height: 38rem;
+        font-size: 12rem;
+        line-height: 18rem;
+    }
+    @include desktop {
+        font-size: 18rem;
+        line-height: 24rem;
+        height: 60rem;
+    }
+    @include desktop-large {
+        font-size: 20rem;
+        line-height: 24rem;
+        height: 84rem;
+    }
 }
