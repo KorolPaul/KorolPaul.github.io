@@ -11,7 +11,8 @@
     }
 
     &_item {
-
+        margin-bottom: 1px;
+        
         .accordion__secondary & {
             border-top: 1rem dashed #9b9b9b;
 
@@ -26,7 +27,7 @@
         font-size: 18rem;
         line-height: 30rem;
         font-weight: bold;
-        padding: 13rem 40rem 19rem 28rem;
+        padding: 15rem 40rem 17rem 28rem;
         position: sticky;
         top: 0;
         z-index: 2;
@@ -133,10 +134,8 @@
         }
 
         .accordion__secondary & {
-            @include tablet {
-                padding-left: 0;
-                padding-right: 0;
-            }
+            padding-left: 0;
+            padding-right: 0;
         }
         .accordion_item__closed & {
             display: none;

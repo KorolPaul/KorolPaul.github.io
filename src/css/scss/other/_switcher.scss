@@ -15,6 +15,7 @@
         transition: 0.2s ease-in-out background;
         @include tablet {
             padding: 9rem 12rem 11rem;
+            min-width: 120rem;
         }
         @include desktop {
             font-size: 16rem;

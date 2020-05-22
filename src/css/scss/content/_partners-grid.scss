@@ -1,0 +1,59 @@
+.partners-grid {
+    border-bottom: 1rem solid #9b9b9b;
+    margin: 0 0 40rem;
+    @include tablet {
+        padding: 40rem 0 0;
+    }
+    @include desktop {
+        padding-top: 70rem;
+    }
+    @include desktop-large {
+        padding-top: 100rem;
+    }
+
+    &_section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 0 20rem;
+    }
+    &_title {
+        font-weight: 500;
+        font-size: 14rem;
+        line-height: 22rem;
+        display: block;
+        width: 100%;
+        padding-right: 55%;
+        margin: 0 0 40rem;
+        box-sizing: border-box;
+        @include tablet {
+            font-size: 12rem;
+            line-height: 22rem;
+            width: 23%;
+            padding-right: 20rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 26rem;
+            line-height: 48rem;
+        }
+    }
+    &_item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 40rem;
+        width: 40%;
+        @include tablet {
+            width: 23%;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}

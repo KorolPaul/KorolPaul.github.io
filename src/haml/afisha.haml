@@ -57,14 +57,15 @@
                     %button.filters_control
                         %img.filters_control-icon(src="src/img/calendar.svg" alt="")
                         %span.filters_control-text календарь
-            .spectacle-date.spectacle-date__today
-                %span сегодня, 21 сентября воскресенье
+            
             
             .tabs
-                .tabs_content.active(data-tab="1")
+                .tabs_content.tabs_content__indent(data-tab="2")
                     .spectacles
                         .spectacle.spectacle__alternate
                             .spectacle_image-wrapper
+                                .spectacle_tags
+                                    %a.spectacle_tag.spectacle_tag__bright(href="/") премьера
                                 %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
                             .spectacle_header
                                 %h2.spectacle_title Ревизор
@@ -85,6 +86,8 @@
 
                         .spectacle.spectacle__alternate
                             .spectacle_image-wrapper
+                                .spectacle_tags
+                                    %a.spectacle_tag(href="/") детский
                                 %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
                             .spectacle_header 
                                 %h2.spectacle_title Подлинная история Фрекен Бок. Подлинная история Фрекен Бок
@@ -105,6 +108,8 @@
                                     
                         .spectacle.spectacle__alternate
                             .spectacle_image-wrapper
+                                .spectacle_tags
+                                    %a.spectacle_tag(href="/") детский
                                 %img.spectacle_image(src="src/img/temp/spectacle-2.jpg" alt="")
                             .spectacle_header
                                 %h2.spectacle_title Макбет
@@ -123,7 +128,10 @@
                                     %a.spectacle_more-info(href="/") подробнее
                                 %button.spectacle_button купить билет
 
-                .tabs_content(data-tab="2")
+                .tabs_content.active(data-tab="1")
+                    .spectacle-date.spectacle-date__today
+                        %span сегодня, 21 сентября
+                            %span воскресенье
                     .spectacles.spectacles__line
                         .spectacle.spectacle__line
                             .spectacle_image-wrapper
@@ -237,13 +245,13 @@
         %footer.footer
             .footer_mobile
                 .social
-                    %span.social_title подписывайтесь на нас в соцсетях
+                    %span.social_title следите за нами в соцсетях
                     .social_links
                         %a.social_link.social_link__vk(href="#")
                         %a.social_link.social_link__fb(href="#")
                         %a.social_link.social_link__insta(href="#")
                         %a.social_link.social_link__youtube(href="#")
-                        %a.social_link.social_link__tw(href="#")
+                        
                 .footer_menu
                     %a.footer_menu-link(href="afisha.html") афиша
                     %a.footer_menu-link(href="/about.html") адреса

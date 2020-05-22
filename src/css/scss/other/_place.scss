@@ -67,8 +67,11 @@
         }
         @include desktop-large {
             font-size: 20rem;
-            line-height: 16rem;
             margin-bottom: 28rem;
+            line-height: 30rem;
+            height: 84rem;
+            padding-top: 25rem;
+            padding-bottom: 35rem;
         }
     }
     &_map-holder {
@@ -78,15 +81,36 @@
             width: 70%;
         }
 
+
+        & > div:not([class]) {
+            padding: 0 0 100%;
+            @include tablet {
+                padding: 0;
+            }
+        }
         iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
             width: 100%;
+            position: absolute !important;
+            @include tablet {
+                height: 212rem;
+                position: relative !important;
+            }
+            @include desktop {
+                height: 356rem;
+            }
+            @include desktop-large {
+                height: 500rem;
+            }
         }
     }
     &_map-buttons {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 20rem 0 0;
+        margin: 20rem 0 32rem;
         @include tablet {
             position: absolute;
             bottom: 0;
@@ -94,6 +118,7 @@
             right: 0;
             background: rgba(#fff, .8);
             padding: 10rem 0 12rem;
+            margin-bottom: 0;
         }
         @include desktop {
             padding: 20rem 4rem 20rem;

@@ -1,125 +1,77 @@
 .events {
-    @include tablet {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 16rem;
-    }
-    @include desktop {
-        column-gap: 36rem;
-    }
-    @include desktop-large {
-        column-gap: 48rem;
-    }
+    margin: 0 0 20rem;
 
-    &_item {
-        display: flex;
-        padding: 24rem 0;
-        position: relative;
+    &_title {
+        display: block;
+        font-size: 14rem;
+        line-height: 46rem;
+        color: $bright_color;
         @include tablet {
-            flex-direction: column;
+            font-size: 12rem;
+            line-height: 46rem;
         }
         @include desktop {
-            padding: 32rem 0;
+            font-size: 18rem;
+            line-height: 46rem;
+            margin-bottom: 22rem;
         }
         @include desktop-large {
-            padding: 40rem 0;
+            font-size: 26rem;
+            line-height: 46rem;
+            margin-bottom: 40rem;
         }
-
+    }
+    &_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 32rem;
+        column-gap: 32rem;
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 40rem;
+            column-gap: 40rem;
+        }
+        @include desktop {
+            row-gap: 62rem;
+            column-gap: 62rem;
+        }
+        @include desktop-large {
+            row-gap: 100rem;
+            column-gap: 100rem;
+        }
+    }
+    &_item {
         &::after {
-            content: "";
-            height: 1rem;
-            border: none;
-            background: #9b9b9b;
-            position: absolute;
-            bottom: 0;
-            left: -$layout_indent;
-            right: -$layout_indent;
-            @include tablet {
-                display: none;
-            }
+            display: none;
         }
     }
     &_item-image-wrapper {
         overflow: hidden;
-        height: 124rem;
-        width: 124rem;
-        margin: 0 20rem 0 0;
-        @include tablet {
-            height: auto;
-            width: 100%;
-            margin: 12rem 0 0;
-            order: 2;
-        }
+        margin: 0 0 8rem;
         @include desktop {
-            margin-top: 18rem;
-        }
-        @include desktop-large {
-            margin-top: 36rem;
+            margin-bottom: 14rem;
         }
     }
     &_item-image {
         width: 100%;
-        height: 100%;
-        max-width: none;
-        transform-origin: center center;
         transition: 0.2s ease-in-out transform;
-        @include tablet {
-            height: auto;
-        }
 
-        &:hover {
-            transform: scale(1.15);
+        .events_item:hover & {
+            transform: scale(1.1);
         }
     }
     &_item-title {
         font-weight: bold;
-        font-size: 20rem;
+        font-size: 16rem;
         line-height: 24rem;
-        display: block;
-        position: relative;
-        @include tablet {
-            font-size: 20rem;
-            line-height: 28rem;
-        }
         @include desktop {
-            font-size: 32rem;
-            line-height: 42rem;
-        }
-        @include desktop-large {
-            font-size: 42rem;
-            line-height: 58rem;
-        }
-    }
-    &_item-date {
-        color: $bright_color;
-        font-weight: bold;
-        font-size: 12rem;
-        line-height: 32rem;
-        margin: 0 0 0 16rem;
-        position: relative;
-        @include tablet {
-            font-size: 10rem;
-            line-height: 16rem;
-        }
-        @include desktop {
-            font-size: 14rem;
+            font-size: 22rem;
             line-height: 32rem;
         }
         @include desktop-large {
-            font-size: 20rem;
-            line-height: 32rem;
-        }
-
-        &::before {
-            content: "";
-            background-color: currentColor;
-            height: 14rem;
-            width: 1rem;
-            position: absolute;
-            left: -9rem;
-            top: 0;
-            transform: rotate(35deg);
+            font-size: 36rem;
+            line-height: 50rem;
         }
     }
 }

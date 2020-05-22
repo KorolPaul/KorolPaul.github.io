@@ -28,6 +28,27 @@
         }
     }
 
+    .accordion-page & {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-top: 1px solid #040304;
+        @include tablet {
+            padding-left: 128rem;
+            padding-top: 16rem;
+            border: none;
+        }
+        @include desktop {
+            padding-right: 54rem;
+            padding-left: 19vw;
+            padding-top: 26rem;
+        }
+        @include desktop-large {
+            padding-left: 18vw;
+            padding-top: 40rem;
+        }
+    }
+
     &_title {
         display: block;
         font-size: 17rem;
@@ -35,7 +56,7 @@
         padding: 0 0 0 15rem;
         position: absolute;
         top: -44rem;
-        left: 120rem;
+        left: 130rem;
         @include tablet {
             font-weight: bold;
             position: relative;
@@ -78,6 +99,13 @@
             }
             @include desktop-large {
                 height: 32rem;
+            }
+        }
+
+        .accordion-page & { 
+            top: -54rem;
+            @include tablet {
+                top: 0;
             }
         }
     }

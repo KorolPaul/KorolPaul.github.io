@@ -2,6 +2,7 @@
     background: $bright_color;
     border: 1rem solid currentColor;
     box-sizing: border-box;
+    border-radius: 0;
     cursor: pointer;
     color: $light_color;
     font-size: 14rem;
@@ -67,7 +68,38 @@
     color: $bright_color;
     background: $light_color;
     border: 1rem solid currentColor;
+    height: 62rem;
+    width: 100%;
+    padding: 12rem 10rem;
+    box-sizing: border-box;
+    text-align: center;
     transition: 0.2s ease-in-out color, 0.2s ease-in-out backround-color, 0.2s ease-in-out opacity;
+    @include tablet {
+        height: 38rem;
+        font-size: 12rem;
+        line-height: 18rem;
+        padding-top: 8rem;
+        padding-bottom: 9rem;
+        display: inline-block;
+        width: auto;
+        min-width: 200rem;
+    }
+    @include desktop {
+        font-size: 18rem;
+        line-height: 24rem;
+        height: 60rem;
+        padding-top: 18rem;
+        padding-bottom: 22rem;
+        min-width: 325rem;
+    }
+    @include desktop-large {
+        font-size: 20rem;
+        line-height: 24rem;
+        height: 84rem;
+        padding-top: 25rem;
+        padding-bottom: 35rem;
+        min-width: 460rem;
+    }
 
     &:hover {
         background-color: $bright_color;
@@ -94,22 +126,5 @@ input[type="submit"] {
 
 input[type="submit"] {
     @include bright-button;
-    height: 62rem;
-    width: 100%;
-    box-sizing: border-box;
-    @include tablet {
-        height: 38rem;
-        font-size: 12rem;
-        line-height: 18rem;
-    }
-    @include desktop {
-        font-size: 18rem;
-        line-height: 24rem;
-        height: 60rem;
-    }
-    @include desktop-large {
-        font-size: 20rem;
-        line-height: 24rem;
-        height: 84rem;
-    }
+    padding: 12rem 20rem;
 }

@@ -6,6 +6,7 @@
     font-weight: bold;
     padding: 35rem $layout_indent 15rem;
     margin: 0 -#{$layout_indent};
+    border-top: 2px solid #9B9B9B;
     @include tablet {
         font-size: 12rem;
         line-height: 20rem;
@@ -24,6 +25,11 @@
     }
 
     &__today {
+        border: none;
         color: $bright_color;
+    }
+
+    span {
+        display: block;
     }
 }

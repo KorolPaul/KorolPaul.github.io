@@ -5,5 +5,12 @@
         &.active {
             display: block;
         }
+
+        &__indent {
+            padding-top: 30rem;
+            @include desktop {
+                padding-top: 35rem;
+            }
+        }
     }
 }

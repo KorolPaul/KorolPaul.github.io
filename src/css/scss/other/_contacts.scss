@@ -62,8 +62,19 @@
         }
     }
     &_right {
+        font-size: 14rem;
         @include tablet {
             width: 63%;
+            font-size: 12rem;
+            line-height: 22rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 26rem;
+            line-height: 48rem;
         }
     }
     &_description {
@@ -84,6 +95,12 @@
             font-size: 26rem;
             line-height: 48rem;
             margin-bottom: 36rem;
+        }
+    }
+    &_link {
+        display: block;
+        &::after {
+            display: none;
         }
     }
     &_title {
@@ -149,30 +166,34 @@
     }
     &_button {
         @include blue-button;
+        box-sizing: border-box;
         display: block;
-        font-size: 12rem;
-        line-height: 16rem;
+        font-size: 18px;
+        line-height: 28px;
+        height: 62rem;
         padding: 13rem 20rem 17rem;
         margin: 0 0 34rem;
-        width: 100%;
         text-align: center;
         @include tablet {
             font-size: 11rem;
             line-height: 16rem;
+            height: 37rem;
             padding: 9rem 12rem 12rem;
             margin: 0 8rem;
             flex-grow: 1;
         }
         @include desktop {
             font-size: 16rem;
-            line-height: 16rem;
+            line-height: 18rem;
             padding: 20rem 33rem 24rem;
             margin: 0 16rem;
+            height: 60rem;
         }
         @include desktop-large {
             font-size: 20rem;
-            line-height: 16rem;
+            line-height: 42rem;
             margin: 0 24rem;
+            height: 84rem;
         }
 
         &::after {
@@ -180,7 +201,7 @@
         }
     }
     &_more {
-        background: url(#{$img}/arrow-down-bold.svg) no-repeat right center;
+        background: url(#{$img}/arrow-down-bold.svg) no-repeat right 44%;
         border: none;
         color: $color;
         font-weight: bold;

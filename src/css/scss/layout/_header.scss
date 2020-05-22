@@ -7,6 +7,14 @@
         z-index: 1;
     }
 
+    .accordion-page & {
+        background-color: $blue_color;
+        padding-bottom: 30rem;
+        @include tablet {
+            background-color: transparent;
+            padding-bottom: 20rem;
+        }
+    }
     .fixed-header & {
         display: flex;
         align-items: center;
@@ -14,10 +22,10 @@
         top: 0;
         left: 0;
         right: 0;
-        z-index: 2;
         background: rgba(227, 227, 227, 0.96);
         padding-top: 15rem;
         padding-bottom: 15rem;
+        z-index: 3;
         @include tablet {
             position: relative;
             background: transparent;

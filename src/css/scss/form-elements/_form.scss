@@ -7,20 +7,37 @@
     &_cell {
         margin: 0 0 22rem;
         @include tablet {
+            flex-grow: 1;
             margin-bottom: 16rem;
+        }
+        @include desktop {
+            margin-bottom: 24rem;
         }
 
         & + & {
             @include tablet {
                 width: 48%;
                 flex-shrink: 0;
+                flex-grow: 0;
                 margin-left: 16rem;
             }
             @include desktop {
-                margin-left: 0 0 0 34rem;
+                margin-left: 34rem;
+            }
+            @include desktop-large {
+                margin-left: 48rem;
+            }
+        }
+
+        &:only-child {
+            @include tablet {
+                padding-right: calc(48% + 16rem);
             }
             @include desktop {
-                margin-left: 0 0 0 48rem;
+                padding-right: calc(48% + 34rem);
+            }
+            @include desktop-large {
+                padding-right: calc(48% + 48rem);
             }
         }
     }
