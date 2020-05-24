@@ -12,11 +12,14 @@
     }
 
     &_section {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
         margin: 0 0 20rem;
+        border-bottom: 1px solid #9B9B9B;
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border-bottom: none;
+        }
     }
     &_title {
         font-weight: 500;
@@ -30,8 +33,9 @@
         @include tablet {
             font-size: 12rem;
             line-height: 22rem;
-            width: 23%;
+            width: 25%;
             padding-right: 20rem;
+            padding-top: 30rem;
         }
         @include desktop {
             font-size: 18rem;
@@ -42,18 +46,36 @@
             line-height: 48rem;
         }
     }
+    &_items {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 0 20rem;
+        @include tablet {
+            width: 75%;
+        }
+    }
     &_item {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 0 40rem;
-        width: 40%;
+        width: 50%;
         @include tablet {
-            width: 23%;
+            width: 33%;
+            min-height: 111rem;
         }
 
         &::after {
             display: none;
+        }
+
+        &:only-child {
+            width: 100%;
+            @include tablet {
+                width: 33%;
+            }
         }
     }
 }

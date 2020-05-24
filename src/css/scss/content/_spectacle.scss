@@ -55,13 +55,14 @@
     &__line {
         display: flex;
         padding-top: 28rem;
-        margin: 0 0 20rem;
+        margin: 0 0 10rem;
         @include tablet {
             padding-top: 22rem;
             padding-bottom: 20rem;
         }
         @include desktop {
             padding-top: 36rem;
+            margin-bottom: 0;
         }
         @include desktop-large {
             padding-top: 50rem;
@@ -73,6 +74,19 @@
             @include tablet {
                 display: block;
                 left: 0;
+            }
+        }
+
+        .search-results &:first-child {
+            padding-top: 12rem;
+             @include tablet {
+                padding-top: 22rem;
+            }
+            @include desktop {
+                padding-top: 36rem;
+            }
+            @include desktop-large {
+                padding-top: 50rem;
             }
         }
     }
@@ -88,6 +102,8 @@
         position: relative;
         margin: 0 0 13rem;
         height: 180rem;
+        display: block;
+        overflow: hidden;
         @include tablet {
             height: 150rem;
         }
@@ -96,6 +112,10 @@
         }
         @include desktop-large {
             height: 352rem;
+        }
+
+        &::after {
+            content: none;
         }
 
         .spectacle__line & {
@@ -125,6 +145,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: .2s ease-in-out transform;
+
+        .spectacle:hover & {
+            transform: scale(1.08);
+        }
     }
     &_date {
         color: $light_color;
@@ -240,6 +265,14 @@
                 min-height: 118rem;
             }
         }
+        
+        &:hover,
+        &:active {
+            color: $color;
+        }
+        &::after {
+            content: none;
+        }
     }
     &_title {
         grid-row: 2 / 3;
@@ -333,6 +366,19 @@
         .spectacle__line & {
             margin-bottom: 12rem;
         }
+    }
+    &_title-text {
+        border-bottom: 2rem solid transparent;
+        transition: .2s ease-in-out border-color;
+
+        .spectacle:hover &,
+        .spectacle:active & {
+            border-bottom-color: currentColor;
+        }
+
+        &::after {
+            content: none;
+        }        
     }
     &_description {
         grid-row: 3 / 4;
@@ -428,12 +474,14 @@
 
         &::before {
             content: '';
-            background: url(#{$img}/adress.svg) no-repeat center center / 100% auto;
+            background: url(#{$img}/adress-bright.svg) no-repeat center center / 100% auto;
             position: absolute;
             left: -16rem;
             top: 2rem;
             height: 13rem;
             width: 11rem;
+            filter: grayscale(1) brightness(.5);
+            transition: .2s ease-in-out transform, .2s ease-in-out filter;
             @include tablet {
                 height: 11rem;
                 width: 9rem;
@@ -451,6 +499,11 @@
         }
         &::after {
             display: none;
+        }
+
+        &:hover::before {
+            filter: none;
+            transform: scale(1.2);
         }
 
         .spectacle__line & {
@@ -659,9 +712,12 @@
         .spectacle__alternate & {
             margin-top: 3rem;
             white-space: normal;
-            width: 88rem;
             min-width: 0;
             flex-shrink: 0;
+            width: 100%;
+            @include tablet {
+                width: 88rem;
+            }
             @include desktop {
                 width: 116rem;
             }
@@ -719,12 +775,11 @@
         }
 
         &::after {
-            display: none;
-
-            .spectacle__alternate &,
-            .spectacle__line & {
-                display: block;
-            }
+            bottom: 3rem;
+            transform: scaleX(0);
+        }
+        &:hover::after {
+            transform: scaleX(1);
         }
     }
     &_bottom {
@@ -732,9 +787,11 @@
         padding: 16rem 0 0;
         margin: 16rem 0 0;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         @include desktop {
+            flex-direction: row;
             padding-top: 26rem;
             margin-top: 26rem;
         }
@@ -744,6 +801,7 @@
             padding: 0;
             border: none;
             width: 100%;
+            flex-direction: column;
             @include tablet {
                 flex-direction: column;
                 justify-content: center;
@@ -759,7 +817,9 @@
     }
     &_bottom-info {
         padding-right: 30rem;
+        order: 2;
         @include tablet {
+            order: 1;
             padding-right: 15rem;
         }
         @include desktop {
@@ -767,6 +827,7 @@
         }
 
         .spectacle__line & {
+            order: 1;
             @include tablet {
                 display: contents;
             }

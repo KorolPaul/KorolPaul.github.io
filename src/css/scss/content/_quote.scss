@@ -101,5 +101,14 @@
             font-size: 26rem;
             line-height: 48rem;
         }
+
+        &:hover,
+        &:active {
+            color: $color;
+        }
+    }
+    &_media-link {
+        color: $bright_color;
+        margin: 0 0 0 5rem;
     }
 }

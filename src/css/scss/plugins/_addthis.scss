@@ -6,10 +6,12 @@
 .at-share-btn {
     box-sizing: border-box;
     background-color: transparent !important;
-    border: 1rem solid $color !important;
+    border: none !important;
     width: 50rem !important;
     height: 50rem !important;
     display: inline-block !important;
+    position: relative;
+    overflow: visible !important;
     @include tablet {
         width: 30rem !important;
         height: 30rem !important;
@@ -25,6 +27,7 @@
 
     svg {
         fill: $color !important;
+        transition: .2s ease-in-out fill;
     }
 
     .at-icon-wrapper {
@@ -36,5 +39,35 @@
             height: 100% !important;
             width: 100% !important;
         }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px $color inset;
+        transition: .2s ease-in-out all;
+    }
+    &::after{
+        content: none;
+    }
+
+    &:hover {
+        transform: none !important;
+
+        svg {
+            fill: $bright_color !important;
+        }
+    }
+    &:hover::before {
+        box-shadow: 0 0 0 1px $bright_color inset;
+        top: -3px;
+        right: -3px;
+        left: -3px;
+        bottom: -3px;
     }
 }

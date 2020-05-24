@@ -21,23 +21,28 @@
             %nav.menu
                 .menu-toggle
 
-                %a.menu_link.menu_link__mobile(href="/") купить билет
-                %a.menu_link.menu_link__mobile(href="/") адреса
-                %a.menu_link(href="/afisha.html") афиша
-                %a.menu_link(href="/about.html") о театре
-                %a.menu_link(href="/events.html") события
-                %a.menu_link(href="/press.html") пресса о театре
-                %a.menu_link(href="/volunteers.html") клуб волонтеров
-                %a.menu_link(href="/partners.html") партнеры театра
-                %a.menu_link.menu_link__indent(href="/search.html") поиск
+                .menu_content
+                    %button.menu_search-icon
+                    %img.menu_logo(src="src/img/logo-mobile-menu.svg" alt="")
 
-                .menu_social
-                    .social
-                        .social_links
-                            %a.social_link.social_link__vk(href="#")
-                            %a.social_link.social_link__fb(href="#")
-                            %a.social_link.social_link__insta(href="#")
-                            %a.social_link.social_link__youtube(href="#")
+
+                    %a.menu_link.menu_link__mobile(href="/") купить билет
+                    %a.menu_link.menu_link__mobile(href="/") адреса
+                    %a.menu_link.active(href="/afisha.html") афиша
+                    %a.menu_link(href="/about.html") о театре
+                    %a.menu_link(href="/events.html") события
+                    %a.menu_link(href="/press.html") пресса о театре
+                    %a.menu_link(href="/volunteers.html") клуб волонтеров
+                    %a.menu_link(href="/partners.html") партнеры театра
+                    %a.menu_link.menu_link__indent(href="/search.html") поиск
+
+                    .menu_social
+                        .social.social__header
+                            .social_links
+                                %a.social_link.social_link__vk(href="#")
+                                %a.social_link.social_link__fb(href="#")
+                                %a.social_link.social_link__insta(href="#")
+                                %a.social_link.social_link__youtube(href="#")
 
         %main.content
             %span.content_title поиск
@@ -45,36 +50,38 @@
             .search-results
                 %span.search-results_header 10 результатов по запросу «макбет трагедия»
             
-                %span.search-results_title спектакль
+                %span.search-results_title.search-results_title__small-indent спектакль
                 .search-results_section
                     .spectacles.spectacles__line
                         .spectacle.spectacle__line
-                            .spectacle_image-wrapper
+                            %a.spectacle_image-wrapper(href="spectacle.html")
                                 %img.spectacle_image(src="src/img/temp/spectacle-rect-1.jpg" alt="")
                             .spectacle_content
                                 .spectacle_content-column
                                     .spectacle_tags
-                                        %a.spectacle_tag.spectacle_tag__bright(href="/") премьера
-                                        %a.spectacle_tag(href="/") детский
-                                    .spectacle_header
-                                        %h2.spectacle_title Ревизор
+                                        %span.spectacle_tag.spectacle_tag__bright премьера
+                                        %span.spectacle_tag детский
+                                    %a.spectacle_header(href="spectacle.html")
+                                        %h2.spectacle_title
+                                            %span.spectacle_title-text Ревизор
                                     .spectacle_info
                                         %span.spectacle_duration 2 часа 30 мин. с антрактом
                                         %a.spectacle_adress(href="#") Центр «На Страстном»
                                         .spectacle_info-rating 16+
                         .spectacle.spectacle__line
-                            .spectacle_image-wrapper
+                            %a.spectacle_image-wrapper(href="spectacle.html")
                                 %img.spectacle_image(src="src/img/temp/spectacle-rect-3.jpg" alt="")
                             .spectacle_content
                                 .spectacle_content-column
-                                    .spectacle_header
-                                        %h2.spectacle_title Подлинная история Фрекен Бок
+                                    %a.spectacle_header(href="spectacle.html")
+                                        %h2.spectacle_title
+                                            %span.spectacle_title-text Кентервильское привидение
                                     .spectacle_info
                                         %span.spectacle_duration 2 часа 30 мин. с антрактом
                                         %a.spectacle_adress(href="#") Центр «На Страстном»
                                         .spectacle_info-rating 16+
 
-                %span.search-results_title пресса
+                %span.search-results_title.search-results_title__small-indent пресса
                 .search-results_section
                     .press.press__big
                         .quote
@@ -105,31 +112,16 @@
 
                 %span.search-results_title событие
                 .search-results_section
-                    .events.events__grid
-                        %a.events_item(href="event-big.html")
-                            .events_item-image-wrapper
-                                %img.events_item-image(src="src/img/temp/news-1.jpg" alt="")
-                            .events_item-info
-                                %span.events_item-title ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
-                                %span.events_item-date 1 февраля 2020
-                        %a.events_item(href="event-big.html")
-                            .events_item-image-wrapper
-                                %img.events_item-image(src="src/img/temp/news-2.jpg" alt="")
-                            .events_item-info
-                                %span.events_item-title Лица победы
-                                %span.events_item-date 2 февраля 2020
-                        %a.events_item(href="event-big.html")
-                            .events_item-image-wrapper
-                                %img.events_item-image(src="src/img/temp/news-3.jpg" alt="")
-                            .events_item-info
-                                %span.events_item-title ПЕРЕЕЗД В ТКЗ «Дворец на Яузе»
-                                %span.events_item-date 3 февраля 2020
-                        %a.events_item(href="event-big.html")
-                            .events_item-image-wrapper
-                                %img.events_item-image(src="src/img/temp/news-4.jpg" alt="")
-                            .events_item-info
-                                %span.events_item-title Лица победы
-                                %span.events_item-date 4 февраля 2020
+                    .events
+                        .events_list
+                            %a.events_item
+                                .events_item-image-wrapper
+                                    %img.events_item-image(src="src/img/temp/event-small-1.jpg" alt="")
+                                %span.events_item-title Ревизор
+                            %a.events_item
+                                .events_item-image-wrapper
+                                    %img.events_item-image(src="src/img/temp/event-small-2.jpg" alt="")
+                                %span.events_item-title Подлинная история Фрекен Бок
                 
 
         %footer.footer
@@ -165,7 +157,7 @@
                         %p.footer_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы  «Московский драматический театр на Малой Бронной» 
                         .footer_documents
                             %span.footer_inn ИНН 7703001970
-                            %a.footer_documents-link Документы
+                            %a.footer_documents-link(href="#") Документы
                 .footer_bottom
                     %img.footer_bottom-image(src="src/img/bank-of-vacancies.jpg" alt="")
                     %img.footer_bottom-image(src="src/img/active-citizen.jpg" alt="")

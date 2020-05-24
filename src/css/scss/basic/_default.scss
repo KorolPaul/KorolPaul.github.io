@@ -1,5 +1,5 @@
 html {
-    font-size: 0.83px;
+    font-size: 0.93px;
     scroll-behavior: smooth;
     @include tablet {
         font-size: 1px;
@@ -88,4 +88,8 @@ table {
     @include tablet {
         padding: 0;
     }
+}
+
+.menu-opened {
+    overflow: hidden;
 }

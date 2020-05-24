@@ -1,5 +1,8 @@
 .logo {
-
+    &::after {
+        content: none;
+    }
+    
     &_image {
         display: block;
         @include tablet {

@@ -71,6 +71,7 @@
         &:active {
             color: $light_color;
             background: transparent;
+            box-shadow: none;
         }
     }
     &_title {

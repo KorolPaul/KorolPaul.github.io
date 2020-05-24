@@ -65,6 +65,8 @@
         font-weight: bold;
         font-size: 16rem;
         line-height: 24rem;
+        border-bottom: 1px solid transparent;
+        transition: .2s ease-in-out border;
         @include desktop {
             font-size: 22rem;
             line-height: 32rem;
@@ -72,6 +74,11 @@
         @include desktop-large {
             font-size: 36rem;
             line-height: 50rem;
+        }
+
+        .events_item:hover & {
+            border-bottom-color: currentColor;
+            color: $color;
         }
     }
 }

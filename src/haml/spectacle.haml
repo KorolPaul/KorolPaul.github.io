@@ -21,23 +21,28 @@
             %nav.menu
                 .menu-toggle
 
-                %a.menu_link.menu_link__mobile(href="/") купить билет
-                %a.menu_link.menu_link__mobile(href="/") адреса
-                %a.menu_link(href="/afisha.html") афиша
-                %a.menu_link(href="/about.html") о театре
-                %a.menu_link(href="/events.html") события
-                %a.menu_link(href="/press.html") пресса о театре
-                %a.menu_link(href="/volunteers.html") клуб волонтеров
-                %a.menu_link(href="/partners.html") партнеры театра
-                %a.menu_link.menu_link__indent(href="/search.html") поиск
+                .menu_content
+                    %button.menu_search-icon
+                    %img.menu_logo(src="src/img/logo-mobile-menu.svg" alt="")
 
-                .menu_social
-                    .social
-                        .social_links
-                            %a.social_link.social_link__vk(href="#")
-                            %a.social_link.social_link__fb(href="#")
-                            %a.social_link.social_link__insta(href="#")
-                            %a.social_link.social_link__youtube(href="#")
+
+                    %a.menu_link.menu_link__mobile(href="/") купить билет
+                    %a.menu_link.menu_link__mobile(href="/") адреса
+                    %a.menu_link.active(href="/afisha.html") афиша
+                    %a.menu_link(href="/about.html") о театре
+                    %a.menu_link(href="/events.html") события
+                    %a.menu_link(href="/press.html") пресса о театре
+                    %a.menu_link(href="/volunteers.html") клуб волонтеров
+                    %a.menu_link(href="/partners.html") партнеры театра
+                    %a.menu_link.menu_link__indent(href="/search.html") поиск
+
+                    .menu_social
+                        .social.social__header
+                            .social_links
+                                %a.social_link.social_link__vk(href="#")
+                                %a.social_link.social_link__fb(href="#")
+                                %a.social_link.social_link__insta(href="#")
+                                %a.social_link.social_link__youtube(href="#")
 
         %main.content
             %span.content_title афиша
@@ -129,6 +134,7 @@
                         
                         
                         %button.event_info-more весь коллектив и исполнители
+                            .event_info-more-arrow
 
                     .event_tickets
                         .tickets
@@ -167,6 +173,7 @@
                                         %td 
                                             %button.tickets_button купить
                             %button.tickets_more все даты
+                                .tickets_more-arrow
                     
                     .event_description
                         %p В одном небольшом испанском городке при театре работает фирма «Ариэль». Сотрудники фирмы занимаются необычным делом: они доставляют людям на дом... счастье! В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. Вот уже 20 лет она занята только перепиской с ним - в ее мыслях он предстает блестящим молодым человеком. Искусные актеры готовы подарить бабушке три счастливых дня в компании любимого внука и его молодой жены. Но неожиданное стечение обстоятельств меняет ход запланированных событий…
@@ -176,11 +183,13 @@
                         %span.press_title пресса о спектакле
                         .quote
                             %p.quote_text «Норма» Максима Диденко, поставленная силами Театра на Малой Бронной и Мастерской Брусникина: советская реальность, поданная в звуковых, визуальных, языковых и вкусовых ощущениях. Театральный критик Алла Шендерова посмотрела спектакль по знаменитому роману Владимира Сорокина и задумалась, почему есть норму
-                            %span.quote_date 9 декабря 2019, m24.ru
+                            %span.quote_date 9 декабря 2019, 
+                                %a.quote_media-link(href="m24.ru") m24.ru
                             %a.quote_link(href="#") читать полностью
                         .quote
                             %p.quote_text Одна из самых громких театральных премьер осени — спектакль по мотивам первого романа Владимира Сорокина «Норма», поставленный Максимом Диденко. В интервью Forbes Life режиссер рассказал о том, почему писатель отказался смотреть постановку до премьеры, чем эволюция
-                            %span.quote_date 9 декабря 2019, m24.ru
+                            %span.quote_date 9 декабря 2019,
+                                 %a.quote_media-link(href="m24.ru") m24.ru
                             %a.quote_link(href="#") читать полностью
 
                     .event_share
@@ -263,7 +272,7 @@
                         %p.footer_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы  «Московский драматический театр на Малой Бронной» 
                         .footer_documents
                             %span.footer_inn ИНН 7703001970
-                            %a.footer_documents-link Документы
+                            %a.footer_documents-link(href="#") Документы
                 .footer_bottom
                     %img.footer_bottom-image(src="src/img/bank-of-vacancies.jpg" alt="")
                     %img.footer_bottom-image(src="src/img/active-citizen.jpg" alt="")

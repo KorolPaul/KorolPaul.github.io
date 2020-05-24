@@ -66,8 +66,8 @@
                 padding: 12rem 0 26rem;
             }
             @include desktop {
-                font-size: 90rem;
-                line-height: 106rem;
+                font-size: 66rem;
+                line-height: 78rem;
                 padding: 25rem 0 35rem;
             }
             @include desktop-large {
@@ -89,6 +89,7 @@
             right: 28rem;
             width: 20rem;
             background: url(#{$img}/accordion-arrow.svg) no-repeat center 60%;
+            transition: .2s ease-in-out transform;
             @include desktop {
                 width: 30rem;
                 right: 54rem;
@@ -96,14 +97,52 @@
             }
 
             .accordion__secondary & {
+                background-position-y: center;
+                top: 34rem;
+                bottom: auto;
+                height: 16rem;
                 right: 0;
+                @include tablet {
+                    top: 38rem;
+                }
+                @include desktop {
+                    top: 66rem;
+                    height: 28rem;
+                }
+                @include desktop-large {
+                    top: 88rem;
+                }
             }
             .accordion_item__disabled & {
                 display: none;
             }
             .accordion_item__closed & {
-                transform: rotate(180deg);
+                transform: rotate(180deg) translateY(8rem);
                 background-position: center center;
+            }
+        }
+        &:hover::after {
+            transform: scale(1.15) translateY(-2rem);
+
+            .accordion_item__closed & {
+                transform: rotate(180deg) scale(1.15) translateY(6rem);
+            }
+        }
+        &:active::after {
+            transform: scale(1) translateY(-2rem);
+
+            .accordion_item__closed & {
+                transform: rotate(180deg) scale(1.15) translateY(6rem);
+            }
+        }
+    }
+    &_header-title {
+        .accordion__secondary & {
+            border-bottom: 1px solid transparent;
+            transition: .2s ease-in-out border;
+
+            &:hover {
+                border-bottom-color: currentColor;
             }
         }
     }
@@ -123,18 +162,20 @@
     }
     &_content {
         padding: 52rem $layout_indent 4rem;
+        overflow: hidden;
         @include tablet {
-            padding: 30rem $layout_indent 0 90rem;
+            padding: 30rem $layout_indent 0 70rem;
         }
         @include desktop {
-            padding: 30rem 50rem 0 200rem;
+            padding: 30rem 50rem 0 124rem;
+            overflow: visible;
         }
         @include desktop-large {
-            padding: 58rem 50rem 6rem 260rem;
+            padding: 58rem 50rem 6rem 162rem;
         }
 
         .accordion__secondary & {
-            padding-left: 0;
+            padding-left: 5rem;
             padding-right: 0;
         }
         .accordion_item__closed & {

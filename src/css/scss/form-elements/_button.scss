@@ -1,6 +1,6 @@
 @mixin button {
     background: $bright_color;
-    border: 1rem solid currentColor;
+    border: 1rem solid $bright_color;
     box-sizing: border-box;
     border-radius: 0;
     cursor: pointer;
@@ -9,7 +9,7 @@
     line-height: 18rem;
     padding: 12rem 20rem;
     text-align: center;
-    transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
+    transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color, 0.2s ease-in-out box-shadow;
     @include tablet {
         white-space: nowrap;
         font-size: 12rem;
@@ -29,10 +29,11 @@
     }
 
     &:hover {
-        background-color: $bright_color__hover;
+        background-color: $bright_color;
+        box-shadow: 0 0 0 3rem $bright_color;
     }
     &:active {
-        background-color: $bright_color__active;
+        background-color: $bright_color;
     }
     &:disabled {
         opacity: 0.6;
@@ -43,24 +44,39 @@
     color: $color;
     background: $blue_color;
     border: none;
+    transition: .2s ease-in-out box-shadow;
 
     &:hover {
         background-color: $blue_color;
+        box-shadow: 0 0 0 3rem $blue_color;
+        color: $color;
     }
     &:active {
         background-color: $blue_color;
+        box-shadow: 0 0 0 1rem $blue_color;
     }
 }
 @mixin light-button {
     color: $color;
     background: $light_color;
     border: 1rem solid currentColor;
+    @include tablet {
+        font-size: 11rem;
+    }
+    @include desktop {
+        font-size: 16rem;
+    }
+    @include desktop-large {
+        font-size: 20rem;
+    }
 
     &:hover {
-        background-color: $blue_color;
+        background-color: $light_color;
+        box-shadow: none;
     }
     &:active {
-        background-color: $blue_color;
+        background-color: $light_color;
+        box-shadow: none;
     }
 }
 @mixin bright-button {

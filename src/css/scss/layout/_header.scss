@@ -4,7 +4,14 @@
     transition: .2s ease-in-out background;
     @include tablet {
         position: fixed;
+        padding: 21rem 14rem;
         z-index: 1;
+    }
+    @include desktop {
+        padding: 35rem 24rem;
+    }
+    @include desktop-large {
+        padding: 50rem 34rem;
     }
 
     .accordion-page & {

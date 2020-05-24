@@ -69,20 +69,21 @@
 
         &:hover,
         &:active {
-            background: transparent;
-            color: $bright_color__hover;
+            background: $bright_color;
+            color: $light_color;
+            box-shadow: none;
         }
     }
     &_more {
         color: $color;
         background: transparent;
-        padding: 0;
+        padding: 0 20rem 0 0;
         border: none;
-        border-bottom: 1px dashed currentColor;
         font-weight: bold;
         font-size: 14rem;
         line-height: 20rem;
         margin: 5rem 0 0;
+        position: relative;
         @include tablet {
             font-size: 14rem;
             line-height: 20rem;
@@ -98,9 +99,28 @@
 
         &:hover {
             background: transparent;
+            box-shadow: none;
         }
         &:active {
             background: transparent;
+            box-shadow: none;
+        }
+    }
+    &_more-arrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 10rem;
+        width: 10rem;
+        background: url(#{$img}/arrow-down.svg) no-repeat right center;
+        transform: translateY(-50%);
+        transition: .2s ease-in-out transform;
+
+        .tickets_more:hover & {
+            transform: scale(1.15) translateY(-30%);
+        }
+        .tickets_more:active & {
+            transform: scale(1) translateY(-30%);
         }
     }
     &_unavailible {

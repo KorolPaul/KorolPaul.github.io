@@ -10,6 +10,7 @@ menuToggleElement.addEventListener('click', function(e) {
     e.preventDefault();
     menuToggleElement.classList.toggle('opened');
     menuElement.classList.toggle('opened');
+    document.body.classList.toggle('menu-opened')
 });
 
 

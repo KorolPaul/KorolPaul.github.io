@@ -108,6 +108,8 @@
         width: 30rem;
         padding: 0;
         display: none;
+        filter: grayscale(1) brightness(.5);
+        transition: .2s ease-in-out transform,  .2s ease-in-out filter;
         @include tablet {
             display: inline-block;
         }
@@ -122,10 +124,16 @@
         &:hover {
             background-color: transparent;
             opacity: 0.3;
+            box-shadow: none;
+            filter: none;
+            transform: scale(1.3);
         }
         &:active {
             background-color: transparent;
             opacity: 0.6;
+            box-shadow: none;
+            filter: none;
+            transform: scale(1.1);
         }
     }
 }

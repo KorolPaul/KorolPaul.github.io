@@ -98,9 +98,17 @@
         }
     }
     &_link {
-        display: block;
+        display: inline;
+
         &::after {
-            display: none;
+            transform: scaleX(0);
+        }
+        &:hover {
+            color: $color;
+
+            &::after {
+                transform: scaleX(1);
+            }
         }
     }
     &_title {
@@ -122,8 +130,18 @@
             line-height: 90rem;
         }
 
+        &[href] {
+            display: inline;
+        }
         &::after {
-            display: none;
+            transform: scaleX(0);
+        }
+        &:hover {
+            color: $color;
+
+            &::after {
+                transform: scaleX(1);
+            }
         }
 
         &__nowrap {
@@ -233,9 +251,11 @@
 
         &:hover {
             background-color: transparent;
+            box-shadow: none;
         }
         &:active {
             background-color: transparent;
+            box-shadow: none;
         }
     }
     &_hidden {

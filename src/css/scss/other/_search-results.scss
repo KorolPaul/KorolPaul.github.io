@@ -13,10 +13,13 @@
         line-height: 30rem;
         padding: 0 14rem 0 12rem;
         position: relative;
-        margin: 25rem 0 5rem;
+        margin: 25rem 0 12rem;
+        @include tablet {
+            margin-bottom: 32rem;
+        }
         @include desktop {
-            font-size: 14rem;
-            padding-right: 30rem;
+            font-size: 22rem;
+            line-height: 30rem;
         }
 
         &::before {
@@ -29,10 +32,16 @@
             top: 10rem;
             transform: rotate(35deg);
         }
+
+        &__small-indent {
+            @include tablet {
+                margin-bottom: 12rem;
+            }
+        }
     }
     &_section {
         position: relative;
-        padding: 0 0 40rem;
+        padding: 0 0 20rem;
 
         &::after {
             content: '';
@@ -41,6 +50,9 @@
             left: -$layout_indent;
             right: -$layout_indent;
             border-bottom: 1px solid #9B9B9B;
+        }
+        &:last-child::after {
+            display: none;
         }
     }
 }
