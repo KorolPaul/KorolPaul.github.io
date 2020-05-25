@@ -3599,6 +3599,9 @@ h3,
 @media all and (min-width: 767px) {
   .spectacle__alternate .spectacle_button {
     width: 88rem;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
 }
 
@@ -3618,6 +3621,9 @@ h3,
 .spectacle__line .spectacle_button {
   margin: 0;
   width: 88rem;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 @media all and (min-width: 767px) {
@@ -3731,10 +3737,10 @@ h3,
   padding: 0;
   border: none;
   width: 100%;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 @media all and (min-width: 767px) {
@@ -3779,12 +3785,6 @@ h3,
   .spectacle_bottom-info {
     padding-right: 25rem;
   }
-}
-
-.spectacle__line .spectacle_bottom-info {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
 }
 
 @media all and (min-width: 767px) {
