@@ -26,15 +26,24 @@
                     %img.menu_logo(src="src/img/logo-mobile-menu.svg" alt="")
 
 
-                    %a.menu_link.menu_link__mobile(href="/") купить билет
-                    %a.menu_link.menu_link__mobile(href="/") адреса
-                    %a.menu_link.active(href="/afisha.html") афиша
-                    %a.menu_link(href="/about.html") о театре
-                    %a.menu_link(href="/events.html") события
-                    %a.menu_link(href="/press.html") пресса о театре
-                    %a.menu_link(href="/volunteers.html") клуб волонтеров
-                    %a.menu_link(href="/partners.html") партнеры театра
-                    %a.menu_link.menu_link__indent(href="/search.html") поиск
+                    %a.menu_link.menu_link__mobile(href="/")
+                        %span.menu_link-text купить билет
+                    %a.menu_link.menu_link__mobile(href="/")
+                        %span.menu_link-text адреса
+                    %a.menu_link.active(href="/afisha.html")
+                        %span.menu_link-text афиша
+                    %a.menu_link(href="/about.html")
+                        %span.menu_link-text о театре
+                    %a.menu_link(href="/events.html")
+                        %span.menu_link-text события
+                    %a.menu_link(href="/press.html")
+                        %span.menu_link-text пресса о театре
+                    %a.menu_link(href="/volunteers.html")
+                        %span.menu_link-text клуб волонтеров
+                    %a.menu_link(href="/partners.html")
+                        %span.menu_link-text партнеры театра
+                    %a.menu_link.menu_link__indent(href="/search.html")
+                        %span.menu_link-text поиск
 
                     .menu_social
                         .social.social__header
@@ -52,7 +61,46 @@
                     %button.filters_control
                         %img.filters_control-icon(src="src/img/calendar.svg" alt="")
                         %span.filters_control-text фильтр по дате
-            
+                .filters_panel-wrapper
+                    .filters_panel
+                        .filters_panel-column
+                            %select(name="month-start")
+                                %option январь
+                                %option февраль
+                                %option март
+                                %option апрель
+                                %option май
+                                %option июнь
+                                %option июль
+                                %option август
+                                %option сентябрь
+                                %option октябрь
+                                %option ноябрь
+                                %option декабрь
+                            %select#(name="year-start")
+                                %option 2020
+                                %option 2021
+                        .filters_panel-divider &#47;
+                        .filters_panel-column
+                            %select(name="month-end")
+                                %option январь
+                                %option февраль
+                                %option март
+                                %option апрель
+                                %option май
+                                %option июнь
+                                %option июль
+                                %option август
+                                %option сентябрь
+                                %option октябрь
+                                %option ноябрь
+                                %option декабрь
+                            %select#(name="year-end")
+                                %option 2020
+                                %option 2021
+                        .filters_panel-column
+                            %button.filters_button применить
+
             .events-grid
                 %a.events-grid_item(href="event-big.html")
                     .events-grid_item-image-wrapper
@@ -150,6 +198,7 @@
         %script(src="src/js/tiny-slider.min.js")
         %script(src="src/js/main.js")
         %script(src="src/js/about.js")
+        %script(src="src/js/filters.js")
                                 
 
 

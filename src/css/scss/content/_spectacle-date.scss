@@ -31,5 +31,12 @@
 
     span {
         display: block;
+        @include tablet {
+            display: inline;
+        }
+
+        &::before {
+            content: ', ';
+        }
     }
 }

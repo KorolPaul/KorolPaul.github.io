@@ -69,7 +69,7 @@
         }
 
         &::after {
-            left: 134rem;
+            left: 114rem;
             right: 0;
             @include tablet {
                 display: block;
@@ -79,7 +79,7 @@
 
         .search-results &:first-child {
             padding-top: 12rem;
-             @include tablet {
+            @include tablet {
                 padding-top: 22rem;
             }
             @include desktop {
@@ -120,8 +120,8 @@
 
         .spectacle__line & {
             margin: 0 18rem 0 0;
-            width: 116rem;
-            height: 116rem;
+            width: 96rem;
+            height: 96rem;
             flex-shrink: 0;
             @include tablet {
                 width: 110rem;
@@ -145,9 +145,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: .2s ease-in-out transform;
+        transition: 0.2s ease-in-out transform;
 
-        .spectacle:hover & {
+        .spectacle_image-wrapper:hover & {
             transform: scale(1.08);
         }
     }
@@ -225,18 +225,23 @@
             width: 2rem;
             position: absolute;
             left: 0;
-            top: 4rem;
+            top: 1rem;
             transform: rotate(35deg);
+            @include tablet {
+                top: 2rem;
+            }
+            @include desktop {
+                top: 3rem;
+            }
         }
 
         .spectacle__line & {
-            color: #9B9B9B;
+            color: #9b9b9b;
         }
         &__bright,
         .spectacle__line &__bright {
             color: $bright_color;
         }
-
     }
     &_header {
         grid-row: 2 / 3;
@@ -265,7 +270,7 @@
                 min-height: 118rem;
             }
         }
-        
+
         &:hover,
         &:active {
             color: $color;
@@ -365,20 +370,24 @@
         }
         .spectacle__line & {
             margin-bottom: 12rem;
+            @include mobile {
+                font-size: 20rem;
+                line-height: 24rem;
+            }
         }
     }
     &_title-text {
         border-bottom: 2rem solid transparent;
-        transition: .2s ease-in-out border-color;
+        transition: 0.2s ease-in-out border-color;
 
-        .spectacle:hover &,
-        .spectacle:active & {
+        .spectacle_header:hover &,
+        .spectacle_header:active & {
             border-bottom-color: currentColor;
         }
 
         &::after {
             content: none;
-        }        
+        }
     }
     &_description {
         grid-row: 3 / 4;
@@ -473,15 +482,15 @@
         border-bottom: 1rem dashed currentColor;
 
         &::before {
-            content: '';
+            content: "";
             background: url(#{$img}/adress-bright.svg) no-repeat center center / 100% auto;
             position: absolute;
             left: -16rem;
             top: 2rem;
             height: 13rem;
             width: 11rem;
-            filter: grayscale(1) brightness(.5);
-            transition: .2s ease-in-out transform, .2s ease-in-out filter;
+            filter: grayscale(1) brightness(0.5);
+            transition: 0.2s ease-in-out transform, 0.2s ease-in-out filter;
             @include tablet {
                 height: 11rem;
                 width: 9rem;
@@ -512,8 +521,8 @@
     }
     &_duration {
         &::before {
-            content: '';
-            background: url(#{$img}/clock-dark.svg) no-repeat center center /  auto 100%;
+            content: "";
+            background: url(#{$img}/clock-dark.svg) no-repeat center center / auto 100%;
             position: absolute;
             left: -16rem;
             top: 2rem;
@@ -548,6 +557,10 @@
     &_creators {
         font-size: 12rem;
         line-height: 16rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 60rem;
         @include tablet {
             font-size: 11rem;
             line-height: 15rem;
@@ -555,6 +568,7 @@
         @include desktop {
             font-size: 14rem;
             line-height: 20rem;
+            min-height: 60rem;
         }
         @include desktop-large {
             font-size: 14rem;
@@ -597,6 +611,9 @@
         }
         .spectacle__line & {
             margin: 0;
+            @include tablet {
+                max-width: none;
+            }
         }
     }
     &_info-column {
@@ -716,9 +733,11 @@
             flex-shrink: 0;
             width: 100%;
             @include tablet {
-                width: 88rem;
+                margin-bottom: 10rem;
             }
             @include desktop {
+                order: 2;
+                margin-bottom: 0;
                 width: 116rem;
             }
             @include desktop-large {
@@ -729,6 +748,7 @@
         .spectacle__line & {
             margin: 0;
             width: 88rem;
+            order: 2;
             @include tablet {
                 width: 116rem;
                 margin: 12rem 0;
@@ -775,11 +795,11 @@
         }
 
         &::after {
-            bottom: 3rem;
-            transform: scaleX(0);
+            bottom: 2rem;
+            transform: scaleX(1);
         }
         &:hover::after {
-            transform: scaleX(1);
+            transform: scaleX(0);
         }
     }
     &_bottom {
@@ -801,15 +821,15 @@
             padding: 0;
             border: none;
             width: 100%;
-            flex-direction: column;
+            flex-direction: row;
             @include tablet {
                 flex-direction: column;
                 justify-content: center;
-                align-items:  center;
+                align-items: center;
                 text-align: center;
                 flex-shrink: 0;
                 padding: 0 0 0 36rem;
-                border-left: 1rem dashed #9B9B9B;
+                border-left: 1rem dashed #9b9b9b;
                 margin: 0;
                 width: auto;
             }
@@ -827,7 +847,6 @@
         }
 
         .spectacle__line & {
-            order: 1;
             @include tablet {
                 display: contents;
             }

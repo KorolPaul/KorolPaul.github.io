@@ -43,6 +43,9 @@
             padding: 40rem 0;
         }
 
+        &:hover {
+            color: $color;
+        }
         &::after {
             content: "";
             height: 1rem;
@@ -103,8 +106,8 @@
             height: auto;
         }
 
-        &:hover {
-            transform: scale(1.15);
+        .events-grid_item:hover & {
+            transform: scale(1.1);
         }
     }
     &_item-title {

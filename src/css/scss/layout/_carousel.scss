@@ -3,6 +3,9 @@
         display: block;
         //background: rgba(#040304, .35);
 
+        &:hover {
+            color: $color;
+        }
         &::after {
             display: none;
         }
@@ -53,8 +56,8 @@
         transform-origin: center center;
         transition: 0.2s ease-in-out transform;
 
-        &:hover {
-            transform: scale(1.15);
+        .carousel_item:hover & {
+            transform: scale(1.1);
         }
     }
     &_item-title {

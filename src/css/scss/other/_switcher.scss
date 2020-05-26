@@ -12,6 +12,7 @@
         width: 50%;
         text-align: center;
         white-space: nowrap;
+        text-decoration-skip-ink: none;
         transition: 0.2s ease-in-out background;
         @include tablet {
             padding: 9rem 12rem 11rem;
@@ -31,10 +32,15 @@
             border-right: 0;
         }
 
-        &.active,
         &:hover {
             background: $light_color;
+            box-shadow: none;
+        }
+        &.active,
+        &:active {
+            background: $light_color;
             text-decoration: underline;
+            box-shadow: none;
         }
     }
 }

@@ -18,10 +18,12 @@
 
     &__fixed {
         @include tablet {
+            box-sizing: border-box;
             position: fixed;
             right: 0;
             top: 0;
             z-index: 1;
+            height: 66rem;
         }
     }
 
@@ -101,10 +103,15 @@
             transition: 0.2s ease-in-out transform;
         }
         .filters_control:hover &::before,
-        .filters_switcher-button:hover &::before,
-        .filters_control.active &::before,
-        .filters_switcher-button.active &::before {
+        .filters_switcher-button:hover &::before {
             transform: scaleX(1);
+        }
+        .filters_control.active &::before,
+        .filters_control:active &::before,
+        .filters_switcher-button.active &::before,
+        .filters_switcher-button:active &::before {
+            transform-origin: right 0;
+            transform: scaleX(0);
         }
     }
     &_control-icon {
@@ -142,5 +149,65 @@
         width: 1px;
         background: $color;
         vertical-align: middle;
+    }
+    &_panel-wrapper {
+        max-width: 0;
+        transition: .3s ease-in-out max-width;
+
+        .filters__opened & {
+            max-width: 1000rem;
+        }
+    }
+    &_panel {
+        display: flex;
+        align-items: center;
+        transform-origin: center right;
+        transform: scaleX(0);
+        transition: .2s ease-in-out .1s transform;
+
+        .filters__opened & {
+            transform: scaleX(1);
+        }
+    }
+    &_panel-divider {
+        color: $color;
+        font-size: 16rem;
+        line-height: 33rem;
+        margin: 0 15rem;
+    }
+    &_button {
+        margin: 0 0 0 20rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        color: $bright_color;
+        font-size: 12rem;
+        line-height: 16rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border-bottom: 1rem solid currentColor;
+            transition: .1s ease-in-out transform;
+            transform-origin: right center;
+            transform: scaleX(0);
+        }
+
+        &:hover {
+            background: transparent;
+            box-shadow: none;
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+        &:active {
+            color: $bright_color__active;
+            outline: none;
+        }
     }
 }
