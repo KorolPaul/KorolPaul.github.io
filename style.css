@@ -1827,9 +1827,15 @@ h3,
 
 @media all and (min-width: 1259px) {
   .accordion-page .content {
-    padding-right: 54rem;
+    padding-right: 34rem;
     padding-left: 15vw;
     padding-top: 26rem;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .accordion-page .content {
+    padding-left: 16vw;
   }
 }
 
@@ -1837,6 +1843,7 @@ h3,
   .accordion-page .content {
     padding-left: 15vw;
     padding-top: 40rem;
+    padding-right: 48rem;
   }
 }
 
@@ -3799,7 +3806,7 @@ h3,
 
 @media all and (min-width: 1259px) {
   .spectacle_header {
-    min-height: 110rem;
+    min-height: 130rem;
   }
 }
 
@@ -4587,6 +4594,8 @@ h3,
   .spectacle__alternate .spectacle_button {
     width: 156rem;
     line-height: 1.3;
+    padding-top: 18rem;
+    padding-bottom: 22rem;
   }
 }
 
@@ -4686,9 +4695,9 @@ h3,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 @media all and (min-width: 1259px) {
@@ -4750,6 +4759,19 @@ h3,
     -ms-flex-order: 1;
     order: 1;
     padding-right: 15rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 }
 
@@ -4782,7 +4804,7 @@ h3,
 @media all and (min-width: 1259px) {
   .spectacle_bottom-date {
     font-size: 14rem;
-    line-height: 24rem;
+    line-height: 20rem;
   }
 }
 
@@ -5426,6 +5448,7 @@ h3,
 }
 
 .slider_image-wrapper {
+  position: relative;
   overflow: hidden;
 }
 
@@ -5616,6 +5639,23 @@ h3,
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #040304;
+}
+
+.slider_image-open {
+  background: url(src/img/fullscreen.svg) no-repeat center center;
+  height: 47rem;
+  width: 47rem;
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: .2s ease-in-out opacity;
+  transition: .2s ease-in-out opacity;
+}
+
+.slider_image-wrapper:hover .slider_image-open {
+  opacity: 1;
 }
 
 .gallery {
@@ -7303,10 +7343,21 @@ h3,
   border-bottom: 1px solid transparent;
   -webkit-transition: .2s ease-in-out border;
   transition: .2s ease-in-out border;
+  pointer-events: none;
 }
 
-.accordion__secondary .accordion_header-title:hover {
+@media all and (min-width: 767px) {
+  .accordion__secondary .accordion_header-title {
+    border-bottom-width: 2rem;
+  }
+}
+
+.accordion__secondary .accordion_header:hover .accordion_header-title {
   border-bottom-color: currentColor;
+}
+
+.accordion__secondary .accordion_item__disabled .accordion_header:hover .accordion_header-title {
+  border-bottom: none;
 }
 
 .accordion_header-subtitle {
@@ -7355,7 +7406,7 @@ h3,
 }
 
 .accordion__secondary .accordion_content {
-  padding-left: 5rem;
+  padding-left: 3rem;
   padding-right: 0;
 }
 
@@ -7797,7 +7848,7 @@ h3,
   }
 }
 
-.spectacle-date span::before {
+.spectacle-date span span::before {
   content: ', ';
 }
 
@@ -8435,6 +8486,7 @@ h3,
   display: flex;
   position: relative;
   margin: 40rem -16rem 80rem;
+  padding-right: 50rem;
   left: auto;
   font-size: 12rem;
   line-height: 18rem;
@@ -8455,6 +8507,10 @@ h3,
   left: -10rem;
   right: -10rem;
   border-top: 1rem solid #9B9B9B;
+}
+
+.partner__mobile img {
+  height: 48rem;
 }
 
 .partner_title {
@@ -8562,6 +8618,9 @@ h3,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     margin: 0 15rem 0 0;
     -ms-flex-negative: 2;
     flex-shrink: 2;
@@ -8684,6 +8743,14 @@ h3,
 }
 
 @media all and (min-width: 767px) {
+  .place_map-holder {
+    width: 77%;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+}
+
+@media all and (min-width: 1259px) {
   .place_map-holder {
     width: 72%;
     -ms-flex-negative: 1;
@@ -8809,12 +8876,14 @@ h3,
   .place_map-button {
     padding: 0 8rem;
     max-width: none;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
     margin: 0 8rem;
     min-height: 37rem;
     line-height: 16rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 }
 
@@ -9067,6 +9136,18 @@ h3,
   transform: scaleX(0);
 }
 
+@media all and (min-width: 767px) {
+  .contacts_title::after {
+    border-bottom-width: 2rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_title::after {
+    border-bottom-width: 3rem;
+  }
+}
+
 .contacts_title:hover {
   color: #040304;
 }
@@ -9203,7 +9284,7 @@ h3,
 }
 
 .contacts_more {
-  background: url(src/img/arrow-down-bold.svg) no-repeat right 44%;
+  background: transparent;
   border: none;
   color: #040304;
   font-weight: bold;
@@ -9213,6 +9294,7 @@ h3,
   width: 100%;
   text-align: right;
   margin: 0 0 22rem;
+  position: relative;
 }
 
 @media all and (min-width: 767px) {
@@ -9225,7 +9307,6 @@ h3,
 
 @media all and (min-width: 1259px) {
   .contacts_more {
-    background-size: 16rem 16rem;
     font-size: 18rem;
     line-height: 28rem;
     padding-right: 48rem;
@@ -9235,7 +9316,6 @@ h3,
 
 @media all and (min-width: 1799px) {
   .contacts_more {
-    background-size: 24rem 24rem;
     font-size: 26rem;
     line-height: 28rem;
     padding-right: 66rem;
@@ -9247,12 +9327,43 @@ h3,
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-size: 20rem 20rem;
 }
 
 .contacts_more:active {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.contacts_more-icon {
+  background: url(src/img/arrow-down-bold.svg) no-repeat center center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 24rem;
+  width: 24rem;
+  -webkit-transform: translateY(-44%);
+  transform: translateY(-44%);
+  -webkit-transition: .2s ease-in-out transform;
+  transition: .2s ease-in-out transform;
+}
+
+@media all and (min-width: 1259px) {
+  .contacts_more-icon {
+    background-size: 16rem 16rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .contacts_more-icon {
+    background-size: 24rem 24rem;
+  }
+}
+
+.contacts_more:hover .contacts_more-icon {
+  -webkit-transform: translateY(-38%) scale(1.2);
+  transform: translateY(-38%) scale(1.2);
 }
 
 .contacts_hidden {

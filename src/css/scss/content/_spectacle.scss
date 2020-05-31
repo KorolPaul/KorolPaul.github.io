@@ -253,7 +253,7 @@
             justify-content: center;
         }
         @include desktop {
-            min-height: 110rem;
+            min-height: 130rem;
         }
         @include desktop-large {
             min-height: 145rem;
@@ -758,6 +758,8 @@
             @include desktop-large {
                 width: 156rem;
                 line-height: 1.3;
+                padding-top: 18rem;
+                padding-bottom: 22rem;
             }
         }
         .spectacle__line & {
@@ -824,7 +826,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: stretch;
         @include desktop {
             flex-direction: row;
             padding-top: 26rem;
@@ -856,6 +858,10 @@
         @include tablet {
             order: 1;
             padding-right: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
         }
         @include desktop {
             padding-right: 25rem;
@@ -878,7 +884,7 @@
         }
         @include desktop {
             font-size: 14rem;
-            line-height: 24rem;
+            line-height: 20rem;
         }
     }
     &_content {

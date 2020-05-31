@@ -135,6 +135,12 @@
         }
         &::after {
             transform: scaleX(0);
+            @include tablet {
+                border-bottom-width: 2rem;
+            }
+            @include desktop {
+                border-bottom-width: 3rem;
+            }
         }
         &:hover {
             color: $color;
@@ -220,7 +226,7 @@
         }
     }
     &_more {
-        background: url(#{$img}/arrow-down-bold.svg) no-repeat right 44%;
+        background: transparent;
         border: none;
         color: $color;
         font-weight: bold;
@@ -230,20 +236,19 @@
         width: 100%;
         text-align: right;
         margin: 0 0 22rem;
+        position: relative;
         @include tablet {
             font-size: 12rem;
             line-height: 28rem;
             margin-bottom: 28rem;
         }
         @include desktop {
-            background-size: 16rem 16rem;
             font-size: 18rem;
             line-height: 28rem;
             padding-right: 48rem;
             margin-bottom: 40rem;
         }
         @include desktop-large {
-            background-size: 24rem 24rem;
             font-size: 26rem;
             line-height: 28rem;
             padding-right: 66rem;
@@ -253,10 +258,31 @@
         &:hover {
             background-color: transparent;
             box-shadow: none;
+            background-size: 20rem 20rem;
         }
         &:active {
             background-color: transparent;
             box-shadow: none;
+        }
+    }
+    &_more-icon {
+        background: url(#{$img}/arrow-down-bold.svg) no-repeat center center;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 24rem;
+        width: 24rem;
+        transform: translateY(-44%);
+        transition: .2s ease-in-out transform;
+        @include desktop {
+            background-size: 16rem 16rem;
+        }
+        @include desktop-large {
+            background-size: 24rem 24rem;
+        }
+
+        .contacts_more:hover & {
+            transform: translateY(-38%) scale(1.2);
         }
     }
     &_hidden {

@@ -19,6 +19,7 @@ if (slider) {
         mouseDrag: true,
         loop: true,
         autoWidth: true,
+        preventScrollOnTouch: true,
         responsive: {
             768: {
                 items: 6.3,
@@ -60,6 +61,7 @@ if (sliderGallery) {
         mouseDrag: true,
         loop: false,
         controlsText: ['', ''],
+        preventScrollOnTouch: true,
         responsive: {
             768: {
                 //items: 2,

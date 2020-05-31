@@ -87,6 +87,7 @@
         }
     }
     &_image-wrapper {
+        position: relative;
         overflow: hidden;
     }
     &_image {
@@ -172,6 +173,21 @@
             background-color: $light_color;
             box-shadow: none;
             color: $color;
+        }
+    }
+    &_image-open {
+        background: url(#{$img}/fullscreen.svg) no-repeat center center;
+        height: 47rem;
+        width: 47rem;
+        position: absolute;
+        right: 4rem;
+        top: 4rem;
+        opacity: 0;
+        z-index: 1;
+        transition: .2s ease-in-out opacity;
+
+        .slider_image-wrapper:hover & {
+            opacity: 1;
         }
     }
 }

@@ -86,9 +86,9 @@
                                                 %a(href="https://yandex.by/maps/213/moscow/house/ploshchad_zhuravlyova_10/Z04YcQdkTEYPQFtvfXt5cn5rYg==/?ll=37.704749%2C55.783214&utm_medium=mapframe&utm_source=maps&z=18.2" style="color:#eee;font-size:12px;position:absolute;top:14px;") Площадь Журавлёва, 10 — Яндекс.Карты
                                                 %iframe(src="https://yandex.by/map-widget/v1/-/C8sMQWlE" width="560" height="400" frameborder="0" allowfullscreen="true" style="position:relative;")
                                             .place_map-buttons
-                                                %button.place_map-button открыть в Google Maps
+                                                %button.place_map-button открыть в&nbsp;Google&nbsp;Maps
                                                     .place_map-button-border
-                                                %button.place_map-button открыть в Яндекс.Картах
+                                                %button.place_map-button открыть в&nbsp;Яндекс.Картах
                                                     .place_map-button-border
                             .accordion_item.accordion_item__closed
                                 .accordion_header(data-tab="adress-2")
@@ -150,7 +150,7 @@
                                 .contacts_row
                                     .contacts_left.contacts_left__long
                                         %div
-                                            %a.contacts_title(href="mailto:#mbronnaya@theatre.ru") Заказ, бронирование и доставка билетов
+                                            %span.contacts_title Заказ, бронирование и доставка билетов
                                 .contacts_row
                                     .contacts_left
                                     .contacts_right
@@ -208,6 +208,7 @@
 
 
                                 %button.contacts_more все контакты
+                                    .contacts_more-icon
 
                                 .contacts_hidden
                                     .contacts_row
@@ -215,19 +216,22 @@
                                             %span.contacts_subtitle Заместитель директора
                                         .contacts_right
                                             %span Лариса Васильевна Гладкая 
-                                            %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-05
+                                            %div
+                                                %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-05
                                     .contacts_row
                                         .contacts_left
                                             %span.contacts_subtitle Заместитель директора
                                         .contacts_right
                                             %span Ирина Александровна Грачева 
-                                            %a.contacts_title(href="tel:690-04-51") 690-04-51 / 1-29
+                                            %div
+                                                %a.contacts_title(href="tel:690-04-51") 690-04-51 / 1-29
                                     .contacts_row
                                         .contacts_left
                                             %span.contacts_subtitle Заместитель директора
                                         .contacts_right
                                             %span Арина Владимировна Богданчик
-                                            %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-03
+                                            %div
+                                                %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-03
 
                 .accordion_item
                     .accordion_header(data-tab="3")
@@ -302,15 +306,19 @@
                             .slider_track
                                 .slider_item
                                     .slider_image-wrapper
+                                        .slider_image-open
                                         %img.slider_image(src="src/img/temp/history-1.jpg" alt="")
                                 .slider_item
                                     .slider_image-wrapper
+                                        .slider_image-open
                                         %img.slider_image(src="src/img/temp/history-2.jpg" alt="")
                                 .slider_item
                                     .slider_image-wrapper
+                                        .slider_image-open
                                         %img.slider_image(src="src/img/temp/history-1.jpg" alt="")
                                 .slider_item
                                     .slider_image-wrapper
+                                        .slider_image-open
                                         %img.slider_image(src="src/img/temp/history-2.jpg" alt="")
                         
                         %h2.contacts_big-text В 1945 году на театральной карте столицы появился новый творческий коллектив — московский драматический театр, который возглавил режиссер Cергей Майоров. 
@@ -320,6 +328,7 @@
                                 .contacts_right
                                     %p Основу новой труппы составили актеры разных московских театров и несколько выпускников театрального училища им. М. С. Щепкина. Театру было предоставлено здание на Спартаковской улице, 26, рядом со станцией метро «Бауманская». Репетиции шли параллельно с реконструкцией здания театра, двери которого открылись для зрителей 9 марта 1946 года, когда был показан первый спектакль («Золотой обруч», пьеса М. Козакова и А. Мариенгофа).
                                     %button.contacts_more читать все
+                                        .contacts_more-icon
                                     .contacts_hidden
                                         %p Основу новой труппы составили актеры разных московских театров и несколько выпускников театрального училища им. М. С. Щепкина. Театру было предоставлено здание на Спартаковской улице, 26, рядом со станцией метро «Бауманская». Репетиции шли параллельно с реконструкцией здания театра, двери которого открылись для зрителей 9 марта 1946 года, когда был показан первый спектакль («Золотой обруч», пьеса М. Козакова и А. Мариенгофа).
                             .contacts_buttons

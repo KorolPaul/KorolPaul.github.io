@@ -35,8 +35,10 @@
             display: inline;
         }
 
-        &::before {
-            content: ', ';
+        span {
+            &::before {
+                content: ', ';
+            }
         }
     }
 }

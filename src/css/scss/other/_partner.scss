@@ -35,6 +35,7 @@
         display: flex;
         position: relative;
         margin: 40rem -16rem 80rem;
+        padding-right: 50rem;
         left: auto;
         font-size: 12rem;
         line-height: 18rem;
@@ -51,6 +52,10 @@
             left: -#{$layout_indent - 16rem};
             right: -#{$layout_indent - 16rem};
             border-top: 1rem solid #9B9B9B;
+        }
+
+        img {
+            height: 48rem;
         }
     }
 

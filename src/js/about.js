@@ -12,6 +12,7 @@ if (sliders.length) {
             controls: false,
             mouseDrag: true,
             loop: false,
+            preventScrollOnTouch: true,
             responsive: {
                 768: {
                     items: 1.5,

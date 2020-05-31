@@ -118,7 +118,7 @@ if (galleries.length) {
 const accordions = document.querySelector('.accordion');
 if (accordions) {
     function toggleAccordion(e) {
-        e.preventDefault();
+        //e.preventDefault();
 
         e.target.parentNode.classList.toggle('accordion_item__closed');
     }

@@ -140,10 +140,16 @@
         .accordion__secondary & {
             border-bottom: 1px solid transparent;
             transition: .2s ease-in-out border;
-
-            &:hover {
-                border-bottom-color: currentColor;
+            pointer-events: none;
+            @include tablet {
+                border-bottom-width: 2rem;
             }
+        }
+        .accordion__secondary .accordion_header:hover & {
+            border-bottom-color: currentColor;
+        }
+        .accordion__secondary .accordion_item__disabled .accordion_header:hover & {
+            border-bottom: none;
         }
     }
     &_header-subtitle {
@@ -175,7 +181,7 @@
         }
 
         .accordion__secondary & {
-            padding-left: 5rem;
+            padding-left: 3rem;
             padding-right: 0;
         }
         .accordion_item__closed & {

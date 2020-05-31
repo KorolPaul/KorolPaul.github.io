@@ -39,13 +39,17 @@
             border: none;
         }
         @include desktop {
-            padding-right: 54rem;
+            padding-right: 34rem;
             padding-left: 15vw;
             padding-top: 26rem;
+        }
+        @include media(1366px) {
+            padding-left: 16vw;
         }
         @include desktop-large {
             padding-left: 15vw;
             padding-top: 40rem;
+            padding-right: 48rem;
         }
     }
 
