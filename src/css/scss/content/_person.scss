@@ -75,6 +75,9 @@
         order: 4;
         @include tablet {
             order: initial;
+            max-width: 85%;
+        }
+        @include desktop {
             max-width: 75%;
         }
     }

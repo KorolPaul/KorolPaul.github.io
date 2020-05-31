@@ -47,4 +47,7 @@
         top: 17rem;
         right: 13rem;
     }
+    .search-opened & {
+        display: none;
+    }
 }

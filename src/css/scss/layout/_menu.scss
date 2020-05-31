@@ -157,9 +157,12 @@
         top: 20rem;
         left: 50%;
         transform: translateX(-50%);
-
         display: none;
+        transition: .2s ease-in-out opacity;
 
+        .search-opened & {
+            opacity: 0;
+        }
         .menu-opened & {
             display: block;
             @include tablet {

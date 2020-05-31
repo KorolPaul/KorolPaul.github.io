@@ -9,7 +9,7 @@
         %meta(name="format-detection" content="telephone=no")/
         %meta(name="HandheldFriendly" content="true")/
         %link(rel="stylesheet" href="style.css")/
-    %body
+    %body.popup-opened
         %header.header 
 
             %a.logo(href="/")
@@ -24,6 +24,16 @@
                 .menu_content
                     %button.menu_search-icon
                     %img.menu_logo(src="src/img/logo-mobile-menu.svg" alt="")
+
+                    .search
+                        .search_close(id="search-close")
+                        .search_fade
+                        .search_content
+                            %input.search_input(type="search" placeholder="поиск" required="true")
+                            .search_results
+                                %a.search_result(href="spectacle.html") макбет
+                                %a.search_result(href="spectacle.html") леди макбет
+                                %a.search_result(href="spectacle.html") макбет трагедия
 
 
                     %a.menu_link.menu_link__mobile(href="/")
@@ -61,7 +71,7 @@
                     .event_tags
                         %a.event_tag.event_tag__bright(href="/") премьера
                         %a.event_tag(href="/") детский
-                    .slider
+                    .slider(id="slider")
                         .slider_counter
                         .slider_track
                             .slider_item
@@ -247,6 +257,33 @@
                         .events_item-image-wrapper
                             %img.events_item-image(src="src/img/temp/event-small-4.jpg" alt="")
                         %span.events_item-title Княжна Марья
+
+
+        .gallery-popup
+            %button.gallery-popup_close
+            .slider.slider__gallery(id="slider-gallery")
+                .slider_counter
+                .slider_track
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
 
         %footer.footer
             .footer_mobile

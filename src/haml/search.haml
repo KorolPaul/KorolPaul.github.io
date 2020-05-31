@@ -22,9 +22,19 @@
                 .menu-toggle
 
                 .menu_content
-                    %button.menu_search-icon
+                    %button.menu_search-icon(id="search-button")
                     %img.menu_logo(src="src/img/logo-mobile-menu.svg" alt="")
 
+                    .search
+                        .search_close(id="search-close")
+                        .search_fade
+                        .search_content
+                            %input.search_input(type="search" placeholder="поиск" required="true")
+                            .search_results
+                                %a.search_result(href="spectacle.html") макбет
+                                %a.search_result(href="spectacle.html") леди макбет
+                                %a.search_result(href="spectacle.html") макбет трагедия
+                    
 
                     %a.menu_link.menu_link__mobile(href="/")
                         %span.menu_link-text купить билет
@@ -42,7 +52,7 @@
                         %span.menu_link-text клуб волонтеров
                     %a.menu_link(href="/partners.html")
                         %span.menu_link-text партнеры театра
-                    %a.menu_link.menu_link__indent(href="/search.html")
+                    %a.menu_link.menu_link__indent.menu_link__search
                         %span.menu_link-text поиск
 
                     .menu_social

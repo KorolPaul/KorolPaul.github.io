@@ -1,0 +1,96 @@
+.gallery-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: rgba(4, 3, 4, .9);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 11;
+    overflow: hidden;
+    transition: .2s ease-in-out opacity;
+
+    .popup-opened & {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &_content {
+        background: $light_color;
+        padding: $layout_indent 36rem 24rem;
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            padding: 50rem 50rem 40rem;
+        }
+        @include desktop {
+            padding: 74rem 92rem 60rem;
+        }
+    }
+
+    &_close {
+        background: url(#{$img}/close.svg) center center no-repeat;
+        background-size: contain;
+        padding: 0;
+        border: none;
+        position: absolute;
+        top: 14rem;
+        right: 14rem;
+        height: 20rem;
+        width: 20rem;
+        transition: 0.2s ease-in-out transform;
+        @include tablet {
+            right: 24rem;
+            top: 24rem;
+        }
+        @include desktop {
+            height: 28rem;
+            width: 28rem;
+            right: 36rem;
+            top: 36rem;
+        }
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+            box-shadow: none;
+            transform: scale(1.2);
+        }
+    }
+
+    &_title {
+        font-weight: bold;
+        font-size: 40rem;
+        line-height: 48rem;
+        margin: 0 0 18rem;
+        @include tablet {
+            font-size: 66rem;
+            line-height: 76rem;
+            margin-bottom: 28rem;
+        }
+        @include desktop {
+            font-size: 90rem;
+            line-height: 106rem;
+            margin-bottom: 50rem;
+        }
+    }
+    &_print-link {
+        font-size: 11rem;
+        line-height: 18rem;
+        align-self: flex-end;
+        @include tablet {
+            font-size: 16rem;
+            line-height: 18rem;
+        }
+        @include desktop {
+            font-size: 20rem;
+            line-height: 18rem;
+        }
+    }
+}

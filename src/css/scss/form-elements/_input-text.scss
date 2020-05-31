@@ -6,6 +6,7 @@ input[type="url"],
 input[type="date"],
 input[type="number"],
 input[type="tel"] {
+    @include placeholder-color($color);
     background-color: $light_color;
     color: $color;
     border: 1rem solid currentColor;
@@ -16,7 +17,7 @@ input[type="tel"] {
     font-family: $font-family;
     padding: 0 20rem;
     width: 100%;
-    transition: 0.2s ease-in border-color;
+    transition: .2s ease-in border-color, .2s ease-in color;
     @include tablet {
         height: 38rem;
         font-size: 12rem;
@@ -33,6 +34,10 @@ input[type="tel"] {
         height: 84rem;
     }
 
+    &:hover,
+    &:focus {
+        @include placeholder-color(rgba($color, .2  ));
+    }
     &:focus,
     &.focus {
         border-color: $bright_color;
@@ -46,17 +51,4 @@ input[type="tel"] {
     .invalid & {
         border-color: $bright_color;
     }
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus {
-    border: 1rem solid #2e343c;
-    background-color: $dark_color !important;
-    -webkit-text-fill-color: #4e565c;
-    -webkit-box-shadow: 0 0 0rem 1000rem $dark_color inset;
-    transition: background-color 5000s ease-in-out 0s;
 }

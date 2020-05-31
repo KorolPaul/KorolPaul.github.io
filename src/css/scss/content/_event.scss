@@ -4,7 +4,6 @@
     &_slider-wrapper {
         margin: 0 -#{$layout_indent} 10rem;
         position: relative;
-        overflow: hidden;
         @include desktop {
             margin-right: -3vw;
             margin-bottom: 22rem;

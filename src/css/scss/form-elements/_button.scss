@@ -24,19 +24,29 @@
     }
     @include desktop-large {
         font-size: 20rem;
-        padding-top: 25rem;
-        padding-bottom: 35rem;
+        padding-top: 29rem;
+        padding-bottom: 31rem;
     }
 
     &:hover {
         background-color: $bright_color;
         box-shadow: 0 0 0 3rem $bright_color;
+        outline: none;
     }
     &:active {
         background-color: $bright_color;
+        outline: none;
     }
-    &:disabled {
-        opacity: 0.6;
+    &:focus {
+        outline: none;
+    }
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.2;
+        box-shadow: none;
+        cursor: default;
     }
 }
 
@@ -89,7 +99,7 @@
     padding: 12rem 10rem;
     box-sizing: border-box;
     text-align: center;
-    transition: 0.2s ease-in-out color, 0.2s ease-in-out backround-color, 0.2s ease-in-out opacity;
+    transition: 0.2s ease-in-out color, 0.2s ease-in-out background-color, 0.2s ease-in-out opacity;
     @include tablet {
         height: 38rem;
         font-size: 12rem;
@@ -121,6 +131,7 @@
         background-color: $bright_color;
         color: $light_color;
         border-color: $bright_color;
+        box-shadow: none;
     }
     &:active {
         background-color: $bright_color;
@@ -142,5 +153,5 @@ input[type="submit"] {
 
 input[type="submit"] {
     @include bright-button;
-    padding: 12rem 20rem;
+    padding: 12rem 10rem;
 }

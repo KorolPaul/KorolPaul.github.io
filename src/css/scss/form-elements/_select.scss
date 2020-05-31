@@ -7,17 +7,29 @@ select:active {
     border: 1px solid $color;
     font-size: 12rem;
     line-height: 14rem;
-    padding: 9rem 20rem 11rem 20rem;
+    padding: 6rem 10rem 7rem;
     text-align: center;
     border-radius: 0;
     outline: none;
-
-    optgroup {
-        box-shadow: 0 0 2rem $color;
-        outline: 2rem $color;
+    @include tablet {
+        padding: 9rem 20rem 11rem 20rem;
     }
-
     & + & {
         margin: 0 0 0 -1rem;
+    }
+}
+
+optgroup {
+    box-shadow: 0 0 2rem $color;
+    outline: 2rem $color;
+}
+
+option {
+    
+    &:hover {
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1) inset;
+        background: rgba(0, 0, 0, 0.1);
+        outline: none !important;
+        border: none !important;
     }
 }

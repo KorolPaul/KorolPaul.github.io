@@ -1,0 +1,243 @@
+%html(lang="en")
+    %head
+        %meta(charset="UTF-8")/
+        %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+        %title Театр на Малой Бронной
+        %meta(name="description" content="")/
+        %meta(name="keywords" content="")/
+        %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
+        %meta(name="format-detection" content="telephone=no")/
+        %meta(name="HandheldFriendly" content="true")/
+        %link(rel="stylesheet" href="style.css")/
+    %body
+        %header.header 
+
+            %a.logo(href="/")
+                %picture.logo_image
+                    %source(srcset="src/img/logo-mobile.svg" media="(max-width: 767px)")
+                    %img(src="src/img/logo.svg" alt="")
+                %img.logo_image__mobile-fixed(src="src/img/logo-mobile-small.svg" alt="")
+
+            %nav.menu
+                .menu-toggle
+
+                .menu_content
+                    %button.menu_search-icon
+                    %img.menu_logo(src="src/img/logo-mobile-menu.svg" alt="")
+
+                    .search
+                        .search_close(id="search-close")
+                        .search_fade
+                        .search_content
+                            %input.search_input(type="search" placeholder="поиск" required="true")
+                            .search_results
+                                %a.search_result(href="spectacle.html") макбет
+                                %a.search_result(href="spectacle.html") леди макбет
+                                %a.search_result(href="spectacle.html") макбет трагедия
+
+                    %a.menu_link.menu_link__mobile(href="/")
+                        %span.menu_link-text купить билет
+                    %a.menu_link.menu_link__mobile(href="/")
+                        %span.menu_link-text адреса
+                    %a.menu_link.active(href="/afisha.html")
+                        %span.menu_link-text афиша
+                    %a.menu_link(href="/about.html")
+                        %span.menu_link-text о театре
+                    %a.menu_link(href="/events.html")
+                        %span.menu_link-text события
+                    %a.menu_link(href="/press.html")
+                        %span.menu_link-text пресса о театре
+                    %a.menu_link(href="/volunteers.html")
+                        %span.menu_link-text клуб волонтеров
+                    %a.menu_link(href="/partners.html")
+                        %span.menu_link-text партнеры театра
+                    %a.menu_link.menu_link__indent(href="/search.html")
+                        %span.menu_link-text поиск
+
+                    .menu_social
+                        .social.social__header
+                            .social_links
+                                %a.social_link.social_link__vk(href="#")
+                                %a.social_link.social_link__fb(href="#")
+                                %a.social_link.social_link__insta(href="#")
+                                %a.social_link.social_link__youtube(href="#")
+
+        %main.content
+            %span.content_title документы
+
+            %article.documents
+                .documents_content
+                    .documents_section
+                        %p Государственное бюджетное учреждение культуры города Москвы «Московский драматический театр на Малой Бронной» ГБУК г. Москвы "Театр на Малой Бронной"
+                        %table
+                            %tbody
+                                %tr
+                                    %td Адрес:
+                                    %td г. Москва, Бронная Малая ул., д. 4,стр.2
+                                %tr
+                                    %td Почтовый адрес:
+                                    %td 123104 г. Москва, Бронная Малая ул., д. 4,стр.2
+
+                        %a(href="#") Схема проезда
+                        %table
+                            %tbody      
+                                %tr
+                                    %td Касса театра:
+                                    %td
+                                        %a(href="tel:+7 (495) 690-40-93") +7 (495) 690-40-93
+                                %tr
+                                    %td Заказ, бронирование и доставка билетов:
+                                    %td 
+                                        %div
+                                            %a(href="tel:+7 (495) 690-40-93") +7 (495) 690-59-53
+                                        %div
+                                            %a(href="tel:+7 (495) 690-40-93") +7 (495) 690 43 97
+                                %tr
+                                    %td Группа администраторов театра:
+                                    %td 
+                                        %div
+                                            %a(href="tel:+7 (495) 690-40-93") +7 (495) 690-67-31
+                                        %div
+                                            %a(href="tel:+7 (495) 690-40-93") +7 (495) 697-08-86
+                                %tr
+                                    %td Зав. труппой:
+                                    %td
+                                        %a(href="tel:+7 (495) 690-40-93") +7 (495) 690-43-58
+                                %tr
+                                    %td Отдел кадров:
+                                    %td
+                                        %a(href="tel:+7 (495) 690-40-93") +7 (495) 690-02-67
+                                %tr
+                                    %td Адрес электронной почты:
+                                    %td
+                                        %a(href="mailto:mbronnaya@theatre.ru") mbronnaya@theatre.ru
+
+                    .documents_section
+                        %a(href="#") Структура организации
+                        %table
+                            %tbody      
+                                %tr
+                                    %td(rowspan="4") Руководящий состав:
+                                %tr
+                                    %td Художественный руководитель театра:
+                                    %td Богомолов Константин Юрьевич
+                                %tr
+                                    %td Директор театра:
+                                    %td Чернышев Константин Витальевич
+                                %tr
+                                    %td Заместитель директора театра:
+                                    %td Грачева Ирина Александровна
+                    .documents_section
+                        %p 
+                            %a(href="#") Перечень платных услуг
+                        %p 
+                            %a(href="#") Перечень льгот для отдельных категорий потребителей на платные услуги
+                        %p 
+                            %a(href="#") Цены на билеты 2017-2018 гг.
+
+                        %p ГБУК г. Москвы "Театр на Малой Бронной" был создан в 1945 году.
+                        %p Учредителем Учреждения является город Москвы. Функции и полномочия учредителя Учреждения в соответствии с федеральными законами, законами города Москвы нормативными правовыми актами правительства Москвы осуществляет Департамент культуры города Москвы.
+
+                    .documents_section
+                        %p 
+                            %a(href="#") Устав
+                        %p 
+                            %a(href="#") Свидетельство о государственной регистрации
+                        %p 
+                            %a(href="#") Решение учредителя о создании организации культуры
+                        %p 
+                            %a(href="#") Решение о назначении руководителя организации культуры
+                        %p 
+                            %a(href="#") План финансово-хозяйственной деятельности 2017-2019 гг.
+                        %p 
+                            %a(href="#") Информация о материально-техническом обеспечении
+                        %p 
+                            %a(href="#") Государственное задание на оказание услуг
+                        %p 
+                            %a(href="#") Информация о выполнении государственного задания
+                        %p 
+                            %a(href="#") Баланс учреждения
+                        %p 
+                            %a(href="#") Независимая оценка качества
+                        %p 
+                            %a(href="#") Приказ об учетной политике театра
+                        %p 
+                            %a(href="#") Правила аккредитации СМИ
+                        %p 
+                            %a(href="#") Кодекс этики
+                        %p 
+                            %a(href="#") Положение о конфликте
+
+                    .documents_section
+                        %p СОУТ:
+                        %p 
+                            %a(href="#") Специальная оценка условий труда
+                        %p 
+                            %a(href="#") Сводная ведомость результатов 2017
+                        %p 
+                            %a(href="#") Перечень мероприятий 2017
+                        %p 
+                            %a(href="#") Сводная ведомость результатов 2018
+                        %p 
+                            %a(href="#") Перечень мероприятий 2018
+
+                    .documents_section
+                        %p Прием граждан руководителем организации осуществляется по согласованию с секретарем.
+
+                        %table
+                            %tbody      
+                                %tr
+                                    %td Секретарь:
+                                    %td
+                                        %a(href="tel:+7 (495) 690-40-93") +7 (495) 690-67-31
+                    
+
+        %footer.footer
+            .footer_mobile
+                .social
+                    %span.social_title следите за нами в соцсетях
+                    .social_links
+                        %a.social_link.social_link__vk(href="#")
+                        %a.social_link.social_link__fb(href="#")
+                        %a.social_link.social_link__insta(href="#")
+                        %a.social_link.social_link__youtube(href="#")
+                        
+                .footer_menu
+                    %a.footer_menu-link(href="afisha.html") афиша
+                    %a.footer_menu-link(href="/about.html") адреса
+                    %a.footer_menu-link(href="#") купить билет
+                    %a.footer_menu-link(href="#") схема зала
+                    %a.footer_menu-link(href="#") фотобанк
+                    %a.footer_menu-link(href="volunteers.html") клуб волонтеров
+                    %a.footer_menu-link(href="/partners.html") партнеры театра
+                    %a.footer_menu-link(href="#") контакты
+            .footer_content
+                .footer_columns
+                    .footer_column.footer_column__flex
+                        %img.footer_logo(src="src/img/dkm.svg" alt="")
+                        %div.footer_contacts
+                            .footer_adress
+                                %span Москва 
+                                %span Малая Бронная, 4
+                                %a(href="mailto:mbronnaya@theatre.ru") mbronnaya@theatre.ru
+                            %a.footer_contacts-button все контакты
+                    .footer_column
+                        %p.footer_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы  «Московский драматический театр на Малой Бронной» 
+                        .footer_documents
+                            %span.footer_inn ИНН 7703001970
+                            %a.footer_documents-link(href="#") Документы
+                .footer_bottom
+                    %img.footer_bottom-image(src="src/img/bank-of-vacancies.jpg" alt="")
+                    %img.footer_bottom-image(src="src/img/active-citizen.jpg" alt="")
+                    %img.footer_bottom-image(src="src/img/year-of-theatre.jpg" alt="")
+                    %a.footer_outer-link(href="#") mos.ru
+
+
+
+        %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")
+        %script(src="src/js/tiny-slider.min.js")
+        %script(src="src/js/main.js")
+        %script(src="src/js/about.js")
+                                
+
+

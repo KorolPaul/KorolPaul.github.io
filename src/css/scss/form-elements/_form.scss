@@ -5,6 +5,7 @@
         }
     }
     &_cell {
+        position: relative;
         margin: 0 0 22rem;
         @include tablet {
             flex-grow: 1;
@@ -40,5 +41,41 @@
                 padding-right: calc(48% + 48rem);
             }
         }
+    }
+    &_errors {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        right: 0;
+
+
+    }
+    &_error {
+        animation: error-fade-in .2s linear .1s 1 forwards;
+        color: $bright_color;
+        font-size: 14rem;
+        display: inline-block;
+        text-align: center;
+        @include tablet {
+            font-size: 12rem;
+            min-width: 200rem;
+        }
+        @include desktop {
+            font-size: 18rem;
+            min-width: 325rem;
+        }
+        @include desktop-large {
+            font-size: 20rem;
+            min-width: 460rem;
+        }
+    }
+}
+
+@keyframes error-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

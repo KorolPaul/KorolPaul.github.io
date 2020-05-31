@@ -31,6 +31,11 @@
 @import  "layout/widget";
 @import  "layout/carousel";
 @import  "layout/tabs";
+@import  "layout/fade";
+@import  "layout/popup";
+@import  "layout/gallery-popup";
+@import  "layout/sidebar";
+@import  "layout/search";
 
 /*Content*/
 @import  "content/spectacle";
@@ -51,6 +56,7 @@
 @import  "content/spectacles-title";
 @import  "content/article";
 @import  "content/person";
+@import  "content/documents";
 
 /*Other*/
 @import  "other/partner";
@@ -59,9 +65,11 @@
 @import  "other/contacts";
 @import  "other/switcher";
 @import  "other/search-results";
+@import  "other/sidebar-filters";
 
 
 /*Plugins*/
 @import  "plugins/tiny-slider";
 @import  "plugins/addthis";
 @import  "plugins/photoswipe";
+@import  "plugins/datapicker";

@@ -43,7 +43,7 @@ a {
 
     &:hover,
     &.hover {
-        color: $bright_color;
+        color: $color;
         outline: none;
 
         &::after {
@@ -52,7 +52,7 @@ a {
     }
     &:active,
     &.active {
-        color: $bright_color__active;
+        color: $color;
         outline: none;
     }
 }
@@ -80,7 +80,33 @@ textarea {
 
 table {
     border-collapse: collapse;
+    margin: 0 0 20rem;
     width: 100%;
+}
+
+td {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    vertical-align: top;
+    font: #{$font-size}/24rem $font-family;
+    @include tablet {
+        font-size: 12rem;   
+        line-height: 22rem;
+    }
+    @include desktop {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        font-size: 18rem;
+        line-height: 32rem;
+    }
+    @include desktop-large {
+        font-size: 26rem;
+        line-height: 48rem;
+    }
+
+    &:first-child {
+        padding-right: 20rem;
+    }
 }
 
 .fixed-header {
@@ -90,6 +116,8 @@ table {
     }
 }
 
-.menu-opened {
+.menu-opened,
+.popup-opened,
+.sidebar-opened {
     overflow: hidden;
 }

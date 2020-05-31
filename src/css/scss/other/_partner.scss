@@ -22,10 +22,13 @@
         height: 112rem;
         left: 19vw;
         margin-left: -2vw;
+        padding-right: 3vw;
     }
     @include desktop-large {
         height: 158rem;
         left: 18vw;
+        padding-bottom: 48rem;
+        padding-right: 5vw;
     }
 
     &__mobile {

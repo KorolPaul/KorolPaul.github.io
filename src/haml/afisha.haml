@@ -25,6 +25,15 @@
                     %button.menu_search-icon
                     %img.menu_logo(src="src/img/logo-mobile-menu.svg" alt="")
 
+                    .search
+                        .search_close(id="search-close")
+                        .search_fade
+                        .search_content
+                            %input.search_input(type="search" placeholder="поиск" required="true")
+                            .search_results
+                                %a.search_result(href="spectacle.html") макбет
+                                %a.search_result(href="spectacle.html") леди макбет
+                                %a.search_result(href="spectacle.html") макбет трагедия
 
                     %a.menu_link.menu_link__mobile(href="/")
                         %span.menu_link-text купить билет
@@ -65,10 +74,10 @@
                     %button.filters_control.filters_control__mobile
                         %img.filters_control-icon(src="src/img/search.svg" alt="")
                         %span.filters_control-text поиск
-                    %button.filters_control.filters_control__active
+                    %button.filters_control.filters_control__active(id="filters-toggle" data-id="filters")
                         %img.filters_control-icon(src="src/img/filters.svg" alt="")
                         %span.filters_control-text фильтры
-                    %button.filters_control
+                    %button.filters_control(id="calendar-toggle" data-id="calendar")
                         %img.filters_control-icon(src="src/img/calendar.svg" alt="")
                         %span.filters_control-text календарь
             
@@ -306,12 +315,63 @@
                     %img.footer_bottom-image(src="src/img/year-of-theatre.jpg" alt="")
                     %a.footer_outer-link(href="#") mos.ru
 
+        %aside.sidebar
+            .sidebar_fade
+            .sidebar_content
+                %button.sidebar_close
+                .sidebar-filters(id="filters")
+                    .sidebar-filters_content
+                        .sidebar-filters_section
+                            .sidebar-filters_section-title возрастной рейтинг
+                            .sidebar-filters_section-options
+                                %input(type="checkbox" id="age-0" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="age-0") 0+
+                                %input(type="checkbox" id="age-6" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="age-6") 6+
+                                %input(type="checkbox" id="age-12" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="age-12") 12+
+                                %input(type="checkbox" id="age-16" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="age-16") 16+
+                                %input(type="checkbox" id="age-18" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="age-18") 18+
+                        .sidebar-filters_section
+                            .sidebar-filters_section-title площадки
+                            .sidebar-filters_section-options.sidebar-filters_section-options__wrap
+                                %input(type="checkbox" id="place-1" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="place-1") Основная сцена
+                                %input(type="checkbox" id="place-2" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="place-2") ТЦ «На Страстном»
+                                %input(type="checkbox" id="place-3" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="place-3") Малая сцена
+                                %input(type="checkbox" id="place-4" checked="true").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="place-4") ТКЗ «Дворец на Яузе»
+                        .sidebar-filters_section.sidebar-filters_section__small-indent
+                            .sidebar-filters_section-title спектакли
+                            .sidebar-filters_section-options
+                                %input(type="checkbox" id="premiers").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="premiers") только премьеры
+                                %input(type="checkbox" id="stock").sidebar-filters_checkbox
+                                %label.sidebar-filters_label(for="stock") билеты в продаже
+                        .sidebar-filters_section
+                            %input(type="checkbox" id="archive").sidebar-filters_checkbox
+                            %label(for="archive") показывать архивные
+                    .sidebar-filters_footer
+                        .sidebar-filters_section
+                            %button.sidebar-filters_button показать (30)
+
+                .sidebar-filters(id="calendar")
+                    .sidebar-filters_section
+                        %input.sidebar-filters_date-input(type="text" id="datapicker")
+                    .sidebar-filters_footer
+                        .sidebar-filters_section
+                            %button.sidebar-filters_button(disabled="true") показать (30)
 
 
         %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")
         %script(src="src/js/tiny-slider.min.js")
+        %script(src="src/js/datapicker.js")
         %script(src="src/js/main.js")
-        %script(src="src/js/about.js")
+        %script(src="src/js/afisha.js")
                                 
 
 

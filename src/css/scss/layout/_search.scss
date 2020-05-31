@@ -1,0 +1,175 @@
+.search {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 13;
+    transition: .2s linear visibility;
+
+
+    .search-opened & {
+        visibility: visible;
+        transition: .0001s linear visibility .2s;
+    }
+
+    &_input[type] {
+        @include placeholder-color(#9B9B9B);
+        background: url(#{$img}/search.svg) no-repeat left center;
+        height: 40rem;
+        line-height: 40rem;
+        padding: 0 6rem 0 40rem;
+        font-weight: normal;
+        font-size: 16rem;
+        line-height: 40rem;
+        border: none;
+
+        &:valid {
+            font-weight: bold;
+            background-image: url(#{$img}/search-back.svg);
+        }
+        &:hover {
+            @include placeholder-color(#9B9B9B);
+        }
+        &:invalid {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    &_result {
+        font-size: 14rem;
+        line-height: 46rem;
+        height: 46rem;
+        line-height: 46rem;
+        display: block;
+        text-align: left;
+        padding: 0 44rem;
+        transition: .2s ease-in-out background;
+
+        &:hover {
+            background: #E3E3E3;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+
+    &_close {
+        background: transparent;
+        border: none;
+        padding: 6rem;
+        margin: 0;
+        height: 24rem;
+        width: 24rem;
+        overflow: visible;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+        top: 17rem;
+        right: 13rem;
+        z-index: 13;
+        @include desktop {
+            right: 3vw;
+        }
+        @include desktop-large {
+            right: 5vw;
+        }
+
+        &:hover,
+        &:active {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            background: #4A4A4A;
+            height: 2rem;
+            width: 100%;
+            margin: 3rem 0;
+            transition: .2s ease-in-out transform;
+        }
+
+        &::before {
+            transform: rotateZ(45deg) translate(0rem, 5rem);
+        }
+        &::after {
+            transform: rotateZ(-45deg) translate(1rem, -6rem);
+        }
+
+    }
+    &_fade {
+        display: none;
+        @include tablet {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(4, 3, 4, 0);
+            display: block;
+            z-index: 1;
+            transition: .2s ease-in-out background;
+        }
+
+        .search-opened & {
+            background: rgba(4, 3, 4, 0.45);
+        }
+    }
+    &_content {
+        background: $light_color;
+        padding: 13rem $layout_indent 24rem;
+        position: relative;
+        z-index: 2;
+        transform: translateY(-100%);
+        transition: .2s ease-in-out .1s transform;
+        @include tablet {
+            padding-left: 128rem;
+        }
+        @include desktop {
+            padding-right: 3vw;
+            padding-left: 19vw;
+        }
+        @include desktop-large {
+            padding-right: 5vw;
+            padding-left: 18vw;
+        }
+
+        &__big-indent {
+            @include tablet {
+                padding-top: 70rem;
+            }
+            @include desktop {
+                padding-top: 92rem;
+            }
+            @include desktop-large {
+                padding-top: 138rem;
+            }
+        }
+
+        .accordion-page & {
+            @include tablet {
+                padding-left: 110rem;
+                padding-top: 16rem;
+            }
+            @include desktop {
+                padding-right: 54rem;
+                padding-left: 15vw;
+            }
+            @include desktop-large {
+                padding-left: 15vw;
+            }
+        }
+
+
+        .search-opened & {
+            transform: translateY(0);
+        }
+    }
+}

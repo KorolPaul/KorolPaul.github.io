@@ -1,5 +1,5 @@
 .filters {
-    background: rgba(227, 227, 227, 0.96);
+    background: #E3E3E3;
     padding: 15rem $layout_indent 12rem;
     margin: 0 -#{$layout_indent};
     @include tablet {
@@ -17,6 +17,7 @@
     }
 
     &__fixed {
+        position: relative;
         @include tablet {
             box-sizing: border-box;
             position: fixed;
@@ -107,11 +108,24 @@
             transform: scaleX(1);
         }
         .filters_control.active &::before,
-        .filters_control:active &::before,
-        .filters_switcher-button.active &::before,
-        .filters_switcher-button:active &::before {
+        .filters_control:active &::before {
             transform-origin: right 0;
             transform: scaleX(0);
+        }
+
+
+        .filters_switcher:hover .filters_switcher-button.active &::before {
+            transform: scale(0);
+        }
+        .filters_switcher-button.active &::before,
+        .filters_switcher .filters_switcher-button.active:hover &::before {
+            transform: scale(1);
+        }
+        .filters_switcher-button:nth-child(1) &::before {
+            transform-origin: right 0;
+        }
+        .filters_switcher-button:nth-child(2) &::before {
+            transform-origin: left 0;
         }
     }
     &_control-icon {
@@ -152,18 +166,42 @@
     }
     &_panel-wrapper {
         max-width: 0;
-        transition: .3s ease-in-out max-width;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        background-color: #E3E3E3;
+        @include tablet {
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            transition: .3s ease-in-out max-width, .3s ease-in-out opacity;
+        }
 
         .filters__opened & {
+            width: 100%;
+            opacity: 1;
             max-width: 1000rem;
+            padding: 0 0 0 $layout_indent;
+            @include tablet {
+                width: auto;
+                padding: 0;
+            }
         }
     }
     &_panel {
-        display: flex;
         align-items: center;
         transform-origin: center right;
+        display: flex;
         transform: scaleX(0);
-        transition: .2s ease-in-out .1s transform;
+        @include tablet {
+            transition: .2s ease-in-out .1s transform;
+        }
 
         .filters__opened & {
             transform: scaleX(1);
@@ -173,17 +211,31 @@
         color: $color;
         font-size: 16rem;
         line-height: 33rem;
-        margin: 0 15rem;
+        margin: 0 8rem;
+        @include tablet {
+            margin: 0 15rem;
+        }
     }
     &_button {
-        margin: 0 0 0 20rem;
+        margin: 0 0 0 16rem;
         padding: 0;
         background: transparent;
         border: none;
         color: $bright_color;
-        font-size: 12rem;
-        line-height: 16rem;
+        font-size: 0;
+        line-height: 0;
         position: relative;
+        width: 16rem;
+        height: 16rem;
+        background: url(#{$img}/clear.svg) no-repeat center center;
+        @include tablet {
+            background: transparent;
+            width: auto;
+            height: auto;
+            font-size: 12rem;
+            line-height: 16rem;
+            margin-left: 0 0 0 20rem;
+        }
 
         &::after {
             content: '';
@@ -198,11 +250,13 @@
         }
 
         &:hover {
-            background: transparent;
+            background-color: transparent;
             box-shadow: none;
 
             &::after {
-                transform: scaleX(1);
+                @include tablet {
+                    transform: scaleX(1);
+                }
             }
         }
         &:active {

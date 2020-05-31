@@ -1,0 +1,19 @@
+.documents {
+    &_content {
+        max-width: 700rem;
+    }
+    &_section {
+        margin-bottom: 40rem;
+    }
+
+    td {
+        width: 50%;
+
+        a::after {
+            transform: scaleX(0);
+        }
+        a:hover::after {
+            transform: scaleX(1);
+        }
+    }
+}

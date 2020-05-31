@@ -70,25 +70,24 @@ if (carousels.length) {
             mouseDrag: true,
             loop: true,
             controlsContainer: carouselControls,
+            preventScrollOnTouch: true,
             responsive: {
+                768: {
+                    autoWidth: true,
+                    items: 6
+                },
+                1024: {
+                    items: 8,
+                    gutter: 38,
+                },
+                1260: {
+                    gutter: 54,
+                    items: 6.8,
+                },
                 1920: {
                     gutter: 74,
                     items: 9,
                 },
-                1366: {
-                    gutter: 38,
-                    items: 8,
-                },
-                1260: {
-                    gutter: 54,
-                },
-                1024: {
-                    items: 6
-                },
-                768: {
-                    autoWidth: true,
-                    items: 5
-                }
             }
         });
     }
@@ -106,7 +105,7 @@ if (galleries.length) {
             autoplayButton: false,
             autoplayButtonOutput: false,
             container: gallery,
-            speed: 1000,
+            speed: 1500,
             items: 1,
             nav: false,
             controls: false,
@@ -157,4 +156,53 @@ if (tabLinks) {
         });
         
     }
+}
+
+/* Popups */
+function togglePopup(e) {
+    if (e) {
+        e.preventDefault();
+    }
+    document.body.classList.toggle('popup-opened')
+}
+
+const fadeElement = document.querySelector('.fade');
+const popupCloseElement = document.querySelector('.popup_close');
+
+if (popupCloseElement) {
+    popupCloseElement.addEventListener('click', togglePopup);
+}
+if (fadeElement) {
+    fadeElement.addEventListener('click', function(e) {
+        if (e.target === fadeElement) {
+            togglePopup();
+        }
+    });
+}
+
+
+const spectacleAdresses = document.querySelectorAll('.spectacle_adress');
+if (spectacleAdresses) {
+    for (let i = 0; i < spectacleAdresses.length; i++) {
+        const adress = spectacleAdresses[i];
+        adress.addEventListener('click', togglePopup)
+    }
+}
+
+/* Search */
+function toggleSearch(e) {
+    e.preventDefault();
+    document.querySelector('.menu').classList.toggle('search-opened')
+}
+
+const searchButtons = document.querySelectorAll('#search-button, .menu_link__search');
+if (searchButtons) {
+    for (let i = 0; i < searchButtons.length; i++) {
+        const button = searchButtons[i];
+        button.addEventListener('click', toggleSearch);
+    }
+}
+const searchClose = document.getElementById('search-close');
+if (searchClose) {
+    searchClose.addEventListener('click', toggleSearch)
 }

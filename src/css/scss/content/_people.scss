@@ -145,14 +145,16 @@
         font-weight: bold;
         border-bottom: 1px solid transparent;
         transition: .2s ease-in-out border;
-
-        .people_item:hover & {
-            border-bottom-color: currentColor;
-        }
     }
     &_item-subtitle {
         color: #4a4a4a;
         display: block;
+
+        .people__big & {
+            @include desktop {
+                font-weight: 200;
+            }
+        }
     }
     &_more {
         font-weight: bold;

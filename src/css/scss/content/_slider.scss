@@ -20,14 +20,23 @@
             margin: 0 calc(#{$layout_indent * -2} - 54rem + 2rem) 0 0;
         }
     }
+    &__gallery {
+        overflow: visible;
+        padding: 0;
+        @include tablet {
+            margin: 0 20vw;
+            position: relative;
+        }
+    }
 
     &_counter {
         right: 26rem;
         top: 100%;
         font-size: 10rem;
         line-height: 20rem;
-        color: #9B9B9B;
+        color: #9b9b9b;
         position: absolute;
+        z-index: 1;
         @include tablet {
             right: auto;
             left: 16rem;
@@ -45,8 +54,25 @@
             line-height: 20rem;
             width: calc(100vw - 618rem - 18vw - 46rem);
         }
+
+        .slider__gallery & {
+            color: $light_color;
+            top: auto;
+            right: 12rem;
+            bottom: calc(2vh + 65rem);
+            font-size: 12rem;
+            line-height: 18rem;
+            @include tablet {
+                width: 100rem;
+                left: auto;
+                right: 0;
+                bottom: auto;
+                top: calc(100% + 16rem);
+            }
+        }
     }
     &_item {
+        position: relative;
 
         .event & {
             @include tablet {
@@ -65,10 +91,87 @@
     }
     &_image {
         width: 100%;
-        transition: .2s ease-in-out transform;
+        transition: 0.2s ease-in-out transform;
 
-        .slider_item:hover & {
+        .slider_image-wrapper:hover & {
             transform: scale(1.08);
+        }
+        .slider__gallery & {
+            height: 96vh;
+            object-fit: cover;
+            @include tablet {
+                height: auto;
+                object-fit: initial;
+            }
+        }
+    }
+    &_item-content {
+        position: absolute;
+        left: 12rem;
+        right: 12rem;
+        bottom: 12rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        opacity: 0;
+        transition: 0.2s ease-in-out opacity;
+        @include tablet {
+            top: calc(100% + 16rem);
+            bottom: auto;
+            left: 0;
+            right: 56rem;
+            min-height: 70rem;
+        }
+        @include desktop {
+            right: 120rem;
+        }
+
+        .tns-slide-active & {
+            opacity: 1;
+        }
+    }
+    &_text {
+        font-size: 12rem;
+        line-height: 18rem;
+        color: $light_color;
+        width: 60%;
+        flex-shrink: 1;
+        @include tablet {
+            max-width: 240rem;
+        }
+        @include desktop {
+            max-width: 340rem;
+            font-size: 18rem;
+            line-height: 24rem;
+        }
+    }
+    &_share-button {
+        @include button;
+        background-color: transparent;
+        color: $light_color;
+        border: 2rem solid $light_color;
+        flex-shrink: 0;
+        margin: 0 0 0 24rem;
+        padding-top: 7rem;
+        padding-bottom: 8rem;
+        @include tablet {
+            padding-top: 7rem;
+            padding-bottom: 9rem;
+        }
+        @include desktop {
+            padding-top: 7rem;
+            padding-bottom: 9rem;
+        }
+
+        &:hover {
+            background-color: $light_color;
+            box-shadow: none;
+            color: $color;
+        }
+        &:active {
+            background-color: $light_color;
+            box-shadow: none;
+            color: $color;
         }
     }
 }
