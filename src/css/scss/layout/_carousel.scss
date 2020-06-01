@@ -93,6 +93,9 @@
                 left: -9rem;
                 top: 0;
                 transform: rotate(35deg);
+                @include desktop {
+                    width: 2rem;
+                }
             }
         }
     }
@@ -116,9 +119,15 @@
         padding: 0;
         display: none;
         filter: grayscale(1) brightness(.5);
-        transition: .2s ease-in-out transform,  .2s ease-in-out filter;
+        transition: .2s ease-in-out transform, .2s ease-in-out filter;
         @include tablet {
             display: inline-block;
+        }
+        @include desktop {
+            background-size: 16rem 16rem;
+        }
+        @include desktop-large {
+            background-size: 22rem 22rem;
         }
 
         &__prev {

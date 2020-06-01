@@ -37,6 +37,10 @@
         @include tablet {
             display: none;
         }
+
+        .spectacles__without-dividers & {
+            content: none;
+        }
     }
     &:last-child::after {
         display: none;
@@ -101,7 +105,7 @@
         background: $gray_color;
         position: relative;
         margin: 0 0 13rem;
-        height: 180rem;
+        height: 180px;
         display: block;
         overflow: hidden;
         @include tablet {

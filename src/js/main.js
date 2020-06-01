@@ -86,7 +86,7 @@ if (carousels.length) {
                 },
                 1920: {
                     gutter: 74,
-                    items: 9,
+                    items: 8,
                 },
             }
         });

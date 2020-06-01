@@ -461,6 +461,18 @@ p {
   margin: 0 0 10rem;
 }
 
+@media all and (min-width: 1259px) {
+  p {
+    margin-bottom: 20rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  p {
+    margin-bottom: 30rem;
+  }
+}
+
 ul,
 ol {
   padding: 0 0 0 20rem;
@@ -2725,6 +2737,12 @@ h3,
   transform: rotate(35deg);
 }
 
+@media all and (min-width: 1259px) {
+  .carousel_item-title__decorated::before {
+    width: 2rem;
+  }
+}
+
 .carousel_item-subtitle {
   font-size: 12rem;
   line-height: 16rem;
@@ -2751,13 +2769,25 @@ h3,
   display: none;
   -webkit-filter: grayscale(1) brightness(0.5);
   filter: grayscale(1) brightness(0.5);
-  -webkit-transition: .2s ease-in-out transform,  .2s ease-in-out filter;
-  transition: .2s ease-in-out transform,  .2s ease-in-out filter;
+  -webkit-transition: .2s ease-in-out transform, .2s ease-in-out filter;
+  transition: .2s ease-in-out transform, .2s ease-in-out filter;
 }
 
 @media all and (min-width: 767px) {
   .carousel_button {
     display: inline-block;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .carousel_button {
+    background-size: 16rem 16rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .carousel_button {
+    background-size: 22rem 22rem;
   }
 }
 
@@ -3490,6 +3520,10 @@ h3,
   }
 }
 
+.spectacles__without-dividers .spectacle::after {
+  content: none;
+}
+
 .spectacle:last-child::after {
   display: none;
 }
@@ -3584,7 +3618,7 @@ h3,
   background: #D8D8D8;
   position: relative;
   margin: 0 0 13rem;
-  height: 180rem;
+  height: 180px;
   display: block;
   overflow: hidden;
 }
