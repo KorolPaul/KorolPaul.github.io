@@ -6,7 +6,10 @@
     &_links {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        @include tablet {
+            justify-content: space-between;
+        }
 
         .social__header & {
             justify-content: center;
@@ -22,10 +25,8 @@
         background-position: center center;
         background-repeat: no-repeat;
         filter: grayscale(1) brightness(.5);
+        background-size: contain;
         transition: .2s ease filter, .2s ease-in-out transform;
-        @include tablet {
-            background-size: contain;
-        }
 
         .menu-opened & {
             background-size: contain;
@@ -44,6 +45,8 @@
         }
 
         &__vk {
+            height: 14rem;
+            width: 25rem;
             @include tablet {
                 height: 5rem;
                 width: 8rem;
@@ -63,6 +66,8 @@
             }
         }
         &__fb {
+            height: 27rem;
+            width: 12rem;
             @include tablet {
                 height: 9rem;
                 width: 4rem;
@@ -82,6 +87,8 @@
             }
         }
         &__insta {
+            height: 33rem;
+            width: 33rem;
             @include tablet {
                 height: 12rem;
                 width: 12rem;
@@ -101,6 +108,8 @@
             }
         }
         &__youtube {
+            height: 27rem;
+            width: 37rem;
             @include tablet {
                 height: 9rem;
                 width: 12rem;

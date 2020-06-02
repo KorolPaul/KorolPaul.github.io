@@ -107,13 +107,13 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 13rem 13rem;
-    transition: .15s ease-in-out transform;
+    transition: .15s linear transform;
 }
 .qs-left {
     background-image: url(#{$img}/calendar-prev.svg);
     
     &:hover {
-        transform: scale(1.1) translateX(-1rem);
+        transform: scale(1.12) translateX(-1rem);
     }
 }
 .qs-right {
@@ -148,7 +148,7 @@
     filter: blur(5px);
 }
 .qs-square {
-    width: calc(100% / 7);
+    width: 46rem;
     height: 46rem;
     display: flex;
     align-items: center;

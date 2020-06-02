@@ -55,9 +55,9 @@
 
         .accordion__secondary & {
             background: transparent;
-            font-size: 28rem;
-            line-height: 36rem;
-            padding: 17rem 0 22rem;
+            font-size: 26rem;
+            line-height: 34rem;
+            padding: 17rem 20rem 22rem 0;
             position: relative;
             z-index: 1;
             @include tablet {
@@ -142,7 +142,13 @@
             transition: .2s ease-in-out border;
             pointer-events: none;
             @include tablet {
-                border-bottom-width: 2rem;
+                border-bottom-width: 3rem;
+            }
+            @include desktop {
+                border-bottom-width: 4rem;
+            }
+            @include desktop-large {
+                border-bottom-width: 5rem;
             }
         }
         .accordion__secondary .accordion_header:hover & {

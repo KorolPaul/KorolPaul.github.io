@@ -129,16 +129,19 @@
         }
     }
     &_control-icon {
-        margin: 0 8rem 0 0;
+        margin: -2rem 8rem 0 0;
         vertical-align: middle;
         @include tablet {
             margin-right: 10rem;
         }
         @include desktop {
-            margin-right: 18rem;
+            margin-right: 14rem;
+            margin-top: -3rem;
         }
         @include desktop-large {
-            margin-right: 26rem;
+            margin-right: 18rem;
+            margin-top: -4rem;
+            width: 18rem;
         }
     }
     &_switcher-button {

@@ -1,15 +1,17 @@
 .article {
-    
     &_slider-wrapper {
-        margin: 0 -#{$layout_indent} 10rem;
+        margin: 0 -#{$layout_indent} 20rem;
         position: relative;
+        @include tablet {
+            margin-bottom: 0;
+        }
         @include desktop {
             margin-right: -3vw;
-            margin-bottom: 22rem;
+            margin-bottom: 0;
         }
         @include desktop-large {
             margin-right: -5vw;
-            margin-bottom: 32rem;
+            margin-bottom: -30rem;
         }
     }
     &_columns {
@@ -44,18 +46,25 @@
             padding-top: 100rem;
         }
 
+        
+    }
+    &_iframe-wrapper {
+        padding: 0 0 56%;
+        position: relative;
+        margin: 0 0 28rem;
+        @include tablet {
+            margin-top: 20rem;
+        }
+        @include desktop {
+            margin-bottom: 32rem;
+        }
+
         iframe {
             width: 100%;
-            margin: 0 0 30rem;
-            @include tablet {
-                margin-top: 20rem;
-            }
-            @include desktop {
-                margin-bottom: 46rem;
-            }
-            @include desktop-large {
-                margin-bottom: 88rem;
-            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
         }
     }
     &_image {
@@ -85,6 +94,8 @@
         @include tablet {
             font-size: 10rem;
             line-height: 16rem;
+            margin-bottom: 8rem;
+            display: block;
         }
         @include desktop {
             font-size: 14rem;
@@ -99,11 +110,14 @@
             content: "";
             background-color: currentColor;
             height: 14rem;
-            width: 1rem;
+            width: 2rem;
             position: absolute;
             left: -11rem;
             top: 1rem;
             transform: rotate(35deg);
+            @include desktop {
+                top: 9rem;
+            }
         }
     }
     &_document {
@@ -114,7 +128,6 @@
     &_document-text {
         flex-grow: 1;
         margin: 0 0 20rem;
-        
     }
     &_document-link-wrapper {
         @include tablet {
@@ -175,8 +188,8 @@
 
         td {
             font-weight: bold;
-            font-size: 16px;
-            line-height: 26px;
+            font-size: 16rem;
+            line-height: 26rem;
             padding: 12rem 0;
             vertical-align: top;
             @include tablet {
@@ -197,6 +210,27 @@
             &::after {
                 display: none;
             }
+        }
+    }
+
+    h1 {
+        font-size: 28rem;
+        line-height: 33rem;
+        margin: 0 0 34rem;
+        @include tablet {
+            font-size: 40rem;
+            line-height: 48rem;
+            margin: 24rem 0 24rem;
+        }
+        @include desktop {
+            font-size: 66rem;
+            line-height: 78rem;
+            margin-bottom: 34rem;
+        }
+        @include desktop-large {
+            font-size: 90rem;
+            line-height: 106rem;
+            margin: 50rem 0 44rem;
         }
     }
 }

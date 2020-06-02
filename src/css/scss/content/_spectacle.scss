@@ -94,6 +94,12 @@
             }
         }
     }
+    .spectacles__without-dividers & {
+        margin-bottom: 0;
+        @include tablet {
+            margin: 0 0 40rem;
+        }
+    }
 
     &_gallery {
         grid-row: 1 / 2;
@@ -260,7 +266,7 @@
             min-height: 130rem;
         }
         @include desktop-large {
-            min-height: 145rem;
+            min-height: 182rem;
         }
 
         .spectacle__line & {
@@ -381,16 +387,41 @@
         }
     }
     &_title-text {
-        border-bottom: 2rem solid transparent;
+        border-bottom: 3rem solid transparent;
         transition: 0.2s ease-in-out border-color;
+        @include tablet {
+            border-bottom-width: 2rem;
+        }
 
         .spectacle_header:hover &,
-        .spectacle_header:active & {
+        .spectacle_header:active &,
+        .spectacle_title:hover &,
+        .spectacle_title:active & {
             border-bottom-color: currentColor;
         }
 
         &::after {
             content: none;
+        }
+
+        .spectacle_title__small & {
+            @include tablet {
+                border-bottom-width: 1rem;
+            }
+            @include desktop {
+                border-bottom-width: 2rem;
+            }
+        }
+        .spectacle_title__big & {
+            @include desktop {
+                border-bottom-width: 3rem;
+            }
+        }
+        .spectacle__big & {
+            border-bottom-width: 3rem;
+            @include desktop-large {
+                border-bottom-width: 4rem;
+            }
         }
     }
     &_description {
@@ -630,6 +661,7 @@
             margin: 0;
             @include tablet {
                 max-width: none;
+                display: block;
             }
         }
     }
@@ -672,7 +704,9 @@
         }
 
         .spectacle__big & {
-            right: -30rem;
+            @include tablet {
+                right: -30rem;
+            }
         }
         .spectacle__alternate & {
             @include tablet {
@@ -682,10 +716,7 @@
         }
         .spectacle__line & {
             top: auto;
-            bottom: 10rem;
-            @include tablet {
-                bottom: 0;
-            }
+            bottom: 0;
         }
     }
     &_controls {
@@ -872,6 +903,7 @@
         }
 
         .spectacle__line & {
+            padding-right: 10rem;
             @include tablet {
                 display: contents;
             }

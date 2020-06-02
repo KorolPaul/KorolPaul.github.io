@@ -37,7 +37,9 @@
 
         span {
             &::before {
-                content: ', ';
+                @include tablet {
+                    content: ', ';
+                }
             }
         }
     }

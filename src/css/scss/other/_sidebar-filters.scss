@@ -42,9 +42,11 @@
         line-height: 16rem;
         padding: 21rem 30rem 20rem 18rem;
         background-repeat: no-repeat;
-        background-position: right 9rem center;
+        margin: 0;
+        background-position: right 12rem center;
         white-space: nowrap;
         flex-grow: 1;
+        box-shadow: 0 0 0 1px #D8D8D8;
         transition: 0.2s ease-in-out background;
 
         &:hover {
@@ -57,8 +59,18 @@
         }
 
         .sidebar-filters_section-options__wrap & {
+            font-size: 12rem;
             width: 50%;
             padding-right: 40rem;
+            background-position: right 9rem center;
+
+            &:nth-of-type(3n) {
+                padding-left: 26rem;
+            }
+        }
+
+        &:nth-of-type(1) {
+            padding-left: 26rem;
         }
     }
     &_button {

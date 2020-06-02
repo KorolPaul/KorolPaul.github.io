@@ -154,6 +154,7 @@
         position: relative;
         border-color: transparent;
         min-height: 62rem;
+        padding: 0 10rem;
         @include tablet {
             padding: 0 8rem;
             max-width: none;
