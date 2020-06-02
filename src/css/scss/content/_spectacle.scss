@@ -70,6 +70,7 @@
         }
         @include desktop-large {
             padding-top: 50rem;
+            padding-bottom: 50rem;
         }
 
         &::after {
@@ -224,6 +225,9 @@
             font-size: 14rem;
             padding-right: 30rem;
         }
+        @include desktop-large {
+            font-size: 20rem;
+        }
 
         &::after {
             display: none;
@@ -242,6 +246,12 @@
             }
             @include desktop {
                 top: 3rem;
+                height: 16rem;
+            }
+            @include desktop-large {
+                font-size: 20rem;
+                height: 18rem;
+                top: 6rem;
             }
         }
 
@@ -385,6 +395,11 @@
                 line-height: 24rem;
             }
         }
+         .spectacle__line &__big {
+             @include desktop-large {
+                font-size: 90rem;
+             }
+         }
     }
     &_title-text {
         border-bottom: 3rem solid transparent;
@@ -483,7 +498,9 @@
             margin-bottom: 18rem;
         }
         @include desktop-large {
+            font-size: 20rem;
             margin-bottom: 20rem;
+            margin-left: 22rem;
         }
 
         .spectacle__big & {
@@ -507,9 +524,12 @@
             @include desktop {
                 margin-right: 60rem;
             }
+            @include desktop-large {
+                margin-left: 22rem;
+            }
 
             &::before {
-                left: -20rem;
+                left: -22rem;
             }
         }
     }
@@ -536,9 +556,20 @@
                 top: 4rem;
             }
             @include desktop-large {
-                height: 18rem;
-                width: 14rem;
-                top: 2rem;
+                height: 20rem;
+                width: 16rem;
+                top: 0;
+                left: -18rem;
+            }
+
+            .spectacle__line & {
+                left: -14rem;
+                @include desktop {
+                    left: -17rem;
+                }
+                @include desktop-large {
+                    left: -20rem;
+                }
             }
         }
         &::after {
@@ -576,18 +607,22 @@
                 top: 4rem;
             }
             @include desktop-large {
-                height: 14rem;
-                width: 14rem;
-                top: 2rem;
+                height: 16rem;
+                width: 16rem;
+                top: 0;
+                left: -19rem;
             }
 
             .spectacle__line & {
-                left: -20rem;
+                left: -16rem;
                 @include tablet {
                     top: 3rem;
                 }
                 @include desktop {
                     top: 2rem;
+                }
+                @include desktop-large {
+                    left: -22rem;
                 }
             }
         }
@@ -701,6 +736,10 @@
         @include desktop {
             font-size: 14rem;
             line-height: 18rem;
+        }
+        @include desktop-large {
+            font-size: 20rem;
+            line-height: 28rem;
         }
 
         .spectacle__big & {

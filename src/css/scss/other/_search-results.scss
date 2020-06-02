@@ -4,10 +4,25 @@
         padding: 15rem $layout_indent 12rem;
         margin: 0 -#{$layout_indent};
         display: block;
+        font-weight: bold;
+        font-size: 14rem;
+        line-height: 24rem;
+        @include tablet {
+            margin-top: -16rem;
+        }
+        @include desktop {
+            padding: 42rem 34rem 30rem;
+            font-size: 22rem;
+            line-height: 40rem;
+            margin-top: -26rem;
+        }
+        @include desktop-large {
+            margin-top: -40rem;
+        }
     }
     &_title {
         display: block;
-        color: #9B9B9B;
+        color: #9b9b9b;
         font-weight: bold;
         font-size: 14rem;
         line-height: 30rem;
@@ -44,12 +59,12 @@
         padding: 0 0 20rem;
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             bottom: 0;
             left: -$layout_indent;
             right: -$layout_indent;
-            border-bottom: 1px solid #9B9B9B;
+            border-bottom: 1rem solid #9b9b9b;
         }
         &:last-child::after {
             display: none;

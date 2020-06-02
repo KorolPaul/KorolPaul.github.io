@@ -74,7 +74,8 @@
             margin-bottom: 52rem;
         }
 
-        .people__four & {
+        .people__four &,
+        .people__five & {
             grid-template-columns: 1fr 1fr;
             row-gap: 36rem;
             column-gap: 36rem;
@@ -90,6 +91,11 @@
             @include desktop-large {
                 row-gap: 56rem;
                 column-gap: 50rem;
+            }
+        }
+        .people__five & {
+            @include tablet {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             }
         }
     }

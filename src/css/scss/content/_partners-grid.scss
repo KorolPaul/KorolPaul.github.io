@@ -1,8 +1,8 @@
 .partners-grid {
-    border-bottom: 1rem solid #9b9b9b;
     margin: 0 0 40rem;
     @include tablet {
         padding: 40rem 0 0;
+        border-bottom: 1rem solid #9b9b9b;
     }
     @include desktop {
         padding-top: 70rem;

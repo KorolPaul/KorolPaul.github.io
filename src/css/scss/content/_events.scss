@@ -40,6 +40,12 @@
             row-gap: 100rem;
             column-gap: 100rem;
         }
+
+        .events__small & {
+            @include tablet {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            }
+        }
     }
     &_item {
         &::after {

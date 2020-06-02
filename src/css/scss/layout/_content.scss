@@ -109,6 +109,12 @@
             }
         }
 
+        &__mobile-only {
+            @include tablet {
+                display: none;
+            }
+        }
+
         .accordion-page & { 
             top: -54rem;
             @include tablet {

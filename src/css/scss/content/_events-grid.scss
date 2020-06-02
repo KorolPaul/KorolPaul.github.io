@@ -165,8 +165,9 @@
                 top: 0;
             }
             @include desktop {
+                height: 16rem;
                 width: 2rem;
-                top: 3rem;
+                top: 0rem;
             }
             @include desktop-large {
                 height: 18rem;

@@ -151,6 +151,7 @@
         padding-left: 27rem;
         @include desktop {
             padding-left: 50rem;
+            padding-right: 60rem;
         }
         @include desktop-large {
             padding-left: 72rem;
@@ -321,9 +322,23 @@
         top: 50%;
         height: 10rem;
         width: 10rem;
-        background: url(#{$img}/arrow-down.svg) no-repeat right center;
+        background: url(#{$img}/arrow-down.svg) no-repeat right center / contain;
         transform: translateY(-50%);
         transition: .2s ease-in-out transform;
+        @include tablet {
+            height: 12rem;
+            width: 12rem;
+        }
+        @include desktop {
+            height: 14rem;
+            width: 14rem;
+            right: -2rem;
+        }
+        @include desktop-large {
+            height: 16rem;
+            width: 16rem;
+            right: -4rem;
+        }
 
         .event_info-more:hover & {
             transform: scale(1.15) translateY(-30%);
