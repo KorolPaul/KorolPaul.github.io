@@ -111,3 +111,11 @@ if (ticketsMoreEl) {
         e.target.style.display = 'none';
     })
 }
+
+/* buy fixed button */
+const fixedButton = document.querySelector('.event_fixed-button');
+if (fixedButton) {
+    let timer = setTimeout(() => {
+        fixedButton.classList.add('visible');
+    }, 3000);
+}

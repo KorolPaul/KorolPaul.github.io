@@ -1,7 +1,8 @@
 .partners {
-    border-bottom: 1rem solid #9b9b9b;
+    position: relative;
     margin: 0 0 40rem;
     @include tablet {
+        border-bottom: 1rem solid #9b9b9b;
         padding: 40rem 0 0;
     }
     @include desktop {

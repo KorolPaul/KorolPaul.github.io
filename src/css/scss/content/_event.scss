@@ -1,5 +1,21 @@
 .event {
     position: relative;
+    padding: 0 0 20rem;
+    @include tablet {
+        padding: 0;
+    }
+    
+    &::after {
+        content: '';
+        border-bottom: 1rem solid #9b9b9b;
+        position: absolute;
+        bottom: 0;
+        left: -$layout_indent;
+        right: -$layout_indent;
+        @include tablet {
+            content: none;
+        }
+    }
 
     &_slider-wrapper {
         margin: 0 -#{$layout_indent} 10rem;
@@ -335,9 +351,9 @@
             right: -2rem;
         }
         @include desktop-large {
-            height: 16rem;
-            width: 16rem;
-            right: -4rem;
+            height: 19rem;
+            width: 19rem;
+            right: -6rem;
         }
 
         .event_info-more:hover & {
@@ -355,19 +371,27 @@
         display: none;
     }
     &_fixed-button {
-        position: fixed;
+        position: sticky;
         left: 50%;
         bottom: 20rem;
         max-width: none;
         width: auto;
         padding: 11rem 55rem 13rem;
-        transform: translateX(-50%);
+        transform: translateX(-25%);
         white-space: nowrap;
         z-index: 1;
         border: none;
         box-shadow: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: .2s ease-in-out opacity;
         @include tablet {
             display: none;
+        }
+
+        &.visible {
+            opacity: 1;
+            pointer-events: all;
         }
     }
     &_header,

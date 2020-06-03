@@ -2284,7 +2284,6 @@ h3,
   padding: 32rem 26rem 18rem;
   font-size: 11rem;
   line-height: 18rem;
-  display: none;
 }
 
 @media all and (min-width: 767px) {
@@ -6143,6 +6142,28 @@ h3,
 
 .event {
   position: relative;
+  padding: 0 0 20rem;
+}
+
+@media all and (min-width: 767px) {
+  .event {
+    padding: 0;
+  }
+}
+
+.event::after {
+  content: '';
+  border-bottom: 1rem solid #9b9b9b;
+  position: absolute;
+  bottom: 0;
+  left: -26rem;
+  right: -26rem;
+}
+
+@media all and (min-width: 767px) {
+  .event::after {
+    content: none;
+  }
 }
 
 .event_slider-wrapper {
@@ -6621,9 +6642,9 @@ h3,
 
 @media all and (min-width: 1799px) {
   .event_info-more-arrow {
-    height: 16rem;
-    width: 16rem;
-    right: -4rem;
+    height: 19rem;
+    width: 19rem;
+    right: -6rem;
   }
 }
 
@@ -6647,25 +6668,35 @@ h3,
 }
 
 .event_fixed-button {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   left: 50%;
   bottom: 20rem;
   max-width: none;
   width: auto;
   padding: 11rem 55rem 13rem;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-25%);
+  transform: translateX(-25%);
   white-space: nowrap;
   z-index: 1;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .2s ease-in-out opacity;
+  transition: .2s ease-in-out opacity;
 }
 
 @media all and (min-width: 767px) {
   .event_fixed-button {
     display: none;
   }
+}
+
+.event_fixed-button.visible {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .event_header, .event_content {
@@ -6761,12 +6792,13 @@ h3,
 }
 
 .partners {
-  border-bottom: 1rem solid #9b9b9b;
+  position: relative;
   margin: 0 0 40rem;
 }
 
 @media all and (min-width: 767px) {
   .partners {
+    border-bottom: 1rem solid #9b9b9b;
     padding: 40rem 0 0;
   }
 }
