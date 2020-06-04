@@ -47,6 +47,7 @@
         white-space: nowrap;
         flex-grow: 1;
         box-shadow: 0 0 0 1px #D8D8D8;
+        margin: 0 0 0 1rem;
         transition: 0.2s ease-in-out background;
 
         &:hover {
@@ -60,7 +61,7 @@
 
         .sidebar-filters_section-options__wrap & {
             font-size: 12rem;
-            width: 50%;
+            width: calc(50% - 1px);
             padding-right: 40rem;
             background-position: right 9rem center;
 

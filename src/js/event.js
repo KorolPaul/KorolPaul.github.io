@@ -102,20 +102,39 @@ if (ticketsMoreEl) {
     ticketsMoreEl.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const hidedElements = document.querySelectorAll('.tickets_hided-row');
+        const hidedElements = document.querySelectorAll('.tickets-row__hidden');
         for (let i = 0; i < hidedElements.length; i++) {
             
             console.log(hidedElements[i].classList)
-            hidedElements[i].classList.remove('tickets_hided-row');
+            hidedElements[i].classList.remove('tickets-row__hidden');
         }
         e.target.style.display = 'none';
     })
 }
 
 /* buy fixed button */
-const fixedButton = document.querySelector('.event_fixed-button');
+const fixedButton = document.querySelector('.event_fixed-button-wrapper');
 if (fixedButton) {
-    let timer = setTimeout(() => {
+    function showButton() {
         fixedButton.classList.add('visible');
+    }
+    function hideButton() {
+        fixedButton.classList.remove('visible');
+    }
+    
+    let timer = setTimeout(() => {
+        showButton();
     }, 3000);
+
+    document.addEventListener("scroll", function (e) {
+        clearTimeout(timer);
+        if (isScrollUp()) {
+            showButton();
+        } else {
+            hideButton();
+            timer = setTimeout(() => {
+                showButton();
+            }, 3000);
+        }
+    });
 }

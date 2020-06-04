@@ -249,6 +249,18 @@
         position: absolute;
         right: 0;
         top: 3px;
+        @include desktop {
+            height: 34rem;
+            width: 34rem;
+            font-size: 14rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            height: 48rem;
+            width: 48rem;
+            font-size: 20rem;
+            line-height: 44rem;
+        }
     }
     &_meta {
         margin: 0 0 12rem;
@@ -370,21 +382,17 @@
     &_hided-info {
         display: none;
     }
-    &_fixed-button {
+    &_fixed-button-wrapper {
         position: sticky;
-        left: 50%;
+        left: 0;
+        width: 100%;
         bottom: 20rem;
-        max-width: none;
-        width: auto;
-        padding: 11rem 55rem 13rem;
-        transform: translateX(-25%);
-        white-space: nowrap;
-        z-index: 1;
-        border: none;
-        box-shadow: none;
         opacity: 0;
-        pointer-events: none;
+        display: flex;
+        justify-content: center;
         transition: .2s ease-in-out opacity;
+        pointer-events: none;
+        z-index: 1;
         @include tablet {
             display: none;
         }
@@ -394,17 +402,24 @@
             pointer-events: all;
         }
     }
+    &_fixed-button {
+        max-width: none;
+        padding: 11rem 55rem 13rem;
+        white-space: nowrap;
+        border: none;
+        box-shadow: none;
+    }
     &_header,
     &_content {
         position: relative;
         @include tablet {
-            padding-right: 234rem;
+            padding-right: 216rem;
         }
         @include desktop {
-            padding-right: 394rem;
+            padding-right: 376rem;
         }
         @include desktop-large {
-            padding-right: 556rem;
+            padding-right: 538rem;
         }
     }
     &_content {
@@ -432,7 +447,7 @@
         @include tablet {
             width: 217rem;
             position: absolute;
-            right: 0;
+            right: -18rem;
             top: 0;
         }
         @include desktop {
@@ -444,16 +459,20 @@
     }
     &_share {
         @include tablet {
+            box-sizing: border-box;
             position: absolute;
             right: 0;
             bottom: 0;
-            width: 217rem;
+            width: 200rem;
+            padding: 0 20rem 0 0;
         }
         @include desktop {
-            width: 360rem;
+            width: 340rem;
+            padding-right: 40rem;
         }
         @include desktop-large {
-            width: 508rem;
+            width: 488rem;
+            padding-right: 60rem;
         }
     }
 }

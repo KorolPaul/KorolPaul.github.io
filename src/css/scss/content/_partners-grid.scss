@@ -11,14 +11,19 @@
         padding-top: 100rem;
     }
 
+
     &_section {
-        margin: 0 0 20rem;
+        padding: 20rem 0 0;
         border-bottom: 1px solid #9B9B9B;
         @include tablet {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             border-bottom: none;
+        }
+
+        &:first-child {
+            border-top: 1rem solid #9b9b9b;
         }
     }
     &_title {
@@ -61,10 +66,13 @@
         align-items: center;
         justify-content: center;
         margin: 0 0 40rem;
+        padding: 10rem 26rem;
+        box-sizing: border-box;
         width: 50%;
         @include tablet {
             width: 33%;
             min-height: 111rem;
+            padding: 19rem 35rem;
         }
 
         &::after {

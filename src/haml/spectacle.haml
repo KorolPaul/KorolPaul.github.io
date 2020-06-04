@@ -118,7 +118,7 @@
                                     %td 
                                         %a(href="#") Геннадий Сайфулин
 
-                        .people
+                        .people.people__small
                             %span.people_title В спектакле заняты
                             .people_items
                                 %a.people_item(href="/person.html")
@@ -157,40 +157,38 @@
 
                     .event_tickets
                         .tickets
-                            %table
-                                %tbody
-                                    %tr
-                                        %td
-                                            %span.tickets_title сегодня, 
-                                                %span 30 сентября 
-                                                %span.tickets_time 19:00
-                                            %span.tickets_price от 2500₽
-                                        %td 
-                                            %span.tickets_unavailible билетов нет
-                                    %tr
-                                        %td
-                                            %span.tickets_title завтра,
-                                                %span 1 октября 
-                                                %span.tickets_time 20:00
-                                            %span.tickets_price от 2500₽
-                                        %td 
-                                            %button.tickets_button купить
-                                    %tr
-                                        %td
-                                            %span.tickets_title 
-                                                %span 3 октября
-                                                %span.tickets_time 19:00
-                                            %span.tickets_price от 2500₽
-                                        %td 
-                                            %button.tickets_button купить
-                                    %tr.tickets_hided-row
-                                        %td
-                                            %span.tickets_title 
-                                                %span 3 октября
-                                                %span.tickets_time 19:00
-                                            %span.tickets_price от 2500₽
-                                        %td 
-                                            %button.tickets_button купить
+                            .tickets_row
+                                .tickets_cell
+                                    %span.tickets_title сегодня, 
+                                        %span 30 сентября 
+                                        %span.tickets_time 19:00
+                                    %span.tickets_price от 2500₽
+                                .tickets_cell
+                                    %span.tickets_unavailible билетов нет
+                            .tickets_row
+                                .tickets_cell
+                                    %span.tickets_title завтра,
+                                        %span 1 октября 
+                                        %span.tickets_time 20:00
+                                    %span.tickets_price от 2500₽
+                                .tickets_cell
+                                    %button.tickets_button купить
+                            .tickets_row
+                                .tickets_cell
+                                    %span.tickets_title 
+                                        %span 3 октября
+                                        %span.tickets_time 19:00
+                                    %span.tickets_price от 2500₽
+                                .tickets_cell
+                                    %button.tickets_button купить
+                            .tickets_row.tickets_row__hidden
+                                .tickets_cell
+                                    %span.tickets_title 
+                                        %span 3 октября
+                                        %span.tickets_time 19:00
+                                    %span.tickets_price от 2500₽
+                                .tickets_cell
+                                    %button.tickets_button купить
                             %button.tickets_more все даты
                                 .tickets_more-arrow
                     
@@ -235,8 +233,8 @@
                             %img.partners_image(src="src/img/partners/kommersatnt.svg" alt="")
 
                     
-
-                %button.event_fixed-button купить билет
+                .event_fixed-button-wrapper
+                    %button.event_fixed-button купить билет
 
             .events
                 %span.events_title наши премьеры
@@ -330,4 +328,5 @@
         %script(src="src/js/tiny-slider.min.js")
         %script(src="src/js/main.js")
         %script(src="src/js/event.js")
+        %script(src="src/js/gallery-popup.js")
                                 

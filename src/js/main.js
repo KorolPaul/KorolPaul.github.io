@@ -29,13 +29,14 @@ function touchMove(event) {
     endPosition = event.touches[0].pageY;
 }
 
+const isScrollUp = () => (startPosition < endPosition);
+
 document.addEventListener("scroll", function(e) {
     const FIXED_NAVBAR_POSITION = 80;
     const position = window.scrollY;
     const fixedModifier = 'fixed-header';
-    const isScrollUp = startPosition < endPosition;
 
-    if (position > FIXED_NAVBAR_POSITION && isScrollUp) {
+    if (position > FIXED_NAVBAR_POSITION && isScrollUp()) {
         document.body.classList.add(fixedModifier);
     } else {
         document.body.classList.remove(fixedModifier);

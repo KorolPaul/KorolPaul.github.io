@@ -59,6 +59,9 @@
                 display: none;
             }
         }
+        &:last-child::after {
+            content: none;
+        }
 
         .events-grid__alternate & {
             flex-direction: column;
@@ -159,7 +162,7 @@
             width: 1rem;
             position: absolute;
             left: -9rem;
-            top: 1rem;
+            top: -1rem;
             transform: rotate(35deg);
             @include tablet {
                 top: 0;

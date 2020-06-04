@@ -534,7 +534,10 @@
         }
     }
     &_adress {
-        border-bottom: 1rem dashed currentColor;
+        //border-bottom: 1rem dashed currentColor;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-underline-offset: 2px;
 
         &::before {
             content: "";

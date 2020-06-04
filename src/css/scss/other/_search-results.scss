@@ -46,6 +46,13 @@
             left: 0;
             top: 10rem;
             transform: rotate(35deg);
+            @include tablet {
+                width: 2rem;
+            }
+            @include desktop {
+                height: 18rem;
+                top: 8rem;
+            }
         }
 
         &__small-indent {

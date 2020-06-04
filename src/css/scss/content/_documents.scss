@@ -16,4 +16,21 @@
             transform: scaleX(1);
         }
     }
+
+    &_section > a,
+    p > a {
+        border-bottom: 2rem solid currentColor;
+        transition: .2s border-color;
+        @include desktop {
+            border-bottom-width: 3rem;
+        }
+
+        &:hover {
+            border-color: transparent;
+        }
+        
+        &::after {
+            content: none;
+        }
+    } 
 }

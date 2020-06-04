@@ -56,15 +56,18 @@
         background: transparent;
         color: $bright_color;
         padding: 14rem 20rem 16rem;
-        margin: 5rem 0 0;
+        margin: 5rem 0 10rem;
         @include tablet {
             margin-top: 7rem;
+            max-height: 60rem;
         }
         @include desktop {
             margin-top: 12rem;
+            max-height: 72rem;
         }
         @include desktop-large {
             margin-top: 16rem;
+            max-height: 86rem;
         }
 
         &:hover,
@@ -144,11 +147,18 @@
             line-height: 42rem;
         }
     }
-    &_hided-row {
-        display: none;
+
+    &_row {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        &__hidden {
+            display: none;
+        }
     }
 
-    td {
+    &_cell {
         padding: 7rem 50rem 7rem 0;
         vertical-align: top;
         @include tablet {
@@ -165,9 +175,12 @@
             white-space: nowrap;
             display: block;
         }
-    }
-    td + td {
-        text-align: right;
-        padding-right: 0;
+
+        & + & {
+            text-align: right;
+            padding-right: 0;
+            display: flex;
+            align-items: stretch;
+        }
     }
 }

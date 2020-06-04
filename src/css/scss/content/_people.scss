@@ -5,6 +5,17 @@
         margin-bottom: 34rem;
     }
 
+    &__small {
+        @include tablet {
+            padding-right: 32rem;
+        }
+        @include desktop {
+            padding-right: 40rem;
+        }
+        @include desktop-large {
+            padding-right: 52rem;
+        }
+    }
     &__big {
         position: relative;
         padding:28rem 0 36rem;
