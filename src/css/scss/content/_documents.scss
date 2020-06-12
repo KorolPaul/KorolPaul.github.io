@@ -19,14 +19,10 @@
 
     &_section > a,
     p > a {
-        border-bottom: 2rem solid currentColor;
-        transition: .2s border-color;
-        @include desktop {
-            border-bottom-width: 3rem;
-        }
+        text-decoration: underline;
 
         &:hover {
-            border-color: transparent;
+            text-decoration: none;
         }
         
         &::after {

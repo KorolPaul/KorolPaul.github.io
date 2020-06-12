@@ -15,6 +15,7 @@
     @include desktop-large {
         padding-left: 44rem;
         padding-right: 44rem;
+        padding-bottom: 35rem;
     }
 
     &_header {
@@ -51,6 +52,7 @@
         line-height: 1.3;
         margin: 0 0 0 40rem;
         @include tablet {
+            margin-top: -4rem;
             font-size: 12rem;
         }
         @include desktop {

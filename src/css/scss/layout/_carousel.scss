@@ -33,8 +33,8 @@
 
         &__rounded {
             border-radius: 50%;
-            height: 135rem;
-            width: 135rem;
+            height: auto;
+            width: 100%;
             @include tablet {
                 height: 64rem;
                 width: 64rem;
@@ -58,6 +58,9 @@
 
         .carousel_item:hover & {
             transform: scale(1.1);
+        }
+        .carousel_item-image-wrapper__rounded & {
+            height: auto;
         }
     }
     &_item-title {
@@ -139,14 +142,14 @@
 
         &:hover {
             background-color: transparent;
-            opacity: 0.3;
+            //opacity: 0.3;
             box-shadow: none;
             filter: none;
             transform: scale(1.3);
         }
         &:active {
             background-color: transparent;
-            opacity: 0.6;
+            //opacity: 0.6;
             box-shadow: none;
             filter: none;
             transform: scale(1.1);

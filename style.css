@@ -457,6 +457,11 @@ a:active, a.active {
   outline: none;
 }
 
+a:active::after, a.active::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 p {
   margin: 0 0 10rem;
 }
@@ -1579,12 +1584,14 @@ h3,
 }
 
 .menu_link__mobile {
+  color: #4a4a4a;
   display: inline;
 }
 
 @media all and (min-width: 767px) {
   .menu_link__mobile {
     display: block;
+    color: #040304;
   }
 }
 
@@ -2380,9 +2387,9 @@ h3,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 }
 
@@ -2419,6 +2426,7 @@ h3,
 @media all and (min-width: 1259px) {
   .footer_contacts-button {
     font-size: 11rem;
+    line-height: 27rem;
   }
 }
 
@@ -2438,6 +2446,12 @@ h3,
 @media all and (min-width: 767px) {
   .footer_description {
     margin: 0 0 28rem;
+  }
+}
+
+@media all and (min-width: 1259px) {
+  .footer_description {
+    margin: 0;
   }
 }
 
@@ -2572,6 +2586,7 @@ h3,
   .widget {
     padding-left: 44rem;
     padding-right: 44rem;
+    padding-bottom: 35rem;
   }
 }
 
@@ -2638,6 +2653,7 @@ h3,
 
 @media all and (min-width: 767px) {
   .widget_link {
+    margin-top: -4rem;
     font-size: 12rem;
   }
 }
@@ -2708,8 +2724,8 @@ h3,
 
 .carousel_item-image-wrapper__rounded {
   border-radius: 50%;
-  height: 135rem;
-  width: 135rem;
+  height: auto;
+  width: 100%;
 }
 
 @media all and (min-width: 767px) {
@@ -2746,6 +2762,10 @@ h3,
 .carousel_item:hover .carousel_item-image {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.carousel_item-image-wrapper__rounded .carousel_item-image {
+  height: auto;
 }
 
 .carousel_item-title {
@@ -2857,7 +2877,6 @@ h3,
 
 .carousel_button:hover {
   background-color: transparent;
-  opacity: 0.3;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-filter: none;
@@ -2868,7 +2887,6 @@ h3,
 
 .carousel_button:active {
   background-color: transparent;
-  opacity: 0.6;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-filter: none;
@@ -3685,7 +3703,7 @@ h3,
   background: #D8D8D8;
   position: relative;
   margin: 0 0 13rem;
-  height: 180px;
+  height: 180rem;
   display: block;
   overflow: hidden;
 }
@@ -3791,6 +3809,7 @@ h3,
   position: absolute;
   left: 17rem;
   bottom: 20rem;
+  z-index: 1;
 }
 
 @media all and (min-width: 767px) {
@@ -4108,7 +4127,6 @@ h3,
 }
 
 .spectacle_title-text {
-  border-bottom: 3rem solid transparent;
   -webkit-transition: 0.2s ease-in-out border-color;
   transition: 0.2s ease-in-out border-color;
 }
@@ -4123,39 +4141,11 @@ h3,
 .spectacle_header:active .spectacle_title-text,
 .spectacle_title:hover .spectacle_title-text,
 .spectacle_title:active .spectacle_title-text {
-  border-bottom-color: currentColor;
+  text-decoration: underline;
 }
 
 .spectacle_title-text::after {
   content: none;
-}
-
-@media all and (min-width: 767px) {
-  .spectacle_title__small .spectacle_title-text {
-    border-bottom-width: 1rem;
-  }
-}
-
-@media all and (min-width: 1259px) {
-  .spectacle_title__small .spectacle_title-text {
-    border-bottom-width: 2rem;
-  }
-}
-
-@media all and (min-width: 1259px) {
-  .spectacle_title__big .spectacle_title-text {
-    border-bottom-width: 3rem;
-  }
-}
-
-.spectacle__big .spectacle_title-text {
-  border-bottom-width: 3rem;
-}
-
-@media all and (min-width: 1799px) {
-  .spectacle__big .spectacle_title-text {
-    border-bottom-width: 4rem;
-  }
 }
 
 .spectacle_description {
@@ -4296,7 +4286,7 @@ h3,
   text-decoration: underline;
   -webkit-text-decoration-style: dashed;
   text-decoration-style: dashed;
-  text-underline-offset: 2px;
+  text-underline-offset: 2rem;
 }
 
 .spectacle_adress::before {
@@ -4461,8 +4451,9 @@ h3,
 
 @media all and (min-width: 1799px) {
   .spectacle_creators {
-    font-size: 14rem;
-    line-height: 20rem;
+    font-size: 20rem;
+    line-height: 30rem;
+    min-height: 70rem;
   }
 }
 
@@ -4873,9 +4864,26 @@ h3,
   transform: scaleX(1);
 }
 
+@media all and (min-width: 1259px) {
+  .spectacle_more-info::after {
+    bottom: -1rem;
+  }
+}
+
+@media all and (min-width: 1799px) {
+  .spectacle_more-info::after {
+    bottom: -2rem;
+  }
+}
+
 .spectacle_more-info:hover::after {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
+}
+
+.spectacle_more-info:active::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .spectacle_bottom {
@@ -8425,13 +8433,13 @@ h3,
 
 @media all and (min-width: 1259px) {
   .article_image {
-    margin-left: 0 0 0 34rem;
+    margin-left: 34rem;
   }
 }
 
 @media all and (min-width: 1259px) {
   .article_image {
-    margin-left: 0 0 0 48rem;
+    margin-left: 48rem;
   }
 }
 
@@ -8530,13 +8538,13 @@ h3,
 
 @media all and (min-width: 1259px) {
   .article_document-link-wrapper {
-    margin-left: 0 0 0 34rem;
+    margin-left: 34rem;
   }
 }
 
 @media all and (min-width: 1799px) {
   .article_document-link-wrapper {
-    margin-left: 0 0 0 48rem;
+    margin-left: 48rem;
   }
 }
 
@@ -8906,21 +8914,12 @@ h3,
 
 .documents_section > a,
 .documents p > a {
-  border-bottom: 2rem solid currentColor;
-  -webkit-transition: .2s border-color;
-  transition: .2s border-color;
-}
-
-@media all and (min-width: 1259px) {
-  .documents_section > a,
-  .documents p > a {
-    border-bottom-width: 3rem;
-  }
+  text-decoration: underline;
 }
 
 .documents_section > a:hover,
 .documents p > a:hover {
-  border-color: transparent;
+  text-decoration: none;
 }
 
 .documents_section > a::after,
@@ -8985,7 +8984,6 @@ h3,
   display: flex;
   position: relative;
   margin: 40rem -16rem 80rem;
-  padding-right: 50rem;
   left: auto;
   font-size: 12rem;
   line-height: 18rem;
@@ -10957,6 +10955,7 @@ input[type="checkbox"]:checked + .sidebar-filters_label {
   flex-wrap: wrap;
   -webkit-filter: blur(0);
   filter: blur(0);
+  width: 290rem;
   -webkit-transition: -webkit-filter 0.3s;
   transition: -webkit-filter 0.3s;
   transition: filter 0.3s;
@@ -10969,8 +10968,8 @@ input[type="checkbox"]:checked + .sidebar-filters_label {
 }
 
 .qs-square {
-  width: 46rem;
-  height: 46rem;
+  width: 41rem;
+  height: 41rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

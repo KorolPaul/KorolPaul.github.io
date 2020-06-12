@@ -85,11 +85,11 @@
             width: 2rem;
             position: absolute;
             left: 0;
-            top: 0;
+            top: -2rem;
             transform: rotate(35deg);
-
             @include tablet {
                 height: 17rem;
+                top: 0;
             }
             @include desktop {
                 height: 26rem;

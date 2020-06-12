@@ -79,14 +79,11 @@ if (carousels.length) {
                 },
                 1024: {
                     items: 8,
-                    gutter: 38,
                 },
                 1260: {
-                    gutter: 54,
                     items: 6.8,
                 },
                 1920: {
-                    gutter: 74,
                     items: 8,
                 },
             }

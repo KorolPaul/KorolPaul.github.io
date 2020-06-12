@@ -112,7 +112,7 @@
         background: $gray_color;
         position: relative;
         margin: 0 0 13rem;
-        height: 180px;
+        height: 180rem;
         display: block;
         overflow: hidden;
         @include tablet {
@@ -187,6 +187,7 @@
         position: absolute;
         left: 17rem;
         bottom: 20rem;
+        z-index: 1;
         @include tablet {
             left: 30rem;
         }
@@ -239,7 +240,7 @@
             width: 2rem;
             position: absolute;
             left: 0;
-            top: 1rem;
+            top: -1rem;
             transform: rotate(35deg);
             @include tablet {
                 top: 2rem;
@@ -402,7 +403,6 @@
          }
     }
     &_title-text {
-        border-bottom: 3rem solid transparent;
         transition: 0.2s ease-in-out border-color;
         @include tablet {
             border-bottom-width: 2rem;
@@ -412,31 +412,11 @@
         .spectacle_header:active &,
         .spectacle_title:hover &,
         .spectacle_title:active & {
-            border-bottom-color: currentColor;
+            text-decoration: underline;
         }
 
         &::after {
             content: none;
-        }
-
-        .spectacle_title__small & {
-            @include tablet {
-                border-bottom-width: 1rem;
-            }
-            @include desktop {
-                border-bottom-width: 2rem;
-            }
-        }
-        .spectacle_title__big & {
-            @include desktop {
-                border-bottom-width: 3rem;
-            }
-        }
-        .spectacle__big & {
-            border-bottom-width: 3rem;
-            @include desktop-large {
-                border-bottom-width: 4rem;
-            }
         }
     }
     &_description {
@@ -537,7 +517,7 @@
         //border-bottom: 1rem dashed currentColor;
         text-decoration: underline;
         text-decoration-style: dashed;
-        text-underline-offset: 2px;
+        text-underline-offset: 2rem;
 
         &::before {
             content: "";
@@ -647,8 +627,9 @@
             min-height: 60rem;
         }
         @include desktop-large {
-            font-size: 14rem;
-            line-height: 20rem;
+            font-size: 20rem;
+            line-height: 30rem;
+            min-height: 70rem;
         }
 
         .spectacle__big & {
@@ -891,9 +872,18 @@
         &::after {
             bottom: 2rem;
             transform: scaleX(1);
+            @include desktop {
+                bottom: -1rem;
+            }
+            @include desktop-large {
+                bottom: -2rem;
+            }
         }
         &:hover::after {
             transform: scaleX(0);
+        }
+        &:active::after {
+            transform: scaleX(1);
         }
     }
     &_bottom {

@@ -54,6 +54,10 @@ a {
     &.active {
         color: $color;
         outline: none;
+
+        &::after {
+            transform: scaleX(1);
+        }
     }
 }
 

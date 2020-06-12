@@ -142,14 +142,15 @@
     display: flex;
     flex-wrap: wrap;
     filter: blur(0);
+    width: 290rem;
     transition: filter 0.3s;
 }
 .qs-squares.qs-blur {
     filter: blur(5px);
 }
 .qs-square {
-    width: 46rem;
-    height: 46rem;
+    width: 41rem;
+    height: 41rem;
     display: flex;
     align-items: center;
     justify-content: center;

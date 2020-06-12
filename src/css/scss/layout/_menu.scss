@@ -66,9 +66,11 @@
         }
 
         &__mobile {
+            color: #4a4a4a;
             display: inline;
             @include tablet {
                 display: block;
+                color: $color;
             }
         }
         &__indent {

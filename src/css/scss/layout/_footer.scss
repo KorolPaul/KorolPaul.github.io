@@ -139,7 +139,7 @@
         @include desktop {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: stretch;
         }
     }
     &_adress {
@@ -166,6 +166,7 @@
         border: 1px solid currentColor;
         @include desktop {
             font-size: 11rem;
+            line-height: 27rem;
         }
 
         &:hover {
@@ -183,6 +184,9 @@
     &_description {
         @include tablet {
             margin: 0 0 28rem;
+        }
+        @include desktop {
+            margin: 0;
         }
     }
     &_documents {
