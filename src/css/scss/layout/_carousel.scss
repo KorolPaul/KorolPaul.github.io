@@ -154,5 +154,12 @@
             filter: none;
             transform: scale(1.1);
         }
+        &:disabled,
+        &:disabled:hover,
+        &:disabled:active {
+            transform: scale(1);
+            background-color: transparent;
+            filter: grayscale(1) brightness(.5);
+        }
     }
 }

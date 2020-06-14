@@ -63,6 +63,16 @@
             line-height: 56rem;
             margin-bottom: 14rem;
         }
+
+        .search-results & {
+             @include desktop {
+                font-size: 16rem;
+                line-height: 1.8;
+            }
+            @include desktop-large {
+                font-size: 18rem;
+            }
+        }
     }
     &_date {
         color: $bright_color;
@@ -85,6 +95,16 @@
             font-size: 26rem;
             line-height: 48rem;
         }
+
+         .search-results & {
+             @include desktop {
+                font-size: 16rem;
+                line-height: 1.8;
+            }
+            @include desktop-large {
+                font-size: 18rem;
+            }
+        }
     }
     &_link {
         font-size: 14rem;
@@ -105,6 +125,16 @@
         &:hover,
         &:active {
             color: $color;
+        }
+
+         .search-results & {
+             @include desktop {
+                font-size: 16rem;
+                line-height: 1.8;
+            }
+            @include desktop-large {
+                font-size: 18rem;
+            }
         }
     }
     &_media-link {

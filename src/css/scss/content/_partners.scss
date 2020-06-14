@@ -4,9 +4,11 @@
     @include tablet {
         border-bottom: 1rem solid #9b9b9b;
         padding: 40rem 0 0;
+        margin-bottom: 10rem;
     }
     @include desktop {
         padding-top: 70rem;
+        margin-bottom: 40rem;
     }
     @include desktop-large {
         padding-top: 100rem;
@@ -33,6 +35,7 @@
             line-height: 22rem;
             width: 23%;
             padding-right: 20rem;
+            min-width: 200rem;
         }
         @include desktop {
             font-size: 18rem;
@@ -49,8 +52,12 @@
         justify-content: center;
         margin: 0 0 40rem;
         width: 40%;
+        padding: 10rem 26rem;
+        box-sizing: border-box;
         @include tablet {
             width: 23%;
+            min-height: 111rem;
+            padding: 19rem 35rem;
         }
 
         &::after {

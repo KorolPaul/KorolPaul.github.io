@@ -18,12 +18,15 @@
     }
     &__big {
         position: relative;
-        padding:28rem 0 36rem;
+        padding: 28rem 0 36rem;
+        margin: 0 0 24rem;
         @include tablet {
             padding-bottom: 0;
+            margin-bottom: 54rem;
         }
         @include desktop {
             padding-top: 46rem;
+            margin-bottom: 80rem;
         }
 
         &::after {

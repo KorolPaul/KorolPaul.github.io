@@ -46,7 +46,7 @@
                     %a.menu_link(href="/events.html")
                         %span.menu_link-text события
                     %a.menu_link(href="/press.html")
-                        %span.menu_link-text пресса о театре
+                        %span.menu_link-text пресса о&nbsp;театре
                     %a.menu_link(href="/volunteers.html")
                         %span.menu_link-text клуб волонтеров
                     %a.menu_link(href="/partners.html")
@@ -68,17 +68,25 @@
             %article.article
                 %h1 Открытие фестиваля
                 .article_slider-wrapper
-                    .slider
+                    .slider(id="slider")
                         .slider_counter
                         .slider_track
                             .slider_item
-                                %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
+                                .slider_image-wrapper
+                                    .slider_image-open
+                                    %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
                             .slider_item
-                                %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
+                                .slider_image-wrapper
+                                    .slider_image-open
+                                    %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
                             .slider_item
-                                %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
+                                .slider_image-wrapper
+                                    .slider_image-open
+                                    %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
                             .slider_item
-                                %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
+                                .slider_image-wrapper
+                                    .slider_image-open
+                                    %img.slider_image(src="src/img/temp/event-1.jpg" alt="")
                 .article_columns.article_columns__indent
                     .article_content
                         %span.article_date 1 февраля 2020
@@ -207,12 +215,39 @@
                     %img.footer_bottom-image(src="src/img/year-of-theatre.jpg" alt="")
                     %a.footer_outer-link(href="#") mos.ru
 
-
+        
+        .gallery-popup
+            %button.gallery-popup_close
+            .slider.slider__gallery(id="slider-gallery")
+                .slider_counter
+                .slider_track
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
 
         %script(src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5642faf671d1921e" async="async")
         %script(src="src/js/tiny-slider.min.js")
         %script(src="src/js/main.js")
-        %script(src="src/js/about.js")
+        %script(src="src/js/event.js")
+        %script(src="src/js/gallery-popup.js")
+
                                 
 
 

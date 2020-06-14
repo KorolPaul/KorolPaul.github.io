@@ -1,12 +1,12 @@
 .footer {
     @include tablet {
-        margin-left: 128rem;
+        margin-left: 110rem;
     }
     @include desktop {
-        margin-left: 19vw;
+        margin-left: 16vw;
     }
     @include desktop-large {
-        margin-left: 18vw;
+        margin-left: 15vw;
     }
 
     &_mobile {

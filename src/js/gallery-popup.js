@@ -10,7 +10,7 @@ if (galleryPopup) {
         popupClose.addEventListener('click', toggleGallery);
     }
 
-    var sliderImages = document.querySelectorAll('.event .slider_image');
+    var sliderImages = document.querySelectorAll('.event .slider_image, .slider__accordion .slider_image, .slider_image-wrapper');
     if (sliderImages) {
     for (let i = 0; i < sliderImages.length; i++) {
         const image = sliderImages[i];

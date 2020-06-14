@@ -36,9 +36,12 @@ a {
         right: 0;
         left: 0;
         bottom: 0;
-        border-bottom: 2rem solid currentColor;
+        border-bottom: 1rem solid currentColor;
         transition: .1s ease-in-out transform;
         transform-origin: right center;
+        @include desktop {
+            border-bottom-width: 2rem;
+        }
     }
 
     &:hover,

@@ -105,7 +105,17 @@
     &_title {
         margin: 0 0 5rem;
         @include tablet {
-            margin: 0 0 8rem;
+            margin: 0 20rem 8rem 0;
+            font-size: 44rem;
+            line-height: 44rem;
+        }
+        @include desktop {
+            font-size: 70rem;
+            line-height: 68rem;
+        }
+        @include desktop-large {
+            font-size: 100rem;
+            line-height: 100rem;
         }
     }
     &_subtitle {

@@ -1,6 +1,14 @@
 .events {
     margin: 0 0 20rem;
 
+    &__bordered {
+        border-top: 1px solid #9B9B9B;
+        padding-top: 20rem;
+        @include desktop {
+            padding-top: 30rem;
+        }
+    }
+
     &_title {
         display: block;
         font-size: 14rem;
@@ -85,6 +93,15 @@
         .events_item:hover & {
             border-bottom-color: currentColor;
             color: $color;
+        }
+
+        .events__small & {
+            font-size: 14rem;
+            line-height: 18rem;
+            @include desktop {
+                font-size: 18rem;
+                line-height: 24rem;
+            }
         }
     }
 }

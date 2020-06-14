@@ -46,6 +46,18 @@
                 margin: 60rem 0 80rem;
             }
         }
+        &__noindent {
+            margin-bottom: -20rem;
+            @include tablet {
+                margin-bottom: -20rem;
+            }
+            @include desktop {
+                margin-bottom: -30rem;
+            }
+            @include desktop-large {
+                margin-bottom: -40rem;
+            }
+        }
     }
     &_left {
         @include tablet {

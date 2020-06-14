@@ -59,15 +59,19 @@
         margin: 5rem 0 10rem;
         @include tablet {
             margin-top: 7rem;
-            max-height: 60rem;
+            height: 45rem;
+            line-height: 13rem;
         }
         @include desktop {
             margin-top: 12rem;
-            max-height: 72rem;
+            height: 76rem;
+            min-width: 138rem;
         }
         @include desktop-large {
             margin-top: 16rem;
-            max-height: 86rem;
+            height: 108rem;
+            line-height: 8rem;
+            min-width: 190rem;
         }
 
         &:hover,
@@ -180,7 +184,6 @@
             text-align: right;
             padding-right: 0;
             display: flex;
-            align-items: stretch;
         }
     }
 }

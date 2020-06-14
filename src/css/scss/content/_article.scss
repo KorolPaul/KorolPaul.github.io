@@ -7,11 +7,11 @@
         }
         @include desktop {
             margin-right: -3vw;
-            margin-bottom: 0;
+            margin-bottom: 22rem;
         }
         @include desktop-large {
             margin-right: -5vw;
-            margin-bottom: -30rem;
+            margin-bottom: 32rem;
         }
     }
     &_columns {

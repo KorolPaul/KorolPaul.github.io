@@ -9,7 +9,7 @@
         %meta(name="format-detection" content="telephone=no")/
         %meta(name="HandheldFriendly" content="true")/
         %link(rel="stylesheet" href="style.css")/
-    %body.accordion-page
+    %body.wide-page
         %header.header 
 
             %a.logo(href="/")
@@ -46,7 +46,7 @@
                     %a.menu_link(href="/events.html")
                         %span.menu_link-text события
                     %a.menu_link(href="/press.html")
-                        %span.menu_link-text пресса о театре
+                        %span.menu_link-text пресса о&nbsp;театре
                     %a.menu_link(href="/volunteers.html")
                         %span.menu_link-text клуб волонтеров
                     %a.menu_link(href="/partners.html")
@@ -122,7 +122,7 @@
                     .accordion_content
                         .contacts
                             .contacts_section
-                                .contacts_row
+                                .contacts_row.contacts_row__noindent
                                     .contacts_left
                                     .contacts_right
                                         %p.contacts_description Официальный сайт Государственного бюджетного учреждения культуры города Москвы «Московский драматический театр на Малой Бронной» / ИНН 7703001970
@@ -150,7 +150,7 @@
                                 .contacts_row
                                     .contacts_left.contacts_left__long
                                         %div
-                                            %span.contacts_title Заказ, бронирование и доставка билетов
+                                            %span.contacts_title Заказ, бронирование и&nbsp;доставка билетов
                                 .contacts_row
                                     .contacts_left
                                     .contacts_right
@@ -217,21 +217,21 @@
                                         .contacts_right
                                             %span Лариса Васильевна Гладкая 
                                             %div
-                                                %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-05
+                                                %a.contacts_link(href="tel:690-04-51") 690-19-48 / 1-05
                                     .contacts_row
                                         .contacts_left
                                             %span.contacts_subtitle Заместитель директора
                                         .contacts_right
                                             %span Ирина Александровна Грачева 
                                             %div
-                                                %a.contacts_title(href="tel:690-04-51") 690-04-51 / 1-29
+                                                %a.contacts_link(href="tel:690-04-51") 690-04-51 / 1-29
                                     .contacts_row
                                         .contacts_left
                                             %span.contacts_subtitle Заместитель директора
                                         .contacts_right
                                             %span Арина Владимировна Богданчик
                                             %div
-                                                %a.contacts_title(href="tel:690-04-51") 690-19-48 / 1-03
+                                                %a.contacts_link(href="tel:690-04-51") 690-19-48 / 1-03
 
                 .accordion_item
                     .accordion_header(data-tab="3")
@@ -335,7 +335,32 @@
                                 %a.contacts_button(href="#") архив спектаклей
                                 %a.contacts_button(href="#") легенды театра
                                 %a.contacts_button(href="#") музей
-                        
+
+        .gallery-popup
+            %button.gallery-popup_close
+            .slider.slider__gallery(id="slider-gallery")
+                .slider_counter
+                .slider_track
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться
+                    .slider_item
+                        %img.slider_image(src="src/img/temp/event-popup-1.jpg" alt="")
+                        .slider_item-content
+                            %span.slider_text В этом же городе живет пожилая сеньора, горячо любящая своего единственного внука. 
+                            %button.slider_share-button поделиться                
 
         %footer.footer
             .footer_mobile
@@ -383,6 +408,7 @@
         %script(src="src/js/tiny-slider.min.js")
         %script(src="src/js/main.js")
         %script(src="src/js/about.js")
+        %script(src="src/js/gallery-popup.js")
                                 
 
 
