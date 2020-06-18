@@ -2,10 +2,23 @@
     margin: 0 0 20rem;
 
     &__bordered {
-        border-top: 1px solid #9B9B9B;
+        position: relative;
         padding-top: 20rem;
         @include desktop {
             padding-top: 30rem;
+        }
+
+        &::before {
+            content: '';
+            border-top: 1px solid #9B9B9B;
+            position: absolute;
+            top: 0;
+            left: -$layout_indent;
+            right: -$layout_indent;
+            @include tablet {
+                left: 0;
+                right: 0;
+            }
         }
     }
 

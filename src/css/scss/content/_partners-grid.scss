@@ -23,10 +23,7 @@
         }
 
         &:first-child {
-            border-top: 1rem solid #9b9b9b;
-            @include tablet {
-                border-top: none;
-            }
+            border-top: none;
         }
     }
     &_title {

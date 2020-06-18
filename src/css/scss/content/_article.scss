@@ -244,4 +244,17 @@
             margin: 50rem 0 44rem;
         }
     }
+
+    h2 {
+        margin-top: 56rem;
+        @include tablet {
+            margin-top: 44rem;
+        }
+        @include desktop {
+            margin-top: 54rem;
+        }
+        @include desktop-large {
+            margin-top: 90rem;
+        }
+    }
 }

@@ -2,6 +2,8 @@
     background: #E3E3E3;
     padding: 15rem $layout_indent 12rem;
     margin: 0 -#{$layout_indent};
+    min-height: 54rem;
+    box-sizing: border-box;
     @include tablet {
         display: flex;
         align-items: center;
@@ -53,6 +55,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        &__only-child {
+            justify-content: flex-end;
+        }
     }
     &_control {
         color: $color;
@@ -98,6 +104,22 @@
         &:active {
             background-color: transparent;
             box-shadow: none;
+        }
+        
+        &:only-child {
+            padding-right: 0;
+            @include tablet {
+                margin-left: 16rem;
+                padding-right: 16rem;
+            }
+            @include desktop {
+                margin-left: 22rem;
+                padding-right: 22rem;
+            }
+            @include desktop-large {
+                margin-left: 30rem;
+                padding-right: 30rem;
+            }
         }
     }
     &_control-text {
@@ -155,6 +177,9 @@
             width: 18rem;
         }
     }
+    &_switcher {
+        text-align: right;
+    }
     &_switcher-button {
         padding: 0;
         background: transparent;
@@ -169,6 +194,10 @@
             color: $color;
             background: transparent;
             box-shadow: none;
+        }
+
+        &:last-child {
+            margin-right: 0;
         }
     }
     &_switcher-divider {

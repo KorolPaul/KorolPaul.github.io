@@ -10,8 +10,11 @@
         padding-right: 0;
     }
     &__accordion {
-        margin: 0 -#{$layout_indent * 2};
+        margin: -52rem -#{$layout_indent} 0;
         padding: 0 #{$layout_indent * 2};
+        @include tablet {
+            margin-top: 0;
+        }
         @include desktop {
             margin: 0 calc(#{$layout_indent * -2} - 34rem + 2rem) 0 0;
             padding: 0;

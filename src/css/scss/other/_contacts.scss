@@ -207,7 +207,7 @@
         font-size: 18px;
         line-height: 28px;
         height: 62rem;
-        padding: 13rem 20rem 17rem;
+        padding: 16rem 20rem 14rem;
         margin: 0 0 34rem;
         text-align: center;
         @include tablet {
@@ -284,8 +284,9 @@
         top: 50%;
         height: 24rem;
         width: 24rem;
-        transform: translateY(-44%);
+        transform: translateY(-55%);
         transition: .2s ease-in-out transform;
+        pointer-events: none;
         @include desktop {
             background-size: 16rem 16rem;
         }
@@ -294,7 +295,7 @@
         }
 
         .contacts_more:hover & {
-            transform: translateY(-38%) scale(1.2);
+            transform: translateY(-45%) scale(1.2);
         }
     }
     &_hidden {

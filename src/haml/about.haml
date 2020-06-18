@@ -9,7 +9,7 @@
         %meta(name="format-detection" content="telephone=no")/
         %meta(name="HandheldFriendly" content="true")/
         %link(rel="stylesheet" href="style.css")/
-    %body.wide-page
+    %body.wide-page.accordion-page
         %header.header 
 
             %a.logo(href="/")
@@ -104,8 +104,10 @@
                                                 %a(href="https://yandex.by/maps/213/moscow/house/ploshchad_zhuravlyova_10/Z04YcQdkTEYPQFtvfXt5cn5rYg==/?ll=37.704749%2C55.783214&utm_medium=mapframe&utm_source=maps&z=18.2" style="color:#eee;font-size:12px;position:absolute;top:14px;") Площадь Журавлёва, 10 — Яндекс.Карты
                                                 %iframe(src="https://yandex.by/map-widget/v1/-/C8sMQWlE" width="560" height="400" frameborder="0" allowfullscreen="true" style="position:relative;")
                                             .place_map-buttons
-                                                %button.place_map-button открыть в Google Maps
-                                                %button.place_map-button открыть в Яндекс.Картах
+                                                %button.place_map-button открыть в&nbsp;Google&nbsp;Maps
+                                                    .place_map-button-border
+                                                %button.place_map-button открыть в&nbsp;Яндекс.Картах
+                                                    .place_map-button-border
                             .accordion_item.accordion_item__disabled
                                 .accordion_header(data-tab="adress-3")
                                     %span.accordion_header-title Основная сцена
