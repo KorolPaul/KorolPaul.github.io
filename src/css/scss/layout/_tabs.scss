@@ -1,4 +1,14 @@
 .tabs {
+    @include tablet {
+        padding: 0 22rem;
+    }
+    @include desktop {
+        padding: 0 36rem;
+    }
+    @include desktop-large {
+        padding: 0 50rem;
+    }
+
     &_content {
         display: none;
 

@@ -1,4 +1,12 @@
 .press {
+    margin: 0 0 24rem;
+    @include desktop {
+        margin-bottom: 34rem;
+    }
+    @include desktop-large {
+        margin-bottom: 54rem;
+    }
+
     &__big {
         padding:28rem 0 36rem;
         @include tablet {

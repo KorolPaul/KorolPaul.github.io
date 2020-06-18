@@ -18,15 +18,15 @@
     }
 
     &_slider-wrapper {
-        margin: 0 -#{$layout_indent} 10rem;
+        margin: 0 -#{$layout_indent} 16rem;
         position: relative;
         @include desktop {
             margin-right: -3vw;
-            margin-bottom: 22rem;
+            margin-bottom: 26rem;
         }
         @include desktop-large {
             margin-right: -5vw;
-            margin-bottom: 32rem;
+            margin-bottom: 40rem;
         }
     }
     &_tags {
@@ -41,11 +41,11 @@
         }
         @include desktop {
             left: calc(100vw - 384rem - 19vw);
-            margin-top: 35rem;
+            margin-top: 40rem;
         }
         @include desktop-large {
             left: calc(100vw - 585rem - 18vw);
-            margin-top: 50rem;
+            margin-top: 60rem;
         }
     }
     &_tag {
@@ -229,17 +229,26 @@
         &:hover::before {
             transform: scale(1.15);
         }
+
+        & + & {
+            margin-top: 10rem;
+            @include tablet {
+                margin-top: 25rem;
+            }
+        }
     }
     &_adress-link {
         color: $bright_color;
         border-bottom: 1rem dashed currentColor;
-        transition: .2s ease-in-out border;
+        transition: .2s ease-in-out color;
 
         &::after {
-            display: none;
+            content: none;
         }
-        .event_adress:hover & {
-            border-bottom-width: 2rem;
+
+        &:hover,
+        &:active {
+            color: $bright_color;
         }
     }
     &_rating {

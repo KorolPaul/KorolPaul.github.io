@@ -186,4 +186,92 @@
             display: flex;
         }
     }
+
+    &_adress {
+        display: block;
+        color: $bright_color;
+        font-size: 14rem;
+        line-height: 22rem;
+        position: relative;
+        box-sizing: border-box;
+        @include desktop {
+            font-size: 22rem;
+            line-height: 32rem;
+        }
+        @include desktop-large {
+            font-size: 32rem;
+            line-height: 48rem;
+        }
+    }
+    &_duration {
+        padding-right: 40rem;
+        padding-left: 27rem;
+        @include desktop {
+            padding-left: 50rem;
+            padding-right: 60rem;
+        }
+        @include desktop-large {
+            padding-left: 72rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            width: 20rem;
+            height: 20rem;
+            background: url(#{$img}/clock.svg) no-repeat 0 0 / contain;
+            @include desktop {
+                width: 34rem;
+                height: 34rem;
+                background-size: 100% auto;
+            }
+            @include desktop-large {
+                width: 48rem;
+                height: 48rem;
+            }
+        }
+    }
+    &_adress {
+        font-size: 14rem;
+        padding-left: 18rem;
+        display: block;
+        margin: 0 0 16rem;
+        @include tablet {
+            font-size: 18px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5rem;
+            left: 0;
+            width: 10rem;
+            height: 13rem;
+            background: url(#{$img}/marker.svg) no-repeat 0 0 / contain;
+            filter: grayscale(1) brightness(0.5);
+            transition: .2s ease-in-out transform, .2s ease-in-out filter;
+            @include tablet {
+                top: 12rem
+            }
+        }
+        &:hover::before {
+            filter: none;
+            transform: scale(1.15);
+        }
+    }
+    &_adress-link {
+        color: $color;
+        border-bottom: 1rem dashed currentColor;
+        transition: .2s ease-in-out color;
+
+        &::after {
+            display: none;
+        }
+        .tickets_adress:hover &,
+        .tickets_adress:active & {
+            color: $bright_color;
+        }
+    }
 }

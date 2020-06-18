@@ -227,7 +227,7 @@
     h1 {
         font-size: 28rem;
         line-height: 33rem;
-        margin: 0 0 34rem;
+        margin: 0 0 22rem;
         @include tablet {
             font-size: 40rem;
             line-height: 48rem;
@@ -242,6 +242,19 @@
             font-size: 90rem;
             line-height: 106rem;
             margin: 50rem 0 44rem;
+        }
+    }
+
+    h2 {
+        margin-top: 56rem;
+        @include tablet {
+            margin-top: 44rem;
+        }
+        @include desktop {
+            margin-top: 54rem;
+        }
+        @include desktop-large {
+            margin-top: 90rem;
         }
     }
 }

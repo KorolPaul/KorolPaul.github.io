@@ -10,8 +10,11 @@
         padding-right: 0;
     }
     &__accordion {
-        margin: 0 -#{$layout_indent * 2};
+        margin: -52rem -#{$layout_indent} 0;
         padding: 0 #{$layout_indent * 2};
+        @include tablet {
+            margin-top: 0;
+        }
         @include desktop {
             margin: 0 calc(#{$layout_indent * -2} - 34rem + 2rem) 0 0;
             padding: 0;
@@ -31,7 +34,7 @@
 
     &_counter {
         right: 26rem;
-        top: 100%;
+        top: 101.5%;
         font-size: 10rem;
         line-height: 20rem;
         color: #9b9b9b;
@@ -40,6 +43,7 @@
         @include tablet {
             right: auto;
             left: 16rem;
+            top: 100%;
             text-align: right;
             width: calc(100vw - 250rem - 128rem - 16rem);
         }
@@ -52,7 +56,7 @@
         @include desktop-large {
             font-size: 18rem;
             line-height: 20rem;
-            width: calc(100vw - 618rem - 18vw - 32rem);
+            width: calc(100vw - 618rem - 18vw - 46rem);
         }
 
         .slider__gallery & {

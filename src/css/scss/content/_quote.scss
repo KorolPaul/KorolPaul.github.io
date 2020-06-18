@@ -98,11 +98,11 @@
 
          .search-results & {
              @include desktop {
-                font-size: 16rem;
+                font-size: 14rem;
                 line-height: 1.8;
             }
             @include desktop-large {
-                font-size: 18rem;
+                font-size: 16rem;
             }
         }
     }
@@ -129,11 +129,11 @@
 
          .search-results & {
              @include desktop {
-                font-size: 16rem;
+                font-size: 14rem;
                 line-height: 1.8;
             }
             @include desktop-large {
-                font-size: 18rem;
+                font-size: 16rem;
             }
         }
     }

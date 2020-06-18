@@ -28,10 +28,13 @@
         }
     }
 
-    .wide-page & {
-        padding-top: 0;
+    .accordion-page & {
         padding-left: 0;
         padding-right: 0;
+    }
+    .wide-page &,
+    .accordion-page & {
+        padding-top: 0;
         border-top: 1px solid #040304;
         @include tablet {
             padding-left: 110rem;

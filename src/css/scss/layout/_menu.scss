@@ -72,6 +72,10 @@
                 display: block;
                 color: $color;
             }
+
+            .menu-opened & { 
+                color: $color;
+            }
         }
         &__indent {
             margin: 38rem 0 30rem;
