@@ -8323,6 +8323,12 @@ h3,
   justify-content: flex-end;
 }
 
+.filters_controls__only-child {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
 .filters_control {
   color: #040304;
   font-size: 12rem;
