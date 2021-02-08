@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'infiniti_brandbold';
+    src: url('./src/fonts/infinitibrandcy-bold-webfont.woff2') format('woff2'),
+         url('./src/fonts/infinitibrandcy-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'infiniti_brandlight';
+    src: url('./src/fonts/infinitibrandcy-light-webfont.woff2') format('woff2'),
+         url('./src/fonts/infinitibrandcy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'infiniti_brandregular';
+    src: url('./src/fonts/infinitibrandcy-regular-webfont.woff2') format('woff2'),
+         url('./src/fonts/infinitibrandcy-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icon-Infiniti-Global';
+    src:url(./src/fonts/Infiniti-Global.eot);
+    src:url(./src/fonts/Infiniti-Global.eot?#iefix) format("embedded-opentype"),
+        url(./src/fonts/Infiniti-Global.woff2) format("woff2"),
+        url(./src/fonts/Infiniti-Global.woff) format("woff"),
+        url(./src/fonts/Infiniti-Global.ttf) format("truetype");
+    font-weight:400;
+    font-style:normal;
+}

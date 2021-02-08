@@ -1,0 +1,61 @@
+.mouse {
+    background: url(#{$img-path}/icons/mouse-icon.svg) no-repeat center -70px;
+    height: 150px;
+    width: 40px;
+    z-index: 2;
+    margin: 20px 0 0 0;
+    transition: .2s ease opacity .8s,.2s ease margin .8s, 0s ease visibility 1s;
+    opacity: 0;
+    z-index: 2;
+    @include mobile {
+        display: none;
+    }
+
+    .loaded & {
+        animation:.8s ease-in-out mouse-appearance .8s forwards,
+                   2s ease-in-out scroll 2s infinite;
+        opacity: 1;
+    }
+    .scrolled & {
+        opacity: 0;
+        visibility: hidden;
+        margin: -50px 0 0 0;
+    }
+}
+
+@keyframes mouse-appearance {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+@keyframes mouse-leave {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 25%);
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}

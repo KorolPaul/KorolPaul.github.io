@@ -1,0 +1,83 @@
+.assistant {
+    background: url(#{$img_path}/assistant-bg.jpg) repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::before {
+        content: '';
+        background: url(#{$img_path}/assistant-line.png) no-repeat center 0;
+        width: 544px;
+        height: 130px;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include mobile {
+            background-size: 100vw;
+            top: 25px;
+        }
+    }
+
+    &_car {
+        background: url(#{$img_path}/assistant-car.png) no-repeat;
+        width: 125px;
+        height: 257px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include mobile {
+            top: 75%;
+            transform: scale(0.5) translate(-100%, -100%);
+        }
+    }
+    &_light {
+        background: url(#{$img_path}/assistant-light.png) no-repeat;
+        width: 281px;
+        height: 334px;
+        position: absolute;
+        bottom: 93%;
+        left: -90%;
+        transform-origin: bottom;
+
+        & + & {
+            left: -35%;
+        }
+    }
+    &_wheel {
+        background: url(#{$img_path}/assistant-wheel.png) no-repeat;
+        width: 125px;
+        height: 125px;
+        position: absolute;
+        bottom: 30%;
+        left: 45px;
+        @include mobile {
+            background-size: 100% auto;
+            height: 80px;
+            width: 80px;
+            left: 20px;
+        }
+    }
+    &_title {
+        color: $light_color;
+        font: 16px $font-family__bold;
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        transform: translate(-50%, 0);
+        @include mobile {
+            display: none;
+        }
+    }
+    &_hover-area {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15%;
+        right: 15%;
+    }
+}

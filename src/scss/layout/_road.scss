@@ -1,0 +1,97 @@
+@mixin read-pseudo {
+    content: '';
+    position: absolute;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.road {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 37.7vh;
+    width: 1920px;
+    z-index: 1;
+    will-change: background;
+    @include mobile {
+        width: 100vw;
+        transition: .2s ease opacity;
+    }
+
+    &::before {
+        @include read-pseudo;
+        background-image: url(#{$img-path}/road.png);
+        z-index: 2;
+        transition: .2s ease opacity;
+        opacity: 0;
+    }
+    &::after {
+        @include read-pseudo;
+        background-image: url(#{$img-path}/road-dark.png);
+    }
+    .faded &::before,
+    .faded &::after {
+        filter: url(#{$img-path}/filters.svg#motion-blur);
+        animation: .8s ease-in road-speed-changes,
+                   .5s linear road .8s infinite;
+    }
+    .dark &::before,
+    .dark &::after {
+        animation: 1s ease road-speed-change,
+                   .2s linear road 1s infinite;
+    }
+    .light &::before,
+    .light &::after {
+        animation: 1s ease road-speed-change,
+                   1.4s linear road 1s infinite;
+    }
+    .light &::before {
+        opacity: 1;
+    }
+    .scrolled & {
+        @include mobile {
+            opacity: 0;
+        }
+    }
+    
+    &__small {
+        height: 1px;
+        left: -50vw;
+        bottom: auto;
+        top: 90px;
+    }
+    &__small::after{
+        animation: 1s linear road-small infinite;
+        background-image: url(#{$img-path}/road-small.png);
+    }
+}
+
+@keyframes road {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1920px 0;
+    }
+}
+@keyframes road-speed-change {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1920px 0;
+    }
+}
+@keyframes road-small {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -820px 0;
+    }
+}

@@ -1,50 +1,47 @@
 "use strict"
 
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync');
-const imagemin = require('gulp-imagemin');
-const haml = require('gulp-haml');
-
-gulp.task('sync', function () {
-    browserSync({
-        server: {
-            baseDir: './'
-        },
-        notify: false,
-        open: true
-    });
-});
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      babel = require('gulp-babel'),
+      concat = require('gulp-concat'),
+      connect = require('gulp-connect'),
+      autoprefixer = require('gulp-autoprefixer'),
+      image = require('gulp-image'),
+      uglify = require('gulp-uglify');
 
 gulp.task('sass', function () {
-    return gulp.src('src/css/scss/**/*.scss')
-        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    return gulp.src('src/scss/**/*.scss')
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(autoprefixer({
+            browsers: ['last 2 versions', 'ie 10'],
             cascade: false
         }))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('js', function () {
+    gulp.src(['src/js/*.js'])
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(concat('script.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('./'))
-        .pipe(browserSync.stream());
+        .pipe(connect.reload());
 });
 
 gulp.task('img', () =>
-	gulp.src('src/img/*')
-		.pipe(imagemin())
+	gulp.src('src/img/**/*')
+		.pipe(image())
         .pipe(gulp.dest('images'))
 );
 
-gulp.task("haml", function () {
-  return gulp
-    .src("src/haml/*.haml")
-    .pipe(haml())
-    .pipe(gulp.dest("./"))
-    .pipe(browserSync.stream());
-});
 
 gulp.task('watch', function () {
-    gulp.watch("src/haml/*.haml", gulp.parallel("haml"));
-    gulp.watch(['src/css/scss/**/*.scss'], gulp.parallel('sass'));
+    gulp.watch(['src/scss/**/*.scss', 'src/js/*.js'], ['sass', 'js']);
 });
 
 
-gulp.task('default',  gulp.parallel('watch', 'sync'));
+gulp.task('default', function () {
+    gulp.run('watch');
+});

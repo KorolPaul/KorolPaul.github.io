@@ -1,0 +1,35 @@
+.test-drive {
+    border: 1px solid currentColor;
+    color: $light_color;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    position: absolute;
+    bottom: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    right: 50px;
+    padding: 15px 20px;
+    z-index: 5;
+    opacity: .7;
+    transition: .2s ease opacity;
+    text-align: center;
+    @include media(1300px) {
+        bottom: auto;
+        top: 16px;
+    }
+    @include mobile {
+        display: inline-block;
+        top: auto;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        z-index: 11;
+    }
+
+    &:hover {
+        border-color: #000;
+        color: #000;
+        background: #fff;
+    }
+}

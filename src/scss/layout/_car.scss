@@ -1,0 +1,290 @@
+.car {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    height: 29vh;
+    width: 77vh;
+    z-index: 2;
+    transform: translateX(-200%);
+    will-change: transform;
+    @include mobile {
+        bottom: 16%;
+        height: 20vh;
+        width: 51vh;
+        transition: .2s ease opacity;
+    }
+
+    .faded & {
+        animation: 2.5s ease-in-out car-appearance,
+                   10s ease-in-out car-moving2 2.5s infinite;
+    }
+    .light & {
+        animation: 10s ease-in-out car-moving infinite; //2.5s ease-in-out car-speed-down,
+    }
+    .dark & {
+        animation: 10s ease-in-out car-moving infinite;//2.5s ease-in-out car-speed-up,
+    }
+    .scrolled & {
+        @include mobile {
+            opacity: 0;
+        }
+    }
+    &__small {
+        animation: none;
+        position: relative;
+        left: 42%;
+        bottom: 0;
+        height: 107px;
+        width: 280px;
+        margin: auto;
+        transform: translate(-50%, 0);
+    }
+    &::before {
+        content: '';
+        background: url(#{$img-path}/car-white.png) no-repeat center bottom;
+        background-size: 100% auto;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        opacity: 0;
+        transition: .2s ease opacity;
+    }
+    &::after {
+        content: '';
+        background: url(#{$img-path}/car.png) no-repeat center bottom;
+        background-size: 100% auto;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    &__small::after {
+        background-image: url(#{$img-path}/car-small.png);
+    }
+    .light &::before {
+        opacity: 1;
+    }
+
+    &_wheel {
+        background: url(#{$img-path}/wheel.png) no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        //filter: url(#{$img-path}/filters.svg#wheel-blur);
+        will-change: transform;
+
+        .faded & {
+            animation: .4s ease-in wheel,
+                       .3s linear wheel .4s,
+                       .2s linear wheel .7s infinite;
+        }
+        .dark & {
+            animation: .2s ease-in wheel-speed-change,
+                       .15s linear wheel .2s infinite;
+        }
+        .light & {
+            animation: .15s ease-out wheel-speed-change,
+                       .5s linear wheel .2s infinite;
+        }
+        .car__small & {
+            animation: .2s linear wheel infinite;
+        }
+
+    }
+    &_wheel-wrapper {
+        position: absolute;
+        bottom: 6px;
+        height: 12vh;
+        width: 12vh;
+        z-index: 2;
+        will-change: transform;
+        @include mobile {
+            bottom: 0;
+            height: 8.7vh;
+            width: 8.7vh;
+        }
+
+        &__back {
+            left: 13.7%;
+            @include mobile {
+                left: 12.7%;
+            }
+
+            .dark.loaded & {
+                animation: .3s ease wheel-jolting .1s infinite;
+                @include mobile {
+                    animation: none;
+                }
+            }
+        }
+        &__front {
+            right: 14.1%;
+            @include mobile {
+                right: 13.1%;
+            }
+
+            .dark.loaded & {
+                animation: .3s ease wheel-jolting infinite;
+                @include mobile {
+                    animation: none;
+                }
+            }
+        }
+        .car__small & {
+            bottom: 2px;
+            height: 45px;
+            width: 45px;
+        }
+        
+    }
+    &_light {
+        background: url(#{$img-path}/light.png) no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        left: 86%;
+        bottom: 10.5vh;
+        height: 13.5vh;
+        width: 59.3vh;
+        opacity: 1;
+        transition: .3s ease-out opacity;
+        z-index: 2;
+        @include mobile {
+            height: 8.5vh;
+            width: 53.3vh;
+            bottom: 9vh;
+            display: none;
+        }
+
+        .car__small & {
+            background-image: url(#{$img-path}/light-small.png);
+            height: 261px;
+            width: 1040px;
+            bottom: -105px;
+            left: 90%;
+            opacity: 1;
+        }
+        .light & {
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes car-appearance {
+    0% {
+        transform: translateX(-200%);
+    }
+    50% {
+        transform: translateX(-40%);
+    }
+    80% {
+        transform: translateX(-55%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes car-moving {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    20% {
+        transform: translateX(-53%);
+    }
+    30% {
+        transform: translateX(-48%) translateY(1.4%) scale(1.02);
+    }
+    51% {
+        transform: translateX(-52%);
+    }
+    66% {
+        transform: translateX(-47%) translateY(-1.2%) scale(0.98);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+@keyframes car-moving2 {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    20% {
+        transform: translateX(-53%);
+    }
+    30% {
+        transform: translateX(-48%) translateY(1.4%) scale(1.02);
+    }
+    51% {
+        transform: translateX(-52%);
+    }
+    66% {
+        transform: translateX(-47%) translateY(-1.2%) scale(0.98);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+@keyframes car-speed-up {
+    0% {
+        transform: translateX(-50%);
+    }
+    30% {
+        transform: translateX(-40%) rotateZ(-0.7deg);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes car-speed-down {
+    0% {
+        transform: translateX(-50%);
+    }
+    30% {
+        transform: translateX(-60%) rotateZ(0.7deg);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes wheel {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes wheel-speed-change {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes wheel-jolting {
+    0% {
+        transform: translate(0, -1%);
+    }
+    25% {
+        transform: translate(0, -1%);
+    }
+    30% {
+        transform: translate(0, 1.5%);
+    }
+    40% {
+        transform: translate(0, -0.5%);
+    }
+    55% {
+        transform: translate(0, 0.5%);
+    }
+    60% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0%);
+    }
+}
