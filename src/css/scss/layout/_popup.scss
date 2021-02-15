@@ -1,0 +1,42 @@
+.popup {
+    display: none;
+    background: rgba($color, .75);
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 111;
+
+    &.opened {
+        display: flex;
+    }
+
+    &_content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 0 20px;
+        @include tablet {
+            width: auto;
+            padding: 0;
+            min-width: 700px;
+        }
+
+        iframe {
+            width: 100%;
+        }
+    }
+}
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}

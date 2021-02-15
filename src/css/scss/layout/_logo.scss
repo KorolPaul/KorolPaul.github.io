@@ -1,0 +1,14 @@
+.logo {
+    @include tablet {
+        position: absolute;
+        left: 0;
+        top: 94px;
+    }
+
+    &_icon {
+        width: 36px;
+        @include tablet {
+            width: 154px;
+        }
+    }
+}

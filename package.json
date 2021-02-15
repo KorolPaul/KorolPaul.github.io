@@ -1,5 +1,5 @@
 {
-  "name": "Infinity",
+  "name": "Lucky7",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -9,21 +9,24 @@
   "author": "Pavel Korol",
   "license": "ISC",
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2015-ie": "^6.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-babel": "^7.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.5.0",
-    "gulp-image": "^4.3.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.1"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-jpeg-xr": "^1.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "gulp-gm": "0.0.9",
+    "gulp-image-resize": "^0.13.1"
   }
 }

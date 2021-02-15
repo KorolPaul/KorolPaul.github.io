@@ -1,0 +1,21 @@
+.subscribe {
+    display: flex;
+    margin: 0 0 50px;
+    @include tablet {
+        width: 50%;
+        order: 2;
+    }
+
+    &_input[type] {
+        padding: 0 50px 0 25px;
+        margin: 0 -50px 0 0;
+        width: 80%;
+        border: 1px solid $color;
+        border-radius: 100px;
+    }
+    &_button[type] {
+        background: $color;
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+}

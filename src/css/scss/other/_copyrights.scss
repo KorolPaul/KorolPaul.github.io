@@ -1,0 +1,12 @@
+.copyrights {
+    display: block;
+    font-size: 15px;
+    line-height: 119%;
+    color: rgba(#fff, .5);
+    text-align: center;
+    @include tablet {
+        color: rgba($color, .5);
+        width: 100%;
+        order: 5;
+    }
+}

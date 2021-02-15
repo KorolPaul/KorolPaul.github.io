@@ -1,0 +1,16 @@
+.title {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 4px;
+        height: 34px;
+        position: absolute;
+        left: -24px;
+        top: 4px;
+        background-color: $color;
+        @include tablet {
+            content: none;
+        }
+    }
+}

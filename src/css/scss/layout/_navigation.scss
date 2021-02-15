@@ -1,0 +1,53 @@
+.navigation {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: .6s $easing transform;
+    @include tablet {
+        left: calc(50% - (1168px + 180px) / 2);
+        top: 50%;
+        transform: translateY(-61%);
+    }
+
+    &[data-slide="1"] {
+        transform: translateY(-87%);
+    }
+    &[data-slide="2"] {
+        transform: translateY(-127%);
+    }
+    &[data-slide="3"] {
+        transform: translateY(-126%);
+    }
+
+    &_icon {
+        width: 36px;
+        @include tablet {
+            width: 154px;
+        }
+    }
+
+    &_up,
+    &_down {
+        padding: 20px;
+        background-color: transparent;
+        border: none;
+        background: no-repeat center center;
+        transition: .2s ease-in-out opacity;
+
+        &:hover {
+            opacity: .5;
+        }
+        &:active {
+            opacity: .8;
+        }
+    }
+    &_up {
+        background-image: url(#{$img}/up.svg);
+    }
+    &_down {
+        background-image: url(#{$img}/down.svg);
+    }
+}

@@ -1,0 +1,17 @@
+.button-link {
+    color: $cLight;
+    background-color: $color;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 24px;
+    border-radius: 50px;
+    font-size: 17px;
+    text-align: center;
+    margin: 0 0 36px;
+    @include tablet {
+        display: inline-block;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}

@@ -1,0 +1,15 @@
+.content {
+    padding: 0 0 0 24px;
+    @include tablet {
+        display: flex;
+        gap: 74px;
+        padding-left: 180px;
+    }
+
+    &_column {
+        &:last-child {
+            margin: 0;
+            max-width: 550px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+$img: "src/img";
+
+$bg_color: #F7EEF5;
+
+$color: #01042F;
+$cBlue: #00A9C3;
+$cPink: #FC12AF;
+$cPurple: #AC48BC;
+$cLight: #DEDEE2;
+
+$font-family: 'ND Astroneer', sans-serif, Helvetica;
+
+$font-size: 25px;
+$font-size__small: 20px;
+
+$max-width: 1400px;
+$indent: 40px;
+
+// easings
+$easeOutCirc: cubic-bezier(.07, .82, .17, 1);
+$easeInOutCirc: cubic-bezier(.78, .13, .15, .86);
+$easeInCirc: cubic-bezier(.6, .04, .98, .34);
+$easing: $easeInOutCirc;

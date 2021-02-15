@@ -1,0 +1,23 @@
+.menu-outside {
+    margin: 0 0 40px;
+    @include tablet {
+        column-count: 2;
+        column-gap: 0;
+        margin-bottom: 74px;
+        width: 50%;
+        order: 1;
+    }
+
+    &_link {
+        font-size: 36px;
+        line-height: 43px;
+        text-transform: uppercase;
+        color: $color;
+        display: block;
+        margin: 0 0 24px;
+        text-align: center;
+        @include tablet {
+            text-align: left;
+        }
+    }
+}
