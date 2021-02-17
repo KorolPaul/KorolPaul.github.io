@@ -1,41 +1,71 @@
 .navigation {
-    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-    transition: .6s $easing transform;
+    position: absolute;
+    left: 50%;
+    top: 85vh;
+    transform: translate(-50%, -50%);
     @include tablet {
-        left: calc(50% - (1168px + 180px) / 2);
+        position: fixed;
+        z-index: 2;
+        transition: .6s $easing transform;
+        left: 20px;
         top: 50%;
         transform: translateY(-61%);
     }
+    @include desktop {
+        left: calc(50% - (1168px + 190px) / 2);
+    }
 
     &[data-slide="1"] {
-        transform: translateY(-87%);
+        @include tablet {
+            transform: translateY(-87%);
+        }
     }
     &[data-slide="2"] {
-        transform: translateY(-127%);
+        @include tablet {
+            transform: translateY(-127%);
+        }
     }
     &[data-slide="3"] {
-        transform: translateY(-126%);
+        @include tablet {
+            transform: translateY(-126%);
+        }
+    }
+    &[data-slide="4"] {
+        @include tablet {
+            transform: translateY(-106%);
+        }
     }
 
     &_icon {
-        width: 36px;
+        width: 80px;
         @include tablet {
+            width: 100px;
+        }
+        @include desktop {
             width: 154px;
         }
     }
 
     &_up,
     &_down {
-        padding: 20px;
+        padding: 10px 0;
         background-color: transparent;
         border: none;
         background: no-repeat center center;
         transition: .2s ease-in-out opacity;
+        width: 17px;
+        height: 17px;
+        background-size: 100% 100%;
+        margin: 6px 0;
+        @include tablet {
+            padding: 20px;
+            width: 33px;
+            height: 33px;
+        }
 
         &:hover {
             opacity: .5;

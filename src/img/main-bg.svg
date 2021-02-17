@@ -14,6 +14,9 @@
 <g opacity="0.5" filter="url(#filter4_f)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M480.125 3971.38C516.406 4003.83 561.261 4033.98 570.055 4081.85C578.909 4130.05 543.553 4172.62 525.458 4218.16C504.964 4269.74 498.442 4328.34 457.311 4365.61C408.982 4409.4 338.834 4470.08 281.286 4439.4C216.917 4405.08 243.306 4303.7 215.063 4236.44C201.068 4203.11 171.089 4180.92 158.518 4147.03C143.023 4105.26 123.41 4062.08 134.37 4018.89C146.625 3970.6 176.481 3924.19 220.832 3901.49C265.211 3878.79 318.585 3887.03 366.719 3900C410.928 3911.92 445.996 3940.86 480.125 3971.38Z" fill="#00A9C3"/>
 </g>
+<g opacity="0.5" filter="url(#filter5_f)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1497.13 2572.38C1533.41 2604.83 1578.26 2634.98 1587.05 2682.85C1595.91 2731.05 1560.55 2773.62 1542.46 2819.16C1521.96 2870.74 1515.44 2929.34 1474.31 2966.61C1425.98 3010.4 1355.83 3071.08 1298.29 3040.4C1233.92 3006.08 1260.31 2904.7 1232.06 2837.44C1218.07 2804.11 1188.09 2781.92 1175.52 2748.03C1160.02 2706.26 1140.41 2663.08 1151.37 2619.89C1163.63 2571.6 1193.48 2525.19 1237.83 2502.49C1282.21 2479.79 1335.59 2488.03 1383.72 2501C1427.93 2512.92 1463 2541.86 1497.13 2572.38Z" fill="#00A9C3"/>
+</g>
 <defs>
 <filter id="filter0_f" x="481" y="4817" width="2410" height="1278" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -36,6 +39,11 @@
 <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur"/>
 </filter>
 <filter id="filter4_f" x="-275" y="3549" width="1193.89" height="1193.89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter5_f" x="742" y="2150" width="1193.89" height="1193.89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur"/>

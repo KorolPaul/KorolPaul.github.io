@@ -12,7 +12,7 @@
     @media all and (min-width: 769px) { @content; }
 }
 @mixin desktop() {
-    @media all and (min-width: 1025px) { @content; }
+    @media all and (min-width: 1367px) { @content; }
 }
 @mixin media($resolution) {
     @media all and (min-width: $resolution) { @content; }

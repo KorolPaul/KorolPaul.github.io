@@ -2,12 +2,18 @@
     @include tablet {
         position: absolute;
         left: 0;
+        top: 0;
+    }
+    @include desktop {
         top: 94px;
     }
 
     &_icon {
         width: 36px;
         @include tablet {
+            width: 100px;
+        }
+        @include desktop {
             width: 154px;
         }
     }

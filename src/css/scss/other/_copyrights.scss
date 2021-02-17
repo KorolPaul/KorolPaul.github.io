@@ -9,4 +9,13 @@
         width: 100%;
         order: 5;
     }
+
+    .slides-page & {
+        @include tablet {
+            position: absolute;
+            left: 50%;
+            bottom: 100px;
+            transform: translateX(-50%);
+        }
+    }
 }

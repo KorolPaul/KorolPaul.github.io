@@ -1,13 +1,16 @@
 textarea {
-    @include placeholder-color(#bcbcbc);
-    color: #bcbcbc;
+    @include placeholder-color($color);
+    color: $color;
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba($color, .12);
+    border-bottom: 1px solid $color;
     box-sizing: border-box;
     font: 300 15px $font-family;
-    padding: 7px 5px;
+    font-size: 20px;
+    padding: 5px 0;
     width: 100%;
+    resize: none;
+    height: 100px;
     transition: .2s ease-in border-color, .2s ease-in color;
 
     &:focus,

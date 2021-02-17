@@ -4,18 +4,24 @@
     @include tablet {
         width: 50%;
         order: 2;
+        display: flex;
+        justify-content: center;
     }
 
     &_input[type] {
         padding: 0 50px 0 25px;
         margin: 0 -50px 0 0;
-        width: 80%;
+        width: 73%;
         border: 1px solid $color;
         border-radius: 100px;
+        @include desktop {
+            width: 45%;
+        }
     }
     &_button[type] {
         background: $color;
         padding-left: 26px;
         padding-right: 26px;
+        width: auto;
     }
 }
