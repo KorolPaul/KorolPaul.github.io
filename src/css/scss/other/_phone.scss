@@ -5,9 +5,8 @@
     &_wrapper {
         overflow: hidden;
         margin: auto;
-        width: 100%;
+        width: 90%;
         position: relative;
-        border-radius: 48px;
         @include tablet {
             width: 65%;
         }
@@ -30,6 +29,7 @@
         width: 100%;
         @include tablet {
             max-height: 80vh;
+            width: auto;
         }
     }
     &_image-decoration {
