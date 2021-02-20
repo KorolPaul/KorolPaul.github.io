@@ -16,36 +16,38 @@
     <meta name="HandheldFriendly" content="true">
 </head>
 <body class="slides-page">
-    <header class="header">
-        <div class="lang">
-            <span class="lang_item">
-                <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
-                English
-            </span>
-            <ul class="lang_list">
-                <li class="lang_list-item">
-                    <a href="/" class="lang_item">
-                        <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
-                        English
-                    </a>
-                </li>
-                <li class="lang_list-item">
-                    <a href="pl.html" class="lang_item">
-                        <img class="lang_item-icon" src="src/img/lang/pl.svg" alt="">
-                        Polish
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
     <div class="navigation">
         <button class="navigation_up js-nav-prev"></button>
         <img src="src/img/logo.svg" alt="" class="navigation_icon">
         <button class="navigation_down js-nav-next"></button>
+        <span class="navigation_caption">UP/DOWN SWIPE</span>
+        <span class="navigation_caption navigation_caption__desktop">Scroll or Tap this triangle</span>
     </div>
     <main class="pages-container">
         <div class="pages-container_background"></div>
         <div class="page active">
+            <header class="header">
+                <div class="lang">
+                    <span class="lang_item">
+                        <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
+                        English
+                    </span>
+                    <ul class="lang_list">
+                        <li class="lang_list-item">
+                            <a href="/" class="lang_item">
+                                <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
+                                English
+                            </a>
+                        </li>
+                        <li class="lang_list-item">
+                            <a href="pl.html" class="lang_item">
+                                <img class="lang_item-icon" src="src/img/lang/pl.svg" alt="">
+                                Polish
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
             <div class="page_content">
                 <h1>AR Generation</h1>
                 <h2>We create a new layer of reality</h2>
@@ -81,7 +83,9 @@
                     <div class="phone">
                         <div class="phone_wrapper">
                             <img class="phone_image" src="src/img/phone.png" alt="">
-                            <video class="phone_video" src="src/img/video.mp4" muted loop >
+                            <div class="phone_video-wrapper">
+                                <video class="phone_video" src="src/img/video.mp4" muted loop >
+                            </div>
                         </div>
                         <img class="phone_image-decoration" src="src/img/phone-decoration.svg" alt="">
                     </div>
@@ -188,6 +192,9 @@
 
     <script src="./src/js/cookies-eu-banner.js"></script>
     <script src="./src/js/main.js"></script>
+    
+
+    <script src="./src/js/lethargy.js"></script>
     <script src="./src/js/navigation.js"></script>
 </body>
 </html>

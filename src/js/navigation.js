@@ -1,14 +1,12 @@
 const isMobile = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
 /* Scroll */
-const timeout = 600;
-let isAninimating = false;
+const timeout = 800;
 let activePage = 0;
-
+const lethargy = new Lethargy();
 const pagesElements = document.querySelectorAll('.page');
 const pagesBgElement = document.querySelector('.pages-container_background');
 const navigationElement = document.querySelector('.navigation');
-
 function prevPage() {
     if (activePage !== 0) {
         activePage--;
@@ -23,76 +21,98 @@ function nextPage() {
     scrollPages();
 }
 
-function scrollHandler(e, inverse = false) {
-    if (isAninimating) {
-        return;
+function scrollHandler(e) {
+    if (hasPeak()) {
+        return false;
     }
 
-    if (e) {
-        var isScrollDown = e.deltaY >= 0;
-        if (inverse) {
-            isScrollDown = !isScrollDown;
-        }
-        if (isScrollDown) {
-            nextPage()
-        } else {
-            prevPage();
-        }
+    const isScrollDown = e.deltaY >= 0;
+    if (isScrollDown) {
+        nextPage()
+    } else {
+        prevPage();
     }
 }
 
 function scrollPages() {
-    if (isAninimating) {
-        return;
-    }
-
-    isAninimating = true;
-    setTimeout(() => {
-        isAninimating = false;
-    }, timeout);
-
     pagesElements.forEach(el => el.classList.remove('active'));
     pagesElements[activePage].classList.add('active');
     navigationElement.dataset.slide = activePage;
     pagesBgElement.dataset.slide = activePage;
 }
 
+function scrollUpdateHandler(e) {
+    update(e);
+}
+
+const debouncedScrollHandler = debounce(scrollHandler, timeout)
+
 if (!isMobile && pagesElements.length) {
-    document.addEventListener('wheel', scrollHandler, { capture: false, passive: true });
+    document.addEventListener('wheel', scrollUpdateHandler);
 }
-
-function navigateToPage() {
-    switch (document.location.hash) {
-        case '#about':
-            activePage = 1;
-            break;
-        case '#products':
-            activePage = 2;
-            break;
-        case '#forum':
-            activePage = 3;
-            break;
-        case '#footer':
-            activePage = 4;
-            break;
-        default:
-            activePage = 0;
-    }
-    scrollPages();
-}
-
-window.addEventListener('popstate', function () {
-    navigateToPage();
-});
 
 window.scrollTo(0, 0);
-navigateToPage();
-
-//var hammer = new Hammer(document.body, {});
-//hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-//hammer.on('swipe', function (e) {
-//    scrollHandler(e, true);
-//});
 
 document.querySelector('.js-nav-prev').addEventListener('click', prevPage);
 document.querySelector('.js-nav-next').addEventListener('click', nextPage);
+
+function debounce(f, ms) {
+    let isCooldown = false;
+
+    return function () {
+        if (isCooldown) return;
+        f.apply(this, arguments);
+
+        isCooldown = true;
+        setTimeout(() => isCooldown = false, ms);
+    };
+}
+
+var deltas = [null, null, null, null, null, null, null, null, null],
+    timer = null,
+    lock = 0,
+    direction = undefined,
+    cb = debouncedScrollHandler,
+    seen = 0;
+
+function update(e) {
+	// Check for an inertial peak. And if found, lock the peak
+    // checking for 10 more events (decremented in hasPeak on
+    // each new event) to prevent the sample window from registering
+    // true more than once for each peak.
+    if (lethargy.check(e) !== false) {
+        cb(e);
+        return;
+    }
+
+    if (hasPeak()) {
+        lock = 20;
+        seen++;
+        cb(e)
+    }
+    deltas.shift();
+    deltas.push(Math.abs(e.deltaY));
+}
+
+function hasPeak() {
+    //console.log(deltas);
+    if (lock > 0) {
+        lock--;
+        return false;
+    }
+    
+    if (deltas[0] == null) return false;
+    
+    if (
+        deltas[0] <  deltas[4] &&
+        deltas[1] <= deltas[4] &&
+        deltas[2] <= deltas[4] &&
+        deltas[3] <= deltas[4] &&
+        deltas[5] <= deltas[4] &&
+        deltas[6] <= deltas[4] &&
+        deltas[7] <= deltas[4] &&
+        deltas[8] <  deltas[4]
+    ) return true;
+    
+    return false;
+}

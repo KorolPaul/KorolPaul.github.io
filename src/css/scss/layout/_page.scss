@@ -12,6 +12,8 @@
 
 .pages-container {
     position: relative;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 100vh;
     @include tablet {
         height: 100%;
         overflow: hidden;

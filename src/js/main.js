@@ -39,6 +39,11 @@ if (videoElement) {
 /* language selector */
 const langElement = document.querySelector('.lang');
 const langToggleElement = document.querySelector('.lang_item');
-langToggleElement.addEventListener('click', function(e) {
-    langElement.classList.toggle('opened');
-})
+
+document.addEventListener('click', function(e) {
+    if (e.target === langElement || e.target === langToggleElement) {
+        langElement.classList.add('opened');
+    } else {
+        langElement.classList.remove('opened');
+    }
+});

@@ -21,12 +21,13 @@ body {
             url(#{$img}/footer-bg.svg) no-repeat left bottom;
         background-color: $bg_color;
         background-size: auto auto, 100% auto;
-        font-size: $font-size;
+        font-size: 22px;
         max-width: 300%;
         margin: auto;
     }
     @include desktop {
         max-width: $max-width;
+        font-size: $font-size;
     }
 }
 
