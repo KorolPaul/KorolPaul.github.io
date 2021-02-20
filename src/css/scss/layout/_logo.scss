@@ -1,11 +1,14 @@
 .logo {
+    position: absolute;
+    left: 0;
+    top: -80px;
     @include tablet {
-        position: absolute;
-        left: 0;
-        top: 0;
+        left: -4px;
+        top: -108px;
     }
     @include desktop {
-        top: 94px;
+        top: 5px;
+        left: -166px;
     }
 
     &_icon {
