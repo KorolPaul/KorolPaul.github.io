@@ -21,9 +21,9 @@ body {
             url(#{$img}/footer-bg.svg) no-repeat left bottom;
         background-color: $bg_color;
         background-size: auto auto, 100% auto;
-        font-size: 22px;
-        max-width: 300%;
+        font-size: 20px;
         margin: auto;
+        max-width: 80vw;
     }
     @include desktop {
         max-width: $max-width;

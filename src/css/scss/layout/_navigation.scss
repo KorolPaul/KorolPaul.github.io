@@ -13,29 +13,42 @@
         transition: .6s $easing transform;
         left: 28px;
         top: 50%;
+        left: calc(50% - (75vw + 190px) / 2);
         transform: translateY(-61%);
     }
     @include desktop {
-        left: calc(50% - (1168px + 190px) / 2);
+        left: calc(50% - (60vw + 190px) / 2);
     }
 
     &[data-slide="1"] {
         @include tablet {
-            transform: translateY(-87%);
+            transform: translateY(-95%);
+        }
+        @include desktop {
+            transform: translateY(-99%);
         }
     }
     &[data-slide="2"] {
         @include tablet {
-            transform: translateY(-127%);
+            transform: translateY(-160%);
+        }
+        @include desktop {
+            transform: translateY(-155%);
         }
     }
     &[data-slide="3"] {
         @include tablet {
-            transform: translateY(-126%);
+            transform: translateY(-154%);
+        }
+        @include desktop {
+            transform: translateY(-135%);
         }
     }
     &[data-slide="4"] {
         @include tablet {
+            transform: translateY(-156%);
+        }
+        @include desktop {
             transform: translateY(-106%);
         }
     }
@@ -79,9 +92,19 @@
     }
     &_up {
         background-image: url(#{$img}/up.svg);
+
+        [data-slide="0"] & {
+            opacity: 0;
+            pointer-events: none;
+        }
     }
     &_down {
         background-image: url(#{$img}/down.svg);
+
+        [data-slide="4"] & {
+            opacity: 0;
+            pointer-events: none;
+        }
     }
 
     &_caption {
@@ -101,12 +124,6 @@
         }
         @include desktop {
             font-size: 25px;
-        }
-
-        .navigation:hover & {
-            animation-delay: 0s;
-            animation-duration: .6s;
-            animation-direction: alternate-reverse;
         }
         
         &__desktop {

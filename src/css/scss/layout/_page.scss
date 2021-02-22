@@ -64,16 +64,13 @@
     content-visibility: auto;
     contain-intrinsic-size: 0 100vh;
     @include tablet {
-        padding: 0 0 0 120px;
+        padding: 0 0 0 9.3vw;
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         transition: .6s $easing transform;
         transform:  translateY(-100%) translateZ(0);
-    }
-    @include desktop {
-        padding: 0 0 0 180px;
     }
 
     &.active {
@@ -89,13 +86,14 @@
         }
     }
 
+
     &_content {
         margin: auto;
         @include tablet {
-            width: 94%;
+            width: 75vw;
         }
         @include desktop {
-            width: 1168px;
+            width: 60vw;
         }
     }
     &_columns {

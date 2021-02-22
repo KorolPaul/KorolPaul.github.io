@@ -3,11 +3,11 @@
     position: relative;
     @include tablet {
         display: flex;
-        gap: 30px;
+        gap: 50px;
         padding-bottom: 130px;
+        padding-left: 9.3vw;
     }
     @include desktop {
-        padding-left: 180px;
         gap: 74px;
     }
 

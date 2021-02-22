@@ -23,5 +23,15 @@
         padding-left: 26px;
         padding-right: 26px;
         width: auto;
+        transition: .2s $easing opacity;
+
+        &:hover {
+            opacity: .6;
+            outline: none;
+        }
+        &:active {
+            opacity: .8;
+            outline: none;
+        }
     }
 }

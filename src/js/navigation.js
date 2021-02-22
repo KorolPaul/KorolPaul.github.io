@@ -86,7 +86,7 @@ function update(e) {
     }
 
     if (hasPeak()) {
-        lock = 20;
+        lock = 30;
         seen++;
         cb(e)
     }
