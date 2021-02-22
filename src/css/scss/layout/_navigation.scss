@@ -30,7 +30,7 @@
     }
     &[data-slide="2"] {
         @include tablet {
-            transform: translateY(-160%);
+            transform: translateY(-148%);
         }
         @include desktop {
             transform: translateY(-155%);

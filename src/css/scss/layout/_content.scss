@@ -12,6 +12,11 @@
     }
 
     &_column {
+        @include tablet {
+            flex-grow: 1;
+            flex-basis: 50%;
+        }
+
         &:last-child {
             padding: 0 0 66px;
             margin: 0 0 70px;

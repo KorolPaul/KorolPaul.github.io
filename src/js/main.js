@@ -13,9 +13,30 @@ popupToggleElements.forEach(el => el.addEventListener('click', (e) => {
 
 
 /* cookies */
-new CookiesEuBanner(function () {
-    // Your code here
+const hasCookies = Cookies.get('CookieNotificationCookie');
+
+const cookiesBanner = document.querySelector('.cookies-banner');
+const cookiesAcceptButton = document.getElementById('cookies-eu-accept');
+const cookiesRejectButton = document.getElementById('cookies-eu-reject');
+cookiesAcceptButton.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    cookiesBanner.style.display = 'none';
+    Cookies.set('CookieNotificationCookie', 'true', { expires: 365 });
 });
+cookiesRejectButton.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    cookiesBanner.style.display = 'none';
+    localStorage.acceptCookies = 'false';
+});
+
+if (cookiesBanner) {
+    if (!hasCookies && !localStorage.acceptCookies) {
+        cookiesBanner.style.display = 'block';
+    }
+}
+
 
 /* video */
 const videoElement = document.querySelector('.phone_video');
