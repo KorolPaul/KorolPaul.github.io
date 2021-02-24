@@ -3,5 +3,13 @@
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
+        padding: 0 0 0 24px;
+        @include tablet {
+            padding-left: 9.3vw;
+        }
+    }
+
+    .slides-page & {
+        padding: 0;
     }
 }

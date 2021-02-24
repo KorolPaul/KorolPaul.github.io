@@ -11,45 +11,15 @@
         z-index: 2;
         transition: .6s $easing transform;
         left: 28px;
-        top: 50%;
+        top: 0;
+        transform: translateY(calc(50vh - 61% + 96px));
+        margin: -96px 0 0;
         left: calc(50% - (75vw + 190px) / 2);
-        transform: translateY(-61%);
     }
     @include desktop {
         left: calc(50% - (60vw + 190px) / 2);
-    }
-
-    &[data-slide="1"] {
-        @include tablet {
-            transform: translateY(-95%);
-        }
-        @include desktop {
-            transform: translateY(-99%);
-        }
-    }
-    &[data-slide="2"] {
-        @include tablet {
-            transform: translateY(-145%);
-        }
-        @include desktop {
-            transform: translateY(-155%);
-        }
-    }
-    &[data-slide="3"] {
-        @include tablet {
-            transform: translateY(-154%);
-        }
-        @include desktop {
-            transform: translateY(-135%);
-        }
-    }
-    &[data-slide="4"] {
-        @include tablet {
-            transform: translateY(-156%);
-        }
-        @include desktop {
-            transform: translateY(-106%);
-        }
+        transform: translateY(calc(50vh - 61% + 120px));
+        margin-top: -120px;
     }
 
     &_icon {

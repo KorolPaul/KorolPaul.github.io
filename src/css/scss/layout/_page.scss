@@ -155,6 +155,13 @@
                 width: 60%;
             }
         }
+        
+        &:first-child {
+            @include desktop {
+                min-width: 440px;
+                margin-right: 20px;
+            }
+        }
     }
     &_column-text {
         @include tablet {
@@ -181,9 +188,6 @@
         text-align: center;
         @include tablet {
             text-align: left;
-        }
-        @include desktop {
-            white-space: nowrap;
         }
     }
     h1 {

@@ -7,6 +7,9 @@ const lethargy = new Lethargy();
 const pagesElements = document.querySelectorAll('.page');
 const pagesBgElement = document.querySelector('.pages-container_background');
 const navigationElement = document.querySelector('.navigation');
+const pageHeadings = document.querySelectorAll('.js-page-headings');
+
+
 function prevPage() {
     if (activePage !== 0) {
         activePage--;
@@ -39,6 +42,16 @@ function scrollPages() {
     pagesElements[activePage].classList.add('active');
     navigationElement.dataset.slide = activePage;
     pagesBgElement.dataset.slide = activePage;
+
+    calculateNavigatoinPosition();
+}
+
+function calculateNavigatoinPosition() {
+    const pagePosition = pagesElements[activePage].getBoundingClientRect();
+    const position = pageHeadings[activePage].getBoundingClientRect();
+    const positionTop = position.top - pagePosition.top;
+
+    navigationElement.style.transform = `translateY(${positionTop + (position.height) / 2}px)`;
 }
 
 function scrollUpdateHandler(e) {
@@ -55,6 +68,7 @@ window.scrollTo(0, 0);
 
 document.querySelector('.js-nav-prev').addEventListener('click', prevPage);
 document.querySelector('.js-nav-next').addEventListener('click', nextPage);
+window.addEventListener('resize', calculateNavigatoinPosition)
 
 function debounce(f, ms) {
     let isCooldown = false;

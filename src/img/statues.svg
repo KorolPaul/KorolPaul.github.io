@@ -1,71 +1,29 @@
 <svg width="686" height="685" viewBox="0 0 686 685" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-<style>
-    .plane {
-        animation: 10s linear rotation infinite;
-        transform-origin: 54% 43%;
-        will-change: transform;
-    }
-    @keyframes rotation {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(-360deg);
-        }
-    }
-    image {
-        position: relative;
-        z-index: 10
-    }
-</style>
 <circle class="circle" cx="370.777" cy="295.743" r="214.303" stroke="#FC12AF" stroke-dasharray="10 10"/>
-<g filter="url(#filter0_f)">
-<rect width="374.24" height="374.24" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 635.423 80.9407)" fill="url(#pattern0)"/>
-</g>
-<rect width="374.24" height="374.24" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 635.423 80.9407)" fill="url(#pattern1)"/>
-<g filter="url(#filter1_f)">
-<rect x="50.7646" y="50.9197" width="526.012" height="584.003" fill="url(#pattern2)"/>
-</g>
 <rect x="50.7646" y="50.9197" width="526.012" height="584.003" fill="url(#pattern3)"/>
-<g class="plane" filter="url(#filter2_d)">
+<g class="plane" filter="url(#filter2_d)" transform-origin="54% 43%">
     <path d="M402.071 89.8291L332.262 78.1823L410.82 95.6979L402.071 89.8291Z" fill="url(#paint0_linear)"/>
     <path d="M332.262 78.1822L385.49 100.096L410.82 95.6979L332.262 78.1822Z" fill="url(#paint1_linear)"/>
     <path d="M390.509 79.3025L420.489 61.9709L332.262 78.1823L390.509 79.3025Z" fill="url(#paint2_linear)"/>
     <path d="M420.489 61.9709L396.235 55.5801L332.262 78.1823L420.489 61.9709Z" fill="url(#paint3_linear)"/>
     <path d="M402.071 89.8291L390.509 79.3025L332.261 78.1823L402.071 89.8291Z" fill="url(#paint4_linear)"/>
+
+    <animateTransform attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 0 0"
+        to="-360 0 0"
+        dur="10s"
+        repeatCount="indefinite"/>
 </g>
 <defs>
-<filter id="filter0_f" x="211.183" y="30.9407" width="474.24" height="474.24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur"/>
-</filter>
-<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0" transform="scale(0.00125)"/>
-</pattern>
-<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image1" transform="scale(0.00125)"/>
-</pattern>
-<filter id="filter1_f" x="0.764648" y="0.919678" width="626.012" height="684.003" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur"/>
-</filter>
-<pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image2" transform="translate(0 -0.000388568) scale(0.00111111 0.00100078)"/>
-</pattern>
-<pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image3" transform="translate(0 -0.000388568) scale(0.00111111 0.00100078)"/>
-</pattern>
 <filter id="filter2_d" x="282.261" y="5.58014" width="188.227" height="144.516" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="25"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.988235 0 0 0 0 0.0705882 0 0 0 0 0.686275 0 0 0 1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+    <feOffset/>
+    <feGaussianBlur stdDeviation="15"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.988235 0 0 0 0 0.0705882 0 0 0 0 0.686275 0 0 0 1 0"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear" x1="410.968" y1="95.1465" x2="332.795" y2="76.343" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FC12AF"/>
