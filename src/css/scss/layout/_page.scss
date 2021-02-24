@@ -63,6 +63,7 @@
     padding: 16px;
     content-visibility: auto;
     contain-intrinsic-size: 0 100vh;
+    position: relative;
     @include tablet {
         padding: 0 0 0 9.3vw;
         position: absolute;
@@ -131,7 +132,8 @@
             @include tablet {
                 padding: 0;
                 margin: 0;
-                width: 37%;
+                width: 41%;
+                align-self: self-start;
             }
 
             &::after {
@@ -157,6 +159,20 @@
     &_column-text {
         @include tablet {
             width: 77%;
+        }
+    }
+    &_instruction {
+        font-size: 16px;
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        pointer-events: none;
+        opacity: 1;
+        text-align: center;
+        @include tablet {
+            display: none;
         }
     }
 

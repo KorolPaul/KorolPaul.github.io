@@ -63,8 +63,18 @@ const langToggleElement = document.querySelector('.lang_item');
 
 document.addEventListener('click', function(e) {
     if (e.target === langElement || e.target === langToggleElement) {
-        langElement.classList.add('opened');
+        langElement.classList.toggle('opened');
     } else {
         langElement.classList.remove('opened');
     }
 });
+
+/* menu toggle */
+const menuToggleElements = document.querySelectorAll('.js-menu-toggle');
+if (menuToggleElements.length) {
+    function toggleMobileMenu() {
+        document.body.classList.toggle('menu-opened');
+    }
+
+    menuToggleElements.forEach(el => el.addEventListener('click', toggleMobileMenu));
+}

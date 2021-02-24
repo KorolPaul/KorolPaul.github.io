@@ -9,13 +9,15 @@
 
     .slides-page & {
         position: absolute;
-        top: 45px;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 35px;
         z-index: 2;
+        right: 25px;
         @include tablet {
             top: 68px;
+            left: 50%;
             width: 90%;
+            right: auto;
+            transform: translateX(-50%);
         }
         @include desktop {
             width: $max-width;

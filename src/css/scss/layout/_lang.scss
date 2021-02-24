@@ -1,5 +1,14 @@
 .lang {
-    position: relative;
+    display: none;
+    @include tablet {
+        display: block;
+        position: relative;
+    }
+
+    &__inner {
+        display: block;
+        margin: 0 0 75px;
+    }
 
     &_item {
         color: $cBlue;
@@ -9,6 +18,11 @@
         &:hover {
             opacity: .6;
         }
+
+        .lang__inner & {
+            color: $cLight;
+        }
+
     }
     &_item-icon {
         height: 17px;
@@ -31,6 +45,14 @@
         .opened & {
             opacity: 1;
             pointer-events: inherit;
+        }
+
+        .lang__inner & {
+            position: static;
+            display: none;
+        }
+        .lang__inner.opened & {
+            display: block;
         }
     }
     &_list-item {

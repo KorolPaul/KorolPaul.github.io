@@ -16,12 +16,62 @@
     <meta name="HandheldFriendly" content="true">
 </head>
 <body class="slides-page">
-    <div class="navigation">
+    <div class="mobile-menu">
+        <div class="mobile-menu_fade js-menu-toggle"></div>
+        <div class="mobile-menu_content">
+            <span class="mobile-menu_title">MENU</span>
+            <ul class="mobile-menu_list">
+                <li class="mobile-menu_list-item">
+                    <a href="/" class="mobile-menu_link">HOME</a>
+                </li>
+                <li class="mobile-menu_list-item">
+                    <a href="/" class="mobile-menu_link">Forum</a>
+                </li>
+                <li class="mobile-menu_list-item">
+                    <a href="/" class="mobile-menu_link">company</a>
+                </li>
+                <li class="mobile-menu_list-item">
+                    <a href="/" class="mobile-menu_link">about</a>
+                </li>
+                <li class="mobile-menu_list-item">
+                    <a href="/" class="mobile-menu_link js-popup-toggle">feedback</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu_additional">
+                <li class="mobile-menu_additional-item">
+                    <a href="/offer.html" class="mobile-menu_additional-link">Public offer</a>
+                </li>
+                <li class="mobile-menu_additional-item">
+                    <a href="/terms.html" class="mobile-menu_additional-link">Terms of us</a>
+                </li>
+            </ul>
+            <div class="lang lang__inner">
+                <span class="lang_item">
+                    <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
+                    English
+                </span>
+                <ul class="lang_list">
+                    <li class="lang_list-item">
+                        <a href="/" class="lang_item">
+                            <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
+                            English
+                        </a>
+                    </li>
+                    <li class="lang_list-item">
+                        <a href="pl.html" class="lang_item">
+                            <img class="lang_item-icon" src="src/img/lang/pl.svg" alt="">
+                            Polish
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="navigation" data-slide="0">
         <button class="navigation_up js-nav-prev"></button>
         <img src="src/img/logo.svg" alt="" class="navigation_icon">
         <button class="navigation_down js-nav-next"></button>
-        <span class="navigation_caption">UP/DOWN SWIPE</span>
-        <span class="navigation_caption navigation_caption__desktop">Scroll or Tap this triangle</span>
+        <span class="navigation_caption">Scroll or Tap this triangle</span>
     </div>
     <main class="pages-container">
         <div class="pages-container_background"></div>
@@ -47,11 +97,17 @@
                         </li>
                     </ul>
                 </div>
+                <button class="menu-toggle js-menu-toggle">
+                    <div class="menu-toggle_line"></div>
+                    <div class="menu-toggle_line"></div>
+                    <div class="menu-toggle_line"></div>
+                </button>
             </header>
             <div class="page_content">
                 <h1>AR Generation</h1>
                 <h2>We create a new layer of reality</h2>
             </div>
+            <span class="page_instruction">UP/DOWN SWIPE</span>
         </div>
         <div class="page">
             <div class="page_content">
@@ -59,10 +115,10 @@
                 <h2>and our mission</h2>
                 <div class="page_columns">
                     <div  class="page_column page_column__small">
-                        <p>We are engaged in the development of new augmented reality technologies and their implementation in society</p>
+                        <p>We develop augmented reality (AR) apps and bring them to life.</p>
                     </div>
                     <div  class="page_column">
-                        <p>Our mission is to accelerate the future by making AR technology a tool to improve all aspects of modern life. From education to entertainment and travel.</p>
+                        <p>Our mission is to make AR technologies an affordable tool for improving all areas of human life: from education to entertainment and travel.</p>
                     </div>
                 </div>
             </div>
@@ -72,12 +128,12 @@
                 <div class="page_columns">
                     <div  class="page_column">
                         <h1>Our product</h1>
-                        <h2>is a door to augmented reality</h2>
+                        <h2>is the door to the world of augmented reality</h2>
                         <div class="page_column-text">
-                            <p>What was hidden behind the technology is now becoming a part of life</p>
-                            <p>New Layer is the door to the world of augmented reality</p>
-                            <p>Seize the opportunities of the new world and become its creators together with AR generation</p>
-                            <a href="#" class="button-link">More About App</a>
+                            <p>Technologies that were considered unique are now becoming a part of our lives.</p>
+                            <p>New Layer is the entrance to the world of augmented reality</p>
+                            <p>Take the possibilities of new technologies and create your own reality with AR Generation</p>
+                            <a href="#" class="button-link">About the app</a>
                         </div>
                     </div>
                     <div class="phone">
@@ -96,13 +152,13 @@
             <div class="page_content">
                 <div class="page_columns">
                     <div  class="page_column page_column__big">
-                        <h1>Join our forum</h1>
-                        <h2>let's create the future together</h2>
+                        <h1>Forum</h1>
+                        <h2>Let's create the future together</h2>
                         <div class="page_column-text">
-                            <p>Сreate, test and discuss new AR technologies</p>
-                            <p>Assemble a community of specialists of the highest level</p>
-                            <p>Share experiences, generate and implement crazy ideas</p>
-                            <a href="#" class="button-link">Go to Forum</a>
+                            <p>Join the community of IT specialists</p>
+                            <p>Discuss, create, and test new AR tools</p>
+                            <p>Generate and implement incredible ideas in a team of your interests</p>
+                            <a href="#" class="button-link">Forum</a>
                         </div>
                     </div>
                     <img src="src/img/statues.svg" alt="">

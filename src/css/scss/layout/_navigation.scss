@@ -4,9 +4,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 50%;
-    top: 85vh;
-    transform: translate(-50%, -50%);
+    left: 30px;
+    top: 40px;
     @include tablet {
         position: fixed;
         z-index: 2;
@@ -30,7 +29,7 @@
     }
     &[data-slide="2"] {
         @include tablet {
-            transform: translateY(-148%);
+            transform: translateY(-145%);
         }
         @include desktop {
             transform: translateY(-155%);
@@ -54,7 +53,7 @@
     }
 
     &_icon {
-        width: 80px;
+        width: 36px;
         @include tablet {
             width: 100px;
         }
@@ -65,18 +64,17 @@
 
     &_up,
     &_down {
-        padding: 10px 0;
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        background: no-repeat center center;
-        transition: .2s ease-in-out opacity;
-        width: 17px;
-        height: 17px;
-        background-size: 100% 100%;
-        margin: 6px 0;
-        opacity: .5;
+        display: none;
         @include tablet {
+            display: block;
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            background: no-repeat center center;
+            transition: .2s ease-in-out opacity;
+            background-size: 100% 100%;
+            margin: 6px 0;
+            opacity: .5;
             padding: 20px;
             width: 33px;
             height: 33px;
@@ -108,10 +106,9 @@
     }
 
     &_caption {
-        animation: .6s captionDissapearing 2s $easeOutCirc forwards;
         font-size: 16px;
         position: absolute;
-        top: -30%;
+        top: 100%;
         left: 52%;
         transform: translateX(-50%);
         width: 90%;
@@ -119,29 +116,18 @@
         opacity: 1;
         text-align: center;
         transition: .3s $easing opacity;
+        display: none;
+        opacity: 0;
+        pointer-events: none;
         @include tablet {
-            display: none;
+            display: block;
         }
-        @include desktop {
-            font-size: 25px;
-        }
-        
-        &__desktop {
-            display: none;
+
+        [data-slide="0"] & {
             @include tablet {
-                display: block;
-                top: 100%;
-                left: 52%;
+                opacity: 1;
+                pointer-events: inherit;
             }
         }
-    }
-}
-
-@keyframes captionDissapearing {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
     }
 }
