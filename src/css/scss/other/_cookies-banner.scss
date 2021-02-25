@@ -1,7 +1,7 @@
 .cookies-banner {
     background-color: $cBlue;
     padding: 20px;
-    font-size: 16px;
+    font-size: 15px;
     color: $cLight;
     position: fixed;
     left: 0;
@@ -10,7 +10,7 @@
     z-index: 3;
     display: none;
     @include media(1336px) {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     &_content {
