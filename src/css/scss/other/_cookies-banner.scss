@@ -20,6 +20,20 @@
             align-items: center;
             justify-content: space-between;
             display: flex;
+            max-width: calc(72vw + 9.3vw + 80px);
+        }
+        @include desktop {
+            max-width: calc(72vw + 168px / 2);
+        }
+
+        .slides-page & {
+            @include tablet {
+                max-width: calc(75vw + 9.3vw + 80px);
+                
+            }
+            @include desktop {
+                max-width: calc(60vw + 9.3vw + 50px);
+            }
         }
     }
     &_buttons {

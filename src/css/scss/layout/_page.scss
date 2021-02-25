@@ -74,6 +74,15 @@
         transform:  translateY(-100%) translateZ(0);
     }
 
+    &__statues {
+        position: relative;
+        padding-bottom: 55vh;
+        overflow: hidden;
+        @include tablet {
+            padding-bottom: 0;
+        }
+    }
+
     &.active {
         @include tablet {
             transform: translateY(0);
@@ -180,6 +189,23 @@
         text-align: center;
         @include tablet {
             display: none;
+        }
+    }
+    &_statues {
+        width: 180vw;
+        max-width: none;
+        position: absolute;
+        right: -60%;
+        bottom: -20vh;
+        z-index: -1;
+        @include tablet {
+            position: static;
+            width: 65%;
+            margin-right: -70px;
+        }
+        @include desktop {
+            max-height: 80vh;
+            margin-right: auto;
         }
     }
 
