@@ -1,5 +1,8 @@
 <svg width="686" height="685" viewBox="0 0 686 685" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<style>
+.plane {
+    transform-origin: 54% 43%;
+}</style>
 <circle class="circle" cx="370.777" cy="295.743" r="214.303" stroke="#FC12AF" stroke-dasharray="10 10"/>
 <rect x="50.7646" y="50.9197" width="526.012" height="584.003" fill="url(#pattern3)"/>
 <g class="plane" filter="url(#filter2_d)" transform-origin="54% 43%">
