@@ -1,3 +1,5 @@
+const isMobile = ('ontouchstart' in window || navigator.msMaxTouchPoints) || screen.width < 768;
+
 /* Popup */
 const popupToggleElements = document.querySelectorAll('.js-popup-toggle')
 const popupElement = document.querySelector('.popup');
@@ -42,6 +44,10 @@ if (cookiesBanner) {
 const videoElement = document.querySelector('.phone_video');
 
 if (videoElement) {
+    if (!isMobile) {
+        videoElement.removeAttribute('controls');
+    }
+
     const observerCallback = function (e) {
         if (e[0].isIntersecting) {
             videoElement.play();

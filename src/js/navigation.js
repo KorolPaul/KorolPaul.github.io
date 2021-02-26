@@ -1,5 +1,3 @@
-const isMobile = 'ontouchstart' in window || navigator.msMaxTouchPoints;
-
 /* Scroll */
 const timeout = 800;
 let activePage = 0;
@@ -43,7 +41,9 @@ function scrollPages() {
     navigationElement.dataset.slide = activePage;
     pagesBgElement.dataset.slide = activePage;
 
-    calculateNavigatoinPosition();
+    if (!isMobile) {
+        calculateNavigatoinPosition();
+    }
 }
 
 function calculateNavigatoinPosition() {
