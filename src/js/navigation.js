@@ -22,6 +22,16 @@ function nextPage() {
     scrollPages();
 }
 
+
+document.querySelectorAll('.js-scroll-to-start').forEach(el => {
+    el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+        activePage = 0;
+        scrollPages();
+    })
+});
+
 function scrollHandler(e) {
     if (hasPeak()) {
         return false;
@@ -40,18 +50,16 @@ function scrollPages() {
     pagesElements[activePage].classList.add('active');
     navigationElement.dataset.slide = activePage;
     pagesBgElement.dataset.slide = activePage;
-
-    if (!isMobile) {
-        calculateNavigatoinPosition();
-    }
 }
 
 function calculateNavigatoinPosition() {
-    const pagePosition = pagesElements[activePage].getBoundingClientRect();
-    const position = pageHeadings[activePage].getBoundingClientRect();
-    const positionTop = position.top - pagePosition.top;
+    if (getComputedStyle(navigationElement).position === 'fixed') {
+        const pagePosition = pagesElements[activePage].getBoundingClientRect();
+        const position = pageHeadings[activePage].getBoundingClientRect();
+        const positionTop = position.top - pagePosition.top;
 
-    navigationElement.style.transform = `translateY(${positionTop + (position.height) / 2}px)`;
+        navigationElement.style.transform = `translateY(${positionTop + (position.height) / 2}px)`;
+    }
 }
 
 function scrollUpdateHandler(e) {

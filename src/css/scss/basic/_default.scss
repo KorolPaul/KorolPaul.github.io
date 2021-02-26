@@ -1,7 +1,5 @@
 html,
 body {
-    //overflow: hidden;
-    //height: 100%;
     position: relative;
 }
 
@@ -13,6 +11,7 @@ body {
     color: $color;
     font: #{$font-size__small}/#{1.2} $font-family;
     padding: 46px 20px;
+    scroll-behavior: smooth;
     @include media(375px) {
         padding: 66px $indent;
     }

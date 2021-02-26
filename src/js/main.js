@@ -46,6 +46,7 @@ const videoElement = document.querySelector('.phone_video');
 if (videoElement) {
     if (!isMobile) {
         videoElement.removeAttribute('controls');
+        videoElement.removeAttribute('autoplay');
     }
 
     const observerCallback = function (e) {
