@@ -29,7 +29,7 @@
 
         .slides-page & {
             @include tablet {
-                max-width: calc(75vw + 9.3vw + 80px);
+                max-width: calc(75vw + 9.3vw + 30px);
                 
             }
             @include desktop {

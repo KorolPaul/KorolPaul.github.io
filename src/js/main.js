@@ -47,21 +47,22 @@ if (videoElement) {
     if (!isMobile) {
         videoElement.removeAttribute('controls');
         videoElement.removeAttribute('autoplay');
+        
+        const observerCallback = function (e) {
+            if (e[0].isIntersecting) {
+                videoElement.play();
+            } else {
+                videoElement.pause();
+            }
+        };
+
+        const observer = new IntersectionObserver(observerCallback, {
+            rootMargin: '0px',
+            threshold: 0.3
+        });
+        observer.observe(videoElement);
     }
 
-    const observerCallback = function (e) {
-        if (e[0].isIntersecting) {
-            videoElement.play();
-        } else {
-            videoElement.pause();
-        }
-    };
-
-    const observer = new IntersectionObserver(observerCallback, {
-        rootMargin: '0px',
-        threshold: 0.3
-    });
-    observer.observe(videoElement);
 }
 
 /* language selector */

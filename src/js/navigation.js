@@ -50,6 +50,8 @@ function scrollPages() {
     pagesElements[activePage].classList.add('active');
     navigationElement.dataset.slide = activePage;
     pagesBgElement.dataset.slide = activePage;
+
+    calculateNavigatoinPosition();
 }
 
 function calculateNavigatoinPosition() {
