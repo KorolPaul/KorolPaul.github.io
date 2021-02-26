@@ -14,10 +14,10 @@
         top: 0;
         transform: translateY(calc(50vh - 61% + 96px));
         margin: -96px 0 0;
-        left: calc(50% - (75vw + 190px) / 2);
+        left: calc(50% - (75vw + 160px) / 2);
     }
     @include desktop {
-        left: calc(50% - (60vw + 198px) / 2);
+        left: calc(50% - (63vw + 198px) / 2);
         transform: translateY(calc(50vh - 61% + 120px));
         margin-top: -120px;
     }
