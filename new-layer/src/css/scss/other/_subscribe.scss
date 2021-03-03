@@ -1,0 +1,27 @@
+.subscribe {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px;
+    @include tablet {
+        width: 100%;
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    &_input[type] {
+        padding: 0 50px 0 25px;
+        margin: 0 -50px 0 0;
+        width: 73%;
+        border: 1px solid $cPink;
+        border-radius: 100px;
+        @include tablet {
+            width: 320px;
+        }
+    }
+    &_button[type] {
+        padding-left: 26px;
+        padding-right: 26px;
+        width: auto;
+    }
+}

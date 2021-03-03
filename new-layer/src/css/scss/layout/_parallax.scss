@@ -1,0 +1,56 @@
+.parallax {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    @include tablet {
+        perspective: 1px;
+        perspective-origin: top center;    
+        scroll-behavior: smooth;
+        transform-style: preserve-3d;
+    }
+
+    &_background {
+        background: url(#{$img}/showcase/showcase-bg.svg) no-repeat center top / 100% auto;
+        position: absolute;
+        height: 500vh;
+        top: 50vh;
+        left: 0;
+        width: 100%;
+        z-index: -2;
+        will-change: transform;
+        transform-origin: top center;
+        @include tablet {
+            transform: translateZ(-2px) scale(3);
+        }
+    }
+    &_front {
+        background: url(#{$img}/showcase/showcase-front.svg) no-repeat center top / 100% auto;
+        position: absolute;
+        height: 500vh;
+        top: 150vh;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        will-change: transform;
+        pointer-events: none;
+        transform-origin: top center;
+        @include tablet {
+            transform: translateZ(-1px) scale(1.5);
+        }
+    }
+    &_content {
+        padding: 46px 40px;
+        background: url(#{$img}/footer-bg.svg) no-repeat center bottom / 100% auto;
+        @include tablet {
+            padding: 33px 40px;
+            transform: translateZ(0);
+        }
+    }
+}
+
+.js-animated {
+    transition: .2s linear transform, 
+                .2s linear opacity;
+}

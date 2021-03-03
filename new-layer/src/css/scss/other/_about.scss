@@ -1,0 +1,26 @@
+.about {
+    margin: 0 0 180px;
+    padding: 0 24px;
+    @include tablet {
+        display: flex;
+    }
+
+    &_content {
+        @include tablet {
+            width: 40%;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &_image {
+        display: none;
+        @include tablet {
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            width: 70%;
+            right: 0;
+            top: -70px;
+        }
+    }
+}

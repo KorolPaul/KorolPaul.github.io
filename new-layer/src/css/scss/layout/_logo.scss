@@ -1,0 +1,14 @@
+.logo {
+    
+
+    .main-page & {
+        
+    }
+
+    &_icon {
+        width: 36px;
+        @include tablet {
+            width: 90px;
+        }
+    }
+}

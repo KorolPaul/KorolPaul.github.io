@@ -1,0 +1,44 @@
+.showcase {
+    margin: 0 0 70px;
+    padding: 0 0 1px;
+    position: relative;
+
+    &::after {
+        content: '';
+        height: 4px;
+        width: 60px;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        background-color: $cPink;
+        margin: 0 0 0 -30px;
+    }
+
+    &_title {
+        @extend %heading-1;
+        text-align: center;
+        margin: 118px auto 58px;
+        position: relative;
+        padding: 0 0 36px;
+        @include tablet {
+            max-width: 75vw;
+            padding-bottom: 74px;
+        }
+
+        &::after {
+            content: '';
+            background: $cPink  ;
+            height: 4px;
+            width: 60px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin: 0 0 0 -30px;
+        }
+    }
+    &_title-wrapper {
+        @include tablet {
+            display: block;
+        }
+    }
+}

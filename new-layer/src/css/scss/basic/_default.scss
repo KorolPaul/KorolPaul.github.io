@@ -1,0 +1,66 @@
+html,
+body {
+    position: relative;
+}
+
+body {
+    background: url(#{$img}/header-bg-mobile.svg) no-repeat 0 0, 
+        url(#{$img}/footer-bg-mobile.svg) no-repeat left bottom;
+    background-color: $bg_color;
+    background-size: 100% auto, 100% auto;
+    color: $color;
+    font: #{$font-size__small}/#{1.2} $font-family;
+    padding: 46px 40px;
+    scroll-behavior: smooth;
+    @include media(375px) {
+        padding: 66px $indent;
+    }
+    @include tablet {
+        background: url(#{$img}/header-bg.svg) no-repeat 0 0, 
+            url(#{$img}/footer-bg.svg) no-repeat center bottom;
+        background-color: $bg_color;
+        font-size: 22px;
+        max-width: 300%;
+        margin: auto;
+    }
+    @include desktop {
+        max-width: $max-width;
+        font-size: $font-size;
+    }
+}
+
+a {
+    color: $color;
+    text-decoration: none;
+    transition: .2s $easing opacity;
+
+    &:hover,
+    &.hover {
+        opacity: .6;
+        outline: none;
+    }
+    &:active,
+    &.active {
+        opacity: .8;
+        outline: none;
+    }
+}
+
+p {
+    margin: 0 0 20px;
+    @include tablet {
+        margin-bottom: 30px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
