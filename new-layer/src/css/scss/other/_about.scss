@@ -3,6 +3,10 @@
     padding: 0 24px;
     @include tablet {
         display: flex;
+        margin-bottom: 480px;
+    }
+    @include desktop {
+        margin-bottom: 600px;
     }
 
     &_content {

@@ -26,7 +26,8 @@
         }
     }
     &_front {
-        background: url(#{$img}/showcase/showcase-front.svg) no-repeat center top / 100% auto;
+        background: url(#{$img}/showcase/showcase-front.svg) no-repeat center top / 100% auto,
+                    url(#{$img}/showcase/showcase-front-bottom.svg) no-repeat center bottom / 100% auto;
         position: absolute;
         height: 500vh;
         top: 150vh;
@@ -37,7 +38,7 @@
         pointer-events: none;
         transform-origin: top center;
         @include tablet {
-            transform: translateZ(-1px) scale(1.5);
+            transform: translateZ(-1px) scale(2);
         }
     }
     &_content {
