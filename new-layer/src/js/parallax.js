@@ -1,3 +1,5 @@
+const isSmallScreen = screen.width < 768;
+
 const parallaxContentElement = document.querySelector('.parallax_content');
 const parallaxBackElement = document.querySelector('.parallax_background');
 const parallaxFrontElement = document.querySelector('.parallax_front');
@@ -33,8 +35,8 @@ if (videoElement) {
 
 const animatedElements = document.querySelectorAll('.js-animated');
 const thresholdSteps = [...Array(100).keys()].map(i => i / 100);
-
-if (animatedElements.length) {
+console.log(screen.width);
+if (animatedElements.length && !isSmallScreen) {
     const observerCallback = function (e) {
         const { boundingClientRect, intersectionRatio, target } = e[0];
         if (boundingClientRect.bottom > 500) {
@@ -49,7 +51,8 @@ if (animatedElements.length) {
                 target.style.transform = `scale(${parseFloat(scale) + ((1 - scale) * ratio)})`;
             }
 
-            target.style.opacity = intersectionRatio;
+            const multiplier = target.classList.contains('phone') ? 4 : 1;
+            target.style.opacity = intersectionRatio * multiplier;
         }
     };
 

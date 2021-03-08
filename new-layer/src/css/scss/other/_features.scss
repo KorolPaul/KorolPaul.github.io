@@ -108,9 +108,12 @@
             }
         }
         .features_item:nth-child(4) & {
-            width: 70%;
+            width: 110%;
             max-width: 500px;
             right: -10%;
+            @include tablet {
+                width: 70%;
+            }
         }
     }
     &_item-decoration {
