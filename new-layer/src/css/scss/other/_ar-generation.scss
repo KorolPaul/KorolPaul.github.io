@@ -24,6 +24,9 @@
             width: auto;
         }
     }
+    &_link {
+        flex-shrink: 0;
+    }
     &_icon {
         display: block;
         margin: 0 auto 60px;

@@ -27,4 +27,10 @@
             top: -70px;
         }
     }
+
+    h2 {
+        @include tablet {
+            max-width: 350px;
+        }
+    }
 }

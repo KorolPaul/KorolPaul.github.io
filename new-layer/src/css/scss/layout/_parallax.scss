@@ -12,42 +12,56 @@
     }
 
     &_background {
-        background: url(#{$img}/showcase/showcase-bg.svg) no-repeat center top / 100% auto;
+        background: url(#{$img}/main-bg-mobile.svg) no-repeat center top / 100% auto;
         position: absolute;
         height: 500vh;
-        top: 50vh;
+        top: 20vh;
         left: 0;
         width: 100%;
         z-index: -2;
         will-change: transform;
         transform-origin: top center;
         @include tablet {
-            transform: translateZ(-2px) scale(3);
+            background-image: url(#{$img}/showcase/showcase-bg.svg);
+            transform: translateZ(-1px) scale(2);
+            top: 50vh;
         }
     }
     &_front {
-        background: url(#{$img}/showcase/showcase-front.svg) no-repeat center top / 100% auto,
-                    url(#{$img}/showcase/showcase-front-bottom.svg) no-repeat center bottom / 100% auto;
-        position: absolute;
-        height: 500vh;
-        top: 150vh;
-        left: 0;
-        width: 100%;
-        z-index: -1;
-        will-change: transform;
-        pointer-events: none;
-        transform-origin: top center;
+        display: none;
         @include tablet {
-            transform: translateZ(-1px) scale(2);
+            display: block;
+            background: url(#{$img}/showcase/showcase-front.svg) no-repeat center top / 100% auto,
+                        url(#{$img}/showcase/showcase-front-bottom.svg) no-repeat center bottom / 100% auto;
+            position: absolute;
+            height: 500vh;
+            top: 150vh;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+            will-change: transform;
+            pointer-events: none;
+            transform-origin: top center;
+            transform: translateZ(-0.5px) scale(1.5);
         }
     }
     &_content {
         padding: 46px 40px;
         background: url(#{$img}/footer-bg.svg) no-repeat center bottom / 100% auto;
         @include tablet {
+            @include layout;
             padding: 33px 40px;
             transform: translateZ(0);
         }
+        @include media(1024px) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        @include media(1200px) {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+        
     }
 }
 

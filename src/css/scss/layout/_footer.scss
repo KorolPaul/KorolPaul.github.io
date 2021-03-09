@@ -1,6 +1,7 @@
 .footer {
     position: relative;
     @include tablet {
+        position: static;
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;

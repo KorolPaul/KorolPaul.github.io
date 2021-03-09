@@ -49,6 +49,7 @@ function scrollPages() {
     pagesElements.forEach(el => el.classList.remove('active'));
     pagesElements[activePage].classList.add('active');
     navigationElement.dataset.slide = activePage;
+    pagesBgElement.dataset.slide = activePage;
     document.body.dataset.slide = activePage;
 
     calculateNavigatoinPosition();

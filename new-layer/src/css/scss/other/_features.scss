@@ -55,8 +55,14 @@
         margin: 0;
         z-index: 1;
         @include tablet {
+            font-size: 28px;
+            width: 62%;
+        }
+        @include media(1200px) {
+            font-size: 32px;
+        }
+        @include desktop {
             font-size: 36px;
-            width: 60%;
         }
     }
     &_item-icon {
@@ -108,18 +114,23 @@
             }
         }
         .features_item:nth-child(4) & {
-            width: 110%;
-            max-width: 500px;
-            right: -10%;
+            height: 70%;
+            left: 0;
+            max-width: 120%;
+            object-fit: cover;
             @include tablet {
+                left: auto;
+                max-width: 500px;
                 width: 70%;
+                right: -10%;
             }
         }
     }
     &_item-decoration {
         position: absolute;
         pointer-events: none;
-        z-index: 1;
+        z-index: 2;
+        max-width: none;
 
         .features_item:nth-child(1) & {
             right: -15px;
@@ -136,7 +147,7 @@
             top: -95px;
             right: -140px;
             @include tablet {
-                width: 490px;
+                width: 455px;
                 top: -135px;
                 right: 5%;
             }
@@ -152,9 +163,9 @@
             }
         }
         .features_item:nth-child(4) & {
-            width: 300px;
-            top: -78px;
-            right: 0;
+            width: 215px;
+            top: 0;
+            right: -62px;
             @include tablet {
                 width: 700px;
                 top: -200px;
