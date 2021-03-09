@@ -217,6 +217,13 @@
         </div>
     </div>
 
+    <script>
+        const svg = document.querySelector('.about_image');
+        const url = svg.getAttribute('src');
+        svg.setAttribute('src', '');
+        svg.setAttribute('src', url);
+    </script>
+
     <script src="./src/js/js-cookie.js"></script>
     <script src="./src/js/parallax.js"></script>
     <script src="./src/js/main.js"></script>
