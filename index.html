@@ -15,7 +15,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta name="HandheldFriendly" content="true">
 </head>
-<body class="slides-page">
+<body class="slides-page" data-slide="0">
     <div class="mobile-menu">
         <div class="mobile-menu_fade js-menu-toggle"></div>
         <div class="mobile-menu_content">
@@ -63,36 +63,40 @@
         <button class="navigation_down js-nav-next"></button>
         <span class="navigation_caption">Scroll or Tap this triangle</span>
     </div>
+    <header class="header">
+        <a class="logo logo__mobile" href="/">
+            <img src="src/img/logo.svg" alt="" class="logo_icon">
+        </a>
+        <div class="lang">
+            <span class="lang_item">
+                <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
+                English
+            </span>
+            <ul class="lang_list">
+                <li class="lang_list-item">
+                    <a href="/" class="lang_item">
+                        <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
+                        English
+                    </a>
+                </li>
+                <li class="lang_list-item">
+                    <a href="pl.html" class="lang_item">
+                        <img class="lang_item-icon" src="src/img/lang/pl.svg" alt="">
+                        Polish
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="menu-toggle js-menu-toggle">
+            <div class="menu-toggle_line"></div>
+            <div class="menu-toggle_line"></div>
+            <div class="menu-toggle_line"></div>
+        </button>
+    </header>
     <main class="pages-container">
         <div class="pages-container_background"></div>
         <div class="page active">
-            <header class="header">
-                <div class="lang">
-                    <span class="lang_item">
-                        <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
-                        English
-                    </span>
-                    <ul class="lang_list">
-                        <li class="lang_list-item">
-                            <a href="/" class="lang_item">
-                                <img class="lang_item-icon" src="src/img/lang/en.svg" alt="">
-                                English
-                            </a>
-                        </li>
-                        <li class="lang_list-item">
-                            <a href="pl.html" class="lang_item">
-                                <img class="lang_item-icon" src="src/img/lang/pl.svg" alt="">
-                                Polish
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <button class="menu-toggle js-menu-toggle">
-                    <div class="menu-toggle_line"></div>
-                    <div class="menu-toggle_line"></div>
-                    <div class="menu-toggle_line"></div>
-                </button>
-            </header>
+            
             <div class="page_content">
                 <div class="js-page-headings">
                     <h1>AR Generation</h1>

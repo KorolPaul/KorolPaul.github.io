@@ -1,18 +1,26 @@
 .header {
+    position: fixed;
+    top: 48px;
+    right: 16px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin: 0 0 54px;
+    position: fixed;
+    @include media(375px) {
+        right: 32px;
+    }
     @include tablet {
         position: relative;
     }
 
     .slides-page & {
-        position: absolute;
-        top: 35px;
+        top: 25px;
         z-index: 2;
-        right: 25px;
+        transition: .2s ease opacity;
         @include tablet {
+            opacity: 0;
+            position: absolute;
             top: 68px;
             left: 50%;
             width: 90%;
@@ -22,5 +30,8 @@
         @include desktop {
             width: $max-width;
         }
+    }
+    .slides-page[data-slide="0"] & {
+        opacity: 1;
     }
 }

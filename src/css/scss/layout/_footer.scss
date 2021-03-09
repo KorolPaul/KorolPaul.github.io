@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     @include tablet {
         display: flex;
         align-items: flex-start;
@@ -9,7 +10,25 @@
         }
     }
 
+    &::after {
+        content: '';
+        background: url(#{$img}/footer-bg-mobile.svg) no-repeat left bottom / 100% auto;
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        left: -$indent;
+        right: -$indent;
+        z-index: -1;
+        @include tablet {
+            display: none;
+        }
+    }
+
     .slides-page & {
         padding: 0;
+
+        &::after {
+            display: none;
+        }
     }
 }

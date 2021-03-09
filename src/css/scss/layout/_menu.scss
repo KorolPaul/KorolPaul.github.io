@@ -3,6 +3,7 @@
     @include tablet {
         width: 25%;
         order: 3;
+        min-width: 200px;
     }
 
     &_link {

@@ -1,13 +1,13 @@
 .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 30px;
-    top: 40px;
+    display: none;
     @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         position: fixed;
+        left: 30px;
+        top: 40px;
         z-index: 2;
         transition: .6s $easing transform;
         left: 28px;

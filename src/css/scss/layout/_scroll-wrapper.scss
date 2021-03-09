@@ -1,0 +1,16 @@
+.scroll-wrapper {
+    padding: 150px 20px 46px 20px;
+    mask-image: linear-gradient(rgba(#000, 0) 0%, rgba(#000, 0) 100px, rgba(#000, 1) 150px, rgba(#000, 1) 100%);
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    @include media(375px) {
+        padding: 150px $indent;
+    }
+    @include tablet {
+        height: auto;
+        padding: 0;
+        mask-image: none;
+        overflow: visible;
+    }
+}

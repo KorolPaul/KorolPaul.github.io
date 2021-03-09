@@ -1,14 +1,32 @@
 .logo {
-    position: absolute;
-    left: 0;
-    top: -90px;
+    position: fixed;
+    display: none;
     @include tablet {
+        display: block;
+        position: absolute;
         left: -4px;
         top: -108px;
     }
     @include desktop {
         top: 5px;
         left: -188px;
+    }
+
+    &__mobile {
+        left: 16px;
+        top: 53px;
+        display: block;
+        @include media(375px) {
+            left: 36px;
+        }
+        @include tablet {
+            display: none;
+        }
+
+        .slides-page & {
+            left: 30px;
+            top: 32px;
+        }
     }
 
     &_icon {

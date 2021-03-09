@@ -5,7 +5,7 @@
         width: 50%;
         order: 1;
     }
-    @include desktop {
+    @include media(1336px) {
         column-count: 2;
         column-gap: 0;
     }

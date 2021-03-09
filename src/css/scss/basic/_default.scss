@@ -4,18 +4,19 @@ body {
 }
 
 body {
-    background: url(#{$img}/header-bg-mobile.svg) no-repeat 0 0, 
-        url(#{$img}/footer-bg-mobile.svg) no-repeat left bottom;
+    background: url(#{$img}/header-bg-mobile.svg) no-repeat 0 0;
     background-color: $bg_color;
-    background-size: auto auto, 100% auto;
+    background-size: auto auto;
     color: $color;
     font: #{$font-size__small}/#{1.2} $font-family;
-    padding: 46px 20px;
+    padding: 0;
     scroll-behavior: smooth;
-    @include media(375px) {
-        padding: 66px $indent;
-    }
+    overflow: hidden;
+    height: 100vh;
     @include tablet {
+        padding: 0 $indent 150px;
+        overflow: auto;
+        height: auto;
         background: url(#{$img}/bg.svg) no-repeat 0 0, 
             url(#{$img}/footer-bg.svg) no-repeat left bottom;
         background-color: $bg_color;
@@ -50,7 +51,7 @@ a {
 p {
     margin: 0 0 20px;
     @include tablet {
-        margin-bottom: 30px;
+        margin-bottom: 26px;
     }
 }
 

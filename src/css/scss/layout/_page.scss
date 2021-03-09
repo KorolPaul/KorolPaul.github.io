@@ -1,5 +1,8 @@
 .slides-page {
     padding: 0;
+    background: url(#{$img}/header-bg-mobile.svg) no-repeat 0 0, url(#{$img}/footer-bg-mobile.svg) no-repeat left bottom;
+    background-color: $bg_color;
+    background-size: auto auto, 100% auto;
     @include tablet {
         padding: 0;
         margin: 0;
@@ -12,9 +15,13 @@
 
 .pages-container {
     position: relative;
+    mask-image: linear-gradient(rgba(#000, 0) 0%, rgba(#000, 0) 90px, rgba(#000, 1) 120px, rgba(#000, 1) 100%);
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
     @include tablet {
-        height: 100%;
         overflow: hidden;
+        mask-image: none;
     }
 
     &_background {
@@ -222,7 +229,7 @@
     h2 {
         margin-bottom: 30px;
         @include desktop {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
     }
 }
