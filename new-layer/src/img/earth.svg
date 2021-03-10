@@ -56,7 +56,7 @@
 <g filter="url(#filter0_d)">
 <rect x="131.5" y="604.094" width="43" height="43" rx="9" transform="rotate(45 131.5 604.094)" stroke="#FC12AF" stroke-width="2"/>
 </g>
-<circle cx="597" cy="364" r="300" fill="white" fill-opacity="0.15" opacity="0" transform-origin="center center">
+<circle cx="597" cy="364" r="300" fill="white" fill-opacity="0.15" opacity="0">
     <animate attributeType="XML"
         attributeName="opacity"
         from="0" to="1"
