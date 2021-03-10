@@ -8,20 +8,15 @@
     right: 0;
     bottom: 0;
     z-index: 3;
-    //display: none;
+    display: none;
     @include media(1336px) {
         font-size: 25px;
     }
 
     .main-page & {
         @include media(1024px) {
-            @include layout;
-            padding-left: 100px;
-            padding-right: 100px;
-        }
-        @include media(1200px) {
-            padding-left: 120px;
-            padding-right: 120px;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
@@ -32,6 +27,18 @@
             align-items: center;
             justify-content: space-between;
             display: flex;
+        }
+
+        .main-page & {
+            @include media(1024px) {
+                @include layout;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            @include media(1200px) {
+                padding-left: 120px;
+                padding-right: 120px;
+            }
         }
     }
     &_buttons {

@@ -13,6 +13,7 @@
 
     circle {
         transform-box: fill-box;
+        transform-origin: center center;
     }
 
     @keyframes flying {
