@@ -21,6 +21,7 @@
         max-width: 695px;
         @include tablet {
             height: 260px;
+            min-width: 500px;
             width: 60%;
             align-items: center;
             padding: 45px 30px;
@@ -61,7 +62,7 @@
         @include media(1200px) {
             font-size: 32px;
         }
-        @include desktop {
+        @include media(1600px) {
             font-size: 36px;
         }
     }

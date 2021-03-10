@@ -14,6 +14,19 @@
     circle {
         transform-box: fill-box;
         transform-origin: center center;
+        opacity: 0;
+        animation: 1s ease-out circle-appearance forwards;
+    }
+
+    @keyframes circle-appearance {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
     @keyframes flying {
@@ -56,56 +69,11 @@
 <g filter="url(#filter0_d)">
 <rect x="131.5" y="604.094" width="43" height="43" rx="9" transform="rotate(45 131.5 604.094)" stroke="#FC12AF" stroke-width="2"/>
 </g>
-<circle cx="597" cy="364" r="300" fill="white" fill-opacity="0.15" opacity="0">
-    <animate attributeType="XML"
-        attributeName="opacity"
-        from="0" to="1"
-        dur="1s"
-        repeatCount="1"
-        fill="freeze"
-    />
-    <animateTransform
-        attributeName="transform"
-        attributeType="XML"
-        type="scale"
-        from="0.5"
-        to="1"
-        dur="0.5s"
-        repeatCount="1"
-        fill="freeze"
-    />
-</circle>
+<circle cx="597" cy="364" r="300" fill="white" fill-opacity="0.15" />
 <rect x="91" width="1017" height="651" fill="url(#pattern0)"/>
-<rect x="91" width="1017" height="651" fill="url(#pattern1)"  opacity="0" class="clouds">
-    <animate attributeType="XML"
-        attributeName="opacity"
-        from="0" to="1"
-        dur="1s"
-        repeatCount="1"
-        fill="freeze"
-        begin="2s"
-    />
-</rect>
-<rect x="91" width="1017" height="651" fill="url(#pattern2)"  opacity="0" class="clouds-middle">
-    <animate attributeType="XML"
-        attributeName="opacity"
-        from="0" to="1"
-        dur="1s"
-        repeatCount="1"
-        fill="freeze"
-        begin="2.4s"
-    />
-</rect>
-<rect x="91" width="1017" height="651" fill="url(#pattern3)"  opacity="0" class="clouds-top">
-    <animate attributeType="XML"
-        attributeName="opacity"
-        from="0" to="1"
-        dur="1s"
-        repeatCount="1"
-        fill="freeze"
-        begin="2.5s"
-    />
-</rect>
+<rect x="91" width="1017" height="651" fill="url(#pattern1)" class="clouds" />
+<rect x="91" width="1017" height="651" fill="url(#pattern2)" class="clouds-middle" />
+<rect x="91" width="1017" height="651" fill="url(#pattern3)" class="clouds-top" />
 <path d="M0.999999 149.5L358 226.5" stroke="url(#paint0_linear)" stroke-width="2" stroke-dasharray="5 5" clip-path="polygon(100% 3%, 100% 0, 100% 99%, 100% 100%)">
     <animate attributeType="XML"
         attributeName="clip-path"
@@ -114,7 +82,7 @@
         dur="0.6s"
         repeatCount="1"
         fill="freeze"
-        begin="1.5s"
+        begin="0.4s"
     />
 </path>
 <defs>
