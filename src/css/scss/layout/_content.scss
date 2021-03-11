@@ -53,6 +53,10 @@
             @include desktop {
                 margin-top: 0;
             }
+
+            & + p {
+                margin-top: 30px;
+            }
         }
         h2 {
             @include tablet {

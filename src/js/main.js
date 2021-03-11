@@ -66,14 +66,14 @@ if (videoElement) {
 }
 
 /* language selector */
-const langElement = document.querySelector('.lang');
+const langElements = document.querySelectorAll('.lang');
 const langToggleElement = document.querySelector('.lang_item');
 
 document.addEventListener('click', function(e) {
-    if (e.target === langElement || e.target === langToggleElement) {
-        langElement.classList.toggle('opened');
+    if (e.target.classList.contains('lang_item')) {
+        e.target.parentElement.classList.toggle('opened');
     } else {
-        langElement.classList.remove('opened');
+        langElements.forEach(el => el.classList.remove('opened'));
     }
 });
 

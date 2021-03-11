@@ -5,7 +5,7 @@
     box-sizing: border-box;
     overflow: auto;
     @include media(375px) {
-        padding: 150px $indent;
+        padding: 150px $indent 0;
     }
     @include tablet {
         height: auto;

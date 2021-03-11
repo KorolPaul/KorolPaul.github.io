@@ -7,6 +7,7 @@
     justify-content: flex-end;
     margin: 0 0 54px;
     position: fixed;
+    z-index: 1;
     @include media(375px) {
         right: 32px;
     }
