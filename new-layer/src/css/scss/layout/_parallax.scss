@@ -46,8 +46,10 @@
         }
     }
     &_content {
+        background: url(#{$img}/footer-bg.svg) no-repeat center bottom / 100% auto;
         padding: 46px 40px;
         @include tablet {
+            background: transparent;
             @include layout;
             padding: 33px 40px;
             transform: translateZ(0);
@@ -62,16 +64,18 @@
         }
 
         &::after {
-            content: '';
-            background: url(#{$img}/footer-bg.svg) no-repeat center bottom / 100% auto;
-            left: 50%;
-            width: 100vw;
-            bottom: 0;
-            height: 1000vh;
-            position: absolute;
-            margin: 0 0 0 -50vw;
-            pointer-events: none;
-            z-index: -1;
+            @include tablet {
+                content: '';
+                background: url(#{$img}/footer-bg.svg) no-repeat center bottom / 100% auto;
+                left: 50%;
+                width: 100vw;
+                bottom: 0;
+                height: 1000vh;
+                position: absolute;
+                margin: 0 0 0 -50vw;
+                pointer-events: none;
+                z-index: -1;
+            }
         }
     }
 }

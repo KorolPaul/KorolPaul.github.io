@@ -20,7 +20,7 @@ body {
             url(#{$img}/footer-bg.svg) no-repeat center bottom;
         background-color: $bg_color;
         font-size: 22px;
-        max-width: 300%;
+        max-width: 80vw;
         margin: auto;
     }
     @include desktop {
