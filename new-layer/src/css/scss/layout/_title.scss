@@ -2,13 +2,15 @@
     position: relative;
 
     &::before {
-        content: '';
-        width: 4px;
-        height: 34px;
-        position: absolute;
-        left: -24px;
-        top: 4px;
-        background-color: $cPink;
+        @include media(400px) {
+            content: '';
+            width: 4px;
+            height: 34px;
+            position: absolute;
+            left: -24px;
+            top: 4px;
+            background-color: $cPink;
+        }
         @include tablet {
             height: 3.5vw;
         }

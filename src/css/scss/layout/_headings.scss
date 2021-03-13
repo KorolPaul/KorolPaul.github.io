@@ -1,9 +1,12 @@
 %heading-1 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: .85;
     font-weight: normal;
     margin: 0 0 20px;
     text-transform: uppercase;
+    @include media(400px) {
+        font-size: 50px;
+    }
     @include tablet {
         font-size: 4.7vw;
         margin-bottom: 5px;
