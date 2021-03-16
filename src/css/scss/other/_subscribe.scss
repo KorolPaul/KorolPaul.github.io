@@ -17,6 +17,10 @@
         @include desktop {
             width: 45%;
         }
+
+        .submited & {
+            display: none;
+        }
     }
     &_button[type] {
         background: $color;
@@ -32,6 +36,17 @@
         &:active {
             opacity: .8;
             outline: none;
+        }
+
+        .submited & {
+            display: none;
+        }
+    }
+    &_result {
+        display: none;
+
+        .submited & {
+            display: block;
         }
     }
 }

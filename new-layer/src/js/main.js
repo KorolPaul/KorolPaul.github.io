@@ -48,3 +48,18 @@ document.addEventListener('click', function(e) {
         langElement.classList.remove('opened');
     }
 });
+
+/* subscribe */
+document.querySelector('.subscribe').addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.target.classList.add('submited');
+});
+
+/* text toggle */
+const toggleElements = document.querySelectorAll('.toggle');
+
+if (toggleElements.length) {
+    toggleElements.forEach(el => el.addEventListener('click', function (e) {
+        e.target.classList.toggle('active');
+    }));
+}

@@ -1,6 +1,6 @@
 textarea {
-    @include placeholder-color($color);
-    color: $color;
+    @include placeholder-color($cDark);
+    color: $cDark;
     background: transparent;
     border: none;
     border-bottom: 1px solid $color;
@@ -15,6 +15,6 @@ textarea {
 
     &:focus,
     &.focus {
-        color: $color;
+        color: $cDark;
     }
 }

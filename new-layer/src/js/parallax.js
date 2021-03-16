@@ -8,7 +8,7 @@ function setBackgroundSize() {
     const height = parallaxContentElement.getBoundingClientRect().height.toFixed(0);
     //console.log(height, height / 3);
     parallaxBackElement.style.height = height / 3;
-    parallaxFrontElement.style.height = height / 2.3;
+    parallaxFrontElement.style.height = height / 2;
 }
 
 window.addEventListener('load', setBackgroundSize);
