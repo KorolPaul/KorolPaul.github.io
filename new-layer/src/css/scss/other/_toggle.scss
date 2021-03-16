@@ -1,0 +1,13 @@
+.toggle {
+    display: block;
+    color: $cPurple;
+    cursor: pointer;
+
+    & + div {
+        display: none;
+    }
+
+    &.active + div {
+        display: block;
+    }
+}
