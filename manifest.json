@@ -2,11 +2,12 @@
   "start_url": "./",
   "name": "Yoyo PWA",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "./src/img/logo.svg",
+      "src": "./icon.svg",
       "sizes": "144x144",
-      "type": "image/png"
+      "type": "image/svg"
     }
   ]
 }
