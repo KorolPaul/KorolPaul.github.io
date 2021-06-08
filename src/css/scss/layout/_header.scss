@@ -1,38 +1,17 @@
 .header {
-    position: fixed;
-    top: 48px;
-    right: 16px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin: 0 0 54px;
-    position: fixed;
-    z-index: 1;
-    @include media(375px) {
-        right: 32px;
-    }
+    justify-content: space-between;
+    padding: $indent $indent 50px;
     @include tablet {
-        position: relative;
+        padding: $indent 70px 50px;
     }
 
-    .slides-page & {
-        top: 25px;
-        z-index: 2;
-        transition: .2s ease opacity;
-        @include tablet {
-            opacity: 0;
-            position: absolute;
-            top: 68px;
-            left: 50%;
-            width: 90%;
-            right: auto;
-            transform: translateX(-50%);
-        }
-        @include desktop {
-            width: $max-width;
-        }
+    .article-opened & {
+        animation: 1s $easing onArticleOpened forwards;
     }
-    .slides-page[data-slide="0"] & {
-        opacity: 1;
+
+    &_link {
+        font-size: 16px;
     }
 }

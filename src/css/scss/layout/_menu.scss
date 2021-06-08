@@ -1,9 +1,9 @@
 .menu {
     margin: 0 0 42px;
+    position: relative;
     @include tablet {
-        width: 25%;
+        width: 50%;
         order: 3;
-        min-width: 200px;
     }
 
     &_link {

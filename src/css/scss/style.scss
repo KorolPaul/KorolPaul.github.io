@@ -8,38 +8,22 @@
 @import  "basic/normalize";
 @import  "basic/fonts";
 @import  "basic/default";
+@import  "basic/animations";
 
 /*Form elements*/
 @import  "form-elements/button";
-@import  "form-elements/input-text";
-@import  "form-elements/textarea";
-@import  "form-elements/checkbox";
-@import  "form-elements/label";
 
 /*layout*/
 @import  "layout/headings";
 @import  "layout/header";
 @import  "layout/footer";
 @import  "layout/menu";
-@import  "layout/menu-outside";
 @import  "layout/logo";
 @import  "layout/content";
-@import  "layout/lang";
-@import  "layout/page";
 @import  "layout/popup";
-@import  "layout/title";
-@import  "layout/navigation";
-@import  "layout/menu-toggle";
-@import  "layout/mobile-menu";
-@import  "layout/scroll-wrapper";
+@import  "layout/share";
+@import  "layout/article";
 
 /* other */
-@import "other/button-link";
-@import "other/subscribe";
-@import "other/social";
-@import "other/copyrights";
-@import "other/cookies-banner";
-@import "other/phone";
-@import "other/contacts";
-@import "other/bright";
-@import "other/toggle";
+@import  "other/status";
+@import  "other/progress";

@@ -1,5 +1,6 @@
 .popup {
     display: none;
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
@@ -50,13 +51,12 @@
         }
     }
     &_content {
+        background: radial-gradient(77.12% 249.97% at 77.12% 51.95%, rgba(172, 72, 188, 0.51) 0%, #080A31 100%), #080A31;
         position: relative;
         z-index: 2;
         width: 100%;
-        background: radial-gradient(77.12% 249.97% at 77.12% 51.95%, rgba(172, 72, 188, 0.51) 0%, #F6EEF5 100%), #F6EEF5;
-        box-sizing: border-box;
         padding: 60px 16px;
-        z-index: 2;
+        box-sizing: border-box;
         @include tablet {
             width: auto;
             min-width: 700px;

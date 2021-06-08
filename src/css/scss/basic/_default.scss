@@ -4,36 +4,23 @@ body {
 }
 
 body {
-    background: url(#{$img}/header-bg-mobile.svg) no-repeat 0 0;
-    background-color: $bg_color;
-    background-size: auto auto;
+    background: $cDark;
     color: $color;
-    font: #{$font-size__small}/#{1.2} $font-family;
-    padding: 0;
+    font: #{$font-size}/#{1} $font-family;
+    letter-spacing: -0.03em;
+    padding: 54px $indent 40px;
     scroll-behavior: smooth;
-    overflow: hidden;
-    height: 100vh;
+    transition: .2s $easing opacity;
     @include tablet {
-        padding: 0 $indent 150px;
-        overflow: auto;
-        height: auto;
-        background: url(#{$img}/bg.svg) no-repeat 0 0, 
-            url(#{$img}/footer-bg.svg) no-repeat left bottom;
-        background-color: $bg_color;
-        background-size: auto auto, 100% auto;
-        font-size: 18px;
+        font-size: $font-size__big;
         margin: auto;
-        max-width: 80vw;
-    }
-    @include desktop {
-        max-width: $max-width;
-        font-size: $font-size;
+        padding: 54px 20px 40px;
     }
 }
 
 a {
-    color: $cPink;
-    text-decoration: none;
+    color: $color;
+    text-decoration: underline;
     transition: .2s $easing opacity;
 
     &:hover,
@@ -51,7 +38,7 @@ a {
 p {
     margin: 0 0 20px;
     @include tablet {
-        margin-bottom: 26px;
+        margin-bottom: 30px;
     }
 }
 

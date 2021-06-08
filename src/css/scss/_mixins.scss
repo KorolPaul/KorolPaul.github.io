@@ -34,8 +34,8 @@
 }
 
 @mixin layout {
-    padding-left: $layout_indent;
-    padding-right: $layout_indent;
+    padding-left: $indent;
+    padding-right: $indent;
     box-sizing: border-box;
     @include tablet {
         max-width: $max-width;
@@ -47,7 +47,7 @@
 
 @mixin gradiented-text($color1, $color2) {
     @supports(-webkit-background-clip: text) {
-        background: linear-gradient($color1,$color2);
+        background: linear-gradient(to right, $color1,$color2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

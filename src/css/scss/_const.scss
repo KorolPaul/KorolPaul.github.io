@@ -1,20 +1,15 @@
 $img: "src/img";
 
-$bg_color: #F7EEF5;
+$color: #fff;
+$cBlue: #2A60FE;
+$cDark: #151515;
 
-$color: #01042F;
-$cBlue: #00A9C3;
-$cPink: #FC12AF;
-$cPurple: #AC48BC;
-$cLight: #DEDEE2;
+$font-family: 'Nimbus Sans', sans-serif, Helvetica;
 
-$font-family: 'ND Astroneer', sans-serif, Helvetica;
+$font-size: 18px;
+$font-size__big: 21px;
 
-$font-size: 23px;
-$font-size__small: 20px;
-
-$max-width: 72vw;
-$indent: 40px;
+$indent: 16px;
 
 // easings
 $easeOutCirc: cubic-bezier(.07, .82, .17, 1);
