@@ -2,7 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#151515">
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <title>Yoyo</title>
@@ -22,7 +23,7 @@
                 <div class="status_description">
                     <p>This report outlines key trends impacting organisations and how embracing digital experiences with impact is not only essential for business survival but will put you ahead of your competition and leave a lasting impression on your customers.</p>
                     
-                    <a href="#" class="status_link">How to install this PWA</a>
+                    <a href="#" class="status_link js-open-popup">How to install this PWA</a>
                 </div>
             </div>
             <div class="status_progress">
@@ -358,12 +359,6 @@
 
     </main>
 
-    
-
-
-
-
-
     <footer class="footer">
         <div class="footer_contacts">
             <span class="footer_contacts-title">Interested in learning more?</span>
@@ -395,14 +390,26 @@
         </div>
     </footer>
 
+    <div class="fade">
+        <div class="popup">
+            <button class="popup_close"></button>
+            <div class="popup_content">
+                <h1>PWA</h1>
+                <p>Install this application on your home screen for quick and easy access when you’re on the go.</p>
+            </div>
+            <div class="popup_footer">
+                <span>Just tap <img src="src/img/settings.svg" alt=""> then ‘Add to Home Screen’</span>
+            </div>
+        </div>
+    </div>
 
     <script>
-        self.addEventListener("load", async () => {
-            const container = navigator.serviceWorker;
-            if (container.controller === null) {
-                const reg = await container.register("./sw.js");
-            }
-        });
+        //self.addEventListener("load", async () => {
+        //    const container = navigator.serviceWorker;
+        //    if (container.controller === null) {
+        //        const reg = await container.register("./sw.js");
+        //    }
+        //});
     </script>
     <script src="src/js/main.js"></script>
 </body>

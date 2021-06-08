@@ -11,3 +11,11 @@ function openArticle(e) {
 }
 
 areticleElements.forEach(el => el.addEventListener('click', openArticle));
+
+/* popup */
+document.body.classList.toggle('popup-opened');
+
+const popupButtons = document.querySelectorAll('.js-open-popup');
+popupButtons.forEach(button => button.addEventListener('click', togglePopup));
+
+document.querySelector('.fade').addEventListener('click', togglePopup);
