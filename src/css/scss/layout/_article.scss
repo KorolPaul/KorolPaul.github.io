@@ -12,7 +12,7 @@
     position: relative;
     transition: .3s $easing padding;
     @include tablet {
-        padding: 70px 0 50px;
+        padding: 45px 0 50px;
     }
 
     &.opened {
@@ -33,10 +33,24 @@
             padding: 0 70px;
         }
     }
+    &_header-info {
+        @include tablet {
+            display: flex;
+            gap: 56px;
+            flex-shrink: 0;
+        }
+    }
     &_intro {
         display: none;
         @include tablet {
             display: block;
+            max-width: 320px;
+            flex-shrink: 0;
+            transition: .3s $easing opacity;
+        }
+
+        .opened & {
+            opacity: 0;
         }
     }
     &_title {
@@ -45,6 +59,10 @@
         width: 80%;
         @include tablet {
             position: relative;
+            margin: 0 50px 0 0;
+        }
+
+        .opened & {
             margin-bottom: 100px;
         }
     }
@@ -65,6 +83,7 @@
         }
     }
     &_duration {
+        white-space: nowrap;
         transition: .3s $easing opacity;
 
         .opened & {
@@ -89,14 +108,18 @@
         padding: 50px $indent 50px 80px;
         max-height: 0;
         overflow: hidden;
-        transition: .6s $easing max-height .2s;
+        transition: .6s $easing padding .2s,
+                    .6s $easing max-height .2s;
         @include tablet {
-            padding-left: 45%;
-            padding-right: 230px;
+            padding: 0 230px 0 45%;
         }
 
         .opened & {
             max-height: 5000px;
+            @include tablet {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
         }
 
         .heading-1 {
