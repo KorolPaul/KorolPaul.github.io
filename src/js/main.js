@@ -13,7 +13,10 @@ function openArticle(e) {
 areticleElements.forEach(el => el.addEventListener('click', openArticle));
 
 /* popup */
-document.body.classList.toggle('popup-opened');
+function togglePopup(e) {
+    e.preventDefault();
+    document.body.classList.toggle('popup-opened');
+}
 
 const popupButtons = document.querySelectorAll('.js-open-popup');
 popupButtons.forEach(button => button.addEventListener('click', togglePopup));

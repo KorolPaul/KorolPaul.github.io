@@ -9,6 +9,7 @@
     background-color: $cBlue;
     padding: 20px 0;
     margin: 0 0 10px;
+    position: relative;
     transition: .3s $easing padding;
     @include tablet {
         padding: 70px 0 50px;
@@ -49,13 +50,18 @@
     }
     &_subtitle {
         font-size: 24px;
-        border-bottom: 1px solid #E2E2E2;
         padding: 0 0 20px;
         margin: 0 0 50px -64px;
+        border-bottom: 1px solid transparent;
+        transition: .2s $easing border;
         @include tablet {
             font-size: 30px;
             margin-bottom: 100px;
             margin-left: -20vw;
+        }
+
+        .opened & {
+            border-bottom-color: #E2E2E2;
         }
     }
     &_duration {
@@ -72,9 +78,11 @@
         top: 0;
         @include tablet {
             font-size: 21px;
+            position: static;
+            vertical-align: top;
+            position: relative;
             top: 10px;
-            right: auto;
-            left: calc(100% + 20px);
+            right: 4px;
         }
     }
     &_content {
@@ -92,10 +100,27 @@
         }
 
         .heading-1 {
-            font-size: 30vw;
+            font-size: 17vw;
             @include tablet {
                 font-size: 200px;
             }
+        }
+    }
+    &_next {
+        position: absolute;
+        left: $indent;
+        bottom: 50px;
+        padding: 0 0 0 40px;
+        background: url(#{$img}/arrow-down.svg) no-repeat left center;
+        width: auto;
+        visibility: hidden;
+        transition: .5s visibility 2s;
+        @include desktop {
+            left: 70px;
+        }
+
+        .opened & {
+            visibility: visible;
         }
     }
 
