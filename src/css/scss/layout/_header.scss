@@ -3,12 +3,16 @@
     align-items: center;
     justify-content: space-between;
     padding: $indent $indent 50px;
+    transition: .4s $easing opacity; 
     @include tablet {
         padding: $indent 70px 50px;
     }
 
+    .content-hidden & {
+        opacity: 0;
+    }
     .article-opened & {
-        animation: 1s $easing onArticleOpened forwards;
+        animation: .6s $easing onArticleOpened forwards;
     }
 
     &_link {
