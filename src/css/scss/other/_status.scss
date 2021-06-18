@@ -1,5 +1,4 @@
 .status {
-    display: none;
     position: relative;
     overflow: hidden;
     margin: 0 0 50px;
@@ -10,7 +9,7 @@
     }
 
     .article-opening & {
-        opacity: 9;
+        opacity: 0;
     }
     .article-opened & {
         display: none;

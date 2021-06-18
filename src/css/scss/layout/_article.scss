@@ -1,6 +1,6 @@
 :root {
     --articleTranslateY: 0;
-    --articleTranslateDuration: 0;
+    --articleTranslateDuration: 0s;
 }
 
 .articles {
@@ -12,15 +12,13 @@
 }
 
 .article {
+    box-shadow: 0 0 0 0 $cBlue;
     background-color: $cBlue;
-    padding: 20px 0;
+    padding: 20px 0 40px;
     margin: 0 0 10px;
     position: relative;
     box-sizing: border-box;
-    transition: .5s linear padding .2s,
-                .5s linear margin .2s,
-                var(--articleTranslateDuration) $easing transform,
-                .2s $easing opacity;
+    
     @include tablet {
         padding: 45px 0 50px;
     }
@@ -34,6 +32,9 @@
         margin-bottom: 20px;
         transform: translateY(var(--articleTranslateY));
     }
+    &.closing {
+        opacity: 0;
+    }
 
 
     .article-opening & {
@@ -41,9 +42,19 @@
     }
     .article-opened & {
         display: none;
+
+        &.closing {
+            display: block;
+        }
     }
     .article-opening &,
     .article-opened & {
+        transition: .5s $easing padding .5s,
+                    .5s $easing box-shadow ,
+                    .5s linear margin .2s,
+                    var(--articleTranslateDuration) $easing transform,
+                    .2s $easing opacity;
+
         &.opened {
             display: block;
             opacity: 1;
@@ -51,24 +62,19 @@
     }
     .article-opened & {
         &.opened {
-            padding-top: 50px;
+            box-shadow: 0 -30px 0 0 $cBlue;
             padding-bottom: 80px;
             margin-bottom: 10px;
             @include tablet {
-                padding-top: 70px;
+                box-shadow: 0 -35px 0 0 $cBlue;
                 padding-bottom: 100px;
             }
         }
     }
     .article-opened &.opened + & {
-        animation: 2s linear showNextArticle forwards;
+        display: block;
+        animation: 1s linear showNextArticle forwards;
         opacity: 0;
-        max-height: 300px;
-        padding: 20px 0;
-        @include tablet {
-            padding-top: 70px;
-            padding-bottom: 60px;
-        }
     }
 
     &_header {
@@ -91,9 +97,14 @@
         display: none;
         @include tablet {
             display: block;
-            max-width: 320px;
+            max-width: 240px;
             flex-shrink: 0;
             transition: .3s $easing opacity;
+            font-size: 16px;
+        }
+        @include desktop {
+            font-size: 21px;
+            max-width: 320px;
         }
 
         .opened & {
@@ -104,11 +115,14 @@
         display: inline-block;
         margin: 0 0 16px;
         width: 92%;
-        transition: .2s $easing margin .5s;
         @include tablet {
             position: relative;
             margin: 0 50px 0 0;
             width: 80%;
+            font-size: 60px;
+        }
+        @include desktop {
+            font-size: 90px;
         }
 
         .opened & {
@@ -116,6 +130,10 @@
             @include tablet {
                 margin-bottom: 100px;
             }
+        }
+        .article-opened &,
+        .article-opening & {
+            transition: .2s $easing margin .5s;
         }
     }
     &_subtitle {
@@ -136,14 +154,26 @@
     }
     &_duration {
         display: inline-block;
-        max-height: 24px;
         white-space: nowrap;
-        transition: .2s $easing opacity .5s,
-                    .1s $easing max-height .6s;
+        pointer-events: none;
+        position: absolute;
+        left: $indent;
+        top: 100%;
+        @include tablet {
+            position: static;
+            font-size: 16px;
+        }
+        @include desktop {
+            font-size: 21px;
+        }
 
         .opened & {
-            max-height: 0;
             opacity: 0;
+        }
+
+        .article-opened &,
+        .article-opening & {
+            transition: .2s $easing opacity .5s;
         }
     }
     &_number {
@@ -169,8 +199,7 @@
         padding: 0 $indent 0 80px;
         max-height: 0;
         overflow: hidden;
-        transition: .6s $easing padding .5s,
-                    .6s $easing max-height .5s;
+        opacity: 0;
         @include tablet {
             padding: 0 230px 0 45%;
         }
@@ -178,12 +207,19 @@
         .opened & {
             padding: 50px $indent 0 80px;
             max-height: 5000px;
+            opacity: 1;
             @include tablet {
                 padding: 50px 50px 0 45%;
             }
             @include desktop {
                 padding: 50px 230px 0 45%;
             }
+        }
+        .article-opened &,
+        .article-opening & {
+            transition: .6s $easing padding .5s,
+                        .6s $easing max-height .5s,
+                        .6s $easing opacity .9s;
         }
 
         .heading-1 {
@@ -206,7 +242,7 @@
         background: url(#{$img}/arrow-down.svg) no-repeat left center / 14px auto;
         width: auto;
         visibility: hidden;
-        transition: .5s visibility 2s;
+        transition: .5s visibility 1s;
         @include tablet {
             left: 70px;
             bottom: 50px;
@@ -214,6 +250,9 @@
 
         .opened & {
             visibility: visible;
+        }
+        .article-closing & {
+            display: none;
         }
     }
 

@@ -9,7 +9,7 @@
     white-space: nowrap;
 }
 @mixin tablet() {
-    @media all and (min-width: 769px) { @content; }
+    @media all and (min-width: 920px) { @content; }
 }
 @mixin desktop() {
     @media all and (min-width: 1367px) { @content; }
