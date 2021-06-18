@@ -2,9 +2,7 @@
 const staticAssets = [
     '/',
     '/index.html',
-    '/offline.html',
     '/styles.css',
-    '/app.js',
     '/manifest.json'
 ];
 

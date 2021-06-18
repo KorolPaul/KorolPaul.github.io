@@ -3,13 +3,14 @@
   "name": "Yoyo PWA",
   "short_name": "YOYO",
   "display": "standalone",
-  "background_color": "#151515",
+  "background_color": "#2A60FE",
+  "theme_color": "#2A60FE",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "./icon.svg",
-      "sizes": "144x144",
-      "type": "image/svg"
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
